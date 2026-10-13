@@ -1,0 +1,60 @@
+name: Publish AIX Registry
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aix-registry-publish
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure read-only registry key
+        shell: bash
+        env:
+          REGISTRY_DEPLOY_KEY: ${{ secrets.REGISTRY_DEPLOY_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$REGISTRY_DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Read private registry
+        run: git clone --depth=1 git@github.com:aixaria0/Aix-registry.git registry
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build sanitized static site
+        working-directory: registry
+        run: |
+          npm run build:site
+          npm run validate:site
+
+      - name: Attach custom domain when configured
+        working-directory: registry
+        env:
+          CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}
+        run: |
+          if [ -n "$CUSTOM_DOMAIN" ]; then printf '%s\n' "$CUSTOM_DOMAIN" > dist/CNAME; fi
+
+      - name: Publish immutable artifact branch
+        working-directory: registry/dist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git init -b gh-pages
+          git config user.name 'AIX Registry Publisher'
+          git config user.email 'actions@users.noreply.github.com'
+          git add .
+          git commit -m "publish: ${GITHUB_RUN_ID}"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/aixaria0/aixaria0.github.io.git"
+          git push --force origin gh-pages
