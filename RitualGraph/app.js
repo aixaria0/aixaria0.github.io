@@ -60,3 +60,16 @@ $$('.epi').forEach(b=>b.addEventListener('click',()=>{const e=EPI[b.dataset.epi]
 
 const canvas=$('#ambient'),ctx=canvas.getContext('2d');let W,H,DPR,pts=[];function resize(){DPR=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;canvas.width=W*DPR;canvas.height=H*DPR;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(DPR,0,0,DPR,0,0);pts=Array.from({length:Math.max(32,Math.min(95,Math.floor(W/24)))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.05,vy:(Math.random()-.5)*.05,r:Math.random()*.8+.2,t:Math.random()}));}
 function frame(){ctx.clearRect(0,0,W,H);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<125){const hue=(a.t+b.t)/2;ctx.strokeStyle=hue>.66?`rgba(255,175,94,${(1-d/125)*.024})`:hue>.33?`rgba(113,243,223,${(1-d/125)*.028})`:`rgba(124,94,255,${(1-d/125)*.026})`;ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}for(const p of pts){ctx.fillStyle=p.t>.66?'rgba(255,175,94,.16)':p.t>.33?'rgba(113,243,223,.15)':'rgba(124,94,255,.15)';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(frame)}addEventListener('resize',resize,{passive:true});resize();frame();
+// v2 — pinned ritual story. Scroll and touch both control the same four semantic stages.
+const ritualStory=$('#ritualStory'),storyMachine=$('#storyMachine'),storyState=$('#storyState'),storyMetric=$('#storyMetric'),storyVerdict=$('#storyVerdict');
+const STORY=[
+ {state:'COMPILE',metric:'0.95',verdict:'READY'},
+ {state:'FRACTURE',metric:'0.50',verdict:'BREACHED'},
+ {state:'CONTROL',metric:'0.882',verdict:'RECOVERING'},
+ {state:'LOCK',metric:'0.882',verdict:'PRESERVED'}
+];
+let storyStage=-1;
+function setStoryStage(n){if(!storyMachine)return;n=Math.max(0,Math.min(3,n));if(n===storyStage)return;storyStage=n;storyMachine.dataset.stage=String(n);const s=STORY[n];storyState.textContent=s.state;storyMetric.textContent=s.metric;storyVerdict.textContent=s.verdict;storyVerdict.style.color=n===1?'#ff8391':n===3?'#71f3df':n===2?'#83ddd2':'#bec7c3';$('#packetValue').textContent=s.metric;$$('.story-step').forEach((b,i)=>b.classList.toggle('active',i===n));}
+function updateStoryFromScroll(){if(!ritualStory||innerWidth<=760)return;const rect=ritualStory.getBoundingClientRect();const travel=Math.max(1,ritualStory.offsetHeight-(innerHeight-72));const p=Math.max(0,Math.min(.999,-rect.top/travel));setStoryStage(Math.floor(p*4));}
+$$('[data-story-jump]').forEach(btn=>btn.addEventListener('click',()=>{const n=+btn.dataset.storyJump;setStoryStage(n);if(innerWidth>760&&ritualStory){const travel=ritualStory.offsetHeight-(innerHeight-72);scrollTo({top:ritualStory.offsetTop+(travel*(n/3)),behavior:'smooth'});}}));
+addEventListener('scroll',updateStoryFromScroll,{passive:true});addEventListener('resize',updateStoryFromScroll,{passive:true});setStoryStage(0);updateStoryFromScroll();

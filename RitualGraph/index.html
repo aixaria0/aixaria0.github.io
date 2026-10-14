@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=1" />
+  <link rel="stylesheet" href="./styles.css?v=2" />
 </head>
 <body>
   <canvas id="ambient" aria-hidden="true"></canvas>
@@ -17,7 +17,7 @@
 
   <header class="topbar">
     <a href="#top" class="brand" aria-label="RitualGraph home">
-      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span class="brand-mark ritual-brand-mark"><i></i><i></i><i></i></span>
       <span><b>RITUAL</b><em>GRAPH</em></span>
     </a>
     <nav>
@@ -30,31 +30,47 @@
   </header>
 
   <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <p class="eyebrow">EXECUTABLE THREAT MODELING / SEMANTIC KERNEL v0.1</p>
-        <h1>Threat models should <span>fail builds.</span></h1>
-        <p class="lede">RitualGraph turns security assumptions into a typed graph that can be compiled, perturbed, controlled and checked against explicit invariants. The model stops being a document. It becomes a contract.</p>
-        <div class="hero-actions">
-          <a class="cta primary" href="#simulator">Open simulator <b>↘</b></a>
-          <a class="cta" href="#graph">Inspect graph</a>
-        </div>
-        <div class="hero-proof">
-          <div><small>SCHEMA</small><b>STRICT</b></div>
-          <div><small>ORDER</small><b>DETERMINISTIC</b></div>
-          <div><small>INVARIANTS</small><b>EXECUTABLE</b></div>
-          <div><small>CI FAILURE</small><b>INTENTIONAL</b></div>
-        </div>
-      </div>
+    <section class="ritual-story" id="ritualStory">
+      <div class="story-sticky">
+        <div class="shell story-layout">
+          <div class="story-copy">
+            <p class="eyebrow">EXECUTABLE THREAT MODELING / SEMANTIC KERNEL v0.1</p>
+            <h1>Write the rule.<br><span>Break the state.</span><br>Watch it close.</h1>
+            <p class="lede">RitualGraph is not a static threat document. It compiles a typed security graph, applies a perturbation, measures the state change and decides whether an explicit invariant still holds.</p>
+            <div class="hero-actions">
+              <a class="cta primary" href="#simulator">Open simulator <b>↘</b></a>
+              <a class="cta" href="#graph">Inspect reference graph</a>
+            </div>
+            <div class="story-script" aria-label="Ritual sequence controls">
+              <button class="story-step active" data-story-jump="0"><span>01</span><b>COMPILE</b><small>typed graph enters deterministic order</small></button>
+              <button class="story-step" data-story-jump="1"><span>02</span><b>FRACTURE</b><small>T-POISON pushes provenance below policy</small></button>
+              <button class="story-step" data-story-jump="2"><span>03</span><b>CONTROL</b><small>C-PROVENANCE absorbs covered delta</small></button>
+              <button class="story-step" data-story-jump="3"><span>04</span><b>LOCK</b><small>invariant closes inside the envelope</small></button>
+            </div>
+            <p class="story-hint">SCROLL OR TAP A STAGE · THE VIEWPORT LOCKS WHILE THE CONTRACT EXECUTES</p>
+          </div>
 
-      <div class="hero-visual" aria-label="RitualGraph model flow">
-        <div class="prism p1"></div><div class="prism p2"></div><div class="prism p3"></div>
-        <div class="hero-node n1"><span>01</span><b>ARTIFACT</b><small>state</small></div>
-        <div class="hero-edge e1"><i></i><b>FRACTURE</b></div>
-        <div class="hero-node n2"><span>02</span><b>ARTIFACT′</b><small>mutated</small></div>
-        <div class="hero-edge e2"><i></i><b>INVARIANT</b></div>
-        <div class="hero-node n3"><span>03</span><b>VERDICT</b><small>pass / fail</small></div>
-        <div class="shimmer-line"></div>
+          <div class="story-machine" id="storyMachine" data-stage="0" aria-label="Animated RitualGraph invariant story">
+            <div class="machine-topline"><span>RITUAL / PROVENANCE RITE</span><code id="storyState">COMPILE</code></div>
+            <div class="loom">
+              <div class="loom-grid"></div>
+              <div class="loom-spine"></div>
+              <div class="loom-node ln1"><i></i><span>GRAPH</span><b>A-EXT → A-DATA</b></div>
+              <div class="loom-node ln2"><i></i><span>THREAT</span><b>T-POISON</b></div>
+              <div class="loom-node ln3"><i></i><span>CONTROL</span><b>C-PROVENANCE</b></div>
+              <div class="loom-node ln4"><i></i><span>INVARIANT</span><b>PROVENANCE ≥ 0.80</b></div>
+              <div class="state-packet"><span></span><b id="packetValue">0.95</b></div>
+              <div class="fracture-flash"><i></i><i></i><i></i><b>−0.45</b></div>
+              <div class="control-field"><span></span><b>85% × coverage</b></div>
+              <div class="invariant-lock"><div class="lock-shackle"></div><div class="lock-body"><i></i></div><b>LOCKED</b></div>
+            </div>
+            <div class="machine-readout">
+              <div><small>PROVENANCE</small><strong id="storyMetric">0.95</strong></div>
+              <div><small>SECURITY ENVELOPE</small><strong id="storyVerdict">READY</strong></div>
+              <div><small>SEMANTICS</small><strong>BROWSER STORY / REPO-ALIGNED</strong></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -120,7 +136,7 @@
         </div>
 
         <div class="simulator glass-dark interactive-zone">
-          <div class="interactive-label hot"><i></i> LIVE CONTROLS — CHANGE THESE</div>
+          <div class="interactive-label hot"><i></i> LIVE CONTROLS — TAP / TOGGLE / RUN</div>
           <aside class="sim-sidebar">
             <div class="side-group">
               <p>THREATS <span id="threatCount">1 active</span></p>
@@ -228,6 +244,6 @@
   </main>
 
   <footer><span>RITUALGRAPH / EXECUTABLE THREAT LABORATORY</span><span>STRIDE · CIAP · NIST AML · DAG · INVARIANTS</span><span>PUBLIC RESEARCH SURFACE</span></footer>
-  <script src="./app.js?v=1"></script>
+  <script src="./app.js?v=2"></script>
 </body>
 </html>
