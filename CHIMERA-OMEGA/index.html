@@ -1,222 +1,200 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#07090b" />
-  <meta name="description" content="CHIMERA OMEGA — proof-carrying evidence runtime and bounded verification command center." />
-  <title>CHIMERA OMEGA — Evidence Command Center</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2307090b'/><circle cx='50' cy='50' r='31' fill='none' stroke='%23d9ff68' stroke-width='2'/><text x='50' y='68' font-size='60' text-anchor='middle' fill='%23d9ff68'>Ω</text></svg>">
-  <link rel="stylesheet" href="./styles.css?v=3" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f1efe8">
+  <meta name="description" content="CHIMERA OMEGA — an editorial evidence atlas for bounded verification, divergence, provenance and explicit unknowns.">
+  <title>CHIMERA OMEGA — Evidence Atlas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23f1efe8'/><circle cx='50' cy='50' r='37' fill='none' stroke='%23111111' stroke-width='3'/><text x='50' y='68' font-size='58' text-anchor='middle' fill='%23e23d28'>Ω</text></svg>">
+  <link rel="stylesheet" href="./styles.css?v=4">
 </head>
 <body>
-  <canvas id="field" aria-hidden="true"></canvas>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="scanline" aria-hidden="true"></div>
+  <div class="paper-noise" aria-hidden="true"></div>
+  <div class="cursor-orbit" id="cursorOrbit" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="CHIMERA OMEGA home">
-      <span class="brand-glyph">Ω</span>
-      <span class="brand-copy"><b>CHIMERA</b><em>/ OMEGA</em></span>
-    </a>
-    <nav class="main-nav">
-      <a href="#dashboard">Command Center</a>
-      <a href="#lab">Evidence Lab</a>
-      <a href="#modules">System</a>
-      <a href="#boundary">Boundary</a>
-      <a href="#protocol">Protocol</a>
+  <aside class="index-rail" aria-label="Page index">
+    <a class="rail-brand" href="#top"><span>Ω</span><b>CHIMERA<br>OMEGA</b></a>
+    <nav id="railNav">
+      <a href="#thesis" data-section="thesis"><i>01</i><span>THESIS</span></a>
+      <a href="#casebook" data-section="casebook"><i>02</i><span>CASEBOOK</span></a>
+      <a href="#anatomy" data-section="anatomy"><i>03</i><span>ANATOMY</span></a>
+      <a href="#limits" data-section="limits"><i>04</i><span>LIMITS</span></a>
+      <a href="#protocol" data-section="protocol"><i>05</i><span>PROTOCOL</span></a>
     </nav>
-    <div class="top-state"><i></i><span>BOUNDED / OFFLINE / FAIL-CLOSED</span></div>
+    <div class="rail-foot"><span>v0.2</span><span>OFFLINE</span><span>FAIL-CLOSED</span></div>
+  </aside>
+
+  <header class="mobile-head">
+    <a href="#top">Ω / CHIMERA OMEGA</a>
+    <button id="menuButton" aria-label="Toggle navigation">INDEX</button>
   </header>
 
   <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <p class="kicker">PROOF-CARRYING EVIDENCE RUNTIME · BOUNDED RUST KERNEL · V0.2</p>
-        <h1>The verifier that refuses to know <span>more than its evidence.</span></h1>
-        <p class="hero-lede">OMEGA separates integrity, identity, authorization, observation, reproduction and truth into different predicates—then refuses to silently collapse them into one green check.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#dashboard">Enter command center <b>↘</b></a>
-          <a class="btn ghost" href="#boundary">Inspect epistemic boundary</a>
-        </div>
-        <div class="axioms">
-          <span>HASH ≠ TRUTH</span><span>SIGNATURE ≠ TRUST</span><span>REPLAY ≠ PRODUCTION SAFETY</span>
-        </div>
+    <section class="hero-artboard">
+      <div class="hero-topline"><span>PROOF-CARRYING EVIDENCE RUNTIME</span><span>BOUNDED RUST KERNEL · V0.2</span></div>
+      <div class="hero-title-wrap">
+        <div class="hero-number">00</div>
+        <h1>Evidence<br><em>before</em><br>certainty.</h1>
+        <p class="hero-deck">OMEGA verifies one narrow proposition at a time, records where evidence stops, and refuses to turn missing proof into confidence.</p>
       </div>
 
-      <div class="hero-machine" id="heroMachine" aria-label="OMEGA verification machine visualization">
-        <div class="machine-frame"></div>
-        <div class="machine-grid"></div>
-        <div class="radar radar-a"></div><div class="radar radar-b"></div><div class="radar radar-c"></div>
-        <div class="cross x"></div><div class="cross y"></div>
-        <div class="omega">Ω</div>
-        <div class="orbit-tag t1">CLAIM</div><div class="orbit-tag t2">EVIDENCE</div><div class="orbit-tag t3">POLICY</div><div class="orbit-tag t4">WITNESS</div>
-        <div class="machine-caption"><small>VERIFIER-SELECTED SCOPE</small><strong>trace_equality</strong><span>external truth: UNKNOWN</span></div>
+      <div class="evidence-lens" id="evidenceLens" aria-label="Interactive evidence lens">
+        <svg viewBox="0 0 600 600" role="img" aria-label="Verification dimensions as bounded rings">
+          <circle class="lens-ring ring-outer" cx="300" cy="300" r="250"/>
+          <circle class="lens-ring ring-mid" cx="300" cy="300" r="180"/>
+          <circle class="lens-ring ring-inner" cx="300" cy="300" r="108"/>
+          <path class="lens-axis" d="M50 300H550M300 50V550"/>
+          <path class="lens-wedge confirmed" d="M300 300 L300 50 A250 250 0 0 1 516 175 Z"/>
+          <path class="lens-wedge bounded" d="M300 300 L516 175 A250 250 0 0 1 516 425 Z"/>
+          <path class="lens-wedge unknown" d="M300 300 L516 425 A250 250 0 0 1 84 425 Z"/>
+          <path class="lens-wedge unknown" d="M300 300 L84 425 A250 250 0 0 1 300 50 Z"/>
+        </svg>
+        <div class="lens-center"><span>Ω</span><b id="lensState">BOUNDED</b><small id="lensLabel">trace equality</small></div>
+        <button class="lens-tag lt1" data-lens="integrity">integrity</button>
+        <button class="lens-tag lt2" data-lens="authorization">authorization</button>
+        <button class="lens-tag lt3" data-lens="observation">observation</button>
+        <button class="lens-tag lt4" data-lens="truth">truth</button>
+      </div>
+
+      <div class="hero-bottomline">
+        <a href="#casebook">ENTER THE CASEBOOK ↓</a>
+        <div><span>HASH ≠ TRUTH</span><span>SIGNATURE ≠ TRUST</span><span>REPLAY ≠ PRODUCTION SAFETY</span></div>
+      </div>
+      <div class="hero-omega" aria-hidden="true">Ω</div>
+    </section>
+
+    <section id="thesis" class="chapter thesis-chapter">
+      <div class="chapter-label"><span>01</span><b>THESIS</b></div>
+      <div class="thesis-layout">
+        <blockquote>“No evidence, no claim.<br>Verification is not a boolean.”</blockquote>
+        <div class="thesis-copy">
+          <p>OMEGA’s core is deliberately narrow: compare every supplied observed state-commitment sequence against an expected sequence inside a pinned evidence package.</p>
+          <p>A match supports that artifact-level proposition only. Formal proof, implementation binding, runtime reproduction, independent observation, production reachability and finality remain separate dimensions.</p>
+        </div>
+        <div class="thesis-stamp"><span>CORE PREDICATE</span><b>trace_equality</b><small>one implemented core predicate</small></div>
       </div>
     </section>
 
-    <section class="ticker" aria-label="OMEGA claim boundaries">
-      <div><span>NO EVIDENCE, NO CLAIM.</span><span>UNKNOWN IS A RESULT.</span><span>FIRST DIVERGENCE BEATS MAJORITY VOTE.</span><span>AUTHORIZATION CANNOT TURN A CONTRADICTION INTO TRUTH.</span></div>
-    </section>
-
-    <section id="dashboard" class="section shell dashboard-section">
-      <div class="section-head">
-        <div><p class="kicker">01 / COMMAND CENTER</p><h2>One surface. Every boundary visible.</h2></div>
-        <p>The public surface mirrors the architecture without pretending to be the production verifier. Every interactive result below is a browser model of OMEGA's bounded semantics.</p>
+    <section id="casebook" class="chapter casebook-chapter">
+      <div class="chapter-label"><span>02</span><b>CASEBOOK</b></div>
+      <div class="casebook-head">
+        <h2>Four cases.<br>Four different meanings.</h2>
+        <p>Same verifier. Different evidence. The result changes because the proof boundary changes—not because the interface wants a green state.</p>
       </div>
 
-      <div class="metric-row">
-        <article class="metric"><small>CORE PREDICATE</small><strong data-count="1">1</strong><span>trace_equality</span></article>
-        <article class="metric"><small>NETWORK I/O</small><strong data-count="0">0</strong><span>verifier / observer / witness</span></article>
-        <article class="metric"><small>CLI EXIT CLASSES</small><strong data-count="4">4</strong><span>support · contradiction · reject · insufficient</span></article>
-        <article class="metric inverse"><small>EXTERNAL TRUTH</small><strong>?</strong><span>explicitly unpromoted</span></article>
-      </div>
+      <div class="casebook">
+        <div class="case-tabs" role="tablist">
+          <button class="case-tab active" data-case="match"><span>01</span><b>BOUND MATCH</b><small>locally supported</small></button>
+          <button class="case-tab" data-case="diverge"><span>02</span><b>DIVERGENCE</b><small>contradicted @ index 2</small></button>
+          <button class="case-tab" data-case="tamper"><span>03</span><b>TAMPER</b><small>integrity gate rejects</small></button>
+          <button class="case-tab" data-case="unknown"><span>04</span><b>INSUFFICIENT</b><small>unknown remains unknown</small></button>
+        </div>
 
-      <div class="command-grid">
-        <article class="panel health-panel">
-          <header><div><small>SYSTEM MAP</small><h3>Verification dimensions</h3></div><span class="live-dot">LOCAL MODEL</span></header>
-          <div class="dimension-list" id="dimensionList">
-            <div data-state="confirmed"><span>artifact_integrity</span><b>CONFIRMED</b></div>
-            <div data-state="confirmed"><span>claim_target_binding</span><b>CONFIRMED</b></div>
-            <div data-state="confirmed"><span>provenance_dag</span><b>CONFIRMED</b></div>
-            <div data-state="run"><span>mutation_control</span><b>EXECUTED</b></div>
-            <div data-state="unknown"><span>runtime_reproduction</span><b>UNKNOWN</b></div>
-            <div data-state="unknown"><span>independent_observation</span><b>UNKNOWN</b></div>
-            <div data-state="unknown"><span>production_reachability</span><b>UNKNOWN</b></div>
-            <div data-state="unknown"><span>external_truth</span><b>UNKNOWN</b></div>
+        <div class="case-stage">
+          <div class="trace-ruler">
+            <div class="ruler-head"><span>EXPECTED</span><span>OBSERVED</span><span id="caseExit">EXIT 0</span></div>
+            <div class="trace-lines" id="traceLines"></div>
           </div>
-        </article>
-
-        <article class="panel graph-panel">
-          <header><div><small>EVIDENCE GRAPH</small><h3>Authority never comes from the producer.</h3></div><span>PINNED DAG</span></header>
-          <div class="evidence-graph" id="evidenceGraph">
-            <svg viewBox="0 0 720 360" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M360 45 L360 120"/><path d="M360 120 L140 225"/><path d="M360 120 L360 225"/><path d="M360 120 L580 225"/><path d="M140 225 L360 320"/><path d="M360 225 L360 320"/><path d="M580 225 L360 320"/>
-            </svg>
-            <button class="graph-node claim" data-inspect="claim"><b>CLAIM</b><span>exact proposition</span></button>
-            <button class="graph-node package" data-inspect="package"><b>SEALED PACKAGE</b><span>digest + provenance</span></button>
-            <button class="graph-node evidence e1" data-inspect="artifact"><b>ARTIFACT</b><span>selected bytes</span></button>
-            <button class="graph-node evidence e2" data-inspect="observer"><b>OBSERVER</b><span>corroboration</span></button>
-            <button class="graph-node evidence e3" data-inspect="policy"><b>POLICY</b><span>authorization</span></button>
-            <button class="graph-node verdict" data-inspect="verdict"><b>VERDICT</b><span>bounded only</span></button>
-          </div>
-          <div class="graph-inspector" id="graphInspector"><small>SELECTED NODE</small><b>CLAIM</b><p>The proposition must be explicit before any evidence can support or contradict it.</p></div>
-        </article>
-
-        <article class="panel log-panel">
-          <header><div><small>EVENT STREAM</small><h3>Fail-closed trace</h3></div><button id="clearLog">CLEAR</button></header>
-          <div class="event-log" id="eventLog"></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="lab" class="section lab-section">
-      <div class="shell">
-        <div class="section-head">
-          <div><p class="kicker">02 / ADVERSARIAL LAB</p><h2>Change the evidence. Watch the meaning change.</h2></div>
-          <p>A matching package, a divergent trace, a tampered digest and insufficient evidence produce different outcomes. Nothing is promoted beyond its proof boundary.</p>
-        </div>
-
-        <div class="lab-shell">
-          <aside class="scenario-rail">
-            <p class="rail-label">SCENARIO SELECTOR</p>
-            <button class="scenario active" data-scenario="match"><i class="status s-ok"></i><span><b>Bound match</b><small>expected = observed</small></span><em>01</em></button>
-            <button class="scenario" data-scenario="diverge"><i class="status s-bad"></i><span><b>First divergence</b><small>trace mismatch @ 2</small></span><em>02</em></button>
-            <button class="scenario" data-scenario="tamper"><i class="status s-warn"></i><span><b>Tampered package</b><small>digest boundary breaks</small></span><em>03</em></button>
-            <button class="scenario" data-scenario="unknown"><i class="status s-idle"></i><span><b>Insufficient evidence</b><small>unknown remains unknown</small></span><em>04</em></button>
-            <div class="rail-rule"><small>OMEGA RULE</small><p>A missing predicate is never replaced by confidence.</p></div>
-          </aside>
-
-          <div class="lab-console">
-            <div class="console-head"><div><i></i><i></i><i></i><span>omega://verifier/session</span></div><code id="sessionId">7E4A:TRACE</code></div>
-            <div class="gate-flow">
-              <div class="gate on" data-gate="claim"><span>01</span><b>CLAIM</b><small>trace equality</small></div><i>→</i>
-              <div class="gate on" data-gate="pin"><span>02</span><b>PIN</b><small>caller selected</small></div><i>→</i>
-              <div class="gate on" data-gate="evidence"><span>03</span><b>EVIDENCE</b><small id="evidenceLabel">bound</small></div><i>→</i>
-              <div class="gate on" data-gate="result"><span>04</span><b>RESULT</b><small id="resultLabel">supported</small></div>
-            </div>
-
-            <div class="trace-head"><span><i class="line expected"></i>EXPECTED</span><span><i class="line observed"></i>OBSERVED</span><b>STATE COMMITMENT SEQUENCE</b></div>
-            <div class="trace-grid" id="traceGrid"></div>
-
-            <div class="verdict-grid">
-              <div class="verdict-main"><small>CLAIM STATUS</small><strong id="verdict">LOCALLY SUPPORTED</strong><p id="verdictDetail">All supplied state commitments match under the selected bounded predicate.</p></div>
-              <div class="verdict-meta">
-                <div><small>first divergence</small><b id="divergence">NONE</b></div>
-                <div><small>evidence integrity</small><b id="integrity">CONFIRMED</b></div>
-                <div><small>independent observation</small><b>UNKNOWN</b></div>
-                <div><small>production reachability</small><b>UNKNOWN</b></div>
-              </div>
-            </div>
-            <div class="digest-bar"><small>PACKAGE DIGEST</small><code id="digest">c2fde1c46452cbe0…fee8c1c5</code><button id="mutate">RUN NEGATIVE CONTROL</button></div>
+          <div class="case-verdict">
+            <p class="case-kicker">CLAIM STATUS</p>
+            <h3 id="caseVerdict">LOCALLY SUPPORTED</h3>
+            <p id="caseDetail">All supplied commitments match under the selected bounded predicate.</p>
+            <dl>
+              <div><dt>first divergence</dt><dd id="caseDivergence">NONE</dd></div>
+              <div><dt>integrity</dt><dd id="caseIntegrity">CONFIRMED</dd></div>
+              <div><dt>external truth</dt><dd>UNKNOWN</dd></div>
+              <div><dt>production reachability</dt><dd>UNKNOWN</dd></div>
+            </dl>
+            <button id="falsifyButton">INJECT NEGATIVE CONTROL</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="modules" class="section shell modules-section">
-      <div class="section-head">
-        <div><p class="kicker">03 / SYSTEM REGISTRY</p><h2>One kernel. Multiple evidence boundaries.</h2></div>
-        <p>These modules do not collapse into a universal truth engine. Each one extends a specific evidence boundary while preserving what remains unknown.</p>
-      </div>
-      <div class="module-tabs" id="moduleTabs">
-        <button class="active" data-module="kernel">Kernel</button><button data-module="kv">KV Adapter</button><button data-module="observer">Observer</button><button data-module="witness">Witness</button><button data-module="aether">Aether</button><button data-module="compiler">RChain Compiler</button><button data-module="audit">Audit Archive</button>
-      </div>
-      <div class="module-stage">
-        <div class="module-visual" id="moduleVisual"><div class="mv-ring a"></div><div class="mv-ring b"></div><div class="mv-ring c"></div><div class="mv-core">Ω</div><span class="mv-label l-a">claim</span><span class="mv-label l-b">evidence</span><span class="mv-label l-c">verdict</span></div>
-        <div class="module-copy"><p class="module-index" id="moduleIndex">MODULE 01 / 07</p><h3 id="moduleTitle">Evidence Kernel</h3><p id="moduleDescription">Validates exact claim and target binding, walks a bounded provenance DAG, recomputes trace equality, locates first divergence and executes mutation controls.</p><div class="module-contract"><div><small>ESTABLISHES</small><b id="moduleEstablishes">artifact-level bounded predicate</b></div><div><small>REFUSES TO PROMOTE</small><b id="moduleRefuses">external truth · production finality</b></div></div></div>
-      </div>
-    </section>
-
-    <section id="boundary" class="section boundary-section">
-      <div class="shell boundary-shell">
-        <div class="boundary-title"><p class="kicker">04 / EPISTEMIC FIREWALL</p><h2>What the system can say.<br><span>What it must refuse to say.</span></h2></div>
-        <div class="boundary-cols">
-          <div class="bound-col yes"><header><b>SUPPORTED WHEN EVIDENCED</b><span>bounded</span></header><ul>
-            <li><strong>Artifact integrity</strong><small>selected bytes match the selected digest</small></li>
-            <li><strong>Claim / target binding</strong><small>evidence belongs to the exact reviewed context</small></li>
-            <li><strong>Provenance structure</strong><small>duplicates, dangling refs and cycles fail closed</small></li>
-            <li><strong>First divergence</strong><small>earliest supplied mismatch can be located</small></li>
-            <li><strong>Policy-local authorization</strong><small>when explicit caller-pinned policy supports it</small></li>
-          </ul></div>
-          <div class="bound-col no"><header><b>NOT IMPLIED</b><span>without separate evidence</span></header><ul>
-            <li><strong>External truth</strong><small>internally consistent bytes can still describe a false world</small></li>
-            <li><strong>Independent observation</strong><small>separate process ≠ independent authority</small></li>
-            <li><strong>Production reachability</strong><small>offline artifact ≠ deployed production system</small></li>
-            <li><strong>Consensus finality</strong><small>local evidence ≠ network-wide finality</small></li>
-            <li><strong>Formal proof</strong><small>deterministic tests ≠ mathematical theorem</small></li>
-          </ul></div>
+    <section id="anatomy" class="chapter anatomy-chapter">
+      <div class="chapter-label"><span>03</span><b>ANATOMY</b></div>
+      <div class="anatomy-grid">
+        <div class="anatomy-title"><h2>The system is not a stack.<br>It is a set of boundaries.</h2></div>
+        <div class="anatomy-map" id="anatomyMap">
+          <button class="an-node n-core active" data-anatomy="kernel"><span>01</span><b>EVIDENCE KERNEL</b></button>
+          <button class="an-node n-kv" data-anatomy="kv"><span>02</span><b>KV ADAPTER</b></button>
+          <button class="an-node n-observer" data-anatomy="observer"><span>03</span><b>OBSERVER</b></button>
+          <button class="an-node n-witness" data-anatomy="witness"><span>04</span><b>WITNESS</b></button>
+          <button class="an-node n-aether" data-anatomy="aether"><span>05</span><b>AETHER</b></button>
+          <button class="an-node n-compiler" data-anatomy="compiler"><span>06</span><b>RCHAIN-COMPLIER</b></button>
+          <button class="an-node n-audit" data-anatomy="audit"><span>07</span><b>AUDIT ARCHIVE</b></button>
+          <svg viewBox="0 0 1000 700" aria-hidden="true">
+            <path d="M500 350L160 130M500 350L500 90M500 350L850 140M500 350L170 575M500 350L500 620M500 350L840 575"/>
+          </svg>
+        </div>
+        <div class="anatomy-inspector" id="anatomyInspector">
+          <p>SELECTED / 01</p>
+          <h3>Evidence Kernel</h3>
+          <div class="inspector-rule"></div>
+          <p class="body">Validates claim and target binding, traverses provenance, recomputes trace equality, locates first divergence and runs mutation controls.</p>
+          <div class="inspector-pair"><span>ESTABLISHES</span><b>artifact-level bounded predicate</b></div>
+          <div class="inspector-pair"><span>REFUSES TO PROMOTE</span><b>external truth · finality</b></div>
         </div>
       </div>
     </section>
 
-    <section class="section shell exit-section">
-      <div class="section-head"><div><p class="kicker">05 / CLI SEMANTICS</p><h2>Four exits. Four meanings.</h2></div><p>OMEGA's process result carries semantics instead of compressing every outcome into success/failure.</p></div>
-      <div class="exit-grid">
-        <article><span>0</span><b>SUPPORTED</b><p>Bounded artifact predicate is locally supported, or a narrowly scoped binding is confirmed.</p></article>
-        <article><span>1</span><b>CONTRADICTED</b><p>A structurally valid artifact contradicts the predicate or report replay diverges.</p></article>
-        <article><span>2</span><b>REJECTED</b><p>Input, policy, provenance, integrity, signature, authorization, pin or I/O boundary fails.</p></article>
-        <article><span>3</span><b>INSUFFICIENT</b><p>Package is valid but evidence or controls cannot support the requested proposition.</p></article>
+    <section id="limits" class="chapter limits-chapter">
+      <div class="chapter-label inverse"><span>04</span><b>LIMITS</b></div>
+      <div class="limits-head"><p>THE EPISTEMIC FIREWALL</p><h2>What OMEGA can say<br><em>versus</em><br>what it refuses to imply.</h2></div>
+      <div class="limits-split">
+        <div class="limit-side can">
+          <span class="side-index">A</span>
+          <h3>SUPPORTED<br>WHEN EVIDENCED</h3>
+          <ol>
+            <li><b>Artifact integrity</b><p>Selected bytes match the selected digest.</p></li>
+            <li><b>Claim / target binding</b><p>Evidence belongs to the exact reviewed context.</p></li>
+            <li><b>Provenance structure</b><p>Duplicate, dangling and cyclic references fail closed.</p></li>
+            <li><b>First divergence</b><p>The earliest supplied mismatch can be surfaced.</p></li>
+            <li><b>Policy-local authorization</b><p>Only when separately pinned policy supports it.</p></li>
+          </ol>
+        </div>
+        <div class="limit-side cannot">
+          <span class="side-index">B</span>
+          <h3>NOT IMPLIED<br>WITHOUT SEPARATE EVIDENCE</h3>
+          <ol>
+            <li><b>External truth</b><p>Correct bytes can still describe a false world.</p></li>
+            <li><b>Independent observation</b><p>Separate process does not equal independent authority.</p></li>
+            <li><b>Production reachability</b><p>Offline replay does not establish deployment.</p></li>
+            <li><b>Consensus finality</b><p>A local verifier is not network-wide finality.</p></li>
+            <li><b>Formal proof</b><p>Deterministic tests are not a theorem.</p></li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <section id="protocol" class="section protocol-section">
-      <div class="shell">
-        <div class="section-head"><div><p class="kicker">06 / OMEGA LOOP</p><h2>Verification as a disciplined refusal.</h2></div><p>Every stage narrows the claim. None grants itself authority.</p></div>
-        <div class="protocol-track">
-          <article><span>01</span><b>SELECT</b><p>Define the exact claim, target, assumptions and obligations.</p></article>
-          <article><span>02</span><b>PIN</b><p>Choose source, context, policy, binary and evidence identities externally.</p></article>
-          <article><span>03</span><b>SEAL</b><p>Bind content-addressed artifacts and provenance into a deterministic package.</p></article>
-          <article><span>04</span><b>VERIFY</b><p>Recompute the bounded predicate instead of trusting producer labels.</p></article>
-          <article><span>05</span><b>ATTACK</b><p>Run negative controls and preserve the first failure boundary.</p></article>
-          <article><span>06</span><b>REPORT</b><p>Return supported, contradicted, rejected or unknown—never more.</p></article>
-        </div>
-        <div class="final-callout"><div class="final-omega">Ω</div><div><small>CHIMERA OMEGA</small><h2>Verification is not a boolean.</h2><p>It is a map of exactly what the evidence supports—and the exact edge where certainty must stop.</p></div><a class="btn ghost" href="../">AIXARIA Registry ↗</a></div>
+    <section id="protocol" class="chapter protocol-chapter">
+      <div class="chapter-label"><span>05</span><b>PROTOCOL</b></div>
+      <div class="protocol-heading"><h2>The OMEGA loop is a sequence of refusals.</h2><p>Each phase removes ambiguity. None is allowed to manufacture authority for the next.</p></div>
+      <div class="protocol-score">
+        <article><span>01</span><h3>SELECT</h3><p>Define the exact claim, target, assumptions and obligations.</p><i></i></article>
+        <article><span>02</span><h3>PIN</h3><p>Choose source, context, policy, binary and evidence identities externally.</p><i></i></article>
+        <article><span>03</span><h3>SEAL</h3><p>Bind content-addressed evidence and provenance into a deterministic package.</p><i></i></article>
+        <article><span>04</span><h3>VERIFY</h3><p>Recompute the bounded predicate instead of trusting producer labels.</p><i></i></article>
+        <article><span>05</span><h3>ATTACK</h3><p>Run negative controls and preserve the first failure boundary.</p><i></i></article>
+        <article><span>06</span><h3>REPORT</h3><p>Return supported, contradicted, rejected or insufficient—never more.</p></article>
       </div>
+      <div class="exit-ledger">
+        <div><span>EXIT 0</span><b>SUPPORTED</b></div>
+        <div><span>EXIT 1</span><b>CONTRADICTED</b></div>
+        <div><span>EXIT 2</span><b>REJECTED</b></div>
+        <div><span>EXIT 3</span><b>INSUFFICIENT</b></div>
+      </div>
+    </section>
+
+    <section class="closing-artboard">
+      <div class="closing-word">OMEGA</div>
+      <div class="closing-copy"><p>CHIMERA / OMEGA</p><h2>Certainty ends exactly<br>where the evidence does.</h2><a href="../">RETURN TO AIXARIA REGISTRY ↗</a></div>
+      <div class="closing-symbol">Ω</div>
     </section>
   </main>
 
-  <footer><span>CHIMERA OMEGA / EVIDENCE COMMAND CENTER</span><span>PUBLIC RESEARCH SURFACE</span><span>SOURCE REMAINS CONTROLLED</span></footer>
-  <script src="./app.js?v=3"></script>
+  <footer><span>CHIMERA OMEGA / EVIDENCE ATLAS</span><span>PUBLIC RESEARCH SURFACE</span><span>SOURCE REPOSITORY REMAINS CONTROLLED</span></footer>
+  <script src="./app.js?v=4"></script>
 </body>
 </html>
