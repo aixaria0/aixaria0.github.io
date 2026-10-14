@@ -1,49 +1,52 @@
 const SCENARIOS={
-  match:{verdict:"LOCALLY SUPPORTED",detail:"All supplied state commitments match under the selected bounded predicate.",divergence:"NONE",integrity:"CONFIRMED",result:"supported",evidence:"bound",digest:"c2fde1c46452cbe0…fee8c1c5",cells:["ok","ok","ok","ok"]},
-  diverge:{verdict:"CONTRADICTED",detail:"The evidence remains structurally bound, but observed state diverges from the expected trace.",divergence:"INDEX 2",integrity:"CONFIRMED",result:"contradicted",evidence:"bound",digest:"7434c43f0bb8122a…9d115ea2",cells:["ok","ok","mismatch","mismatch"]},
-  tamper:{verdict:"REJECTED",detail:"Evidence bytes no longer satisfy the externally selected digest boundary. No semantic verdict is promoted.",divergence:"NOT ASSESSED",integrity:"FAILED",result:"rejected",evidence:"tampered",digest:"digest mismatch / fail closed",cells:["tampered","tampered","tampered","tampered"]},
-  unknown:{verdict:"INCONCLUSIVE",detail:"The supplied package does not establish every required dimension. OMEGA preserves the gap instead of guessing.",divergence:"UNKNOWN",integrity:"CONFIRMED",result:"unknown",evidence:"insufficient",digest:"1f4a0e983fca75d1…b3e6b118",cells:["ok","ok","unknown","unknown"]}
+  match:{verdict:"LOCALLY SUPPORTED",detail:"All supplied state commitments match under the selected bounded predicate.",divergence:"NONE",integrity:"CONFIRMED",result:"supported",evidence:"bound",digest:"c2fde1c46452cbe0…fee8c1c5",cells:["ok","ok","ok","ok"],log:["claim digest bound","provenance DAG accepted","4/4 observations match","negative control available"],tone:"good"},
+  diverge:{verdict:"CONTRADICTED",detail:"The package remains structurally valid, but the observed commitment sequence diverges from the expected trace.",divergence:"INDEX 2",integrity:"CONFIRMED",result:"contradicted",evidence:"bound",digest:"7434c43f0bb8122a…9d115ea2",cells:["ok","ok","mismatch","mismatch"],log:["claim digest bound","provenance DAG accepted","first divergence located @ index 2","predicate contradicted"],tone:"bad"},
+  tamper:{verdict:"REJECTED",detail:"Evidence bytes no longer satisfy the caller-selected digest boundary. Semantic verification is not promoted.",divergence:"NOT ASSESSED",integrity:"FAILED",result:"rejected",evidence:"tampered",digest:"digest mismatch / fail closed",cells:["tampered","tampered","tampered","tampered"],log:["package digest mismatch","integrity gate rejected input","semantic predicate not executed","exit class = REJECTED"],tone:"warn"},
+  unknown:{verdict:"INCONCLUSIVE",detail:"The supplied package is structurally acceptable but cannot establish every requested dimension. Unknown remains explicit.",divergence:"UNKNOWN",integrity:"CONFIRMED",result:"insufficient",evidence:"insufficient",digest:"1f4a0e983fca75d1…b3e6b118",cells:["ok","ok","unknown","unknown"],log:["integrity boundary accepted","evidence set incomplete","unsupported dimensions preserved","exit class = INSUFFICIENT"],tone:"neutral"}
 };
-const labels=["s0","s1","s2","s3"];
-const grid=document.querySelector("#trace-grid");
-const verdict=document.querySelector("#verdict");
-const detail=document.querySelector("#verdict-detail");
-const divergence=document.querySelector("#divergence");
-const integrity=document.querySelector("#integrity");
-const resultLabel=document.querySelector("#result-label");
-const evidenceLabel=document.querySelector("#evidence-label");
-const digest=document.querySelector("#digest");
-const mutate=document.querySelector("#mutate");
+const MODULES={
+  kernel:{index:"MODULE 01 / 07",title:"Evidence Kernel",description:"Validates exact claim and target binding, walks a bounded provenance DAG, recomputes trace equality, locates first divergence and executes mutation controls.",establishes:"artifact-level bounded predicate",refuses:"external truth · production finality",labels:["claim","evidence","verdict"]},
+  kv:{index:"MODULE 02 / 07",title:"KV Adapter",description:"Executes a bounded deterministic local state machine, preserves raw snapshots, emits content-addressed receipts and binds them into the existing evidence envelope.",establishes:"raw snapshot → commitment binding",refuses:"independent authority · remote execution",labels:["state","receipt","package"]},
+  observer:{index:"MODULE 03 / 07",title:"Observer Plane",description:"Re-observes the supplied local execution artifact through a separate executable and code path, producing a deterministic corroborating receipt.",establishes:"artifact corroboration",refuses:"operator independence · external truth",labels:["receipt","observer","binding"]},
+  witness:{index:"MODULE 04 / 07",title:"Witness Plane",description:"Attaches offline Ed25519 attribution to exact observer bytes, then evaluates authorization against a separately content-addressed caller-pinned policy.",establishes:"signature + policy-local authorization",refuses:"real-world identity · freshness · truth",labels:["bytes","signature","policy"]},
+  aether:{index:"MODULE 05 / 07",title:"Aether Lineage",description:"Verifies signed operation and lineage bindings from a separately pinned context, recomputing signatures, operation results, policy references and graph/replay bindings.",establishes:"selected lineage bindings",refuses:"full journal chain · core truth promotion",labels:["operation","lineage","context"]},
+  compiler:{index:"MODULE 06 / 07",title:"RCHAIN-COMPLIER Import",description:"Imports pinned assurance packages and native verifier reports while preserving their attributed PASS / FAIL / BLOCKED result without converting that report into an OMEGA verdict.",establishes:"package/report binding",refuses:"signature re-verification · verdict laundering",labels:["report","pin","attribution"]},
+  audit:{index:"MODULE 07 / 07",title:"Audit Archive",description:"Binds saved audit captures to a reviewer-selected manifest and observation roles, preserves raw bytes and reports unavailable artifacts without inventing impact.",establishes:"selected archive integrity",refuses:"finding truth · production impact",labels:["capture","manifest","roles"]}
+};
+const GRAPH_INFO={
+  claim:["CLAIM","The proposition is explicit before any evidence is allowed to support or contradict it."],
+  package:["SEALED PACKAGE","Exact claim, target, assumptions and evidence identities are bound into a deterministic package."],
+  artifact:["ARTIFACT","Selected bytes can establish integrity and local semantics—not the truth of the world they describe."],
+  observer:["OBSERVER","A separate process can corroborate an artifact while independent observation remains a distinct, unproven predicate."],
+  policy:["POLICY","Authorization comes from a separately selected policy; key possession alone grants no authority."],
+  verdict:["VERDICT","OMEGA reports only the bounded dimensions actually established. Missing evidence stays UNKNOWN."]
+};
+const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
+const traceGrid=$("#traceGrid"),verdict=$("#verdict"),verdictDetail=$("#verdictDetail"),divergence=$("#divergence"),integrity=$("#integrity"),resultLabel=$("#resultLabel"),evidenceLabel=$("#evidenceLabel"),digest=$("#digest"),sessionId=$("#sessionId"),eventLog=$("#eventLog");
 let current="match";
-function drawTrace(kind){
-  grid.innerHTML="";
-  SCENARIOS[kind].cells.forEach((state,i)=>{
-    const cell=document.createElement("div");
-    cell.className="trace-cell "+state;
-    cell.innerHTML=`<span>${labels[i].toUpperCase()} / ${String(i).padStart(2,"0")}</span><b>${state==="mismatch"?"Δ DETECTED":state==="tampered"?"INTEGRITY FAIL":state==="unknown"?"NO EVIDENCE":"MATCH"}</b>`;
-    grid.appendChild(cell);
-  });
-}
-function applyScenario(kind){
-  current=kind;
-  document.querySelectorAll(".scenario").forEach(x=>x.classList.toggle("active",x.dataset.scenario===kind));
-  const s=SCENARIOS[kind];
-  verdict.textContent=s.verdict;
-  verdict.style.color=kind==="match"?"#d7ff66":kind==="diverge"?"#ff6e6e":kind==="tamper"?"#ffd15c":"#a4ada7";
-  detail.textContent=s.detail; divergence.textContent=s.divergence; integrity.textContent=s.integrity;
-  resultLabel.textContent=s.result; evidenceLabel.textContent=s.evidence; digest.textContent=s.digest;
-  drawTrace(kind);
-  document.querySelectorAll(".node").forEach(n=>n.classList.add("active"));
-  if(kind==="tamper"){document.querySelector('[data-node="evidence"]').classList.remove("active");document.querySelector('[data-node="verdict"]').classList.remove("active");}
-  document.querySelector("#session-id").textContent="SESSION "+Math.random().toString(16).slice(2,6).toUpperCase();
-}
-document.querySelectorAll(".scenario").forEach(btn=>btn.addEventListener("click",()=>applyScenario(btn.dataset.scenario)));
-mutate.addEventListener("click",()=>{const before=mutate.textContent;mutate.textContent="MUTATION APPLIED";applyScenario(current==="match"?"diverge":"tamper");setTimeout(()=>{mutate.textContent=before},1100);});
-drawTrace("match");
-const canvas=document.querySelector("#field"); const ctx=canvas.getContext("2d"); let w=0,h=0,dpr=1,nodes=[];
-function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+"px";canvas.style.height=h+"px";ctx.setTransform(dpr,0,0,dpr,0,0);const count=Math.max(25,Math.floor(w/42));nodes=Array.from({length:count},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.11,vy:(Math.random()-.5)*.11,r:Math.random()*1.2+.3}));}
-function tick(){ctx.clearRect(0,0,w,h);nodes.forEach(n=>{n.x+=n.vx;n.y+=n.vy;if(n.x<-10)n.x=w+10;if(n.x>w+10)n.x=-10;if(n.y<-10)n.y=h+10;if(n.y>h+10)n.y=-10});for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,dist=Math.hypot(dx,dy);if(dist<150){ctx.strokeStyle=`rgba(140,160,145,${(1-dist/150)*.07})`;ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}nodes.forEach(n=>{ctx.fillStyle="rgba(215,255,102,.15)";ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(tick);}
-addEventListener("resize",resize,{passive:true});resize();tick();
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("seen")}),{threshold:.12});
-document.querySelectorAll(".arch-card,.protocol-step,.bound-col").forEach(el=>{el.style.opacity="0";el.style.transform="translateY(18px)";el.style.transition="opacity .55s ease, transform .55s ease";obs.observe(el)});
-const style=document.createElement("style");style.textContent=".seen{opacity:1!important;transform:none!important}";document.head.appendChild(style);
+function timeStamp(){return new Date().toLocaleTimeString([], {hour12:false,hour:"2-digit",minute:"2-digit",second:"2-digit"});}
+function addLog(kind,message){if(!eventLog)return;const line=document.createElement("div");line.className="event-line "+(kind||"");line.innerHTML=`<time>${timeStamp()}</time><b>${(kind||"info").toUpperCase()}</b><span>${message}</span>`;eventLog.prepend(line);while(eventLog.children.length>12)eventLog.lastElementChild.remove();}
+function drawTrace(kind){traceGrid.innerHTML="";SCENARIOS[kind].cells.forEach((state,i)=>{const cell=document.createElement("div");cell.className="trace-cell "+state;const label=state==="mismatch"?"Δ DETECTED":state==="tampered"?"INTEGRITY FAIL":state==="unknown"?"NO EVIDENCE":"MATCH";cell.innerHTML=`<span>S${i} / ${String(i).padStart(2,"0")}</span><b>${label}</b>`;traceGrid.appendChild(cell);});}
+function applyScenario(kind,log=true){current=kind;const s=SCENARIOS[kind];$$('.scenario').forEach(x=>x.classList.toggle('active',x.dataset.scenario===kind));verdict.textContent=s.verdict;verdict.style.color=kind==="match"?"#d9ff68":kind==="diverge"?"#ff6970":kind==="tamper"?"#ffd15f":"#a6afa8";verdictDetail.textContent=s.detail;divergence.textContent=s.divergence;integrity.textContent=s.integrity;resultLabel.textContent=s.result;evidenceLabel.textContent=s.evidence;digest.textContent=s.digest;sessionId.textContent=Math.random().toString(16).slice(2,6).toUpperCase()+":"+kind.toUpperCase();drawTrace(kind);$$('.gate').forEach(g=>g.classList.add('on'));if(kind==="tamper"){$('[data-gate="evidence"]').classList.remove('on');$('[data-gate="result"]').classList.remove('on');}if(log)s.log.forEach((m,i)=>setTimeout(()=>addLog(s.tone==="bad"?"bad":s.tone==="warn"?"warn":"ok",m),i*80));}
+$$('.scenario').forEach(btn=>btn.addEventListener('click',()=>applyScenario(btn.dataset.scenario)));
+$('#mutate').addEventListener('click',()=>{const btn=$('#mutate');btn.textContent="MUTATION APPLIED";addLog("warn","negative control injected into current evidence path");setTimeout(()=>applyScenario(current==="match"?"diverge":"tamper"),180);setTimeout(()=>btn.textContent="RUN NEGATIVE CONTROL",1200);});
+$('#clearLog').addEventListener('click',()=>{eventLog.innerHTML="";addLog("ok","event stream cleared; verifier state unchanged");});
+
+$$('.graph-node').forEach(node=>node.addEventListener('click',()=>{$$('.graph-node').forEach(n=>n.classList.remove('active'));node.classList.add('active');const [title,body]=GRAPH_INFO[node.dataset.inspect];$('#graphInspector').innerHTML=`<small>SELECTED NODE</small><b>${title}</b><p>${body}</p>`;addLog('ok',`inspected evidence node: ${node.dataset.inspect}`);}));
+
+function setModule(key){const m=MODULES[key];$$('#moduleTabs button').forEach(b=>b.classList.toggle('active',b.dataset.module===key));$('#moduleIndex').textContent=m.index;$('#moduleTitle').textContent=m.title;$('#moduleDescription').textContent=m.description;$('#moduleEstablishes').textContent=m.establishes;$('#moduleRefuses').textContent=m.refuses;const labels=$$('.mv-label');labels.forEach((el,i)=>el.textContent=m.labels[i]);$('#moduleVisual').animate([{opacity:.55,transform:'scale(.985)'},{opacity:1,transform:'scale(1)'}],{duration:320,easing:'ease-out'});addLog('ok',`module selected: ${m.title}`);}
+$$('#moduleTabs button').forEach(btn=>btn.addEventListener('click',()=>setModule(btn.dataset.module)));
+
+applyScenario('match',false);['kernel initialized','trace_equality policy selected','caller pin loaded','public surface ready'].reverse().forEach((m,i)=>setTimeout(()=>addLog('ok',m),i*90));
+
+// Background evidence field
+const canvas=$('#field'),ctx=canvas.getContext('2d');let W=0,H=0,DPR=1,points=[];
+function resize(){DPR=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;canvas.width=W*DPR;canvas.height=H*DPR;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(DPR,0,0,DPR,0,0);const count=Math.max(30,Math.min(90,Math.floor(W/28)));points=Array.from({length:count},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.08,vy:(Math.random()-.5)*.08,r:Math.random()*1.1+.25}));}
+function frame(){ctx.clearRect(0,0,W,H);for(const p of points){p.x+=p.vx;p.y+=p.vy;if(p.x<-20)p.x=W+20;if(p.x>W+20)p.x=-20;if(p.y<-20)p.y=H+20;if(p.y>H+20)p.y=-20}for(let i=0;i<points.length;i++){for(let j=i+1;j<points.length;j++){const a=points[i],b=points[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<145){ctx.strokeStyle=`rgba(151,170,156,${(1-d/145)*.055})`;ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}for(const p of points){ctx.fillStyle='rgba(217,255,104,.13)';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(frame)}
+addEventListener('resize',resize,{passive:true});resize();frame();
+
+// Subtle parallax, disabled for coarse pointers
+const machine=$('#heroMachine');if(matchMedia('(pointer:fine)').matches){machine.addEventListener('pointermove',e=>{const r=machine.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;machine.style.transform=`perspective(900px) rotateY(${x*4}deg) rotateX(${-y*4}deg)`});machine.addEventListener('pointerleave',()=>machine.style.transform='');}
+
+// Reveal sections without hiding content when JS is unavailable
+const revealTargets=$$('.panel,.metric,.module-stage,.bound-col,.exit-grid article,.protocol-track article');if('IntersectionObserver' in window){revealTargets.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)'});const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.transition='opacity .55s ease, transform .55s ease';e.target.style.opacity='1';e.target.style.transform='none';io.unobserve(e.target)}}),{threshold:.08});revealTargets.forEach(el=>io.observe(el));}
