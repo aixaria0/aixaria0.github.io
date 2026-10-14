@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#08090b" />
+  <meta name="description" content="RitualGraph — executable threat modeling for AI systems. Validate, simulate and enforce security invariants." />
+  <title>RitualGraph — Executable Threat Laboratory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=1" />
+</head>
+<body>
+  <canvas id="ambient" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#top" class="brand" aria-label="RitualGraph home">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span><b>RITUAL</b><em>GRAPH</em></span>
+    </a>
+    <nav>
+      <a href="#graph">Graph</a>
+      <a href="#simulator">Simulator</a>
+      <a href="#invariants">Invariants</a>
+      <a href="#epistemics">Epistemics</a>
+    </nav>
+    <button class="run-pill" id="headerRun"><i></i> RUN MODEL</button>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">EXECUTABLE THREAT MODELING / SEMANTIC KERNEL v0.1</p>
+        <h1>Threat models should <span>fail builds.</span></h1>
+        <p class="lede">RitualGraph turns security assumptions into a typed graph that can be compiled, perturbed, controlled and checked against explicit invariants. The model stops being a document. It becomes a contract.</p>
+        <div class="hero-actions">
+          <a class="cta primary" href="#simulator">Open simulator <b>↘</b></a>
+          <a class="cta" href="#graph">Inspect graph</a>
+        </div>
+        <div class="hero-proof">
+          <div><small>SCHEMA</small><b>STRICT</b></div>
+          <div><small>ORDER</small><b>DETERMINISTIC</b></div>
+          <div><small>INVARIANTS</small><b>EXECUTABLE</b></div>
+          <div><small>CI FAILURE</small><b>INTENTIONAL</b></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="RitualGraph model flow">
+        <div class="prism p1"></div><div class="prism p2"></div><div class="prism p3"></div>
+        <div class="hero-node n1"><span>01</span><b>ARTIFACT</b><small>state</small></div>
+        <div class="hero-edge e1"><i></i><b>FRACTURE</b></div>
+        <div class="hero-node n2"><span>02</span><b>ARTIFACT′</b><small>mutated</small></div>
+        <div class="hero-edge e2"><i></i><b>INVARIANT</b></div>
+        <div class="hero-node n3"><span>03</span><b>VERDICT</b><small>pass / fail</small></div>
+        <div class="shimmer-line"></div>
+      </div>
+    </section>
+
+    <section class="marquee"><div><span>WHAT STATE CHANGES?</span><span>WHICH INVARIANT BREAKS?</span><span>CAN A CONTROL PRESERVE IT?</span><span>EVIDENCE STATUS REMAINS EXPLICIT.</span><span>WHAT STATE CHANGES?</span><span>WHICH INVARIANT BREAKS?</span></div></section>
+
+    <section id="graph" class="section shell">
+      <div class="section-head">
+        <div><p class="eyebrow">01 / REFERENCE GRAPH</p><h2>A threat model you can touch.</h2></div>
+        <p>The browser surface mirrors the vendor-neutral molecular AI reference model. Click assets, threats and controls to inspect how security state flows through the pipeline.</p>
+      </div>
+
+      <div class="graph-lab glass interactive-zone">
+        <div class="interactive-label"><i></i> INTERACTIVE GRAPH</div>
+        <div class="graph-toolbar">
+          <div class="segmented" id="graphMode">
+            <button class="active" data-mode="threats">Threat paths</button>
+            <button data-mode="controls">Control coverage</button>
+            <button data-mode="trust">Trust boundaries</button>
+          </div>
+          <div class="legend"><span><i class="l-asset"></i>asset</span><span><i class="l-threat"></i>threat</span><span><i class="l-control"></i>control</span></div>
+        </div>
+
+        <div class="graph-stage" id="graphStage">
+          <svg class="graph-lines" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="edgeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7a5cff"/><stop offset=".55" stop-color="#41e0d0"/><stop offset="1" stop-color="#f4a24b"/></linearGradient></defs>
+            <path class="edge base" d="M120 285 C220 285 230 285 320 285"/>
+            <path class="edge base" d="M400 285 C500 285 510 285 600 285"/>
+            <path class="edge base" d="M680 285 C780 285 790 285 880 285"/>
+            <path class="edge base" d="M960 285 C1030 285 1050 285 1120 285"/>
+            <path class="edge threat-line t-poison" d="M120 250 C220 160 250 160 320 250"/>
+            <path class="edge threat-line t-supply" d="M400 250 C500 160 530 160 600 250"/>
+            <path class="edge threat-line t-injection" d="M680 250 C780 160 810 160 880 250"/>
+            <path class="edge threat-line t-decision" d="M960 250 C1030 185 1070 185 1120 250"/>
+            <path class="edge threat-line t-thermal" d="M680 320 C760 405 815 405 880 320"/>
+          </svg>
+
+          <button class="asset-node a-ext" data-asset="A-EXT"><small>A-EXT</small><b>External<br>Sources</b><em>internet</em></button>
+          <button class="asset-node a-data" data-asset="A-DATA"><small>A-DATA</small><b>Curated<br>Corpus</b><em>data-platform</em></button>
+          <button class="asset-node a-model" data-asset="A-MODEL"><small>A-MODEL</small><b>Foundation<br>Model</b><em>model-platform</em></button>
+          <button class="asset-node a-agent" data-asset="A-AGENT"><small>A-AGENT</small><b>Discovery<br>Agent</b><em>runtime</em></button>
+          <button class="asset-node a-decision" data-asset="A-DECISION"><small>A-DECISION</small><b>Scientific<br>Decision</b><em>human-review</em></button>
+
+          <button class="threat-chip tc1" data-threat="T-POISON"><i></i>T-POISON</button>
+          <button class="threat-chip tc2" data-threat="T-SUPPLY"><i></i>T-SUPPLY</button>
+          <button class="threat-chip tc3" data-threat="T-INJECTION"><i></i>T-INJECTION</button>
+          <button class="threat-chip tc4" data-threat="T-DECISION-DRIFT"><i></i>T-DECISION</button>
+          <button class="threat-chip tc5" data-threat="T-THERMAL-HYP"><i></i>T-THERMAL-HYP</button>
+        </div>
+
+        <div class="graph-inspector" id="graphInspector">
+          <div class="inspect-title"><small>SELECTED OBJECT</small><b id="inspectName">Curated Scientific Corpus</b><span id="inspectType">critical dataset</span></div>
+          <div class="inspect-metrics" id="inspectMetrics"></div>
+          <div class="inspect-copy"><small id="inspectLabel">TRUST BOUNDARY</small><p id="inspectText">data-platform</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulator" class="section sim-section">
+      <div class="shell">
+        <div class="section-head light">
+          <div><p class="eyebrow">02 / SECURITY-STATE SIMULATOR</p><h2>Break it. Defend it. Measure it.</h2></div>
+          <p>This is a browser reimplementation of the reference model’s deterministic metric-reduction logic. Select threats and controls, then run the state transition.</p>
+        </div>
+
+        <div class="simulator glass-dark interactive-zone">
+          <div class="interactive-label hot"><i></i> LIVE CONTROLS — CHANGE THESE</div>
+          <aside class="sim-sidebar">
+            <div class="side-group">
+              <p>THREATS <span id="threatCount">1 active</span></p>
+              <label class="toggle-row"><input type="checkbox" data-threat-toggle="T-POISON" checked><span class="toggle"></span><b>Data poisoning</b><small>established</small></label>
+              <label class="toggle-row"><input type="checkbox" data-threat-toggle="T-SUPPLY"><span class="toggle"></span><b>Artifact substitution</b><small>plausible</small></label>
+              <label class="toggle-row"><input type="checkbox" data-threat-toggle="T-INJECTION"><span class="toggle"></span><b>Indirect injection</b><small>established</small></label>
+              <label class="toggle-row"><input type="checkbox" data-threat-toggle="T-DECISION-DRIFT"><span class="toggle"></span><b>Decision drift</b><small>plausible</small></label>
+              <label class="toggle-row"><input type="checkbox" data-threat-toggle="T-THERMAL-HYP"><span class="toggle"></span><b>Thermal disturbance</b><small>hypothesis</small></label>
+            </div>
+            <div class="side-group controls-group">
+              <p>CONTROLS <span id="controlCount">0 active</span></p>
+              <label class="toggle-row"><input type="checkbox" data-control-toggle="C-PROVENANCE"><span class="toggle"></span><b>Provenance quorum</b><small>85%</small></label>
+              <label class="toggle-row"><input type="checkbox" data-control-toggle="C-SIGNATURE"><span class="toggle"></span><b>Artifact identity gate</b><small>95%</small></label>
+              <label class="toggle-row"><input type="checkbox" data-control-toggle="C-TOOL-GATE"><span class="toggle"></span><b>Least-privilege tool gate</b><small>80%</small></label>
+              <label class="toggle-row"><input type="checkbox" data-control-toggle="C-INDEPENDENT-VERIFY"><span class="toggle"></span><b>Independent verification</b><small>90%</small></label>
+              <label class="toggle-row"><input type="checkbox" data-control-toggle="C-TELEMETRY"><span class="toggle"></span><b>Compute telemetry</b><small>70%</small></label>
+            </div>
+            <div class="preset-row">
+              <button data-preset="unsafe">UNSAFE</button><button data-preset="defended">DEFENDED</button><button data-preset="full">FULL CHAIN</button>
+            </div>
+          </aside>
+
+          <div class="sim-main">
+            <div class="sim-topline">
+              <div><small>RUN ID</small><code id="runId">RG-0001</code></div>
+              <div><small>EXECUTION ORDER</small><b id="executionOrder">T-POISON</b></div>
+              <button id="runSimulation">RUN SIMULATION <span>▶</span></button>
+            </div>
+
+            <div class="state-grid" id="stateGrid"></div>
+
+            <div class="invariant-bar">
+              <div><small>SECURITY ENVELOPE</small><strong id="overallVerdict">FAIL</strong></div>
+              <div class="inv-mini" id="invMini"></div>
+            </div>
+
+            <div class="trace-shell">
+              <div class="trace-head"><span>EXECUTION TRACE</span><button id="clearTrace">CLEAR</button></div>
+              <div id="simTrace" class="sim-trace"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="invariants" class="section shell">
+      <div class="section-head">
+        <div><p class="eyebrow">03 / INVARIANT ENGINE</p><h2>Security becomes a threshold.</h2></div>
+        <p>Each invariant binds one asset, one metric and one explicit threshold. A violated invariant is not a warning label; it can become a CI failure condition.</p>
+      </div>
+
+      <div class="invariant-grid">
+        <article class="inv-card shiny"><span>INV-DATA-PROV</span><h3>Data provenance remains trustworthy.</h3><div class="threshold"><b>provenance</b><strong>≥ 0.80</strong></div><p>Training and retrieval inputs require attributable lineage.</p></article>
+        <article class="inv-card"><span>INV-MODEL-INTEGRITY</span><h3>Promoted model integrity remains high.</h3><div class="threshold"><b>integrity</b><strong>≥ 0.90</strong></div><p>Critical model artifacts must remain identical to approved artifacts.</p></article>
+        <article class="inv-card"><span>INV-AGENT-SURFACE</span><h3>Runtime attack surface remains bounded.</h3><div class="threshold"><b>attack_surface</b><strong>≤ 0.50</strong></div><p>Agent privileges and ingress paths must stay bounded.</p></article>
+        <article class="inv-card"><span>INV-DECISION-INTEGRITY</span><h3>Scientific decision integrity remains high.</h3><div class="threshold"><b>integrity</b><strong>≥ 0.90</strong></div><p>No single model output may silently degrade a critical decision.</p></article>
+      </div>
+
+      <div class="ci-callout">
+        <div class="ci-code"><span>$</span><code>ritualgraph run models/molecular_pipeline.json --threat T-POISON</code><b>exit 3</b></div>
+        <div><small>INTENTIONAL BUILD FAILURE</small><h3>Broken provenance is a failed condition.</h3><p>Activate <code>C-PROVENANCE</code> and the same perturbation remains inside the declared security envelope.</p></div>
+      </div>
+    </section>
+
+    <section id="epistemics" class="section epistemic-section">
+      <div class="shell">
+        <div class="section-head light">
+          <div><p class="eyebrow">04 / EPISTEMIC MODEL</p><h2>Executable does not mean established.</h2></div>
+          <p>RitualGraph keeps evidence status attached to the threat. Research hypotheses can be simulated without being silently promoted to known attack classes.</p>
+        </div>
+
+        <div class="epistemic-spectrum">
+          <button class="epi active" data-epi="established"><span>01</span><b>ESTABLISHED</b><small>known attack class</small></button>
+          <button class="epi" data-epi="plausible"><span>02</span><b>PLAUSIBLE</b><small>mechanism with support</small></button>
+          <button class="epi" data-epi="hypothesis"><span>03</span><b>HYPOTHESIS</b><small>research-only mechanism</small></button>
+          <button class="epi" data-epi="symbolic"><span>04</span><b>SYMBOLIC</b><small>structural placeholder</small></button>
+        </div>
+        <div class="epi-detail" id="epiDetail">
+          <div class="epi-orb"><span>0.95</span></div>
+          <div><small>EVIDENCE STATUS</small><h3>Established attack class</h3><p>Supported by an external standard/reference in the current model. Simulation is still a model of the declared effects—not proof of a specific deployed incident.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell anatomy-section">
+      <div class="section-head"><div><p class="eyebrow">05 / SEMANTIC KERNEL</p><h2>From specification to enforcement.</h2></div><p>v0.1 focuses on typed semantics, deterministic compilation, simulation, controls and invariant evaluation.</p></div>
+      <div class="kernel-flow">
+        <article><span>01</span><b>SPECIFY</b><p>assets · threats · controls · invariants</p></article><i>→</i>
+        <article><span>02</span><b>VALIDATE</b><p>strict schema + referential integrity</p></article><i>→</i>
+        <article><span>03</span><b>COMPILE</b><p>DAG + deterministic execution order</p></article><i>→</i>
+        <article><span>04</span><b>SIMULATE</b><p>normalized security-state transition</p></article><i>→</i>
+        <article><span>05</span><b>ENFORCE</b><p>invariants + CI-friendly exit status</p></article>
+      </div>
+      <div class="future-strip"><small>NEXT LAYERS / NOT PRESENTED AS v0.1 FACT</small><span>evidence adapters</span><span>temporal propagation</span><span>scanner ingestion</span><span>attestation + telemetry adapters</span><span>graph visualization</span></div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-grid"></div>
+      <div class="shell closing-inner">
+        <div class="closing-mark"><span></span><span></span><span></span></div>
+        <div><small>RITUALGRAPH</small><h2>Model the fracture.<br>Enforce the boundary.</h2><p>Security assumptions become inspectable state transitions instead of forgotten prose.</p></div>
+        <a class="cta bright" href="../CHIMERA-ONE/">Back to constellation ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>RITUALGRAPH / EXECUTABLE THREAT LABORATORY</span><span>STRIDE · CIAP · NIST AML · DAG · INVARIANTS</span><span>PUBLIC RESEARCH SURFACE</span></footer>
+  <script src="./app.js?v=1"></script>
+</body>
+</html>
