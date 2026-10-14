@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#09090b" />
+  <meta name="description" content="Aria Fani — adversarial AI security, jailbreak research, cybersecurity, distributed systems, formal methods, quantitative systems, and evidence-oriented engineering." />
+  <meta property="og:title" content="AIXARIA — AIX Aria, The Systems Architect" />
+  <meta property="og:description" content="Adversarial AI security, distributed systems, quantitative research, and evidence-oriented engineering." />
+  <title>AIXARIA — AIX Aria, The Systems Architect</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=11" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand brand-aixaria" href="#top" aria-label="AIXARIA home">
+      <span class="brand-mark wordmark" aria-label="AIXARIA"><span class="wm-ai">AI</span><span class="wm-x">X</span><span class="wm-aria">ARIA</span></span>
+      <span class="brand-word">SYSTEMS ARCHITECT</span>
+    </a>
+    <nav class="nav">
+      <a href="#impact">Impact</a><a href="#atlas">Systems</a><a href="#rchain-stack">RChain</a><a href="#footprint">Footprint</a><a href="#research-index">Index</a>
+    </nav>
+    <div class="status"><i></i><span>LIVE INDEX</span></div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="aixaria-identity">
+          <p class="aixaria-name wordmark wordmark-hero" aria-label="AIXARIA"><span class="wm-ai">AI</span><span class="wm-x">X</span><span class="wm-aria">ARIA</span></p>
+          <p class="aixaria-title">AIX Aria — The Systems Architect</p>
+          <p class="aixaria-quote">“Impossible is only a temporary state before AIX Aria touches it.”</p>
+        </div>
+        <div class="role-strip">AI SECURITY · ADVERSARIAL JAILBREAK RESEARCH · CYBERSECURITY · DISTRIBUTED SYSTEMS · QUANTITATIVE SYSTEMS</div>
+        <h1>Systems that make<br/><em>claims carry evidence.</em></h1>
+        <p class="lede">I work across adversarial AI security and jailbreak research, cybersecurity, distributed consensus, protocol assurance, formal methods, quantitative systems, and quantum computing — with a parallel background in trading and technical-analysis education. The common thread is the same: stress the system, expose the boundary, and make every serious claim carry reproducible evidence.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#atlas">Enter Project Atlas <span>↘</span></a>
+          <a class="btn ghost" href="https://github.com/aixaria0" rel="noreferrer" target="_blank">GitHub ↗</a>
+          <button class="btn ghost persian-trigger" id="openPersian" type="button" aria-haspopup="dialog" aria-controls="persianDialog">فارسی — توضیح ساده</button>
+          <a class="btn ghost" href="https://www.linkedin.com/in/ariafani" rel="noreferrer" target="_blank">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbital o1"></div><div class="orbital o2"></div><div class="orbital o3"></div>
+        <div class="core"><span>AIX</span><small>EVIDENCE CORE</small></div>
+        <span class="node n1">CLAIM</span><span class="node n2">REPLAY</span><span class="node n3">BOUNDARY</span><span class="node n4">PROVENANCE</span>
+      </div>
+      <div class="metric-grid" id="heroMetrics" aria-label="Registry metrics"></div>
+    </section>
+
+    <section class="manifesto shell">
+      <span class="section-index">01</span>
+      <p>Not a flat portfolio. Not a list of repositories.</p>
+      <h2>Claim → Artifact → Reproduction → Boundary</h2>
+      <p class="muted">The registry separates what exists, what was observed, what can be replayed, and what remains unproven.</p>
+    </section>
+
+    <section id="impact" class="section shell resume-impact">
+      <div class="section-head">
+        <div><span class="section-index">02</span><p class="eyebrow">PROOF OF IMPACT</p><h2>Accepted work before vanity metrics.</h2></div>
+        <p class="side-note dark">Upstream acceptance, review activity, reproducible evidence, and shipped systems are ranked above raw repository volume.</p>
+      </div>
+      <div class="impact-grid" id="impactGrid"></div>
+      <p class="impact-note">Measured from repository history and contribution evidence — not self-reported estimates.</p>
+    </section>
+
+    <section id="atlas" class="section shell">
+      <div class="section-head">
+        <div><span class="section-index">03</span><p class="eyebrow">FLAGSHIP SYSTEMS</p><h2>Evidence-ranked public systems.</h2></div>
+        <div class="count-badge"><b id="visibleCount">0</b><span>VISIBLE</span></div>
+      </div>
+      <div class="controls">
+        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search systems, capabilities, technologies…" autocomplete="off" /></label>
+        <div class="filters" id="familyFilters"></div>
+      </div>
+      <div class="project-grid" id="projectGrid"></div>
+      <div class="empty" id="emptyState" hidden>No project matches this evidence query.</div>
+    </section>
+
+    <section id="rchain-stack" class="section rchain-stack-section">
+      <div class="shell">
+        <div class="section-head rchain-stack-head">
+          <div><span class="section-index">04</span><p class="eyebrow">RCHAIN ASSURANCE STACK</p><h2>Four systems. One evidence path.</h2></div>
+          <p class="side-note dark">A research assurance chain spanning adversarial execution, evidence compilation, block forensics, and consensus/provability. Each surface remains independently bounded.</p>
+        </div>
+        <div class="rchain-stack-meta"><span>LIVE SURFACES</span><b id="rchainLiveCount">0 / 4</b><i></i><span>STRESS → STRUCTURE → INSPECT → PROVE</span></div>
+        <div class="rchain-stack" id="rchainStack"></div>
+        <div class="rchain-stack-boundary"><b>BOUNDARY</b><p>This map expresses the research architecture and evidence flow. It does not claim that all four systems form one production-deployed runtime or that PBFT-shaped evidence is RChain Casper finality.</p></div>
+      </div>
+    </section>
+
+    <section id="footprint" class="section shell footprint-section">
+      <div class="section-head">
+        <div><span class="section-index">05</span><p class="eyebrow">ENGINEERING FOOTPRINT</p><h2>The scale behind the systems.</h2></div>
+        <p class="side-note dark">Counts are surfaced with their boundaries. Authored commit sums can overlap across mirrors; Actions runs are sampled rather than lifetime totals.</p>
+      </div>
+      <div class="footprint-grid" id="footprintGrid"></div>
+      <div class="footprint-lower">
+        <div class="language-surface"><p class="eyebrow">LANGUAGE SURFACE</p><div id="languageBars"></div></div>
+        <div class="delta-panel" id="upstreamDelta"></div>
+      </div>
+    </section>
+
+    <section id="private-work" class="section shell private-work-section">
+      <div class="section-head">
+        <div><span class="section-index">06</span><p class="eyebrow">PRIVATE RESEARCH & SYSTEMS</p><h2>Visible identity. Private source.</h2></div>
+        <p class="side-note dark">Names, categories, and curated descriptions are intentionally public. Repository URLs, branches, files, and internal metadata remain undisclosed.</p>
+      </div>
+      <div class="private-featured" id="privateFeatured"></div>
+      <div class="private-index-head"><span>ALL PRIVATE REPOSITORIES</span><b id="privateCount">0</b></div>
+      <div class="private-index" id="privateIndex"></div>
+    </section>
+
+    <section id="research-index" class="section shell research-index-section">
+      <div class="section-head">
+        <div><span class="section-index">07</span><p class="eyebrow">COMPLETE RESEARCH INDEX</p><h2>All repository identities. One surface.</h2></div>
+        <div class="count-badge"><b id="allRepoCount">0</b><span>INDEXED</span></div>
+      </div>
+      <div class="repo-index" id="fullRepoIndex"></div>
+    </section>
+
+    <section id="evidence" class="section evidence-section">
+      <canvas id="evidenceMatrix" class="evidence-matrix" aria-hidden="true"></canvas>
+      <div class="evidence-grid" aria-hidden="true"></div>
+      <div class="shell evidence-shell">
+        <div class="section-head inverse">
+          <div><span class="section-index">08</span><p class="eyebrow">EVIDENCE LENS</p><h2>What the repository can actually support.</h2></div>
+          <p class="side-note">Presence of an artifact is not promoted into a theorem, production guarantee, or correctness claim.</p>
+        </div>
+        <div class="evidence-flow">
+          <article><b>01</b><span>CLAIM</span><p>Bound the statement before measuring it.</p></article>
+          <i>→</i><article><b>02</b><span>ARTIFACT</span><p>Locate tests, code, proofs, traces, or receipts.</p></article>
+          <i>→</i><article><b>03</b><span>REPRODUCTION</span><p>Replay the path and preserve first divergence.</p></article>
+          <i>→</i><article><b>04</b><span>BOUNDARY</span><p>Publish what remains outside the evidence.</p></article>
+        </div>
+        <div class="evidence-stats" id="evidenceStats"></div>
+      </div>
+    </section>
+
+    <section id="contributions" class="section shell">
+      <div class="section-head">
+        <div><span class="section-index">09</span><p class="eyebrow">UPSTREAM ENGINEERING</p><h2>Accepted work, not vanity counts.</h2></div>
+        <p class="side-note dark">Merged code is evidence of accepted change — not proof that every downstream effect is resolved.</p>
+      </div>
+      <div class="contrib-summary" id="contribSummary"></div>
+      <div class="table-wrap"><table><thead><tr><th>Repository</th><th>Authored</th><th>Merged</th><th>Open</th><th>Reviews</th><th>Diff</th></tr></thead><tbody id="contribRows"></tbody></table></div>
+    </section>
+
+    <section class="section shell architecture">
+      <div class="section-head"><div><span class="section-index">10</span><p class="eyebrow">ZERO-INFRA DELIVERY</p><h2>Private source. Public artifact. Your domain.</h2></div></div>
+      <div class="pipeline">
+        <article><small>PRIVATE</small><b>Aix Registry</b><p>curation · evidence · lineage</p></article><span>→</span>
+        <article><small>SANITIZED</small><b>Static Export</b><p>HTML · CSS · JSON · no secrets</p></article><span>→</span>
+        <article><small>PUBLIC</small><b>GitHub Pages</b><p>global delivery · HTTPS · no server</p></article><span>→</span>
+        <article class="domain"><small>ONLY INPUT</small><b>Your Domain</b><p>DNS → Pages</p></article>
+      </div>
+      <p class="architecture-note">No runtime API. No database. No VPS. No separate hosting account. No application server.</p>
+    </section>
+  </main>
+
+  <footer class="footer shell"><div><span class="brand-mark">AIX</span><p><strong>Aria Fani</strong> · Engineering Intelligence Registry</p><a class="footer-link" href="https://www.linkedin.com/in/ariafani" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><div class="footer-meta"><span id="buildStamp">BUILD —</span><span>PUBLIC SURFACE / SANITIZED</span></div></footer>
+
+  <dialog id="projectDialog"><button class="dialog-close" aria-label="Close">×</button><div id="dialogBody"></div></dialog>
+
+  <dialog id="persianDialog" class="persian-dialog" dir="rtl" lang="fa">
+    <button class="persian-close" type="button" aria-label="بستن">×</button>
+    <div class="persian-dialog-content">
+      <span class="persian-kicker">یک توضیح خیلی ساده</span>
+      <h2>من آریا فانی‌ام.</h2>
+      <p class="persian-lead">اگر خیلی ساده بخوام بگم، من سیستم‌های کامپیوتری و هوش مصنوعی را می‌سازم، آزمایش می‌کنم و سعی می‌کنم جاهایی را پیدا کنم که ممکنه اشتباه کنند یا بشه از محدودیت‌هایشان عبور کرد.</p>
+      <p>بخش مهمی از کارم امنیت هوش مصنوعی و امنیت سایبریه؛ یعنی مدل‌های هوش مصنوعی و نرم‌افزارها را تحت فشار می‌ذارم تا ضعف‌ها، راه‌های دور زدن محدودیت‌ها و رفتارهای غیرمنتظره‌شان مشخص بشه. در کنارش روی شبکه‌های پیچیده، پروژه‌های پژوهشی و ابزارهای فنی هم کار می‌کنم.</p>
+      <p>قبل از این مسیر هم سال‌ها در بازارهای مالی فعالیت و تحلیل تکنیکال تدریس کردم. هنوز هم کارهای مربوط به معامله‌گری، مدل‌های کمی و تحلیل داده بخشی از چیزهاییه که می‌سازم و بررسی می‌کنم.</p>
+      <p>چیزی که تقریباً بین همه‌ی کارهام مشترکه اینه که فقط به ظاهر یک نتیجه اعتماد نکنم؛ سعی می‌کنم تستش کنم، مدرک جمع کنم و مشخص کنم دقیقاً کجا درست کار می‌کنه و کجا هنوز معلوم نیست.</p>
+      <p class="persian-note">این سایت خلاصه‌ای از پروژه‌ها و کارهای فنی منه. لازم نیست اصطلاحات انگلیسی پایین صفحه را بفهمید؛ همین توضیح برای اینکه بدونید من در چه حوزه‌ای کار می‌کنم کافیه.</p>
+      <div class="persian-links"><a href="https://www.linkedin.com/in/ariafani" target="_blank" rel="noreferrer">لینکدین</a><a href="https://github.com/aixaria0" target="_blank" rel="noreferrer">گیت‌هاب</a></div>
+    </div>
+  </dialog>
+  <script type="module" src="./app.js?v=11"></script>
+</body>
+</html>
