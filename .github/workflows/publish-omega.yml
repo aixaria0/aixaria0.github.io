@@ -1,0 +1,43 @@
+name: Publish CHIMERA OMEGA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'CHIMERA-OMEGA/**'
+      - '.github/workflows/publish-omega.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-chimera-omega
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate site
+        shell: bash
+        run: |
+          test -s CHIMERA-OMEGA/index.html
+          grep -q 'CHIMERA OMEGA' CHIMERA-OMEGA/index.html
+          grep -q 'Adversarial Lab' CHIMERA-OMEGA/index.html
+          grep -q 'AGPL-3.0-or-later' CHIMERA-OMEGA/index.html
+
+      - name: Publish to gh-pages / CHIMERA-OMEGA
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./CHIMERA-OMEGA
+          destination_dir: CHIMERA-OMEGA
+          keep_files: true
+          user_name: AIX Registry Publisher
+          user_email: actions@users.noreply.github.com
+          commit_message: 'publish: CHIMERA-OMEGA ${{ github.sha }}'
