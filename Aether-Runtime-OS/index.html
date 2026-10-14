@@ -1,18 +1,223 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070b10"><meta name="description" content="Aether Runtime OS — fault-tolerant execution runtime with signed evidence, recovery, journaling and replay."><title>Aether Runtime OS — Recovery Observatory</title><link rel="stylesheet" href="./styles.css?v=1"></head>
-<body><canvas id="space"></canvas><div class="grain"></div>
-<header class="top"><a class="brand" href="#top"><span>A</span><div><b>AETHER</b><small>RUNTIME OS</small></div></a><nav><a href="#runtime">Runtime</a><a href="#recovery">Recovery</a><a href="#replay">Replay</a><a href="#verification">Verification</a></nav><div class="state"><i></i> 3 WORKERS / WAL ACTIVE</div></header>
-<main id="top">
-<section class="hero shell"><div class="hero-copy"><p class="kicker">FAULT-TOLERANT EXECUTION RUNTIME · RUST-FIRST · V0.2</p><h1>Execution should survive the machine that <em>fails beneath it.</em></h1><p>Aether runs real worker processes, persists state transitions, detects a crash, restores worker identity, retries interrupted work, verifies signed evidence and replays the journal until the first inconsistent edge.</p><div class="actions"><a class="btn primary" href="#runtime">Open runtime console ↘</a><a class="btn" href="#replay">Inspect replay model</a></div><div class="pipeline"><span>REQUEST</span><i>→</i><span>SCHEDULE</span><i>→</i><span>EXECUTE</span><i>→</i><span>RECOVER</span><i>→</i><span>JOURNAL</span><i>→</i><span>REPLAY</span></div></div>
-<div class="runtime-orbit"><div class="orbit o1"></div><div class="orbit o2"></div><div class="core"><b>AETHER</b><small>EXECUTION CORE</small></div><div class="worker w1">W1<span>READY</span></div><div class="worker w2">W2<span>READY</span></div><div class="worker w3">W3<span>READY</span></div><div class="pulse p1"></div><div class="pulse p2"></div></div></section>
-<section class="strip"><span>PROCESS ≠ SIMULATION</span><span>CRASH ≠ LOST LINEAGE</span><span>REPLAY ≠ RE-EXECUTION</span><span>SIGNATURE ≠ EXTERNAL TRUTH</span></section>
-<section id="runtime" class="section shell"><div class="section-head"><div><p class="kicker">01 / RUNTIME CONTROL</p><h2>Three processes. One recoverable lineage.</h2></div><p>This public dashboard models the real v0.2 flow. It does not execute the Rust runtime in your browser.</p></div>
-<div class="runtime-grid"><article class="panel workers"><header><div><small>PROCESS TABLE</small><h3>Independent workers</h3></div><button id="killWorker">KILL WORKER-2</button></header><div id="workerTable"></div></article>
-<article class="panel journal"><header><div><small>SQLITE / WAL</small><h3>Append-only event lineage</h3></div><span id="journalCount">SEQ 0008</span></header><div class="journal-stream" id="journalStream"></div></article>
-<article class="panel controller"><header><div><small>CONTROLLER</small><h3>Recovery state machine</h3></div><span class="badge">LOCAL MODEL</span></header><div class="controller-flow" id="controllerFlow"><div class="stage active">REQUEST<small>accepted</small></div><i>→</i><div class="stage active">EXECUTE<small>worker-2</small></div><i>→</i><div class="stage">FAILURE<small>none</small></div><i>→</i><div class="stage">RECOVER<small>idle</small></div><i>→</i><div class="stage">VERIFY<small>pending</small></div></div><div class="controller-status"><small>WORKFLOW STATUS</small><strong id="workflowStatus">RUNNING / HEALTHY</strong><p id="workflowDetail">All worker identities are available and the current transition chain is internally coherent.</p></div></article></div></section>
-<section id="recovery" class="section recovery-section"><div class="shell"><div class="section-head"><div><p class="kicker">02 / RECOVERY SCENARIO</p><h2>Crash the worker. Preserve the evidence.</h2></div><p>The actual demo intentionally kills worker-2, records failure, restarts the same identity, retries the task and verifies the returned evidence before completion.</p></div><div class="recovery-console"><div class="timeline" id="recoveryTimeline"></div><div class="recovery-card"><small>RECOVERY CONTRACT</small><h3>Identity continuity matters.</h3><p>A restart is not treated as success because a new process appeared. The runtime checks stable per-worker signing identity and journals the transition path.</p><div class="identity"><span>worker-2</span><i>ED25519</i><b id="identityState">CONTINUOUS</b></div><button id="runRecovery">RUN CRASH / RECOVERY DEMO</button></div></div></div></section>
-<section id="replay" class="section shell"><div class="section-head"><div><p class="kicker">03 / REPLAY AUDIT</p><h2>History is a contract, not a story.</h2></div><p>Replay reconstructs state from persisted events and checks each edge against the explicit transition contract. It does not re-run worker code.</p></div><div class="replay-shell"><aside><button class="replay-case active" data-case="clean"><b>Clean lineage</b><small>all edges valid</small></button><button class="replay-case" data-case="mutated"><b>Mutated history</b><small>first divergence @ seq 6</small></button><button class="replay-case" data-case="missing"><b>Missing event</b><small>transition gap</small></button><div class="rule"><small>AUDIT RULE</small><p>The first inconsistent edge is surfaced instead of hidden by a later terminal state.</p></div></aside><div class="replay-main"><div class="edge-map" id="edgeMap"></div><div class="replay-verdict"><div><small>REPLAY RESULT</small><strong id="replayVerdict">REPLAY VERIFIED</strong><p id="replayDetail">All persisted edges satisfy the selected transition contract.</p></div><div><small>FIRST DIVERGENCE</small><b id="replayDivergence">NONE</b></div></div></div></div></section>
-<section id="verification" class="section verification-section"><div class="shell"><div class="section-head"><div><p class="kicker">04 / VERIFICATION LADDER</p><h2>Do not call everything “verified.”</h2></div><p>Aether uses a ladder so local runtime evidence cannot silently become independent or formal verification.</p></div><div class="ladder"><article class="done"><span>01</span><b>Claimed</b><p>worker/controller assertion</p></article><article class="done"><span>02</span><b>Observed</b><p>runtime captured event</p></article><article class="done"><span>03</span><b>RuntimeVerified</b><p>signed local evidence checked</p></article><article class="done"><span>04</span><b>ReplayVerified</b><p>journal contract replayed</p></article><article><span>05</span><b>IndependentlyVerified</b><p>not established by v0.2</p></article><article><span>06</span><b>FormallyVerified</b><p>not established by v0.2</p></article></div>
-<div class="final"><div class="aether-mark">A</div><div><small>AETHER RUNTIME OS</small><h2>Survive failure without inventing certainty.</h2><p>Execution, evidence, recovery and replay remain separate enough to inspect.</p></div><a class="btn" href="../CHIMERA-OMEGA/">Next: CHIMERA OMEGA ↗</a></div></div></section></main>
-<footer><span>AETHER RUNTIME OS / RECOVERY OBSERVATORY</span><span>RUST · SQLITE/WAL · ED25519 · REPLAY</span><span>PUBLIC RESEARCH SURFACE</span></footer><script src="./app.js?v=1"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a0611">
+  <meta name="description" content="Aether Runtime OS — fault-tolerant execution runtime with crash recovery, signed evidence, SQLite/WAL journaling and deterministic replay audit.">
+  <title>Aether Runtime OS — Fault Recovery Reactor</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0611'/><path d='M50 12 86 78H14Z' fill='none' stroke='%23a16cff' stroke-width='5'/><circle cx='50' cy='58' r='11' fill='%23ff8a34'/></svg>">
+  <link rel="stylesheet" href="./styles.css?v=6">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ambient a1" aria-hidden="true"></div>
+  <div class="ambient a2" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="sigil">A</span><span><b>AETHER</b><small>RUNTIME OS / V0.2</small></span></a>
+    <nav>
+      <a href="#reactor">Reactor</a>
+      <a href="#faultlab">Fault Lab</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#replay">Replay</a>
+    </nav>
+    <div class="top-status"><i></i><span>3 WORKERS · WAL · ED25519</span></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-spine">
+        <span>FAULT</span><span>TOLERANT</span><span>EXECUTION</span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">RUST-FIRST / MULTI-PROCESS / RECOVERABLE LINEAGE</p>
+        <h1>Make failure <em>observable.</em><br>Make recovery <strong>provable.</strong></h1>
+        <p class="deck">Aether records what ran, preserves identity across restart, verifies signed local evidence, and replays persisted execution history until the first inconsistent edge.</p>
+        <div class="hero-actions">
+          <a href="#reactor" class="cta primary">ENTER REACTOR <b>↘</b></a>
+          <a href="#faultlab" class="cta">INJECT FAILURE</a>
+        </div>
+        <div class="hero-contracts">
+          <span>PROCESS ≠ SIMULATION</span><span>REPLAY ≠ RE-EXECUTION</span><span>SIGNATURE ≠ EXTERNAL TRUTH</span>
+        </div>
+      </div>
+
+      <div class="reactor-hero" id="heroReactor" aria-label="Aether worker topology">
+        <div class="reactor-frame rf1"></div><div class="reactor-frame rf2"></div><div class="reactor-frame rf3"></div>
+        <svg viewBox="0 0 600 600" aria-hidden="true">
+          <path d="M300 300 135 135M300 300 465 135M300 300 300 500"/>
+          <path class="pulse-line p1" d="M300 300 135 135"/><path class="pulse-line p2" d="M300 300 465 135"/><path class="pulse-line p3" d="M300 300 300 500"/>
+        </svg>
+        <div class="reactor-core"><span>A</span><b>CONTROLLER</b><small>lineage authority</small></div>
+        <div class="hero-worker hw1"><i></i><b>W1</b><small>READY</small></div>
+        <div class="hero-worker hw2"><i></i><b>W2</b><small>READY</small></div>
+        <div class="hero-worker hw3"><i></i><b>W3</b><small>READY</small></div>
+        <div class="hero-readout"><small>MODE</small><b id="heroMode">HEALTHY</b><span id="heroReadout">journal coherent / replay ready</span></div>
+      </div>
+    </section>
+
+    <section id="reactor" class="reactor-section">
+      <div class="section-rail"><span>01</span><b>RUNTIME REACTOR</b></div>
+      <div class="reactor-shell">
+        <div class="reactor-head">
+          <div><p class="eyebrow">EXECUTION SURFACE</p><h2>Control the failure boundary.</h2></div>
+          <div class="head-note">Browser simulation of Aether v0.2 semantics. This page does not execute the Rust runtime.</div>
+        </div>
+
+        <div class="metric-deck">
+          <article><small>WORKERS</small><strong>03</strong><span>independent OS processes</span></article>
+          <article><small>JOURNAL</small><strong>WAL</strong><span>persistent transition lineage</span></article>
+          <article><small>EVIDENCE</small><strong>25519</strong><span>stable per-worker signing identity</span></article>
+          <article class="hot"><small>RECOVERY</small><strong id="recoveryMetric">ARMED</strong><span>failure is a first-class event</span></article>
+        </div>
+
+        <div class="cockpit-grid">
+          <article class="cockpit workers-panel">
+            <header><div><small>PROCESS MATRIX</small><h3>Worker topology</h3></div><span class="tag violet">LOCAL</span></header>
+            <div class="worker-matrix" id="workerMatrix"></div>
+            <div class="worker-controls">
+              <button data-fault="kill">KILL W2</button><button data-fault="identity">BREAK IDENTITY</button><button data-fault="tamper">TAMPER RESULT</button><button data-fault="reset">RESET</button>
+            </div>
+          </article>
+
+          <article class="cockpit telemetry-panel">
+            <header><div><small>LIVE TELEMETRY</small><h3>Runtime pressure</h3></div><span id="telemetryState">STABLE</span></header>
+            <div class="telemetry">
+              <div class="dial" style="--p:72"><span><b id="dialExec">72</b>%</span><small>EXECUTION</small></div>
+              <div class="dial orange" style="--p:46"><span><b id="dialJournal">46</b>%</span><small>JOURNAL</small></div>
+              <div class="telemetry-list">
+                <div><span>controller</span><b id="controllerState">RUNNING</b></div>
+                <div><span>worker quorum</span><b id="workerQuorum">3 / 3</b></div>
+                <div><span>identity continuity</span><b id="identityContinuity">CONFIRMED</b></div>
+                <div><span>last evidence</span><b id="lastEvidence">VERIFIED</b></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="cockpit journal-panel">
+            <header><div><small>SQLITE / WAL</small><h3>Execution lineage</h3></div><code id="seqCode">SEQ 0012</code></header>
+            <div class="journal-head"><span>SEQ</span><span>EVENT</span><span>WORKER</span><span>DETAIL</span></div>
+            <div class="journal-stream" id="journalStream"></div>
+          </article>
+
+          <article class="cockpit state-panel">
+            <header><div><small>TRANSITION CONTRACT</small><h3>Controller state</h3></div><span class="tag orange">EXPLICIT</span></header>
+            <div class="state-machine" id="stateMachine">
+              <div class="sm-node done"><span>01</span><b>REQUEST</b><small>accepted</small></div><i>→</i>
+              <div class="sm-node current"><span>02</span><b>EXECUTE</b><small>worker-2</small></div><i>→</i>
+              <div class="sm-node"><span>03</span><b>FAILURE</b><small>none</small></div><i>→</i>
+              <div class="sm-node"><span>04</span><b>RECOVER</b><small>idle</small></div><i>→</i>
+              <div class="sm-node"><span>05</span><b>VERIFY</b><small>pending</small></div>
+            </div>
+            <div class="state-verdict"><small>WORKFLOW STATE</small><strong id="workflowState">RUNNING / HEALTHY</strong><p id="workflowDetail">All three worker identities are available and the current transition chain remains internally coherent.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faultlab" class="fault-section">
+      <div class="section-rail inverse"><span>02</span><b>FAULT INJECTION LAB</b></div>
+      <div class="fault-shell">
+        <div class="fault-heading"><p class="eyebrow">ADVERSARIAL RECOVERY</p><h2>Break it on purpose.</h2><p>Aether's v0.2 demo intentionally kills worker-2. The controller must record failure, restart the same worker identity, retry the interrupted task, verify returned evidence and only then complete.</p></div>
+
+        <div class="fault-console">
+          <aside class="fault-menu">
+            <button class="fault-case active" data-case="crash"><span>01</span><b>Worker crash</b><small>restart + retry</small></button>
+            <button class="fault-case" data-case="identity"><span>02</span><b>Identity drift</b><small>continuity must fail</small></button>
+            <button class="fault-case" data-case="tamper"><span>03</span><b>Output tamper</b><small>signature/hash rejection</small></button>
+            <button class="fault-case" data-case="history"><span>04</span><b>History mutation</b><small>replay divergence</small></button>
+          </aside>
+
+          <div class="fault-stage">
+            <div class="fault-visual" id="faultVisual">
+              <div class="fracture f1"></div><div class="fracture f2"></div><div class="fracture f3"></div>
+              <div class="fault-core"><small>FAULT TARGET</small><strong id="faultTarget">WORKER-2</strong><span id="faultSub">SIGKILL / PROCESS LOSS</span></div>
+              <div class="recovery-ring"><span>DETECT</span><span>RECORD</span><span>RESTART</span><span>RETRY</span><span>VERIFY</span></div>
+            </div>
+            <div class="fault-inspector">
+              <p class="eyebrow">SCENARIO OUTCOME</p>
+              <h3 id="faultTitle">Crash recovery</h3>
+              <p id="faultBody">Process loss is captured as a journal event before any retry. Recovery restores worker-2 under the same signing identity.</p>
+              <div class="fault-facts"><div><small>EXPECTED GATE</small><b id="faultGate">IDENTITY CONTINUITY</b></div><div><small>NEGATIVE CONTROL</small><b id="faultNegative">WRONG KEY MUST FAIL</b></div></div>
+              <button id="runFault">RUN SCENARIO</button>
+              <div class="fault-progress"><i id="faultProgress"></i></div>
+            </div>
+          </div>
+
+          <div class="fault-timeline" id="faultTimeline"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence" class="evidence-section">
+      <div class="section-rail"><span>03</span><b>EVIDENCE ENVELOPE</b></div>
+      <div class="evidence-shell">
+        <div class="evidence-heading"><div><p class="eyebrow">SIGNED LOCAL EVIDENCE</p><h2>Inspect what “verified” actually means.</h2></div><p>Aether distinguishes runtime-local evidence from independent or formal verification. The envelope below is an explanatory model of the fields and checks.</p></div>
+
+        <div class="envelope-grid">
+          <article class="envelope-card">
+            <div class="envelope-seal"><span>A</span><small>ED25519</small></div>
+            <dl>
+              <div><dt>worker_id</dt><dd id="envWorker">worker-2</dd></div>
+              <div><dt>result_hash</dt><dd id="envHash">sha256:8a31…fe90</dd></div>
+              <div><dt>signing_key</dt><dd id="envKey">b8a2…4f11</dd></div>
+              <div><dt>journal_seq</dt><dd id="envSeq">0017</dd></div>
+              <div><dt>signature</dt><dd id="envSig">VALID</dd></div>
+            </dl>
+            <button id="tamperEnvelope">TAMPER OUTPUT</button>
+          </article>
+
+          <article class="check-matrix">
+            <header><small>VERIFICATION MATRIX</small><h3>Independent checks</h3></header>
+            <div id="checkMatrix"></div>
+          </article>
+
+          <article class="scope-card">
+            <p class="eyebrow">CURRENT CLAIM BOUNDARY</p>
+            <div class="scope-orbit"><div class="scope-core">RUNTIME<br>+<br>REPLAY</div><span class="s1">CLAIMED</span><span class="s2">OBSERVED</span><span class="s3">SIGNED</span><span class="s4">REPLAYED</span></div>
+            <p>v0.2 reaches <b>RuntimeVerified + ReplayVerified</b> for local evidence and journal contracts. It does not establish distributed, independent, or formal verification.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="replay" class="replay-section">
+      <div class="section-rail inverse"><span>04</span><b>REPLAY AUDIT</b></div>
+      <div class="replay-shell">
+        <div class="replay-heading"><p class="eyebrow">PERSISTED HISTORY</p><h2>History must survive inspection.</h2><p>Replay reconstructs state from append-only events and checks every edge against the transition contract. It does not re-run worker code.</p></div>
+
+        <div class="replay-workbench">
+          <div class="replay-cases">
+            <button class="replay-case active" data-replay="clean"><span>01</span><b>CLEAN LINEAGE</b><small>all edges satisfy contract</small></button>
+            <button class="replay-case" data-replay="mutated"><span>02</span><b>MUTATED EDGE</b><small>first divergence @ 04</small></button>
+            <button class="replay-case" data-replay="missing"><span>03</span><b>MISSING EVENT</b><small>transition gap</small></button>
+            <button class="replay-case" data-replay="illegal"><span>04</span><b>ILLEGAL TRANSITION</b><small>terminal → execute</small></button>
+          </div>
+          <div class="replay-map" id="replayMap"></div>
+          <div class="replay-result"><div><small>REPLAY RESULT</small><strong id="replayResult">REPLAY VERIFIED</strong><p id="replayText">All persisted edges satisfy the selected runtime transition contract.</p></div><div><small>FIRST DIVERGENCE</small><b id="firstDivergence">NONE</b></div></div>
+        </div>
+
+        <div class="verification-ladder">
+          <div class="ladder-step active"><span>01</span><b>Claimed</b><small>worker/controller assertion</small></div>
+          <div class="ladder-step active"><span>02</span><b>Observed</b><small>runtime-captured event</small></div>
+          <div class="ladder-step active"><span>03</span><b>RuntimeVerified</b><small>signed local evidence checked</small></div>
+          <div class="ladder-step active"><span>04</span><b>ReplayVerified</b><small>journal contract replayed</small></div>
+          <div class="ladder-step"><span>05</span><b>IndependentlyVerified</b><small>not established by v0.2</small></div>
+          <div class="ladder-step"><span>06</span><b>FormallyVerified</b><small>not established by v0.2</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-number">A</div>
+      <div><p class="eyebrow">AETHER RUNTIME OS</p><h2>Failure becomes useful when its lineage survives.</h2><p>Request → schedule → execute → observe → verify → recover → journal → replay.</p></div>
+      <a href="../CHIMERA-OMEGA/">OPEN OMEGA ↗</a>
+    </section>
+  </main>
+
+  <footer><span>AETHER RUNTIME OS / FAULT RECOVERY REACTOR</span><span>RUST · SQLITE/WAL · ED25519 · SHA-256 · REPLAY</span><span>PUBLIC EXPLANATORY SURFACE</span></footer>
+  <script src="./app.js?v=6"></script>
+</body>
+</html>
