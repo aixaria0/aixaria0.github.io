@@ -1,185 +1,125 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#09090b" />
-  <meta name="description" content="Aria Fani — adversarial AI security, jailbreak research, cybersecurity, distributed systems, formal methods, quantitative systems, and evidence-oriented engineering." />
-  <meta property="og:title" content="AIXARIA — AIX Aria, The Systems Architect" />
-  <meta property="og:description" content="Adversarial AI security, distributed systems, quantitative research, and evidence-oriented engineering." />
-  <title>AIXARIA — AIX Aria, The Systems Architect</title>
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=11" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0B0D10">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Sunaria is the independent engineering practice of Aria Fani. Explore intelligent systems, quantum experiments, formal methods, and resilient software through their source and evidence.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sunaria">
+  <meta property="og:title" content="Sunaria — Systems, built with discipline.">
+  <meta property="og:description" content="Aria Fani’s independent engineering laboratory. AI, distributed systems, quantum computing, and formal methods.">
+  <meta property="og:url" content="https://sunaria.si/">
+  <meta property="og:image" content="https://sunaria.si/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sunaria. Engineering intelligent systems with mathematical discipline.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sunaria — Systems, built with discipline.">
+  <meta name="twitter:description" content="The independent engineering laboratory of Aria Fani.">
+  <meta name="twitter:image" content="https://sunaria.si/social-card.png">
+  <title>Sunaria — Aria Fani · Systems & Research</title>
+  <link rel="canonical" href="https://sunaria.si/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css?v=b1389f14cd">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sunaria.si/#website","name":"Sunaria","url":"https://sunaria.si/","description":"Independent engineering and research by Aria Fani.","author":{"@id":"https://sunaria.si/#person"}},{"@type":"Person","@id":"https://sunaria.si/#person","name":"Aria Fani","url":"https://sunaria.si/","sameAs":["https://github.com/aixaria0","https://www.linkedin.com/in/ariafani"]},{"@type":"SoftwareSourceCode","name":"RCHAIN-COMPLIER","description":"Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.","codeRepository":"https://github.com/aixaria0/RCHAIN-COMPLIER","programmingLanguage":["TypeScript"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Omni","description":"Test how robust an investigation is when its evidence is challenged, removed, or replayed.","codeRepository":"https://github.com/aixaria0/Omni","programmingLanguage":["TypeScript","Python"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"VQE Analyzer","description":"Inspect quantum optimization through real statevector evaluation and a stochastic search that retains its best parameters.","codeRepository":"https://github.com/aixaria0/vqe-analyzer","programmingLanguage":["JavaScript","Python"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Aether Runtime","description":"Keep a verifiable record of bounded execution across routing failures, restarts, and replay.","codeRepository":"https://github.com/aixaria0/aether-runtime","programmingLanguage":["Rust","C++"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Nexus Quantum","description":"Explore quantum optimization alongside Lean 4 proof artifacts and explicit mathematical constraints.","codeRepository":"https://github.com/aixaria0/nexus-quantum","programmingLanguage":["Lean 4","Python"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Sovereign Lattice","description":"Explore PBFT-style consensus with cryptographic certificates, durable state, and scoped formal artifacts.","codeRepository":"https://github.com/aixaria0/Sovereign-Lattice","programmingLanguage":["Rust","Lean 4"],"author":{"@id":"https://sunaria.si/#person"}}]}</script>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="topbar">
-    <a class="brand brand-aixaria" href="#top" aria-label="AIXARIA home">
-      <span class="brand-mark wordmark" aria-label="AIXARIA"><span class="wm-ai">AI</span><span class="wm-x">X</span><span class="wm-aria">ARIA</span></span>
-      <span class="brand-word">SYSTEMS ARCHITECT</span>
-    </a>
-    <nav class="nav">
-      <a href="#impact">Impact</a><a href="#atlas">Systems</a><a href="#rchain-stack">RChain</a><a href="#footprint">Footprint</a><a href="#research-index">Index</a>
-    </nav>
-    <div class="status"><i></i><span>LIVE INDEX</span></div>
-  </header>
-
-  <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <div class="aixaria-identity">
-          <p class="aixaria-name wordmark wordmark-hero" aria-label="AIXARIA"><span class="wm-ai">AI</span><span class="wm-x">X</span><span class="wm-aria">ARIA</span></p>
-          <p class="aixaria-title">AIX Aria — The Systems Architect</p>
-          <p class="aixaria-quote">“Impossible is only a temporary state before AIX Aria touches it.”</p>
-        </div>
-        <div class="role-strip">AI SECURITY · ADVERSARIAL JAILBREAK RESEARCH · CYBERSECURITY · DISTRIBUTED SYSTEMS · QUANTITATIVE SYSTEMS</div>
-        <h1>Systems that make<br/><em>claims carry evidence.</em></h1>
-        <p class="lede">I work across adversarial AI security and jailbreak research, cybersecurity, distributed consensus, protocol assurance, formal methods, quantitative systems, and quantum computing — with a parallel background in trading and technical-analysis education. The common thread is the same: stress the system, expose the boundary, and make every serious claim carry reproducible evidence.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#atlas">Enter Project Atlas <span>↘</span></a>
-          <a class="btn ghost" href="https://github.com/aixaria0" rel="noreferrer" target="_blank">GitHub ↗</a>
-          <button class="btn ghost persian-trigger" id="openPersian" type="button" aria-haspopup="dialog" aria-controls="persianDialog">فارسی — توضیح ساده</button>
-          <a class="btn ghost" href="https://www.linkedin.com/in/ariafani" rel="noreferrer" target="_blank">LinkedIn ↗</a>
-        </div>
-      </div>
-      <div class="hero-orbit" aria-hidden="true">
-        <div class="orbital o1"></div><div class="orbital o2"></div><div class="orbital o3"></div>
-        <div class="core"><span>AIX</span><small>EVIDENCE CORE</small></div>
-        <span class="node n1">CLAIM</span><span class="node n2">REPLAY</span><span class="node n3">BOUNDARY</span><span class="node n4">PROVENANCE</span>
-      </div>
-      <div class="metric-grid" id="heroMetrics" aria-label="Registry metrics"></div>
-    </section>
-
-    <section class="manifesto shell">
-      <span class="section-index">01</span>
-      <p>Not a flat portfolio. Not a list of repositories.</p>
-      <h2>Claim → Artifact → Reproduction → Boundary</h2>
-      <p class="muted">The registry separates what exists, what was observed, what can be replayed, and what remains unproven.</p>
-    </section>
-
-    <section id="impact" class="section shell resume-impact">
-      <div class="section-head">
-        <div><span class="section-index">02</span><p class="eyebrow">PROOF OF IMPACT</p><h2>Accepted work before vanity metrics.</h2></div>
-        <p class="side-note dark">Upstream acceptance, review activity, reproducible evidence, and shipped systems are ranked above raw repository volume.</p>
-      </div>
-      <div class="impact-grid" id="impactGrid"></div>
-      <p class="impact-note">Measured from repository history and contribution evidence — not self-reported estimates.</p>
-    </section>
-
-    <section id="atlas" class="section shell">
-      <div class="section-head">
-        <div><span class="section-index">03</span><p class="eyebrow">FLAGSHIP SYSTEMS</p><h2>Evidence-ranked public systems.</h2></div>
-        <div class="count-badge"><b id="visibleCount">0</b><span>VISIBLE</span></div>
-      </div>
-      <div class="controls">
-        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search systems, capabilities, technologies…" autocomplete="off" /></label>
-        <div class="filters" id="familyFilters"></div>
-      </div>
-      <div class="project-grid" id="projectGrid"></div>
-      <div class="empty" id="emptyState" hidden>No project matches this evidence query.</div>
-    </section>
-
-    <section id="rchain-stack" class="section rchain-stack-section">
-      <div class="shell">
-        <div class="section-head rchain-stack-head">
-          <div><span class="section-index">04</span><p class="eyebrow">RCHAIN ASSURANCE STACK</p><h2>Four systems. One evidence path.</h2></div>
-          <p class="side-note dark">A research assurance chain spanning adversarial execution, evidence compilation, block forensics, and consensus/provability. Each surface remains independently bounded.</p>
-        </div>
-        <div class="rchain-stack-meta"><span>LIVE SURFACES</span><b id="rchainLiveCount">0 / 4</b><i></i><span>STRESS → STRUCTURE → INSPECT → PROVE</span></div>
-        <div class="rchain-stack" id="rchainStack"></div>
-        <div class="rchain-stack-boundary"><b>BOUNDARY</b><p>This map expresses the research architecture and evidence flow. It does not claim that all four systems form one production-deployed runtime or that PBFT-shaped evidence is RChain Casper finality.</p></div>
-      </div>
-    </section>
-
-    <section id="footprint" class="section shell footprint-section">
-      <div class="section-head">
-        <div><span class="section-index">05</span><p class="eyebrow">ENGINEERING FOOTPRINT</p><h2>The scale behind the systems.</h2></div>
-        <p class="side-note dark">Counts are surfaced with their boundaries. Authored commit sums can overlap across mirrors; Actions runs are sampled rather than lifetime totals.</p>
-      </div>
-      <div class="footprint-grid" id="footprintGrid"></div>
-      <div class="footprint-lower">
-        <div class="language-surface"><p class="eyebrow">LANGUAGE SURFACE</p><div id="languageBars"></div></div>
-        <div class="delta-panel" id="upstreamDelta"></div>
-      </div>
-    </section>
-
-    <section id="private-work" class="section shell private-work-section">
-      <div class="section-head">
-        <div><span class="section-index">06</span><p class="eyebrow">PRIVATE RESEARCH & SYSTEMS</p><h2>Visible identity. Private source.</h2></div>
-        <p class="side-note dark">Names, categories, and curated descriptions are intentionally public. Repository URLs, branches, files, and internal metadata remain undisclosed.</p>
-      </div>
-      <div class="private-featured" id="privateFeatured"></div>
-      <div class="private-index-head"><span>ALL PRIVATE REPOSITORIES</span><b id="privateCount">0</b></div>
-      <div class="private-index" id="privateIndex"></div>
-    </section>
-
-    <section id="research-index" class="section shell research-index-section">
-      <div class="section-head">
-        <div><span class="section-index">07</span><p class="eyebrow">COMPLETE RESEARCH INDEX</p><h2>All repository identities. One surface.</h2></div>
-        <div class="count-badge"><b id="allRepoCount">0</b><span>INDEXED</span></div>
-      </div>
-      <div class="repo-index" id="fullRepoIndex"></div>
-    </section>
-
-    <section id="evidence" class="section evidence-section">
-      <canvas id="evidenceMatrix" class="evidence-matrix" aria-hidden="true"></canvas>
-      <div class="evidence-grid" aria-hidden="true"></div>
-      <div class="shell evidence-shell">
-        <div class="section-head inverse">
-          <div><span class="section-index">08</span><p class="eyebrow">EVIDENCE LENS</p><h2>What the repository can actually support.</h2></div>
-          <p class="side-note">Presence of an artifact is not promoted into a theorem, production guarantee, or correctness claim.</p>
-        </div>
-        <div class="evidence-flow">
-          <article><b>01</b><span>CLAIM</span><p>Bound the statement before measuring it.</p></article>
-          <i>→</i><article><b>02</b><span>ARTIFACT</span><p>Locate tests, code, proofs, traces, or receipts.</p></article>
-          <i>→</i><article><b>03</b><span>REPRODUCTION</span><p>Replay the path and preserve first divergence.</p></article>
-          <i>→</i><article><b>04</b><span>BOUNDARY</span><p>Publish what remains outside the evidence.</p></article>
-        </div>
-        <div class="evidence-stats" id="evidenceStats"></div>
-      </div>
-    </section>
-
-    <section id="contributions" class="section shell">
-      <div class="section-head">
-        <div><span class="section-index">09</span><p class="eyebrow">UPSTREAM ENGINEERING</p><h2>Accepted work, not vanity counts.</h2></div>
-        <p class="side-note dark">Merged code is evidence of accepted change — not proof that every downstream effect is resolved.</p>
-      </div>
-      <div class="contrib-summary" id="contribSummary"></div>
-      <div class="table-wrap"><table><thead><tr><th>Repository</th><th>Authored</th><th>Merged</th><th>Open</th><th>Reviews</th><th>Diff</th></tr></thead><tbody id="contribRows"></tbody></table></div>
-    </section>
-
-    <section class="section shell architecture">
-      <div class="section-head"><div><span class="section-index">10</span><p class="eyebrow">ZERO-INFRA DELIVERY</p><h2>Private source. Public artifact. Your domain.</h2></div></div>
-      <div class="pipeline">
-        <article><small>PRIVATE</small><b>Aix Registry</b><p>curation · evidence · lineage</p></article><span>→</span>
-        <article><small>SANITIZED</small><b>Static Export</b><p>HTML · CSS · JSON · no secrets</p></article><span>→</span>
-        <article><small>PUBLIC</small><b>GitHub Pages</b><p>global delivery · HTTPS · no server</p></article><span>→</span>
-        <article class="domain"><small>ONLY INPUT</small><b>Your Domain</b><p>DNS → Pages</p></article>
-      </div>
-      <p class="architecture-note">No runtime API. No database. No VPS. No separate hosting account. No application server.</p>
-    </section>
-  </main>
-
-  <footer class="footer shell"><div><span class="brand-mark">AIX</span><p><strong>Aria Fani</strong> · Engineering Intelligence Registry</p><a class="footer-link" href="https://www.linkedin.com/in/ariafani" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><div class="footer-meta"><span id="buildStamp">BUILD —</span><span>PUBLIC SURFACE / SANITIZED</span></div></footer>
-
-  <dialog id="projectDialog"><button class="dialog-close" aria-label="Close">×</button><div id="dialogBody"></div></dialog>
-
-  <dialog id="persianDialog" class="persian-dialog" dir="rtl" lang="fa">
-    <button class="persian-close" type="button" aria-label="بستن">×</button>
-    <div class="persian-dialog-content">
-      <span class="persian-kicker">یک توضیح خیلی ساده</span>
-      <h2>من آریا فانی‌ام.</h2>
-      <p class="persian-lead">اگر خیلی ساده بخوام بگم، من سیستم‌های کامپیوتری و هوش مصنوعی را می‌سازم، آزمایش می‌کنم و سعی می‌کنم جاهایی را پیدا کنم که ممکنه اشتباه کنند یا بشه از محدودیت‌هایشان عبور کرد.</p>
-      <p>بخش مهمی از کارم امنیت هوش مصنوعی و امنیت سایبریه؛ یعنی مدل‌های هوش مصنوعی و نرم‌افزارها را تحت فشار می‌ذارم تا ضعف‌ها، راه‌های دور زدن محدودیت‌ها و رفتارهای غیرمنتظره‌شان مشخص بشه. در کنارش روی شبکه‌های پیچیده، پروژه‌های پژوهشی و ابزارهای فنی هم کار می‌کنم.</p>
-      <p>قبل از این مسیر هم سال‌ها در بازارهای مالی فعالیت و تحلیل تکنیکال تدریس کردم. هنوز هم کارهای مربوط به معامله‌گری، مدل‌های کمی و تحلیل داده بخشی از چیزهاییه که می‌سازم و بررسی می‌کنم.</p>
-      <p>چیزی که تقریباً بین همه‌ی کارهام مشترکه اینه که فقط به ظاهر یک نتیجه اعتماد نکنم؛ سعی می‌کنم تستش کنم، مدرک جمع کنم و مشخص کنم دقیقاً کجا درست کار می‌کنه و کجا هنوز معلوم نیست.</p>
-      <p class="persian-note">این سایت خلاصه‌ای از پروژه‌ها و کارهای فنی منه. لازم نیست اصطلاحات انگلیسی پایین صفحه را بفهمید؛ همین توضیح برای اینکه بدونید من در چه حوزه‌ای کار می‌کنم کافیه.</p>
-      <div class="persian-links"><a href="https://www.linkedin.com/in/ariafani" target="_blank" rel="noreferrer">لینکدین</a><a href="https://github.com/aixaria0" target="_blank" rel="noreferrer">گیت‌هاب</a></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Sunaria home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M25 5H12l-7 7 20 8-7 7H5M5 12h14l6-7M25 20H11l-6 7"/></svg><span>sunaria<span class="brand-dot">.</span></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#research">Research</a><a href="#systems">Systems</a><a href="#about">About</a><a href="https://github.com/aixaria0" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></nav>
+      <span class="header-status"><i aria-hidden="true"></i>Building intelligent systems</span>
+      <button class="menu-toggle" type="button" data-js-only hidden aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span>Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
-  </dialog>
-  <script type="module" src="./app.js?v=11"></script>
+    <nav id="mobile-nav" class="mobile-nav shell" aria-label="Mobile navigation" hidden><a href="#work">Work</a><a href="#research">Research</a><a href="#systems">Systems</a><a href="#about">About</a><a href="https://github.com/aixaria0" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-cross" aria-hidden="true">+</span> INDEPENDENT DEVELOPER · AI SYSTEMS · FORMAL METHODS</p>
+        <h1 id="hero-heading">Engineering<br>intelligent systems<br>with <span>mathematical<br class="desktop-break"> discipline.</span></h1>
+        <p class="hero-description">I’m Aria Fani. I build software that connects intelligent models, verifiable logic, and resilient infrastructure.</p>
+        <div class="hero-actions"><a class="button primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/aixaria0" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <figure class="hero-model">
+        <div class="figure-heading"><span>THE WORKING PRINCIPLE</span><span aria-hidden="true">FIG. 001</span></div>
+        <svg class="principle-map" viewBox="0 0 400 330" role="img" aria-labelledby="principle-title principle-desc">
+          <title id="principle-title">From a question to an inspectable system</title>
+          <desc id="principle-desc">Define a bounded question, execute an experiment, and verify its evidence. Findings feed back into the next question.</desc>
+          <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-opacity=".06"/></pattern><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1l5 3-5 3" fill="none" stroke="#62D9E8"/></marker></defs>
+          <rect width="400" height="330" fill="url(#grid)"/>
+          <g fill="none" stroke="#62D9E8" stroke-width="1.2" marker-end="url(#arrow)"><path d="M106 100v39h93v32"/><path d="M200 222v29h100v-97"/><path d="M300 103V64H156" stroke-dasharray="3 5" opacity=".55"/></g>
+          <g fill="#11151A" stroke="#334149"><rect x="48" y="48" width="109" height="53"/><rect x="145" y="170" width="110" height="53"/><rect x="244" y="102" width="110" height="53"/></g>
+          <g fill="#F2F4F7" font-size="14" font-family="Geist,Arial,sans-serif"><text x="68" y="80">Define</text><text x="165" y="202">Execute</text><text x="264" y="134">Verify</text></g>
+          <g fill="#8D98A5" font-size="9" font-family="monospace"><text x="48" y="37">01 / QUESTION</text><text x="145" y="159">02 / EXPERIMENT</text><text x="244" y="91">03 / EVIDENCE</text><text x="48" y="294">BOUNDED CLAIMS.</text><text x="48" y="310">INSPECTABLE RESULTS.</text></g><circle cx="300" cy="251" r="3" fill="#62D9E8"/>
+        </svg>
+        <figcaption>Every serious claim should have a path back to its evidence.</figcaption>
+      </figure>
+      <div class="hero-bottom"><span>RESEARCH MEETS IMPLEMENTATION</span><p>Python <i>/</i> Rust <i>/</i> Qiskit <i>/</i> Lean 4 <i>/</i> Linux</p><a href="#work" aria-label="Scroll to selected work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="section shell" id="work" aria-labelledby="work-heading">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-heading">Built to be inspected.</h2></div><p>Working systems and research instruments. <br>Source, method, and limitations included.</p></div>
+      <div class="work-controls" data-js-only hidden><div class="filters" role="group" aria-label="Filter projects by domain"><button type="button" class="filter" data-filter="all" aria-pressed="true" aria-controls="project-list">All work</button><button type="button" class="filter" data-filter="AI" aria-pressed="false" aria-controls="project-list">AI</button><button type="button" class="filter" data-filter="Distributed Systems" aria-pressed="false" aria-controls="project-list">Distributed Systems</button><button type="button" class="filter" data-filter="Quantum" aria-pressed="false" aria-controls="project-list">Quantum</button><button type="button" class="filter" data-filter="Formal Verification" aria-pressed="false" aria-controls="project-list">Formal Verification</button><button type="button" class="filter" data-filter="Security" aria-pressed="false" aria-controls="project-list">Security</button><button type="button" class="filter" data-filter="Tooling" aria-pressed="false" aria-controls="project-list">Tooling</button></div><span id="work-count" class="mono" aria-live="polite">6 projects</span></div>
+      <div id="project-list"><article class="project featured" data-project="rchain-complier" data-categories="Distributed Systems|Tooling" data-selected="true"><div class="featured-top"><span>FEATURED / ASSURANCE ENGINE</span><span>RCHAIN-COMPLIER</span></div><div class="featured-grid"><div class="featured-copy"><div class="project-meta"><span class="project-category">Distributed Systems / Tooling</span><span class="project-status">Bounded local runtime</span></div><h3>When a claim needs evidence.</h3><p class="project-description">Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.</p><ul class="technologies" aria-label="Technologies"><li>TypeScript</li><li>Node.js</li><li>Ed25519</li><li>SQLite WAL</li></ul><div class="project-links"><a href="https://github.com/aixaria0/RCHAIN-COMPLIER" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/RCHAIN-COMPLIER/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/docs/ASSURANCE_ENGINE.md" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div></div><figure class="architecture-figure"><div class="figure-heading"><span>ASSURANCE ENGINE / LOCAL TOPOLOGY</span><span>3 PROCESSES</span></div>
+  <svg viewBox="0 0 480 240" role="img" aria-labelledby="arch-title arch-desc"><title id="arch-title">Independent process identities and reviewer-pinned verification</title><desc id="arch-desc">A submitter signs a task and evidence. Two non-submitter processes verify the task against reviewer-supplied pins and return signed receipts to the canonical evidence package. Each identity persists its own journal.</desc>
+  <defs><marker id="case-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1l5 3-5 3" fill="none" stroke="#62d9e8"/></marker></defs>
+  <g fill="none" stroke="#47616c" stroke-width="1.2" marker-end="url(#case-arrow)"><path d="M127 116h49V68h37"/><path d="M176 116v54h37"/><path d="M340 68h27v48"/><path d="M340 170h27v-54"/><path d="M290 26v15" stroke-dasharray="3 3"/></g>
+  <g fill="#11151a" stroke="#34454e"><rect x="12" y="85" width="115" height="63"/><rect x="214" y="41" width="126" height="57"/><rect x="214" y="142" width="126" height="57"/><rect x="390" y="85" width="77" height="63"/></g><path d="M367 116h22" stroke="#62d9e8" stroke-width="1.2" marker-end="url(#case-arrow)"/>
+  <g fill="#f2f4f7" font-size="12" font-family="Geist,Arial,sans-serif"><text x="26" y="109">Submitter</text><text x="229" y="64">Verifier A</text><text x="229" y="166">Verifier B</text><text x="403" y="110">Evidence</text></g>
+  <g fill="#9ba6b3" font-size="10" font-family="monospace"><text x="26" y="131">SIGNED TASK</text><text x="229" y="82">SIGNED RECEIPT</text><text x="229" y="184">SIGNED RECEIPT</text><text x="403" y="131">PACKAGE</text><text x="14" y="172">OWN JOURNAL</text><text x="214" y="222">INDEPENDENT IDENTITIES</text></g><text x="214" y="18" fill="#62d9e8" font-size="10" font-family="monospace">REVIEWER-SUPPLIED PINS</text></svg>
+  <figcaption>Separate local identities and durable journals.<br>Verification policy stays under the reviewer’s control.</figcaption></figure></div>
+  <details class="case-details"><summary>Inside the engineering <span>PROBLEM / APPROACH / DECISIONS</span></summary><div class="case-grid"><div><h4>THE PROBLEM</h4><p>A result alone cannot explain which task ran, who produced it, or whether an independent verifier can reproduce the claim after a restart.</p></div><div><h4>THE APPROACH</h4><p>Three local processes persist separate identities and journals. Signed tasks, evidence, and two verifier receipts form a canonical package that can be checked and replayed.</p></div><div><h4>THE DECISIONS</h4><p>Keep reviewer pins independent of the producer. Bind evidence to a specific operation. Preserve durable state across recovery. Reject tampering with executable checks.</p></div></div><div class="case-boundary"><b>CURRENT SCOPE</b><p>Fixed membership, trusted verifier code, and local transport. A passing task-bound check is not a protocol safety theorem or a production RChain finality claim.</p></div></details></article>
+<article class="project" data-project="omni" data-categories="Security|AI" data-selected="true"><div class="project-meta"><span class="project-category">Security / AI</span><span class="project-status">Research workspace</span></div><h3>Omni</h3><p class="project-description">Test how robust an investigation is when its evidence is challenged, removed, or replayed.</p><ul class="technologies" aria-label="Technologies"><li>TypeScript</li><li>React</li><li>Python</li><li>Ed25519</li></ul><div class="project-links"><a href="https://github.com/aixaria0/Omni" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/Omni/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/Omni/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Public-source collection, competing hypotheses, evidence stress tests, and portable run receipts. Integrity verifies binding and consistency; it does not establish the truth of a source.</p><ul><li>integrity mechanisms demonstrate binding/consistency, not truth</li><li>quantum-adjacent artifacts do not imply quantum advantage</li></ul><a href="https://github.com/aixaria0/Omni/blob/main/README.md" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="vqe-analyzer" data-categories="Quantum|Tooling" data-selected="true"><div class="project-meta"><span class="project-category">Quantum / Tooling</span><span class="project-status">Browser workbench</span></div><h3>VQE Analyzer</h3><p class="project-description">Inspect quantum optimization through real statevector evaluation and a stochastic search that retains its best parameters.</p><ul class="technologies" aria-label="Technologies"><li>JavaScript</li><li>Python</li><li>Statevectors</li></ul><div class="project-links"><a href="https://github.com/aixaria0/vqe-analyzer" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/vqe-analyzer/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/vqe-analyzer#what-runs-here" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>RY/CX circuits, exact-reference comparisons, fresh random starts, and persistent search memory. A simulator for small circuits; hardware execution and quantum advantage are not claimed.</p><ul><li>no quantum-advantage claim</li><li>no hardware-execution claim</li><li>no global-convergence guarantee</li><li>not presented as QAOA</li></ul><a href="https://github.com/aixaria0/vqe-analyzer/blob/main/README.md" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="aether-runtime" data-categories="Distributed Systems|Tooling" data-selected="true"><div class="project-meta"><span class="project-category">Distributed Systems / Tooling</span><span class="project-status">Local runtime</span></div><h3>Aether Runtime</h3><p class="project-description">Keep a verifiable record of bounded execution across routing failures, restarts, and replay.</p><ul class="technologies" aria-label="Technologies"><li>Rust</li><li>C++</li><li>gRPC</li><li>SQLite WAL</li></ul><div class="project-links"><a href="https://github.com/aixaria0/aether-runtime" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/aether-runtime/blob/main/docs/architecture-decisions.md" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>A Rust control plane and C++ route share an operation contract. Persisted Ed25519 identities sign execution receipts. Current admitted operations are echo, ASCII uppercase, and sha256.</p><ul><li>no blanket remote-attestation claim</li><li>no distributed-consensus claim</li><li>no arbitrary-shell safety claim</li></ul><a href="https://github.com/aixaria0/aether-runtime/blob/main/README.md" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="nexus-quantum" data-categories="Quantum|Formal Verification" data-selected="true"><div class="project-meta"><span class="project-category">Quantum / Formal Verification</span><span class="project-status">Research experiment</span></div><h3>Nexus Quantum</h3><p class="project-description">Explore quantum optimization alongside Lean 4 proof artifacts and explicit mathematical constraints.</p><ul class="technologies" aria-label="Technologies"><li>Lean 4</li><li>Python</li><li>Qiskit</li><li>FastAPI</li></ul><div class="project-links"><a href="https://github.com/aixaria0/nexus-quantum" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/nexus-quantum/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/nexus-quantum/blob/main/README_AGENT_VQE.md" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>VQE, zero-noise extrapolation, and spectral/geometric proof experiments. The existence of Lean files is not a certification of the complete system.</p><ul><li>presence of Lean artifacts does not certify the full system</li><li>formal scope must be audited theorem-by-theorem before a formally-verified badge is used</li></ul><a href="https://github.com/aixaria0/nexus-quantum/blob/main/README.md" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="sovereign-lattice" data-categories="Distributed Systems|Formal Verification" data-selected="true"><div class="project-meta"><span class="project-category">Distributed Systems / Formal Verification</span><span class="project-status">Research prototype</span></div><h3>Sovereign Lattice</h3><p class="project-description">Explore PBFT-style consensus with cryptographic certificates, durable state, and scoped formal artifacts.</p><ul class="technologies" aria-label="Technologies"><li>Rust</li><li>BLS12-381</li><li>Lean 4</li><li>WAL</li></ul><div class="project-links"><a href="https://github.com/aixaria0/Sovereign-Lattice" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/Sovereign-Lattice/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/Sovereign-Lattice#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Quorum and view-change logic are studied alongside persistence and selected formal invariants. Research artifacts are not presented as a production consensus guarantee.</p><ul><li>formal artifacts must be scoped precisely</li><li>README-level mathematical claims are not promoted to registry facts without artifact-level verification</li></ul><a href="https://github.com/aixaria0/Sovereign-Lattice" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="aether-runtime-os" data-categories="Distributed Systems" data-selected="false"><div class="project-meta"><span class="project-category">Distributed Systems</span><span class="project-status">Legacy research</span></div><h3>Aether Runtime OS</h3><p class="project-description">Multi-process Aether runtime research generation focused on recovery, signed evidence, WAL-backed persistence, and deterministic replay.</p><ul class="technologies" aria-label="Technologies"><li>GitHub Actions</li><li>Rust</li><li>Rust/Cargo</li></ul><div class="project-links"><a href="https://github.com/aixaria0/Aether-Runtime-OS" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/Aether-Runtime-OS#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Multi-process Aether runtime research generation focused on recovery, signed evidence, WAL-backed persistence, and deterministic replay.</p><ul><li>repository chronology does not establish that this codebase predates aether-runtime</li><li>runtime/replay evidence is not a formal correctness proof</li></ul><a href="https://github.com/aixaria0/Aether-Runtime-OS#readme" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="bookofkings" data-categories="Tooling" data-selected="false"><div class="project-meta"><span class="project-category">Tooling</span><span class="project-status">Local-first application</span></div><h3>Book of Kings</h3><p class="project-description">Local-first Persian cultural reflection product built around a structured daily ritual and Shahnameh-inspired visual language.</p><ul class="technologies" aria-label="Technologies"><li>CSS</li><li>JavaScript</li><li>Next.js</li><li>Node.js</li></ul><div class="project-links"><a href="https://github.com/aixaria0/Bookofkings" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/Bookofkings/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/Bookofkings#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Local-first Persian cultural reflection product built around a structured daily ritual and Shahnameh-inspired visual language.</p><ul><li>consumer/cultural product rather than an engineering-verification claim</li></ul><a href="https://github.com/aixaria0/Bookofkings#readme" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="llm-security-poc" data-categories="Security|AI" data-selected="false"><div class="project-meta"><span class="project-category">Security / AI</span><span class="project-status">Research PoC</span></div><h3>LLM Security PoC</h3><p class="project-description">Forensic red-team proof-of-concept repository for testing security failure modes in dynamic model/application architectures.</p><ul class="technologies" aria-label="Technologies"><li>Python</li></ul><div class="project-links"><a href="https://github.com/aixaria0/llm-security-poc" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/llm-security-poc#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Forensic red-team proof-of-concept repository for testing security failure modes in dynamic model/application architectures.</p><ul><li>PoC labels are not treated as established vulnerabilities in third-party targets without target-specific reproduction and evidence</li><li>severity language remains scoped to demonstrated conditions</li></ul><a href="https://github.com/aixaria0/llm-security-poc#readme" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="rchain-sentinel" data-categories="Distributed Systems|Tooling" data-selected="false"><div class="project-meta"><span class="project-category">Distributed Systems / Tooling</span><span class="project-status">Observation tool</span></div><h3>RChain Sentinel</h3><p class="project-description">Independent observation and evidence layer for RChain node/block behavior.</p><ul class="technologies" aria-label="Technologies"><li>C</li><li>DTrace</li><li>Docker</li><li>Dockerfile</li></ul><div class="project-links"><a href="https://github.com/aixaria0/rchain-sentinel" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/rchain-sentinel/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/rchain-sentinel#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Independent observation and evidence layer for RChain node/block behavior.</p><ul><li>does not claim independent stake-weighted Casper finality</li><li>observations are separated from protocol-level proof</li></ul><a href="https://github.com/aixaria0/rchain-sentinel#readme" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="rholox" data-categories="Distributed Systems" data-selected="false"><div class="project-meta"><span class="project-category">Distributed Systems</span><span class="project-status">Testnet application</span></div><h3>Rholox</h3><p class="project-description">Evidence-first public-testnet product surface for RChain interaction and verification.</p><ul class="technologies" aria-label="Technologies"><li>CSS</li><li>GitHub Actions</li><li>HTML</li><li>JavaScript</li></ul><div class="project-links"><a href="https://github.com/aixaria0/Rholox" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://rholox.com/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/Rholox#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Evidence-first public-testnet product surface for RChain interaction and verification.</p><ul><li>public-testnet scope</li><li>no mainnet status claim</li><li>no production custody claim</li><li>telemetry must come from real node data</li></ul><a href="https://github.com/aixaria0/Rholox#readme" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="rlsenti" data-categories="Distributed Systems|Tooling" data-selected="false"><div class="project-meta"><span class="project-category">Distributed Systems / Tooling</span><span class="project-status">Synthetic workbench</span></div><h3>rlsenti</h3><p class="project-description">Deterministic RChain reality/sentinel workbench for provenance, bounded language experiments, certificates, and synthetic node observations.</p><ul class="technologies" aria-label="Technologies"><li>CSS</li><li>GitHub Actions</li><li>HTML</li><li>JavaScript</li></ul><div class="project-links"><a href="https://github.com/aixaria0/rlsenti" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://aixaria0.github.io/rlsenti/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/rlsenti#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Deterministic RChain reality/sentinel workbench for provenance, bounded language experiments, certificates, and synthetic node observations.</p><ul><li>current workbench data is self-contained/synthetic unless explicitly connected to live evidence</li><li>not represented as an independent live Casper-finality verifier</li></ul><a href="https://github.com/aixaria0/rlsenti#readme" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article>
+<article class="project" data-project="strategic-intelligence-lattice" data-categories="AI" data-selected="false"><div class="project-meta"><span class="project-category">AI</span><span class="project-status">Synthetic research</span></div><h3>Strategic Intelligence Lattice</h3><p class="project-description">Compare adaptive computation policies under equal budgets in a reproducible synthetic decision laboratory.</p><ul class="technologies" aria-label="Technologies"><li>Python</li><li>Streamlit</li><li>Docker</li></ul><div class="project-links"><a href="https://github.com/aixaria0/strategic-intelligence-lattice" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/strategic-intelligence-lattice/blob/main/docs/QUERY_LAB_RESULTS.md" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope & evidence</summary><p>Uniform allocation remains the baseline after exploratory adaptive methods failed to establish a general advantage. Negative and neutral results are retained.</p><ul><li>failed or neutral experiments remain recorded</li><li>experimental wins are not generalized beyond their measured conditions</li></ul><a href="https://github.com/aixaria0/strategic-intelligence-lattice/blob/main/README.md" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article></div>
+      <div id="work-empty" class="empty-state" hidden><h3>No projects in this category yet.</h3><p>Explore the other domains or return to the full selection.</p><button id="reset-filter" class="button" type="button">Show all work</button></div>
+      <div class="work-bottom"><p>Curated from repository documentation. Status describes scope, not a production guarantee.</p><button class="text-link" id="show-all" type="button" data-js-only hidden aria-expanded="false" aria-controls="project-list">Explore all 13 projects <span aria-hidden="true">↗</span></button></div>
+    </section>
+
+    <section class="section research-section" id="research" aria-labelledby="research-heading"><div class="shell">
+      <div class="section-heading"><div><p class="eyebrow">02 / RESEARCH & EXPERIMENTS</p><h2 id="research-heading">Questions worth testing.</h2></div><p>Small, explicit questions. Reproducible methods. <br>Room for a result that says “not yet.”</p></div>
+      <div class="research-list"><article class="research-entry"><div><p class="eyebrow">01 / ADAPTIVE COMPUTATION</p><h3>When does more reasoning help?</h3><span class="research-state">Ongoing research</span></div><dl class="research-method"><dt>Question</dt><dd>Can adaptive allocation improve decisions at the same compute budget?</dd><dt>Method</dt><dd>Synthetic query experiments with fixed-budget comparisons and held-out evaluation.</dd><dt>Status</dt><dd>Uniform remains the baseline; neutral and negative results are preserved.</dd></dl><a href="https://github.com/aixaria0/strategic-intelligence-lattice/blob/main/docs/QUERY_LAB_RESULTS.md" target="_blank" rel="noopener noreferrer" aria-label="Read Strategic Intelligence Lattice research">↗</a></article><article class="research-entry"><div><p class="eyebrow">02 / QUANTUM + FORMAL METHODS</p><h3>Where does the proof end?</h3><span class="research-state">Experimental</span></div><dl class="research-method"><dt>Question</dt><dd>Which mathematical constraints can be expressed separately from a quantum heuristic?</dd><dt>Method</dt><dd>Lean 4 spectral and geometric artifacts alongside VQE and ZNE experiments.</dd><dt>Status</dt><dd>Formal artifacts exist. Their scope must be assessed theorem by theorem.</dd></dl><a href="https://github.com/aixaria0/nexus-quantum/blob/main/README_AGENT_VQE.md" target="_blank" rel="noopener noreferrer" aria-label="Read Nexus Quantum research">↗</a></article><article class="research-entry"><div><p class="eyebrow">03 / VARIATIONAL OPTIMIZATION</p><h3>What does the search retain?</h3><span class="research-state">Interactive experiment</span></div><dl class="research-method"><dt>Question</dt><dd>How do fresh starts and retained parameters change a small-circuit optimization search?</dd><dt>Method</dt><dd>Statevector energy evaluation, adaptive mutations, and exact-reference comparisons.</dd><dt>Status</dt><dd>The workbench retains the best evaluated parameters; convergence is not guaranteed.</dd></dl><a href="https://github.com/aixaria0/vqe-analyzer#what-runs-here" target="_blank" rel="noopener noreferrer" aria-label="Read VQE Analyzer research">↗</a></article></div>
+    </div></section>
+
+    <section class="section shell" id="systems" aria-labelledby="systems-heading">
+      <div class="section-heading"><div><p class="eyebrow">03 / TECHNICAL PRACTICE</p><h2 id="systems-heading">Across the stack. <br>Close to the fundamentals.</h2></div><p>The tools change with the problem. <br>The discipline stays the same.</p></div>
+      <div class="capability-grid">
+        <article><span class="capability-number">01</span><h3>AI & intelligent systems</h3><p>Model workflows, local inference, and decision experiments that make behavior inspectable.</p><ul><li>Local language models</li><li>Agent workflows & model routing</li><li>Retrieval & automation</li><li>Python</li></ul></article>
+        <article><span class="capability-number">02</span><h3>Backend & distributed systems</h3><p>Services that preserve state and explain what happened when something fails.</p><ul><li>Rust & FastAPI</li><li>WebSockets & Redis Streams</li><li>Event-driven architecture</li><li>Fault tolerance & deterministic replay</li></ul></article>
+        <article><span class="capability-number">03</span><h3>Quantum & formal methods</h3><p>Experiments where numerical results and the scope of a proof remain distinct.</p><ul><li>Qiskit & quantum simulation</li><li>Variational optimization</li><li>Lean 4 & theorem proving</li><li>Mathematical modeling</li></ul></article>
+        <article><span class="capability-number">04</span><h3>Infrastructure & security</h3><p>Explicit trust boundaries, reproducible environments, and adversarial testing.</p><ul><li>Linux & Android environments</li><li>CI/CD & GitHub automation</li><li>Zero Trust concepts</li><li>Policy-as-code</li></ul></article>
+      </div>
+    </section>
+
+    <section class="activity-section shell" aria-labelledby="activity-heading">
+      <div class="activity-intro"><p class="eyebrow">04 / FROM THE SOURCE</p><h2 id="activity-heading">Still building.</h2><p>A small view of recent repository activity.</p><div class="activity-status"><i aria-hidden="true"></i><span id="github-status" role="status">Repository snapshot · 2026-10-13</span></div><button class="text-link" id="refresh-activity" type="button" data-js-only hidden>Refresh activity <span aria-hidden="true">↻</span></button></div>
+      <div class="activity-content"><div id="activity-list"><div class="activity-row"><a href="https://github.com/aixaria0/Rholox" target="_blank" rel="noopener noreferrer">Rholox <span aria-hidden="true">↗</span></a><span>JavaScript</span><time datetime="2026-10-12">2026-10-12</time></div><div class="activity-row"><a href="https://github.com/aixaria0/vqe-analyzer" target="_blank" rel="noopener noreferrer">VQE Analyzer <span aria-hidden="true">↗</span></a><span>JavaScript</span><time datetime="2026-10-12">2026-10-12</time></div><div class="activity-row"><a href="https://github.com/aixaria0/Omni" target="_blank" rel="noopener noreferrer">Omni <span aria-hidden="true">↗</span></a><span>TypeScript</span><time datetime="2026-10-10">2026-10-10</time></div><div class="activity-row"><a href="https://github.com/aixaria0/RCHAIN-COMPLIER" target="_blank" rel="noopener noreferrer">RCHAIN-COMPLIER <span aria-hidden="true">↗</span></a><span>TypeScript</span><time datetime="2026-10-10">2026-10-10</time></div></div><a class="text-link activity-github" href="https://github.com/aixaria0?tab=repositories" target="_blank" rel="noopener noreferrer">All public repositories <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section shell about-section" id="about" aria-labelledby="about-heading">
+      <div><p class="eyebrow">05 / THE PERSON BEHIND THE SYSTEMS</p><h2 id="about-heading">Aria Fani<span class="accent">.</span></h2><p class="about-role">Independent developer & systems researcher</p><button id="open-persian" class="text-link" type="button" aria-haspopup="dialog" aria-controls="persian-dialog" data-js-only hidden lang="fa">معرفی به فارسی <span aria-hidden="true">↗</span></button></div>
+      <div class="about-copy"><p class="large-copy">I’m interested in the space between a system that runs and a system we can reason about.</p><p>My work combines practical software engineering with research across AI, distributed systems, quantum computing, formal methods, and security. I build the implementation, test its failure modes, and keep the limits of the result visible.</p><p>Some projects are usable tools. Others are experiments with unresolved questions. Both belong here, with enough context to tell them apart.</p><details class="private-index"><summary>Private research index <span>9 names</span></summary><p>Selected private project identities already published in this portfolio. Source code and internal records remain private.</p><div><span>Aether Forge</span><span>Aix Registry</span><span>AriaTrading</span><span>Chimera-AG</span><span>CHIMERA-OMEGA</span><span>CHIMERA-ONE</span><span>CHIMERA RChain Staking Audit</span><span>Personal LLM Sanctum</span><span>RitualGraph</span></div></details></div>
+    </section>
+
+    <section class="contact-section shell" aria-labelledby="contact-heading"><div><p class="eyebrow">LET’S COMPARE NOTES</p><h2 id="contact-heading">A difficult technical problem?<br>An interesting system to build?</h2><p>I’m interested in thoughtful technical conversations and focused collaborations.</p></div><div class="contact-links"><a href="mailto:mailboxofaria@gmail.com">Email Aria <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/ariafani" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="shell site-footer"><div><a class="brand" href="#top">sunaria<span class="brand-dot">.</span></a><span>Systems, built with discipline.</span></div><div class="footer-meta"><span>© <span id="year">2026</span> Aria Fani</span><span class="mono">SOURCE-LED / INDEPENDENT</span><a href="#top" aria-label="Back to top">↑</a></div></footer>
+  <dialog id="persian-dialog" aria-labelledby="persian-heading" lang="fa" dir="rtl"><button class="dialog-close" type="button" aria-label="بستن معرفی">×</button><p class="eyebrow">SUNARIA / معرفی</p><h2 id="persian-heading">من آریا فانی‌ام.</h2><p>سیستم‌های نرم‌افزاری می‌سازم و بررسی می‌کنم چه زمانی می‌شود به نتیجهٔ آن‌ها اعتماد کرد. کارم از هوش مصنوعی و سیستم‌های توزیع‌شده تا محاسبات کوانتومی، روش‌های صوری و امنیت امتداد دارد.</p><p>برای من فقط اجرا شدن یک برنامه کافی نیست؛ باید بشود رفتار آن را بررسی کرد، آزمایش را دوباره انجام داد و مرز بین نتیجهٔ اثبات‌شده و سؤالِ باز را روشن نگه داشت.</p><p>در این سایت، ابزارهای قابل استفاده و پروژه‌های پژوهشی را کنار هم می‌بینید؛ هرکدام همراه با کد، روش و محدودیت‌های خودش.</p><a class="text-link" href="https://github.com/aixaria0" target="_blank" rel="noopener noreferrer">پروژه‌ها در گیت‌هاب ↗</a></dialog>
+  <noscript><p class="shell no-script">All project descriptions and source links are available without JavaScript. Enable JavaScript for category filters and live activity updates.</p></noscript>
+  <script type="module" src="./app.js?v=b1389f14cd"></script>
 </body>
 </html>
