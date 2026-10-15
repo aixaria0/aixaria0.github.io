@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07080b">
+  <meta name="description" content="Fracture Archive — an interactive research desk across post-quantum cryptography, holography, Hawking radiation and primordial cosmology.">
+  <title>Fracture Archive — Research Under Glass</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=1">
+</head>
+<body>
+  <canvas id="ambient" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Fracture Archive home">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><b>FRACTURE</b><em>ARCHIVE</em></span>
+    </a>
+    <nav>
+      <a href="#instrument">Instrument</a>
+      <a href="#volumes">Volumes</a>
+      <a href="#boundaries">Boundaries</a>
+    </nav>
+    <a class="top-open" href="#instrument"><span></span> OPEN DESK</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker">LOCAL-FIRST RESEARCH DESK · FRACTURE ARCHIVE</p>
+        <h1>Research,<br><i>under glass.</i></h1>
+        <p class="hero-lede">Five volumes. Four interactive instruments. One rule: a formula, a toy model, and a schematic claim never masquerade as the same kind of evidence.</p>
+        <div class="hero-actions">
+          <a class="action action-primary" href="#instrument">ENTER INSTRUMENT <span>↘</span></a>
+          <a class="action" href="#volumes">OPEN THE ARCHIVE</a>
+        </div>
+        <div class="hero-facts">
+          <div><small>MODE</small><b>LOCAL / BROWSER</b></div>
+          <div><small>DOMAINS</small><b>PQC · QG · PBH</b></div>
+          <div><small>STATE</small><b>INSPECTABLE</b></div>
+        </div>
+      </div>
+
+      <div class="fracture-theatre" id="fractureTheatre" aria-label="Interactive volume fracture">
+        <div class="theatre-label"><span>SELECT A FRACTURE</span><b id="heroIndex">I / COMPRESSION</b></div>
+        <div class="glass-plane">
+          <button class="shard s1 active" data-volume="compression"><span>I</span><small>COMPRESSION</small></button>
+          <button class="shard s2" data-volume="pqc"><span>II</span><small>POST-QUANTUM</small></button>
+          <button class="shard s3" data-volume="holography"><span>III</span><small>HOLOGRAPHY</small></button>
+          <button class="shard s4" data-volume="hawking"><span>IV</span><small>MICROSTATES</small></button>
+          <button class="shard s5" data-volume="pbh"><span>V</span><small>PRIMORDIAL</small></button>
+          <svg class="fracture-svg" viewBox="0 0 720 720" preserveAspectRatio="none" aria-hidden="true">
+            <path class="faint" d="M348 -10 337 112 381 190 329 285 369 361 320 461 358 547 337 730"/>
+            <path class="hot" d="M348 -10 337 112 381 190 329 285 369 361 320 461 358 547 337 730"/>
+            <path class="branch b1" d="M381 190 488 142 603 172"/>
+            <path class="branch b2" d="M329 285 221 240 118 273"/>
+            <path class="branch b3" d="M369 361 484 414 620 387"/>
+            <path class="branch b4" d="M320 461 207 515 91 493"/>
+          </svg>
+          <div class="refraction r1"></div><div class="refraction r2"></div><div class="refraction r3"></div>
+          <div class="lens-readout">
+            <small id="heroType">MODEL CLASS</small>
+            <strong id="heroStatus">ARCHIVE / FIELD NOTES</strong>
+            <p id="heroDetail">Compression opens the archive: pruning, distillation and quantization recorded as engineering trade-offs, not slogans.</p>
+          </div>
+        </div>
+        <div class="theatre-foot"><span>MOVE / TAP TO REFRACT</span><span>01—05</span></div>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-label="Research boundary strip">
+      <div><span>REFERENCE PARAMETERS</span><i></i><span>FORMULA-BASED</span><i></i><span>EDUCATIONAL</span><i></i><span>SCHEMATIC</span><i></i><span>LOCAL STATE</span><i></i><span>REFERENCE PARAMETERS</span></div>
+    </section>
+
+    <section id="instrument" class="instrument-section">
+      <div class="section-intro wrap">
+        <div><p class="kicker">01 / CROSS-DOMAIN INSTRUMENT</p><h2>Touch the assumptions.<br><i>Watch the scale move.</i></h2></div>
+        <p>This public surface mirrors bounded browser models from the workspace. Change the controls; results update immediately. It does not call a live scientific service or a production cryptosystem.</p>
+      </div>
+
+      <div class="instrument-wrap wrap">
+        <div class="instrument-shell">
+          <aside class="mode-rail" aria-label="Instrument mode">
+            <button class="mode active" data-mode="hawking"><span>H</span><b>HAWKING</b><small>formula + toy spectrum</small></button>
+            <button class="mode" data-mode="holography"><span>Q</span><b>HOLOGRAPHY</b><small>schematic saddles</small></button>
+            <button class="mode" data-mode="pbh"><span>P</span><b>PBH</b><small>schematic envelope</small></button>
+            <button class="mode" data-mode="pqc"><span>K</span><b>PQC</b><small>educational transform</small></button>
+          </aside>
+
+          <div class="control-bay">
+            <div class="interactive-flag"><i></i> LIVE CONTROLS · DRAG / TYPE / TOGGLE</div>
+            <div class="bay-head">
+              <div><small>ACTIVE INSTRUMENT</small><h3 id="modeTitle">Hawking spectrum desk</h3></div>
+              <span class="model-tag" id="modeTag">FORMULA + TOY</span>
+            </div>
+            <div id="controlsHost" class="controls-host"></div>
+            <div class="preset-line" id="presetLine"></div>
+            <div class="boundary-note"><small>BOUNDARY</small><p id="boundaryCopy">Temperature and lifetime use compact formulas. Channel curves are qualitative graybody-inspired weights, not precision emission tables.</p></div>
+          </div>
+
+          <div class="scope-bay">
+            <div class="scope-top">
+              <div><small>LIVE READOUT</small><b id="scopeLabel">M = 10^15.00 kg</b></div>
+              <div class="scope-state"><i></i><span id="scopeState">LOCAL MODEL</span></div>
+            </div>
+            <div class="scope-frame">
+              <canvas id="scope" width="1000" height="560" aria-label="Interactive model plot"></canvas>
+              <div class="axis-note x" id="axisX">ω / T_H</div>
+              <div class="axis-note y" id="axisY">relative emission</div>
+              <div class="scope-crosshair" aria-hidden="true"></div>
+            </div>
+            <div class="readout-grid" id="readoutGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="volumes" class="volumes-section">
+      <div class="wrap section-intro compact">
+        <div><p class="kicker">02 / FIVE VOLUMES</p><h2>An archive with<br><i>working edges.</i></h2></div>
+        <p>The source desk connects field notes to labs. This public atlas keeps the same spine while exposing which parts are reference data, formula-based calculations, educational transforms, or schematic models.</p>
+      </div>
+
+      <div class="volume-stack wrap">
+        <article class="volume-row" data-color="violet">
+          <div class="vol-num">I</div><div class="vol-title"><small>52—55</small><h3>Compression</h3></div>
+          <p>Pruning, distillation, feature transfer, quantization and deployment trade-offs.</p><span class="vol-state">ENGINEERING NOTES</span>
+        </article>
+        <article class="volume-row" data-color="cyan">
+          <div class="vol-num">II</div><div class="vol-title"><small>63—122</small><h3>Post-quantum</h3></div>
+          <p>Entropy, NTT structure, ML-KEM, ML-DSA, Falcon and hybrid migration.</p><span class="vol-state">REFERENCE + EDUCATIONAL</span>
+        </article>
+        <article class="volume-row" data-color="blue">
+          <div class="vol-num">III</div><div class="vol-title"><small>AdS—QES</small><h3>Holography</h3></div>
+          <p>ER=EPR, QEC, tensor networks, subfactors, islands and generalized entropy.</p><span class="vol-state">CONCEPTUAL / SCHEMATIC</span>
+        </article>
+        <article class="volume-row" data-color="coral">
+          <div class="vol-num">IV</div><div class="vol-title"><small>SV—HAWKING</small><h3>Microstates</h3></div>
+          <p>Horizon thermodynamics, Hawking channels, lifetime scaling and information flow.</p><span class="vol-state">FORMULA + TOY CURVES</span>
+        </article>
+        <article class="volume-row" data-color="gold">
+          <div class="vol-num">V</div><div class="vol-title"><small>PBH—FEMTO</small><h3>Primordial</h3></div>
+          <p>Asteroid-mass PBHs, minicluster distributions and simplified lensing observables.</p><span class="vol-state">SCHEMATIC ENVELOPE</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-section">
+      <div class="archive-window wrap">
+        <div class="archive-index">
+          <p class="kicker">03 / ARCHIVE INDEX</p>
+          <h2>Forty fragments,<br>one research spine.</h2>
+          <p>Search and bookmarks live in the full local desk. The public surface shows a representative cross-section of the archive.</p>
+          <div class="chapter-filter" id="chapterFilter">
+            <button class="active" data-filter="all">ALL</button><button data-filter="pqc">PQC</button><button data-filter="holography">QG</button><button data-filter="hawking">HAWKING</button><button data-filter="pbh">PBH</button>
+          </div>
+        </div>
+        <div class="chapter-tape" id="chapterTape"></div>
+      </div>
+    </section>
+
+    <section id="boundaries" class="boundary-section">
+      <div class="wrap section-intro compact light">
+        <div><p class="kicker">04 / CLAIM CONTRACT</p><h2>The magic stops<br><i>where evidence stops.</i></h2></div>
+        <p>Visual polish does not upgrade a model’s epistemic status. Every public interaction keeps the source workspace’s boundaries visible.</p>
+      </div>
+      <div class="boundary-grid wrap">
+        <article><span class="sig standard">01</span><small>REFERENCE</small><h3>Standardized parameter tables</h3><p>ML-KEM / ML-DSA sizes are presented as inspection and budgeting data, not as an implementation of those cryptosystems.</p></article>
+        <article><span class="sig formula">02</span><small>FORMULA</small><h3>Compact analytical quantities</h3><p>Hawking temperature and lifetime scaling are calculated from explicit compact formulas with visible assumptions.</p></article>
+        <article><span class="sig educational">03</span><small>EDUCATIONAL</small><h3>Small transforms you can touch</h3><p>The NTT and seed demo exist to expose structure. They are not production key generation, encapsulation, or signatures.</p></article>
+        <article><span class="sig schematic">04</span><small>SCHEMATIC</small><h3>Conceptual curves and envelopes</h3><p>Page-curve branches and PBH limits are desk models for reasoning, not current observational likelihoods or numerical-gravity output.</p></article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-crack" aria-hidden="true"></div>
+      <div class="wrap closing-inner">
+        <p class="kicker">FRACTURE ARCHIVE / LOCAL-FIRST</p>
+        <h2>The archive does not hide<br><i>the fracture.</i></h2>
+        <p>It makes the boundary part of the instrument.</p>
+        <a class="action action-bright" href="#instrument">RETURN TO INSTRUMENT <span>↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>FRACTURE ARCHIVE</span><span>INTERACTIVE RESEARCH SURFACE</span><span>FORMULA ≠ SIMULATION ≠ OBSERVATION</span></footer>
+  <script src="./app.js?v=1"></script>
+</body>
+</html>
