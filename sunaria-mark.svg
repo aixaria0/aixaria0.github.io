@@ -1,28 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
   <title id="title">Sunaria SA monogram</title>
-  <desc id="desc">A gold S and A monogram with a thin orbit and four-point star.</desc>
+  <desc id="desc">A sharp A intertwined with a flowing S ribbon, orbit and four-point star.</desc>
   <defs>
-    <linearGradient id="gold" x1="40" y1="40" x2="220" y2="225" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff7e8"/>
-      <stop offset=".28" stop-color="#e7c992"/>
-      <stop offset=".58" stop-color="#b88148"/>
-      <stop offset=".8" stop-color="#f3deb6"/>
-      <stop offset="1" stop-color="#c39158"/>
+    <linearGradient id="aGold" x1="55" y1="284" x2="260" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9f652f"/>
+      <stop offset=".24" stop-color="#dda95e"/>
+      <stop offset=".48" stop-color="#fff0ce"/>
+      <stop offset=".72" stop-color="#c68f4c"/>
+      <stop offset="1" stop-color="#f6ddaf"/>
     </linearGradient>
-    <linearGradient id="silver" x1="72" y1="60" x2="188" y2="205" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fffef9"/>
-      <stop offset=".45" stop-color="#d6c9b5"/>
-      <stop offset="1" stop-color="#b88d58"/>
+    <linearGradient id="ribbon" x1="74" y1="86" x2="286" y2="286" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffdf5"/>
+      <stop offset=".25" stop-color="#f3dfba"/>
+      <stop offset=".52" stop-color="#c99b60"/>
+      <stop offset=".78" stop-color="#f8e8c9"/>
+      <stop offset="1" stop-color="#b8783c"/>
     </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="orbit" x1="34" y1="160" x2="290" y2="155" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9f642f" stop-opacity=".16"/>
+      <stop offset=".42" stop-color="#efc57d" stop-opacity=".90"/>
+      <stop offset=".72" stop-color="#fff1cf" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#99622f" stop-opacity=".12"/>
+    </linearGradient>
+    <filter id="starGlow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <ellipse cx="132" cy="132" rx="101" ry="48" transform="rotate(-12 132 132)" stroke="#d8aa6b" stroke-width="1.6" opacity=".72"/>
-    <path d="M49 207 128 35 211 207" stroke="url(#gold)" stroke-width="18"/>
-    <path d="M79 168 129 70 176 168" stroke="#090909" stroke-width="15"/>
-    <path d="M63 89c24-31 85-35 114-7 22 21 7 49-25 57-25 6-58 7-70 24-12 17 8 37 34 38 27 2 52-12 66-34" stroke="url(#silver)" stroke-width="18"/>
-  </g>
-  <g transform="translate(198 77)" fill="url(#gold)" filter="url(#glow)">
-    <path d="M0-18C2-6 6-2 18 0 6 2 2 6 0 18-2 6-6 2-18 0-6-2-2-6 0-18Z"/>
-  </g>
+
+  <ellipse cx="162" cy="158" rx="128" ry="54" transform="rotate(-10 162 158)" fill="none" stroke="url(#orbit)" stroke-width="2"/>
+  <path d="M55 284 L161 37 L279 284" fill="none" stroke="url(#aGold)" stroke-width="14" stroke-linejoin="miter" stroke-linecap="butt"/>
+
+  <path d="M108 87 C84 86 72 106 83 128 C99 158 155 164 199 182 C226 194 240 214 248 238 C255 259 267 277 284 284" fill="none" stroke="#7f512d" stroke-width="27" stroke-opacity=".48" stroke-linecap="round"/>
+  <path d="M108 87 C84 86 72 106 83 128 C99 158 155 164 199 182 C226 194 240 214 248 238 C255 259 267 277 284 284" fill="none" stroke="url(#ribbon)" stroke-width="21" stroke-linecap="round"/>
+  <path d="M168 165 C190 184 195 210 185 234 C171 264 137 282 98 284 C82 285 68 284 54 282" fill="none" stroke="url(#ribbon)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M102 88 C89 91 82 101 81 111" fill="none" stroke="#fff9ea" stroke-width="3.2" stroke-linecap="round" stroke-opacity=".82"/>
+
+  <g transform="translate(230 96)" fill="#fff0cc" filter="url(#starGlow)"><path d="M0-18 C2-6 6-2 18 0 C6 2 2 6 0 18 C-2 6-6 2-18 0 C-6-2-2-6 0-18Z"/></g>
 </svg>

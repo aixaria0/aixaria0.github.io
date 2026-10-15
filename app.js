@@ -165,12 +165,16 @@ if (astralCanvas) {
   const rebuild=()=>{
     stars=[];segments=[];nodes=[];
     const compact=w<700||h<560;
-    const starCount=compact?38:76;
+    const starCount=compact?48:96;
     for(let i=0;i<starCount;i++)stars.push({x:rand()*w,y:rand()*h,r:.35+rand()*1.15,a:.12+rand()*.42,p:rand()*Math.PI*2});
     const depth=compact?4:5;
-    tree(w*.10,h*.57,-.22,w*(compact?.14:.12),depth,'gold');
-    tree(w*.90,h*.57,Math.PI+.22,w*(compact?.14:.12),depth,'cool');
-    const n=compact?12:20;
+    tree(w*.015,h*.39,-.12,w*(compact?.21:.205),depth,'gold');
+    tree(w*.055,h*.58,-.26,w*(compact?.19:.175),depth,'gold');
+    if(!compact)tree(w*.13,h*.28,.10,w*.125,5,'gold');
+    tree(w*.985,h*.40,Math.PI+.12,w*(compact?.21:.205),depth,'cool');
+    tree(w*.945,h*.60,Math.PI+.26,w*(compact?.19:.175),depth,'cool');
+    if(!compact)tree(w*.87,h*.29,Math.PI-.10,w*.125,5,'cool');
+    const n=compact?16:28;
     for(let i=0;i<n;i++){
       const side=i<n/2?-1:1, a=(i%(n/2))/(n/2)*Math.PI*1.35-Math.PI*.68;
       const rx=w*(compact?.24:.31), ry=h*(compact?.18:.25), cx=w*.5,cy=h*.39;
@@ -183,14 +187,17 @@ if (astralCanvas) {
   };
   const orbit=(cx,cy,rx,ry,rot,color,alpha,dash=[])=>{ctx.save();ctx.translate(cx+pointerX,cy+pointerY);ctx.rotate(rot);ctx.scale(1,ry/rx);ctx.beginPath();ctx.arc(0,0,rx,0,Math.PI*2);ctx.setLineDash(dash);ctx.strokeStyle=`rgba(${color},${alpha})`;ctx.lineWidth=.75;ctx.stroke();ctx.restore();ctx.setLineDash([])};
   const curve=(s,time)=>{
-    const color=s.tone==='gold'?GOLD:COOL, pulse=.25+.18*Math.sin(time*.00055+s.phase*6.28);
+    const color=s.tone==='gold'?GOLD:COOL, pulse=.38+.24*Math.sin(time*.00055+s.phase*6.28);
     ctx.beginPath();const mx=(s.x1+s.x2)/2, my=(s.y1+s.y2)/2;
     ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-s.bend*.18+pointerX,my+s.bend+pointerY,s.x2+pointerX,s.y2+pointerY);
-    ctx.strokeStyle=`rgba(${color},${Math.max(.035,pulse*(.18+s.depth*.045))})`;ctx.lineWidth=.35+s.depth*.12;ctx.stroke();
+    ctx.strokeStyle=`rgba(${color},${Math.max(.035,pulse*(.11+s.depth*.012))})`;ctx.lineWidth=2.1+s.depth*.34;ctx.stroke();
+    ctx.beginPath();ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-s.bend*.18+pointerX,my+s.bend+pointerY,s.x2+pointerX,s.y2+pointerY);
+    ctx.strokeStyle=`rgba(${color},${Math.max(.10,pulse*(.52+s.depth*.07))})`;ctx.lineWidth=.62+s.depth*.19;ctx.stroke();
     const t=(time*.000055+s.phase)%1, omt=1-t;
     const qx=omt*omt*s.x1+2*omt*t*(mx-s.bend*.18)+t*t*s.x2+pointerX;
     const qy=omt*omt*s.y1+2*omt*t*(my+s.bend)+t*t*s.y2+pointerY;
-    ctx.beginPath();ctx.arc(qx,qy,.55+s.depth*.08,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.28+s.depth*.04})`;ctx.fill();
+    ctx.beginPath();ctx.arc(qx,qy,.55+s.depth*.08,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.30+s.depth*.045})`;ctx.fill();
+    if(s.depth<=1){ctx.beginPath();ctx.arc(s.x2+pointerX,s.y2+pointerY,2.6,0,Math.PI*2);ctx.fillStyle=`rgba(${color},.10)`;ctx.fill();ctx.beginPath();ctx.arc(s.x2+pointerX,s.y2+pointerY,.8,0,Math.PI*2);ctx.fillStyle=`rgba(${color},.62)`;ctx.fill();}
   };
   const draw=(time,staticFrame=false)=>{
     if(!ctx||!w||!h)return;ctx.clearRect(0,0,w,h);pointerX+=(targetX-pointerX)*.035;pointerY+=(targetY-pointerY)*.035;
@@ -205,9 +212,9 @@ if (astralCanvas) {
       const a=nodes[i],color=a.tone==='gold'?GOLD:COOL;
       for(let j=i+1;j<nodes.length;j++){
         const b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-        if(d<w*.115 && a.tone===b.tone){ctx.beginPath();ctx.moveTo(a.x+pointerX,a.y+pointerY);ctx.lineTo(b.x+pointerX,b.y+pointerY);ctx.strokeStyle=`rgba(${color},${Math.max(0,.11-d/(w*.115)*.09)})`;ctx.lineWidth=.55;ctx.stroke();}
+        if(d<w*.115 && a.tone===b.tone){ctx.beginPath();ctx.moveTo(a.x+pointerX,a.y+pointerY);ctx.lineTo(b.x+pointerX,b.y+pointerY);ctx.strokeStyle=`rgba(${color},${Math.max(0,.18-d/(w*.115)*.13)})`;ctx.lineWidth=.62;ctx.stroke();}
       }
-      const glow=.6+.4*Math.sin(time*.0015+a.p*8);ctx.beginPath();ctx.arc(a.x+pointerX,a.y+pointerY,1.05+glow*.55,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.28+glow*.28})`;ctx.fill();
+      const glow=.6+.4*Math.sin(time*.0015+a.p*8);ctx.beginPath();ctx.arc(a.x+pointerX,a.y+pointerY,1.05+glow*.55,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.38+glow*.32})`;ctx.fill();
     }
     ctx.globalCompositeOperation='source-over';
     if(!staticFrame&&active&&!reducedMotion.matches)raf=requestAnimationFrame(loop);
