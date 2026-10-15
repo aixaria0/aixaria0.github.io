@@ -1,53 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" role="img" aria-labelledby="title desc">
   <title id="title">Sunaria SA monogram</title>
-  <desc id="desc">A tall champagne-gold A intertwined with a luminous S ribbon, orbital arc, and four-point star.</desc>
+  <desc id="desc">A sharp pointed A woven with a correctly oriented S ribbon, celestial orbit and four-point star.</desc>
   <defs>
-    <linearGradient id="a" x1="72" y1="336" x2="302" y2="58" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8d5428"/>
-      <stop offset=".18" stop-color="#c9853f"/>
-      <stop offset=".42" stop-color="#f5d49b"/>
-      <stop offset=".60" stop-color="#fff0cb"/>
-      <stop offset=".79" stop-color="#c98d4c"/>
-      <stop offset="1" stop-color="#f4d8a6"/>
-    </linearGradient>
-    <linearGradient id="s" x1="94" y1="106" x2="315" y2="307" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fffdf6"/>
-      <stop offset=".19" stop-color="#f9edcf"/>
-      <stop offset=".43" stop-color="#d9ae70"/>
-      <stop offset=".61" stop-color="#fff3d8"/>
-      <stop offset=".82" stop-color="#d69a57"/>
-      <stop offset="1" stop-color="#8f572e"/>
-    </linearGradient>
-    <linearGradient id="orbit" x1="35" y1="205" x2="365" y2="174" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#9e642f" stop-opacity="0"/>
-      <stop offset=".22" stop-color="#c98d4c" stop-opacity=".35"/>
-      <stop offset=".52" stop-color="#ffe0a6" stop-opacity=".88"/>
-      <stop offset=".78" stop-color="#c8dbe3" stop-opacity=".34"/>
-      <stop offset="1" stop-color="#8daaba" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="star" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="metal" x1="160" y1="448" x2="455" y2="70" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9a5f2f"/><stop offset=".25" stop-color="#d69f58"/><stop offset=".48" stop-color="#fff0ca"/><stop offset=".70" stop-color="#aab4b7"/><stop offset=".86" stop-color="#ead2a6"/><stop offset="1" stop-color="#b8783b"/></linearGradient>
+    <linearGradient id="ribbon" x1="207" y1="156" x2="430" y2="413" gradientUnits="userSpaceOnUse"><stop stop-color="#b8793b"/><stop offset=".28" stop-color="#f5d9a6"/><stop offset=".52" stop-color="#fff6df"/><stop offset=".74" stop-color="#d6a15c"/><stop offset="1" stop-color="#8f572f"/></linearGradient>
+    <linearGradient id="orbit" x1="58" y1="330" x2="544" y2="248" gradientUnits="userSpaceOnUse"><stop stop-color="#98602f" stop-opacity="0"/><stop offset=".32" stop-color="#d59b50" stop-opacity=".62"/><stop offset=".58" stop-color="#ffe1a7" stop-opacity=".92"/><stop offset=".82" stop-color="#aec5cf" stop-opacity=".32"/><stop offset="1" stop-color="#aec5cf" stop-opacity="0"/></linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
-  <!-- quiet orbital signature -->
-  <ellipse cx="202" cy="192" rx="160" ry="63" transform="rotate(-11 202 192)" fill="none" stroke="url(#orbit)" stroke-width="2.2"/>
+  <ellipse cx="300" cy="298" rx="263" ry="80" transform="rotate(-24 300 298)" fill="none" stroke="url(#orbit)" stroke-width="1.4"/>
 
-  <!-- architectural A: sharp apex, wide stance, deliberately minimal crossbar -->
-  <path d="M63 339 L190 48 Q195 36 201 49 L337 339 L307 339 L198 92 L94 339 Z" fill="url(#a)"/>
-  <path d="M136 239 L270 239 L260 218 L145 218 Z" fill="#f4d39e" opacity=".84"/>
+  <!-- Architectural A: very sharp apex and knife-like feet. -->
+  <path d="M315 57 L462 448 L404 419 L309 163 L183 448 L215 343 Z" fill="url(#metal)"/>
+  <path d="M235 322 L381 307 L390 330 L224 347 Z" fill="url(#metal)" opacity=".92"/>
 
-  <!-- S ribbon shadow / body -->
-  <path d="M101 112 C126 82 195 78 250 98 C289 112 310 139 299 167 C287 196 246 207 202 214 C153 222 118 234 109 258 C98 288 132 314 184 316 C237 319 281 296 305 259" fill="none" stroke="#6f452a" stroke-opacity=".48" stroke-width="35" stroke-linecap="round"/>
-  <path d="M101 112 C126 82 195 78 250 98 C289 112 310 139 299 167 C287 196 246 207 202 214 C153 222 118 234 109 258 C98 288 132 314 184 316 C237 319 281 296 305 259" fill="none" stroke="url(#s)" stroke-width="27" stroke-linecap="round"/>
+  <!-- Correct S orientation, with pointed vector ends rather than rounded stroke caps. -->
+  <path d="M411 160 C367 126 279 130 235 161 C184 196 199 243 248 268 C277 283 324 291 351 309 C387 332 377 365 343 382 C308 400 252 390 208 363 L236 408 C281 435 349 426 388 398 C443 357 429 308 379 281 C348 265 303 256 271 242 C236 226 230 204 251 186 C281 161 345 156 411 160 Z" fill="url(#ribbon)"/>
+  <path d="M402 158 C358 142 292 145 257 169" fill="none" stroke="#fff7e4" stroke-width="4" opacity=".62"/>
 
-  <!-- make the upper sweep feel like a ribbon, not a tube -->
-  <path d="M103 108 C137 82 202 83 246 99 C270 108 288 120 296 136" fill="none" stroke="#fffdf7" stroke-opacity=".78" stroke-width="3.6" stroke-linecap="round"/>
-  <path d="M115 264 C128 292 163 301 196 299" fill="none" stroke="#ffe7bb" stroke-opacity=".52" stroke-width="2.6" stroke-linecap="round"/>
+  <!-- Weave passes: the A returns over the ribbon at the upper and lower crossings. -->
+  <path d="M315 57 L359 175 L329 167 L309 163 L294 196 L270 190 Z" fill="url(#metal)"/>
+  <path d="M373 303 L410 328 L462 448 L404 419 Z" fill="url(#metal)"/>
+  <path d="M388 398 C420 380 449 359 471 330 L447 383 L402 413 Z" fill="url(#ribbon)"/>
 
-  <!-- one deliberate weave: A returns over the ribbon on the lower-right -->
-  <path d="M247 202 L337 339 L307 339 L233 218 Z" fill="url(#a)" opacity=".96"/>
-
-  <!-- star -->
-  <g transform="translate(303 108)" fill="#fff1cc" filter="url(#star)"><path d="M0-22 C2.5-7 7-2.5 22 0 C7 2.5 2.5 7 0 22 C-2.5 7-7 2.5-22 0 C-7-2.5-2.5-7 0-22Z"/></g>
-  <circle cx="351" cy="173" r="4.5" fill="#d5a35e" filter="url(#shadow)"/>
+  <g transform="translate(445 130)" fill="#fff0c7" filter="url(#glow)"><path d="M0-27 C3-9 9-3 27 0 C9 3 3 9 0 27 C-3 9-9 3-27 0 C-9-3-3-9 0-27Z"/></g>
 </svg>

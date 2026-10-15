@@ -141,89 +141,80 @@ if('IntersectionObserver' in window){
 // A low-priority safety trigger keeps activity fresh even when an observer is delayed by a very long portfolio page.
 window.addEventListener('load',()=>setTimeout(autoRefreshActivity,2200),{once:true});
 
-// Astral motion system: deterministic, lightweight and decorative only.
+// Astral motion system: live Fibonacci/mycelium growth with adaptive rendering.
 document.documentElement.classList.add('js');
 const astralCanvas = $('#astral-field');
 if (astralCanvas) {
   const hero = astralCanvas.closest('.astral-hero');
-  const ctx = astralCanvas.getContext('2d', {alpha:true});
-  const GOLD='186,139,79', COOL='181,205,214', IVORY='238,232,220';
-  let w=0,h=0,dpr=1,raf=0,last=0,active=true,stars=[],segments=[],nodes=[];
-  let pointerX=0,pointerY=0,targetX=0,targetY=0;
+  const ctx = astralCanvas.getContext('2d', {alpha:true, desynchronized:true});
+  const GOLD='190,142,79', COOL='182,207,219', GREEN='104,184,139', IVORY='239,232,219';
+  const PHI=(1+Math.sqrt(5))/2, GOLDEN=Math.PI*(3-Math.sqrt(5));
+  const coarse=matchMedia('(pointer:coarse)').matches, compact=()=>innerWidth<760||innerHeight<560;
+  let w=0,h=0,dpr=1,raf=0,last=0,active=true,stars=[],segments=[],nodes=[],links=[];
+  let pointerX=0,pointerY=0,targetX=0,targetY=0,frameMs=coarse?24:16.5;
   const rand=(()=>{let a=0x51a7f19d;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}})();
-  const tree=(x,y,angle,len,depth,tone)=>{
+  const tree=(x,y,angle,len,depth,tone,birth=0)=>{
     if(depth<0||len<4)return;
-    const sway=(rand()-.5)*.09;
-    const x2=x+Math.cos(angle+sway)*len, y2=y+Math.sin(angle+sway)*len;
-    segments.push({x1:x,y1:y,x2,y2,phase:rand(),tone,depth,bend:(rand()-.5)*len*.38});
+    const sway=(rand()-.5)*.075, a=angle+sway, x2=x+Math.cos(a)*len, y2=y+Math.sin(a)*len;
+    segments.push({x1:x,y1:y,x2,y2,phase:rand(),tone,depth,birth,bend:(rand()-.5)*len*.34});
     if(depth===0)return;
-    const spread=.24+rand()*.19, shrink=.68+rand()*.08;
-    tree(x2,y2,angle-spread,len*shrink,depth-1,tone);
-    tree(x2,y2,angle+spread,len*shrink,depth-1,tone);
-    if(depth>2&&rand()>.56)tree(x2,y2,angle+(rand()-.5)*spread*.55,len*shrink*.82,depth-2,tone);
+    const spread=.27+GOLDEN*.11+(rand()-.5)*.08, shrink=.68+.05*rand();
+    tree(x2,y2,a-spread,len*shrink,depth-1,tone,birth+1);
+    tree(x2,y2,a+spread,len*shrink,depth-1,tone,birth+1);
+    if(depth>2&&rand()>.63)tree(x2,y2,a+(rand()-.5)*spread*.5,len*shrink*.80,depth-2,tone,birth+1.35);
   };
   const rebuild=()=>{
-    stars=[];segments=[];nodes=[];
-    const compact=w<700||h<560;
-    const starCount=compact?48:96;
-    for(let i=0;i<starCount;i++)stars.push({x:rand()*w,y:rand()*h,r:.35+rand()*1.15,a:.12+rand()*.42,p:rand()*Math.PI*2});
-    const depth=compact?4:5;
-    tree(w*.015,h*.39,-.12,w*(compact?.21:.205),depth,'gold');
-    tree(w*.055,h*.58,-.26,w*(compact?.19:.175),depth,'gold');
-    if(!compact)tree(w*.13,h*.28,.10,w*.125,5,'gold');
-    tree(w*.985,h*.40,Math.PI+.12,w*(compact?.21:.205),depth,'cool');
-    tree(w*.945,h*.60,Math.PI+.26,w*(compact?.19:.175),depth,'cool');
-    if(!compact)tree(w*.87,h*.29,Math.PI-.10,w*.125,5,'cool');
-    const n=compact?16:28;
+    stars=[];segments=[];nodes=[];links=[];
+    const small=compact(), starCount=small?34:78, depth=small?4:5;
+    for(let i=0;i<starCount;i++)stars.push({x:rand()*w,y:rand()*h,r:.3+rand()*.95,a:.10+rand()*.32,p:rand()*6.283});
+    tree(w*.012,h*.36,-.08,w*(small?.22:.205),depth,'gold');
+    tree(w*.03,h*.61,-.28,w*(small?.18:.17),depth,'gold');
+    if(!small)tree(w*.12,h*.26,.10,w*.125,5,'gold');
+    tree(w*.988,h*.36,Math.PI+.08,w*(small?.22:.205),depth,'cool');
+    tree(w*.97,h*.61,Math.PI+.28,w*(small?.18:.17),depth,'cool');
+    if(!small)tree(w*.88,h*.26,Math.PI-.10,w*.125,5,'green');
+    const n=small?14:24;
     for(let i=0;i<n;i++){
-      const side=i<n/2?-1:1, a=(i%(n/2))/(n/2)*Math.PI*1.35-Math.PI*.68;
-      const rx=w*(compact?.24:.31), ry=h*(compact?.18:.25), cx=w*.5,cy=h*.39;
-      nodes.push({x:cx+side*Math.abs(Math.cos(a))*rx*(.48+rand()*.55),y:cy+Math.sin(a)*ry*(.5+rand()*.65),p:rand(),tone:side<0?'gold':'cool'});
+      const side=i<n/2?-1:1, q=i%(n/2), a=q*GOLDEN;
+      const rx=w*(small?.23:.30), ry=h*(small?.17:.24), cx=w*.5,cy=h*.38;
+      nodes.push({x:cx+side*Math.abs(Math.cos(a))*rx*(.48+rand()*.5),y:cy+Math.sin(a)*ry*(.48+rand()*.55),p:rand(),tone:side<0?'gold':(q%3===0?'green':'cool')});
+    }
+    const max=w*.12;
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+      const a=nodes[i],b=nodes[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d<max&&(a.tone===b.tone||rand()>.86))links.push({a,b,d,max,tone:a.tone});
     }
   };
   const resize=()=>{
-    const r=hero.getBoundingClientRect();w=Math.max(1,Math.round(r.width));h=Math.max(1,Math.round(r.height));dpr=Math.min(window.devicePixelRatio||1,1.5);
+    const r=hero.getBoundingClientRect();w=Math.max(1,Math.round(r.width));h=Math.max(1,Math.round(r.height));
+    dpr=Math.min(devicePixelRatio||1,compact()?1.15:1.45);frameMs=coarse||compact()?24:16.5;
     astralCanvas.width=Math.round(w*dpr);astralCanvas.height=Math.round(h*dpr);astralCanvas.style.width=w+'px';astralCanvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);rebuild();draw(performance.now(),true);
   };
-  const orbit=(cx,cy,rx,ry,rot,color,alpha,dash=[])=>{ctx.save();ctx.translate(cx+pointerX,cy+pointerY);ctx.rotate(rot);ctx.scale(1,ry/rx);ctx.beginPath();ctx.arc(0,0,rx,0,Math.PI*2);ctx.setLineDash(dash);ctx.strokeStyle=`rgba(${color},${alpha})`;ctx.lineWidth=.75;ctx.stroke();ctx.restore();ctx.setLineDash([])};
-  const curve=(s,time)=>{
-    const color=s.tone==='gold'?GOLD:COOL, pulse=.38+.24*Math.sin(time*.00055+s.phase*6.28);
-    ctx.beginPath();const mx=(s.x1+s.x2)/2, my=(s.y1+s.y2)/2;
-    ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-s.bend*.18+pointerX,my+s.bend+pointerY,s.x2+pointerX,s.y2+pointerY);
-    ctx.strokeStyle=`rgba(${color},${Math.max(.035,pulse*(.11+s.depth*.012))})`;ctx.lineWidth=2.1+s.depth*.34;ctx.stroke();
-    ctx.beginPath();ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-s.bend*.18+pointerX,my+s.bend+pointerY,s.x2+pointerX,s.y2+pointerY);
-    ctx.strokeStyle=`rgba(${color},${Math.max(.10,pulse*(.52+s.depth*.07))})`;ctx.lineWidth=.62+s.depth*.19;ctx.stroke();
-    const t=(time*.000055+s.phase)%1, omt=1-t;
-    const qx=omt*omt*s.x1+2*omt*t*(mx-s.bend*.18)+t*t*s.x2+pointerX;
-    const qy=omt*omt*s.y1+2*omt*t*(my+s.bend)+t*t*s.y2+pointerY;
-    ctx.beginPath();ctx.arc(qx,qy,.55+s.depth*.08,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.30+s.depth*.045})`;ctx.fill();
-    if(s.depth<=1){ctx.beginPath();ctx.arc(s.x2+pointerX,s.y2+pointerY,2.6,0,Math.PI*2);ctx.fillStyle=`rgba(${color},.10)`;ctx.fill();ctx.beginPath();ctx.arc(s.x2+pointerX,s.y2+pointerY,.8,0,Math.PI*2);ctx.fillStyle=`rgba(${color},.62)`;ctx.fill();}
+  const col=t=>t==='gold'?GOLD:t==='green'?GREEN:COOL;
+  const orbit=(cx,cy,rx,ry,rot,color,alpha,dash=[])=>{ctx.save();ctx.translate(cx+pointerX,cy+pointerY);ctx.rotate(rot);ctx.scale(1,ry/rx);ctx.beginPath();ctx.arc(0,0,rx,0,6.283);ctx.setLineDash(dash);ctx.strokeStyle=`rgba(${color},${alpha})`;ctx.lineWidth=.72;ctx.stroke();ctx.restore();ctx.setLineDash([])};
+  const curve=(s,time,grow)=>{
+    const local=Math.max(0,Math.min(1,(grow*8-s.birth)/1.1));if(local<=0)return;
+    const color=col(s.tone), pulse=.56+.22*Math.sin(time*.0007+s.phase*6.28), ex=s.x1+(s.x2-s.x1)*local, ey=s.y1+(s.y2-s.y1)*local;
+    const mx=(s.x1+ex)/2,my=(s.y1+ey)/2,b=s.bend*local;
+    ctx.beginPath();ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-b*.18+pointerX,my+b+pointerY,ex+pointerX,ey+pointerY);ctx.strokeStyle=`rgba(${color},${(.10+s.depth*.018)*pulse})`;ctx.lineWidth=1.65+s.depth*.22;ctx.stroke();
+    ctx.beginPath();ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-b*.18+pointerX,my+b+pointerY,ex+pointerX,ey+pointerY);ctx.strokeStyle=`rgba(${color},${(.30+s.depth*.045)*pulse})`;ctx.lineWidth=.45+s.depth*.12;ctx.stroke();
+    if(local>.92&&s.depth<=1){ctx.beginPath();ctx.arc(ex+pointerX,ey+pointerY,.75,0,6.283);ctx.fillStyle=`rgba(${color},.72)`;ctx.fill();}
   };
   const draw=(time,staticFrame=false)=>{
-    if(!ctx||!w||!h)return;ctx.clearRect(0,0,w,h);pointerX+=(targetX-pointerX)*.035;pointerY+=(targetY-pointerY)*.035;
-    ctx.globalCompositeOperation='lighter';
-    for(const s of stars){const tw=staticFrame?1:(.62+.38*Math.sin(time*.0012+s.p));ctx.beginPath();ctx.arc(s.x+pointerX*.22,s.y+pointerY*.22,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(${IVORY},${s.a*tw})`;ctx.fill();}
-    const cx=w*.5,cy=h*.37;
-    orbit(cx,cy,w*.28,h*.13,time*.000018,GOLD,.16,[2,7]);
-    orbit(cx,cy,w*.22,h*.19,-time*.000014,COOL,.11,[1,9]);
-    orbit(cx,cy,w*.36,h*.09,time*.000009,IVORY,.08,[1,12]);
-    for(const s of segments)curve(s,time);
-    for(let i=0;i<nodes.length;i++){
-      const a=nodes[i],color=a.tone==='gold'?GOLD:COOL;
-      for(let j=i+1;j<nodes.length;j++){
-        const b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-        if(d<w*.115 && a.tone===b.tone){ctx.beginPath();ctx.moveTo(a.x+pointerX,a.y+pointerY);ctx.lineTo(b.x+pointerX,b.y+pointerY);ctx.strokeStyle=`rgba(${color},${Math.max(0,.18-d/(w*.115)*.13)})`;ctx.lineWidth=.62;ctx.stroke();}
-      }
-      const glow=.6+.4*Math.sin(time*.0015+a.p*8);ctx.beginPath();ctx.arc(a.x+pointerX,a.y+pointerY,1.05+glow*.55,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.38+glow*.32})`;ctx.fill();
-    }
-    ctx.globalCompositeOperation='source-over';
-    if(!staticFrame&&active&&!reducedMotion.matches)raf=requestAnimationFrame(loop);
+    if(!ctx||!w||!h)return;ctx.clearRect(0,0,w,h);pointerX+=(targetX-pointerX)*.045;pointerY+=(targetY-pointerY)*.045;ctx.globalCompositeOperation='lighter';
+    for(const s of stars){const tw=staticFrame?1:(.68+.32*Math.sin(time*.0011+s.p));ctx.beginPath();ctx.arc(s.x+pointerX*.18,s.y+pointerY*.18,s.r,0,6.283);ctx.fillStyle=`rgba(${IVORY},${s.a*tw})`;ctx.fill();}
+    const cx=w*.5,cy=h*.37,cycle=(time%12000)/12000,grow=cycle<.72?Math.min(1,cycle/.54):1;
+    orbit(cx,cy,w*.29,h*.13,time*.000014,GOLD,.15,[2,8]);orbit(cx,cy,w*.225,h*.19,-time*.000011,COOL,.10,[1,10]);orbit(cx,cy,w*.355,h*.09,time*.000007,GREEN,.065,[1,14]);
+    for(const s of segments)curve(s,time,grow);
+    for(const l of links){const alpha=.035*(1-l.d/l.max);ctx.beginPath();ctx.moveTo(l.a.x+pointerX,l.a.y+pointerY);ctx.lineTo(l.b.x+pointerX,l.b.y+pointerY);ctx.strokeStyle=`rgba(${col(l.tone)},${alpha})`;ctx.lineWidth=.45;ctx.stroke();}
+    for(const a of nodes){const c=col(a.tone),glow=.6+.4*Math.sin(time*.0013+a.p*8);ctx.beginPath();ctx.arc(a.x+pointerX,a.y+pointerY,.95+glow*.38,0,6.283);ctx.fillStyle=`rgba(${c},${.28+glow*.24})`;ctx.fill();}
+    ctx.globalCompositeOperation='source-over';if(!staticFrame&&active&&!reducedMotion.matches)raf=requestAnimationFrame(loop);
   };
-  const loop=time=>{if(time-last<33){raf=requestAnimationFrame(loop);return}last=time;draw(time)};
-  hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();targetX=(e.clientX-r.left-r.width/2)*.012;targetY=(e.clientY-r.top-r.height/2)*.012},{passive:true});
+  const loop=time=>{if(time-last<frameMs){raf=requestAnimationFrame(loop);return}last=time;draw(time)};
+  if(!coarse)hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();targetX=(e.clientX-r.left-r.width/2)*.010;targetY=(e.clientY-r.top-r.height/2)*.010},{passive:true});
   hero.addEventListener('pointerleave',()=>{targetX=0;targetY=0},{passive:true});
-  new ResizeObserver(resize).observe(hero);
-  if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{active=entry.isIntersecting;if(active&&!raf&&!reducedMotion.matches)raf=requestAnimationFrame(loop);if(!active&&raf){cancelAnimationFrame(raf);raf=0;}},{threshold:.01}).observe(hero);
+  new ResizeObserver(()=>requestAnimationFrame(resize)).observe(hero);
+  if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{active=entry.isIntersecting&&!document.hidden;if(active&&!raf&&!reducedMotion.matches)raf=requestAnimationFrame(loop);if(!active&&raf){cancelAnimationFrame(raf);raf=0;}},{threshold:.01}).observe(hero);
   document.addEventListener('visibilitychange',()=>{active=!document.hidden;if(active&&!reducedMotion.matches){if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)}else if(raf){cancelAnimationFrame(raf);raf=0}});
   resize();if(!reducedMotion.matches)raf=requestAnimationFrame(loop);
 }
