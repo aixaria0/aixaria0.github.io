@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1-resume-surface",
-  "built_at": "2026-10-15T16:17:30.044Z",
+  "built_at": "2026-10-15T17:01:10.339Z",
   "observed_at": "2026-10-13T19:08:07.041Z",
   "owner": "aixaria0",
   "principle": "Systems that make claims carry evidence.",
@@ -19,6 +19,7 @@
     "owned_repositories": 62,
     "public_repositories": 33,
     "private_repositories": 29,
+    "live_sites": 10,
     "authored_commits": 1899,
     "default_branch_commits": 17835,
     "authored_prs": 301,
@@ -249,7 +250,7 @@
         "reviewed_prs": 10
       },
       "last_pushed_at": "2026-07-22T07:08:04Z",
-      "resume_priority": 5,
+      "resume_priority": 10,
       "live_url": "https://aixaria0.github.io/Bookofkings/",
       "label": "Open live site"
     },
@@ -358,7 +359,7 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-09-09T16:56:34Z",
-      "resume_priority": 8,
+      "resume_priority": 4,
       "live_url": "https://aixaria0.github.io/nexus-quantum/",
       "label": "Open live site"
     },
@@ -419,7 +420,7 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-10-10T04:06:00Z",
-      "resume_priority": 4,
+      "resume_priority": 3,
       "live_url": "https://aixaria0.github.io/Omni/",
       "label": "Open Omni"
     },
@@ -605,7 +606,7 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-10-12T13:13:25Z",
-      "resume_priority": 3,
+      "resume_priority": 8,
       "live_url": "https://Rholox.com/",
       "label": "Open Rholox",
       "related_repositories": [
@@ -671,7 +672,7 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-09-28T01:29:24Z",
-      "resume_priority": 10,
+      "resume_priority": 9,
       "live_url": "https://aixaria0.github.io/rlsenti/",
       "label": "Open live site"
     },
@@ -733,7 +734,7 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-10-10T02:54:15Z",
-      "resume_priority": 7,
+      "resume_priority": 1,
       "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
       "label": "Open live site"
     },
@@ -790,7 +791,7 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-10-05T18:24:57Z",
-      "resume_priority": 9
+      "resume_priority": 7
     },
     {
       "id": "vqe-analyzer",
@@ -848,7 +849,7 @@
         "reviewed_prs": 13
       },
       "last_pushed_at": "2026-10-12T13:01:19Z",
-      "resume_priority": 1,
+      "resume_priority": 5,
       "live_url": "https://aixaria0.github.io/vqe-analyzer/",
       "label": "Open VQE Analyzer"
     }
@@ -1276,6 +1277,58 @@
       "featured": true
     },
     {
+      "id": "sovereign-lattice",
+      "name": "Sovereign Lattice",
+      "visibility": "public",
+      "family": "quantum-formal",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Distributed consensus / formal-methods research; formal claims require artifact-level audit.",
+      "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
+      "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
+      "featured": true
+    },
+    {
+      "id": "aether-runtime",
+      "name": "Aether Runtime",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "replay-verified",
+      "note": "Current canonical execution/evidence runtime.",
+      "repository_url": "https://github.com/aixaria0/aether-runtime",
+      "live_url": null,
+      "featured": true
+    },
+    {
+      "id": "omni",
+      "name": "Omni",
+      "visibility": "public",
+      "family": "intelligence-security",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "replay-verified",
+      "note": "Evidence-stress and proof-carrying investigation workspace with Quantum Fabric.",
+      "repository_url": "https://github.com/aixaria0/Omni",
+      "live_url": "https://aixaria0.github.io/Omni/",
+      "featured": true
+    },
+    {
+      "id": "nexus-quantum",
+      "name": "Nexus Quantum",
+      "visibility": "public",
+      "family": "quantum-formal",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Formal/quantum research project; strongest formal claims require artifact-level verification.",
+      "repository_url": "https://github.com/aixaria0/nexus-quantum",
+      "live_url": "https://aixaria0.github.io/nexus-quantum/",
+      "featured": false
+    },
+    {
       "id": "vqe-analyzer",
       "name": "VQE Analyzer",
       "visibility": "public",
@@ -1289,15 +1342,28 @@
       "featured": true
     },
     {
-      "id": "aether-runtime",
-      "name": "Aether Runtime",
+      "id": "rchain-sentinel",
+      "name": "RChain Sentinel",
       "visibility": "public",
-      "family": "chimera-evidence-runtime",
-      "relation": "canonical",
+      "family": "rchain-assurance",
+      "relation": "component",
       "status": "active",
+      "evidence_grade": "observed",
+      "note": "Read/verification surface for node and block evidence.",
+      "repository_url": "https://github.com/aixaria0/rchain-sentinel",
+      "live_url": "https://aixaria0.github.io/rchain-sentinel/",
+      "featured": false
+    },
+    {
+      "id": "strategic-intelligence-lattice",
+      "name": "Strategic Intelligence Lattice",
+      "visibility": "public",
+      "family": "research-operations",
+      "relation": "canonical",
+      "status": "research",
       "evidence_grade": "replay-verified",
-      "note": "Current canonical execution/evidence runtime.",
-      "repository_url": "https://github.com/aixaria0/aether-runtime",
+      "note": "Reproducible multi-agent research and evaluation framework.",
+      "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
       "live_url": null,
       "featured": true
     },
@@ -1315,17 +1381,17 @@
       "featured": true
     },
     {
-      "id": "omni",
-      "name": "Omni",
+      "id": "rlsenti",
+      "name": "rlsenti",
       "visibility": "public",
-      "family": "intelligence-security",
-      "relation": "canonical",
-      "status": "active",
-      "evidence_grade": "replay-verified",
-      "note": "Evidence-stress and proof-carrying investigation workspace with Quantum Fabric.",
-      "repository_url": "https://github.com/aixaria0/Omni",
-      "live_url": "https://aixaria0.github.io/Omni/",
-      "featured": true
+      "family": "rchain-assurance",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Compiler/workbench evidence adapter; synthetic/integration-oriented.",
+      "repository_url": "https://github.com/aixaria0/rlsenti",
+      "live_url": "https://aixaria0.github.io/rlsenti/",
+      "featured": false
     },
     {
       "id": "bookofkings",
@@ -1338,71 +1404,6 @@
       "note": "Current canonical cultural/consumer product.",
       "repository_url": "https://github.com/aixaria0/Bookofkings",
       "live_url": "https://aixaria0.github.io/Bookofkings/",
-      "featured": false
-    },
-    {
-      "id": "rchain-sentinel",
-      "name": "RChain Sentinel",
-      "visibility": "public",
-      "family": "rchain-assurance",
-      "relation": "component",
-      "status": "active",
-      "evidence_grade": "observed",
-      "note": "Read/verification surface for node and block evidence.",
-      "repository_url": "https://github.com/aixaria0/rchain-sentinel",
-      "live_url": "https://aixaria0.github.io/rchain-sentinel/",
-      "featured": false
-    },
-    {
-      "id": "sovereign-lattice",
-      "name": "Sovereign Lattice",
-      "visibility": "public",
-      "family": "quantum-formal",
-      "relation": "canonical",
-      "status": "research",
-      "evidence_grade": "experimental",
-      "note": "Distributed consensus / formal-methods research; formal claims require artifact-level audit.",
-      "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
-      "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
-      "featured": true
-    },
-    {
-      "id": "nexus-quantum",
-      "name": "Nexus Quantum",
-      "visibility": "public",
-      "family": "quantum-formal",
-      "relation": "canonical",
-      "status": "research",
-      "evidence_grade": "experimental",
-      "note": "Formal/quantum research project; strongest formal claims require artifact-level verification.",
-      "repository_url": "https://github.com/aixaria0/nexus-quantum",
-      "live_url": "https://aixaria0.github.io/nexus-quantum/",
-      "featured": false
-    },
-    {
-      "id": "strategic-intelligence-lattice",
-      "name": "Strategic Intelligence Lattice",
-      "visibility": "public",
-      "family": "research-operations",
-      "relation": "canonical",
-      "status": "research",
-      "evidence_grade": "replay-verified",
-      "note": "Reproducible multi-agent research and evaluation framework.",
-      "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
-      "live_url": null,
-      "featured": true
-    },
-    {
-      "id": "rlsenti",
-      "name": "rlsenti",
-      "visibility": "public",
-      "family": "rchain-assurance",
-      "relation": "component",
-      "status": "research",
-      "evidence_grade": "experimental",
-      "note": "Compiler/workbench evidence adapter; synthetic/integration-oriented.",
-      "repository_url": "https://github.com/aixaria0/rlsenti",
-      "live_url": "https://aixaria0.github.io/rlsenti/",
       "featured": false
     },
     {

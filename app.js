@@ -135,3 +135,93 @@ if('IntersectionObserver' in window){
   const activityObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){activityObserver.disconnect();refreshActivity();}},{rootMargin:'200px'});
   activityObserver.observe($('.activity-section'));
 } else { window.addEventListener('load',()=>refreshActivity(),{once:true}); }
+
+// Astral motion system: deterministic, lightweight and decorative only.
+document.documentElement.classList.add('js');
+const astralCanvas = $('#astral-field');
+if (astralCanvas) {
+  const hero = astralCanvas.closest('.astral-hero');
+  const ctx = astralCanvas.getContext('2d', {alpha:true});
+  const GOLD='215,173,114', COOL='152,187,205', IVORY='244,226,195';
+  let w=0,h=0,dpr=1,raf=0,last=0,active=true,stars=[],segments=[],nodes=[];
+  let pointerX=0,pointerY=0,targetX=0,targetY=0;
+  const rand=(()=>{let a=0x51a7f19d;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}})();
+  const tree=(x,y,angle,len,depth,tone)=>{
+    if(depth<0||len<4)return;
+    const sway=(rand()-.5)*.09;
+    const x2=x+Math.cos(angle+sway)*len, y2=y+Math.sin(angle+sway)*len;
+    segments.push({x1:x,y1:y,x2,y2,phase:rand(),tone,depth,bend:(rand()-.5)*len*.38});
+    if(depth===0)return;
+    const spread=.24+rand()*.19, shrink=.68+rand()*.08;
+    tree(x2,y2,angle-spread,len*shrink,depth-1,tone);
+    tree(x2,y2,angle+spread,len*shrink,depth-1,tone);
+    if(depth>2&&rand()>.56)tree(x2,y2,angle+(rand()-.5)*spread*.55,len*shrink*.82,depth-2,tone);
+  };
+  const rebuild=()=>{
+    stars=[];segments=[];nodes=[];
+    const compact=w<700||h<560;
+    const starCount=compact?38:76;
+    for(let i=0;i<starCount;i++)stars.push({x:rand()*w,y:rand()*h,r:.35+rand()*1.15,a:.12+rand()*.42,p:rand()*Math.PI*2});
+    const depth=compact?4:5;
+    tree(w*.10,h*.57,-.22,w*(compact?.14:.12),depth,'gold');
+    tree(w*.90,h*.57,Math.PI+.22,w*(compact?.14:.12),depth,'cool');
+    const n=compact?12:20;
+    for(let i=0;i<n;i++){
+      const side=i<n/2?-1:1, a=(i%(n/2))/(n/2)*Math.PI*1.35-Math.PI*.68;
+      const rx=w*(compact?.24:.31), ry=h*(compact?.18:.25), cx=w*.5,cy=h*.39;
+      nodes.push({x:cx+side*Math.abs(Math.cos(a))*rx*(.48+rand()*.55),y:cy+Math.sin(a)*ry*(.5+rand()*.65),p:rand(),tone:side<0?'gold':'cool'});
+    }
+  };
+  const resize=()=>{
+    const r=hero.getBoundingClientRect();w=Math.max(1,Math.round(r.width));h=Math.max(1,Math.round(r.height));dpr=Math.min(window.devicePixelRatio||1,1.5);
+    astralCanvas.width=Math.round(w*dpr);astralCanvas.height=Math.round(h*dpr);astralCanvas.style.width=w+'px';astralCanvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);rebuild();draw(performance.now(),true);
+  };
+  const orbit=(cx,cy,rx,ry,rot,color,alpha,dash=[])=>{ctx.save();ctx.translate(cx+pointerX,cy+pointerY);ctx.rotate(rot);ctx.scale(1,ry/rx);ctx.beginPath();ctx.arc(0,0,rx,0,Math.PI*2);ctx.setLineDash(dash);ctx.strokeStyle=`rgba(${color},${alpha})`;ctx.lineWidth=.75;ctx.stroke();ctx.restore();ctx.setLineDash([])};
+  const curve=(s,time)=>{
+    const color=s.tone==='gold'?GOLD:COOL, pulse=.25+.18*Math.sin(time*.00055+s.phase*6.28);
+    ctx.beginPath();const mx=(s.x1+s.x2)/2, my=(s.y1+s.y2)/2;
+    ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-s.bend*.18+pointerX,my+s.bend+pointerY,s.x2+pointerX,s.y2+pointerY);
+    ctx.strokeStyle=`rgba(${color},${Math.max(.035,pulse*(.18+s.depth*.045))})`;ctx.lineWidth=.35+s.depth*.12;ctx.stroke();
+    const t=(time*.000055+s.phase)%1, omt=1-t;
+    const qx=omt*omt*s.x1+2*omt*t*(mx-s.bend*.18)+t*t*s.x2+pointerX;
+    const qy=omt*omt*s.y1+2*omt*t*(my+s.bend)+t*t*s.y2+pointerY;
+    ctx.beginPath();ctx.arc(qx,qy,.55+s.depth*.08,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.28+s.depth*.04})`;ctx.fill();
+  };
+  const draw=(time,staticFrame=false)=>{
+    if(!ctx||!w||!h)return;ctx.clearRect(0,0,w,h);pointerX+=(targetX-pointerX)*.035;pointerY+=(targetY-pointerY)*.035;
+    ctx.globalCompositeOperation='lighter';
+    for(const s of stars){const tw=staticFrame?1:(.62+.38*Math.sin(time*.0012+s.p));ctx.beginPath();ctx.arc(s.x+pointerX*.22,s.y+pointerY*.22,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(${IVORY},${s.a*tw})`;ctx.fill();}
+    const cx=w*.5,cy=h*.37;
+    orbit(cx,cy,w*.28,h*.13,time*.000018,GOLD,.16,[2,7]);
+    orbit(cx,cy,w*.22,h*.19,-time*.000014,COOL,.11,[1,9]);
+    orbit(cx,cy,w*.36,h*.09,time*.000009,IVORY,.08,[1,12]);
+    for(const s of segments)curve(s,time);
+    for(let i=0;i<nodes.length;i++){
+      const a=nodes[i],color=a.tone==='gold'?GOLD:COOL;
+      for(let j=i+1;j<nodes.length;j++){
+        const b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
+        if(d<w*.115 && a.tone===b.tone){ctx.beginPath();ctx.moveTo(a.x+pointerX,a.y+pointerY);ctx.lineTo(b.x+pointerX,b.y+pointerY);ctx.strokeStyle=`rgba(${color},${Math.max(0,.11-d/(w*.115)*.09)})`;ctx.lineWidth=.55;ctx.stroke();}
+      }
+      const glow=.6+.4*Math.sin(time*.0015+a.p*8);ctx.beginPath();ctx.arc(a.x+pointerX,a.y+pointerY,1.05+glow*.55,0,Math.PI*2);ctx.fillStyle=`rgba(${color},${.28+glow*.28})`;ctx.fill();
+    }
+    ctx.globalCompositeOperation='source-over';
+    if(!staticFrame&&active&&!reducedMotion.matches)raf=requestAnimationFrame(loop);
+  };
+  const loop=time=>{if(time-last<33){raf=requestAnimationFrame(loop);return}last=time;draw(time)};
+  hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();targetX=(e.clientX-r.left-r.width/2)*.012;targetY=(e.clientY-r.top-r.height/2)*.012},{passive:true});
+  hero.addEventListener('pointerleave',()=>{targetX=0;targetY=0},{passive:true});
+  new ResizeObserver(resize).observe(hero);
+  if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{active=entry.isIntersecting;if(active&&!raf&&!reducedMotion.matches)raf=requestAnimationFrame(loop);if(!active&&raf){cancelAnimationFrame(raf);raf=0;}},{threshold:.01}).observe(hero);
+  document.addEventListener('visibilitychange',()=>{active=!document.hidden;if(active&&!reducedMotion.matches){if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)}else if(raf){cancelAnimationFrame(raf);raf=0}});
+  resize();if(!reducedMotion.matches)raf=requestAnimationFrame(loop);
+}
+
+// Animate registry-derived metrics only when they enter the viewport.
+const metricValues=$$('[data-count]');
+const formatMetric=n=>new Intl.NumberFormat('en-US').format(Math.round(n));
+const animateMetric=el=>{
+  const end=Number(el.dataset.count);if(!Number.isFinite(end)||reducedMotion.matches){el.textContent=formatMetric(end||0);return}
+  const start=performance.now(),duration=780;
+  const tick=now=>{const p=Math.min(1,(now-start)/duration),e=1-Math.pow(1-p,3);el.textContent=formatMetric(end*e);if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick);
+};
+if('IntersectionObserver'in window&&metricValues.length){const io=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){animateMetric(entry.target);io.unobserve(entry.target)}},{threshold:.45});metricValues.forEach(el=>io.observe(el))}else metricValues.forEach(el=>animateMetric(el));

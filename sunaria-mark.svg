@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-labelledby="title desc">
+  <title id="title">Sunaria SA monogram</title>
+  <desc id="desc">A gold S and A monogram with a thin orbit and four-point star.</desc>
+  <defs>
+    <linearGradient id="gold" x1="40" y1="40" x2="220" y2="225" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff7e8"/>
+      <stop offset=".28" stop-color="#e7c992"/>
+      <stop offset=".58" stop-color="#b88148"/>
+      <stop offset=".8" stop-color="#f3deb6"/>
+      <stop offset="1" stop-color="#c39158"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="72" y1="60" x2="188" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffef9"/>
+      <stop offset=".45" stop-color="#d6c9b5"/>
+      <stop offset="1" stop-color="#b88d58"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="132" cy="132" rx="101" ry="48" transform="rotate(-12 132 132)" stroke="#d8aa6b" stroke-width="1.6" opacity=".72"/>
+    <path d="M49 207 128 35 211 207" stroke="url(#gold)" stroke-width="18"/>
+    <path d="M79 168 129 70 176 168" stroke="#090909" stroke-width="15"/>
+    <path d="M63 89c24-31 85-35 114-7 22 21 7 49-25 57-25 6-58 7-70 24-12 17 8 37 34 38 27 2 52-12 66-34" stroke="url(#silver)" stroke-width="18"/>
+  </g>
+  <g transform="translate(198 77)" fill="url(#gold)" filter="url(#glow)">
+    <path d="M0-18C2-6 6-2 18 0 6 2 2 6 0 18-2 6-6 2-18 0-6-2-2-6 0-18Z"/>
+  </g>
+</svg>
