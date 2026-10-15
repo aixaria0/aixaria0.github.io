@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#05070c" />
+  <meta name="description" content="Strategic Intelligence Lattice — a synthetic, human-directed research platform for allocation under uncertainty." />
+  <title>Strategic Intelligence Lattice — Decision Observatory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=1" />
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Strategic Intelligence Lattice home">
+      <span class="brand-glyph"><i></i><i></i><i></i><i></i></span>
+      <span><b>STRATEGIC</b><em>INTELLIGENCE LATTICE</em></span>
+    </a>
+    <nav>
+      <a href="#room">Decision room</a>
+      <a href="#record">Measured record</a>
+      <a href="#archive">Archive</a>
+    </nav>
+    <button id="jumpLab" class="nav-action">OPEN LAB <span>↘</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker">SYNTHETIC DECISION SCIENCE / REPRODUCIBLE RESEARCH PLATFORM</p>
+        <h1>Allocate <i>attention</i><br>before you allocate <strong>belief.</strong></h1>
+        <p class="hero-lede">SIL is a human-directed synthetic research environment for asking where computation should go when reward, safety and uncertainty compete. It records what worked, what failed, and which old ideas were never proved.</p>
+        <div class="hero-actions">
+          <a href="#room" class="primary-action">ENTER DECISION ROOM <span>↘</span></a>
+          <a href="#record" class="text-action">SEE THE NEGATIVE RESULTS</a>
+        </div>
+        <div class="truth-strip">
+          <span><b>DEFAULT</b> bulk-uniform</span>
+          <span><b>LLM</b> non-acting</span>
+          <span><b>WORLD</b> synthetic only</span>
+          <span><b>ARCHIVE</b> failures retained</span>
+        </div>
+      </div>
+
+      <div class="hero-lattice" aria-label="interactive strategic lattice preview">
+        <div class="hero-caption"><span>DECISION LATTICE / LIVE PREVIEW</span><b id="heroMethod">UNIFORM BULK</b></div>
+        <div class="plane-wrap">
+          <div class="plane" id="heroPlane">
+            <div class="axis axis-x"><span>A0 / NO-OP</span><span>A1</span><span>A2</span></div>
+            <div class="axis axis-y"><span>R0</span><span>R1</span><span>R2</span></div>
+            <div class="hero-cells" id="heroCells"></div>
+            <div class="scan"></div>
+          </div>
+        </div>
+        <div class="hero-readout">
+          <div><small>POSTERIOR</small><b id="heroPosterior">0.35 / 0.40 / 0.25</b></div>
+          <div><small>CERTIFIED</small><b id="heroCertified">A0 / SAFE FALLBACK</b></div>
+          <div><small>BUDGET</small><b id="heroBudget">576 QUERIES</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="shell statement-inner">
+        <p>Prediction is not the product.</p>
+        <h2>The product is a <span>falsifiable decision process</span> that knows what it does not know.</h2>
+      </div>
+    </section>
+
+    <section id="room" class="room-section">
+      <div class="shell">
+        <div class="section-head">
+          <div><p class="kicker">01 / QUERY LAB v0.7</p><h2>Decision room.</h2></div>
+          <p>Manipulate a browser teaching model of the repository's three-regime / three-action query lab. The real research engine uses its own Python implementation and time-uniform binary-KL safety bounds; this surface is an explanatory simulator, not the research result itself.</p>
+        </div>
+
+        <div class="room-grid">
+          <aside class="control-deck interactive-zone">
+            <div class="interactive-flag"><i></i> YOU CAN CHANGE THIS</div>
+
+            <div class="control-group">
+              <label>SCENARIO SEED <output id="scenarioOut">2</output></label>
+              <input id="scenario" type="range" min="1" max="96" value="2" />
+              <div class="ticks"><span>01</span><span>48</span><span>96</span></div>
+            </div>
+
+            <div class="control-group">
+              <label>QUERY BUDGET <output id="budgetOut">576</output></label>
+              <input id="budget" type="range" min="144" max="1152" step="72" value="576" />
+              <div class="ticks"><span>144</span><span>576</span><span>1152</span></div>
+            </div>
+
+            <div class="control-group">
+              <label>SAFETY THRESHOLD <output id="riskOut">0.75</output></label>
+              <input id="risk" type="range" min="0.55" max="0.95" step="0.01" value="0.75" />
+              <div class="ticks"><span>0.55</span><span>θ</span><span>0.95</span></div>
+            </div>
+
+            <div class="method-group">
+              <label>ALLOCATION POLICY</label>
+              <button class="method active" data-method="uniform_bulk"><span>01</span><b>Bulk uniform</b><small>current default</small></button>
+              <button class="method" data-method="certificate_sprint"><span>02</span><b>Certificate sprint</b><small>opt-in targeted</small></button>
+              <button class="method" data-method="certificate_portfolio"><span>03</span><b>Certificate portfolio</b><small>predictive / expensive</small></button>
+              <button class="method" data-method="c_voc"><span>04</span><b>C-VoC</b><small>one-batch value</small></button>
+              <button class="method" data-method="hybrid"><span>05</span><b>Hybrid</b><small>uniform → adaptive</small></button>
+              <button class="method" data-method="adaptive"><span>06</span><b>Legacy adaptive</b><small>heuristic priority</small></button>
+            </div>
+
+            <div class="deck-actions">
+              <button id="runLab" class="run-button">RUN BROWSER MODEL <span>▶</span></button>
+              <button id="resample" class="ghost-button">RESAMPLE EVIDENCE</button>
+            </div>
+          </aside>
+
+          <div class="observatory">
+            <div class="obs-topline">
+              <div><small>RUN</small><b id="runId">SIL-002-A</b></div>
+              <div><small>MODE</small><b id="modeLabel">BULK UNIFORM</b></div>
+              <div><small>PROVENANCE</small><b>SYNTHETIC / SEEDED</b></div>
+              <div class="pulse-status"><i></i><span id="statusLabel">READY</span></div>
+            </div>
+
+            <div class="posterior-panel">
+              <div class="panel-title"><span>REGIME POSTERIOR</span><small>one independent evidence observation</small></div>
+              <div class="posterior-bars" id="posteriorBars"></div>
+            </div>
+
+            <div class="matrix-panel">
+              <div class="panel-title"><span>ALLOCATION LATTICE</span><small>3 regimes × 3 actions</small></div>
+              <div class="matrix-wrap">
+                <div class="matrix-labels top"><span>A0 / NO-OP</span><span>A1</span><span>A2</span></div>
+                <div class="matrix-labels side"><span>REGIME 0</span><span>REGIME 1</span><span>REGIME 2</span></div>
+                <div class="matrix" id="matrix"></div>
+              </div>
+              <div class="matrix-legend"><span><i class="q"></i>allocation</span><span><i class="r"></i>reward mean</span><span><i class="s"></i>safety lower bound</span></div>
+            </div>
+
+            <div class="decision-band">
+              <article class="decision-card certified">
+                <span>CERTIFIED ACTION</span>
+                <strong id="certifiedAction">A0</strong>
+                <p id="certifiedCopy">Known-safe toy fallback under the browser gate.</p>
+                <div><small>MODEL VALUE</small><b id="certifiedValue">0.000</b></div>
+              </article>
+              <article class="decision-card exploratory">
+                <span>EXPLORATORY ONLY</span>
+                <strong id="exploratoryAction">A1</strong>
+                <p id="exploratoryCopy">Highest empirical value among apparently feasible actions. Not authorization.</p>
+                <div><small>APPARENT VALUE</small><b id="exploratoryValue">0.000</b></div>
+              </article>
+              <article class="decision-card oracle">
+                <span>ANALYTIC SYNTHETIC ORACLE</span>
+                <strong id="oracleAction">A0</strong>
+                <p>Computed from hidden synthetic probabilities; never estimated from the selection samples.</p>
+                <div><small>TRUE REGRET</small><b id="regretValue">0.000</b></div>
+              </article>
+            </div>
+
+            <div class="frontier-panel">
+              <div class="panel-title"><span>VALUE / SAFETY FRONTIER</span><small>synthetic action geometry</small></div>
+              <svg id="frontier" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-label="synthetic value safety frontier"></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="architecture-section">
+      <div class="shell">
+        <div class="section-head">
+          <div><p class="kicker">02 / ACTUAL BASELINE</p><h2>What the engine really does.</h2></div>
+          <p>Human parameters enter a reproducible synthetic state machine. Candidate actions share seeded shocks, three hypothetical regimes are weighted, rollouts are evaluated, safety gates are applied, and only then is a synthetic action recorded.</p>
+        </div>
+
+        <div class="flow-ribbon">
+          <div><span>01</span><b>HUMAN PARAMS</b><small>seed / trials / budget</small></div><i>→</i>
+          <div><span>02</span><b>SYNTHETIC STATE</b><small>two-dimensional baseline</small></div><i>→</i>
+          <div><span>03</span><b>3 REGIMES</b><small>posterior-weighted hypotheses</small></div><i>→</i>
+          <div><span>04</span><b>ROLLOUTS</b><small>shared seeded shocks</small></div><i>→</i>
+          <div><span>05</span><b>SAFETY GATE</b><small>model-conditional</small></div><i>→</i>
+          <div><span>06</span><b>RECORDED ACTION</b><small>synthetic provenance</small></div>
+        </div>
+
+        <div class="boundary-grid">
+          <article><span>DOES</span><h3>Reproducible synthetic experimentation.</h3><p>Fixed seed and configuration produce repeatable synthetic records and explicit evaluation artifacts.</p></article>
+          <article><span>DOES</span><h3>Separate decision from explanation.</h3><p>The optional LLM can summarize. It cannot select or execute actions.</p></article>
+          <article class="refuse"><span>DOES NOT</span><h3>Predict markets or geopolitics.</h3><p>The query lab is a falsifiable synthetic decision-science testbed, not a deployed strategic oracle.</p></article>
+          <article class="refuse"><span>DOES NOT</span><h3>Turn low entropy into destiny.</h3><p>Historical inevitability, Lyapunov and entropy claims remain archived as unproved or invalid where appropriate.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="record" class="record-section">
+      <div class="shell">
+        <div class="section-head light">
+          <div><p class="kicker">03 / MEASURED RECORD</p><h2>Wins stay bounded.<br>Losses stay visible.</h2></div>
+          <p>Selected published repository results. These are synthetic experiment outcomes, not general guarantees. The default remains the faster bulk-uniform baseline because CPU and holdout behavior matter.</p>
+        </div>
+
+        <div class="record-grid">
+          <article class="record-card">
+            <div class="record-head"><span>CERTIFICATE SPRINT / FRESH SEEDS</span><b>96 contexts</b></div>
+            <div class="score-pair"><strong>42<small>/96</small></strong><i>vs</i><strong>28<small>/96</small></strong></div>
+            <p>Oracle matches: Sprint vs bulk-uniform at equal 576 generated cell queries.</p>
+            <div class="cpu-row"><span>Sprint CPU <b>0.004475s</b></span><span>Uniform CPU <b>0.004380s</b></span></div>
+          </article>
+
+          <article class="record-card warn">
+            <div class="record-head"><span>CPU-MATCHED HOLDOUT</span><b>48 contexts</b></div>
+            <div class="score-pair"><strong>19<small>/48</small></strong><i>vs</i><strong>13<small>/48</small></strong></div>
+            <p>Sprint retained more oracle matches, but mean CPU remained about 2.8% higher.</p>
+            <div class="status-line">RESULT: <b>INTERESTING / NOT A FREE WIN</b></div>
+          </article>
+
+          <article class="record-card dim">
+            <div class="record-head"><span>CERTIFICATE PORTFOLIO</span><b>equal queries</b></div>
+            <div class="score-pair"><strong>47<small>/96</small></strong><i>vs</i><strong>31<small>/96</small></strong></div>
+            <p>Better equal-query oracle matching, but roughly 3.4× mean measured CPU.</p>
+            <div class="status-line">EQUAL-CPU HOLDOUT: <b>4/48 vs 12/48</b></div>
+          </article>
+        </div>
+
+        <div class="default-banner"><span>CURRENT RESEARCH DEFAULT</span><strong>BULK-UNIFORM</strong><p>Faster baseline first. Experimental allocators must earn the right to replace it.</p></div>
+      </div>
+    </section>
+
+    <section id="archive" class="archive-section">
+      <div class="shell archive-grid">
+        <div class="archive-copy">
+          <p class="kicker">04 / PRESERVATION LAYER</p>
+          <h2>Nothing gets deleted just because it was wrong.</h2>
+          <p>The repository preserves rejected prototypes, flawed metrics, unproved mathematical claims, earlier architecture sketches and the original paper draft next to the current runnable baseline. The archive is part of the research method.</p>
+          <div class="archive-tags"><span>DEVELOPMENT TIMELINE</span><span>FORMAL CLAIMS</span><span>PROTOTYPE CATALOG</span><span>DESIGN DECISIONS</span><span>LEGACY VARIANTS</span></div>
+        </div>
+        <div class="archive-stack" aria-label="archive layers">
+          <div class="archive-sheet s1"><small>ARCHIVE / 01</small><b>CLAIM</b><p>Low entropy implies favorable inevitability.</p><strong>REJECTED / UNSUPPORTED</strong></div>
+          <div class="archive-sheet s2"><small>ARCHIVE / 02</small><b>PROTOTYPE</b><p>Constant 3D score plane labeled an entropy basin.</p><strong>PRESERVED / NOT COPIED FORWARD</strong></div>
+          <div class="archive-sheet s3"><small>BASELINE / NOW</small><b>RULE</b><p>Every result states synthetic provenance and keeps evaluation separate from belief.</p><strong>ACTIVE ENGINEERING INVARIANT</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="shell closing-inner">
+        <p class="kicker">STRATEGIC INTELLIGENCE LATTICE</p>
+        <h2>Spend computation where uncertainty matters.<br><span>Keep the receipts when it doesn't.</span></h2>
+        <a href="#room" class="primary-action">RETURN TO DECISION ROOM <span>↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>SIL / SYNTHETIC RESEARCH SURFACE</span><span>NO MARKET PREDICTION · NO REAL-WORLD EXECUTION</span><span>REPRODUCIBILITY OVER THEATER</span></footer>
+
+  <script src="./app.js?v=1"></script>
+</body>
+</html>
