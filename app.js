@@ -151,7 +151,7 @@ if (astralCanvas) {
   const PHI=(1+Math.sqrt(5))/2, GOLDEN=Math.PI*(3-Math.sqrt(5));
   const coarse=matchMedia('(pointer:coarse)').matches, compact=()=>innerWidth<760||innerHeight<560;
   let w=0,h=0,dpr=1,raf=0,last=0,active=true,stars=[],segments=[],nodes=[],links=[];
-  let pointerX=0,pointerY=0,targetX=0,targetY=0,frameMs=coarse?24:16.5;
+  let pointerX=0,pointerY=0,targetX=0,targetY=0,frameMs=16.6;
   const rand=(()=>{let a=0x51a7f19d;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}})();
   const tree=(x,y,angle,len,depth,tone,birth=0)=>{
     if(depth<0||len<4)return;
@@ -187,7 +187,7 @@ if (astralCanvas) {
   };
   const resize=()=>{
     const r=hero.getBoundingClientRect();w=Math.max(1,Math.round(r.width));h=Math.max(1,Math.round(r.height));
-    dpr=Math.min(devicePixelRatio||1,compact()?1.15:1.45);frameMs=coarse||compact()?24:16.5;
+    dpr=Math.min(devicePixelRatio||1,compact()?1.0:1.25);frameMs=compact()?20:16.6;
     astralCanvas.width=Math.round(w*dpr);astralCanvas.height=Math.round(h*dpr);astralCanvas.style.width=w+'px';astralCanvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);rebuild();draw(performance.now(),true);
   };
   const col=t=>t==='gold'?GOLD:t==='green'?GREEN:COOL;
