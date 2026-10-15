@@ -1,3 +1,4 @@
+import './system-field.js';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -131,10 +132,14 @@ async function refreshActivity(force = false) {
 }
 $('#refresh-activity').addEventListener('click',()=>refreshActivity(true));
 // Below-the-fold metadata never competes with the initial render.
+let activityAutoRequested=false;
+const autoRefreshActivity=()=>{if(activityAutoRequested)return;activityAutoRequested=true;refreshActivity();};
 if('IntersectionObserver' in window){
-  const activityObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){activityObserver.disconnect();refreshActivity();}},{rootMargin:'200px'});
+  const activityObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){activityObserver.disconnect();autoRefreshActivity();}},{rootMargin:'200px'});
   activityObserver.observe($('.activity-section'));
-} else { window.addEventListener('load',()=>refreshActivity(),{once:true}); }
+} else { window.addEventListener('load',autoRefreshActivity,{once:true}); }
+// A low-priority safety trigger keeps activity fresh even when an observer is delayed by a very long portfolio page.
+window.addEventListener('load',()=>setTimeout(autoRefreshActivity,2200),{once:true});
 
 // Astral motion system: deterministic, lightweight and decorative only.
 document.documentElement.classList.add('js');
@@ -142,7 +147,7 @@ const astralCanvas = $('#astral-field');
 if (astralCanvas) {
   const hero = astralCanvas.closest('.astral-hero');
   const ctx = astralCanvas.getContext('2d', {alpha:true});
-  const GOLD='215,173,114', COOL='152,187,205', IVORY='244,226,195';
+  const GOLD='186,139,79', COOL='181,205,214', IVORY='238,232,220';
   let w=0,h=0,dpr=1,raf=0,last=0,active=true,stars=[],segments=[],nodes=[];
   let pointerX=0,pointerY=0,targetX=0,targetY=0;
   const rand=(()=>{let a=0x51a7f19d;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}})();
@@ -225,3 +230,11 @@ const animateMetric=el=>{
   const tick=now=>{const p=Math.min(1,(now-start)/duration),e=1-Math.pow(1-p,3);el.textContent=formatMetric(end*e);if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick);
 };
 if('IntersectionObserver'in window&&metricValues.length){const io=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){animateMetric(entry.target);io.unobserve(entry.target)}},{threshold:.45});metricValues.forEach(el=>io.observe(el))}else metricValues.forEach(el=>animateMetric(el));
+
+// Repository atlas filters keep all public work visible by default.
+const atlasCards=$$('.atlas-card[data-family]');
+$$('[data-atlas-filter]').forEach(button=>button.addEventListener('click',()=>{
+  const family=button.dataset.atlasFilter;
+  $$('[data-atlas-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  for(const card of atlasCards)card.hidden=family!=='all'&&card.dataset.family!==family;
+}));
