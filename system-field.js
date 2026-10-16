@@ -12,10 +12,13 @@ if(canvas){
   const color=t=>t==='green'?GREEN:t==='silver'?SILVER:GOLD;
   const spiral=(cx,cy,scale,time,tone,dir=1)=>{ctx.beginPath();for(let i=0;i<72;i++){const a=i*.18*dir+time*.00004*dir,r=scale*Math.pow(PHI,i/38)/PHI,x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r*.56;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.strokeStyle=`rgba(${color(tone)},${tone==='gold'?.07:.10})`;ctx.lineWidth=.6;ctx.stroke()};
   const draw=(time,staticFrame=false)=>{ctx.clearRect(0,0,w,h);ctx.globalCompositeOperation='lighter';const cycle=(time%14000)/14000,grow=Math.min(1,cycle*1.85),fade=cycle>.84?1-(cycle-.84)/.16:1;for(const s of stars){const a=.08+.13*(.5+.5*Math.sin(time*.001+s.p));ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.283);ctx.fillStyle=`rgba(${color(s.tone)},${a})`;ctx.fill()}spiral(w*.13,h*.22,w*.025,time,'silver',1);spiral(w*.87,h*.78,w*.023,time,'green',-1);for(const s of segments){const local=Math.max(0,Math.min(1,(grow*8-s.birth)/1.15));if(local<=0)continue;const ex=s.x+(s.x2-s.x)*local,ey=s.y+(s.y2-s.y)*local,pulse=.72+.28*Math.sin(time*.0009+s.phase*8);ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.quadraticCurveTo((s.x+ex)/2-Math.sin(s.a)*s.len*.08,(s.y+ey)/2+Math.cos(s.a)*s.len*.08,ex,ey);ctx.strokeStyle=`rgba(${color(s.tone)},${(.10+s.depth*.036)*pulse*fade})`;ctx.lineWidth=.45+s.depth*.11;ctx.stroke();if(local>.6&&s.depth<=1){ctx.beginPath();ctx.arc(ex,ey,.7,0,6.283);ctx.fillStyle=`rgba(${color(s.tone)},${.40*fade})`;ctx.fill()}}for(const l of tipLinks){ctx.beginPath();ctx.moveTo(l.a.x,l.a.y);ctx.lineTo(l.b.x,l.b.y);ctx.strokeStyle=`rgba(${color(l.a.tone)},${.045*(1-l.d/l.maxDist)*fade})`;ctx.lineWidth=.4;ctx.stroke()}ctx.globalCompositeOperation='source-over';if(!staticFrame&&running&&!reduced.matches)raf=requestAnimationFrame(loop)};
-  const loop=t=>{const frame=w<700?42:32;if(t-last<frame){raf=requestAnimationFrame(loop);return}last=t;draw(t)};
-  const sync=()=>{running=!document.hidden&&!heroVisible&&!reduced.matches;if(running&&!raf)raf=requestAnimationFrame(loop);if(!running&&raf){cancelAnimationFrame(raf);raf=0}};
+  const loop=t=>{if(t-last<33){raf=requestAnimationFrame(loop);return}last=t;draw(t)};
+  const sync=()=>{running=!document.hidden&&!heroVisible&&!reduced.matches&&!navigator.connection?.saveData;if(running&&!raf)raf=requestAnimationFrame(loop);if(!running&&raf){cancelAnimationFrame(raf);raf=0}};
   const resize=()=>{w=innerWidth;h=innerHeight;dpr=Math.min(devicePixelRatio||1,w<700?1:1.25);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);rebuild();draw(performance.now(),true)};
-  addEventListener('resize',()=>requestAnimationFrame(resize),{passive:true});document.addEventListener('visibilitychange',sync);reduced.addEventListener?.('change',sync);
+  let resizeFrame=0;
+  addEventListener('resize',()=>{if(!resizeFrame)resizeFrame=requestAnimationFrame(()=>{resizeFrame=0;resize()})},{passive:true});
+  document.addEventListener('visibilitychange',sync);
+  reduced.addEventListener?.('change',()=>{draw(performance.now(),true);sync()});
   if(hero&&'IntersectionObserver'in window)new IntersectionObserver(([e])=>{heroVisible=e.isIntersecting;sync()},{threshold:.01}).observe(hero);else heroVisible=false;
   resize();sync();
 }

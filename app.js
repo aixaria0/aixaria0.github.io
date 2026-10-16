@@ -138,11 +138,17 @@ if('IntersectionObserver' in window){
   const activityObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){activityObserver.disconnect();autoRefreshActivity();}},{rootMargin:'200px'});
   activityObserver.observe($('.activity-section'));
 } else { window.addEventListener('load',autoRefreshActivity,{once:true}); }
-// A low-priority safety trigger keeps activity fresh even when an observer is delayed by a very long portfolio page.
-window.addEventListener('load',()=>setTimeout(autoRefreshActivity,2200),{once:true});
-
-// Astral motion system: live Fibonacci/mycelium growth with adaptive rendering.
+// Motion is tied to visibility; the first paint has no network dependency.
 document.documentElement.classList.add('js');
+const motionTargets=$$('.research-instruments .instrument, .project.featured');
+if('IntersectionObserver' in window){
+  const motionObserver=new IntersectionObserver(entries=>{
+    for(const entry of entries)entry.target.classList.toggle('motion-visible',entry.isIntersecting);
+  },{rootMargin:'80px'});
+  motionTargets.forEach(element=>motionObserver.observe(element));
+}else motionTargets.forEach(element=>element.classList.add('motion-visible'));
+
+// Astral motion: a deterministic causal DAG sits behind Fibonacci growth.
 const astralCanvas = $('#astral-field');
 if (astralCanvas) {
   const hero = astralCanvas.closest('.astral-hero');
@@ -150,7 +156,7 @@ if (astralCanvas) {
   const GOLD='190,142,79', COOL='182,207,219', GREEN='104,184,139', IVORY='239,232,219';
   const PHI=(1+Math.sqrt(5))/2, GOLDEN=Math.PI*(3-Math.sqrt(5));
   const coarse=matchMedia('(pointer:coarse)').matches, compact=()=>innerWidth<760||innerHeight<560;
-  let w=0,h=0,dpr=1,raf=0,last=0,active=true,stars=[],segments=[],nodes=[],links=[];
+  let w=0,h=0,dpr=1,raf=0,last=0,active=false,heroVisible=true,stars=[],segments=[],nodes=[],links=[],causal=[];
   let pointerX=0,pointerY=0,targetX=0,targetY=0,frameMs=16.6;
   const rand=(()=>{let a=0x51a7f19d;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}})();
   const tree=(x,y,angle,len,depth,tone,birth=0)=>{
@@ -164,7 +170,7 @@ if (astralCanvas) {
     if(depth>2&&rand()>.63)tree(x2,y2,a+(rand()-.5)*spread*.5,len*shrink*.80,depth-2,tone,birth+1.35);
   };
   const rebuild=()=>{
-    stars=[];segments=[];nodes=[];links=[];
+    stars=[];segments=[];nodes=[];links=[];causal=[];
     const small=compact(), starCount=small?34:78, depth=small?4:5;
     for(let i=0;i<starCount;i++)stars.push({x:rand()*w,y:rand()*h,r:.3+rand()*.95,a:.10+rand()*.32,p:rand()*6.283});
     tree(w*.012,h*.36,-.08,w*(small?.22:.205),depth,'gold');
@@ -184,10 +190,26 @@ if (astralCanvas) {
       const a=nodes[i],b=nodes[j],d=Math.hypot(a.x-b.x,a.y-b.y);
       if(d<max&&(a.tone===b.tone||rand()>.86))links.push({a,b,d,max,tone:a.tone});
     }
+    if(!small){
+      // Edges always advance in column order. Cross-lane messages merge at later events.
+      for(const side of [0,1]){
+        const xs=side ? [.79,.85,.92,.985] : [.015,.08,.15,.21];
+        const tone=side ? COOL : GOLD;
+        for(let lane=0;lane<4;lane++){
+          const y=h*(.18+lane*.082);
+          for(let col=0;col<3;col++){
+            causal.push({x1:w*xs[col],y1:y,x2:w*xs[col+1],y2:y,tone,phase:(col+lane*.31)/5});
+          }
+        }
+        for(let lane=0;lane<3;lane++){
+          causal.push({x1:w*xs[1],y1:h*(.18+lane*.082),x2:w*xs[2],y2:h*(.18+(lane+1)*.082),tone,phase:(lane+.4)/4});
+        }
+      }
+    }
   };
   const resize=()=>{
     const r=hero.getBoundingClientRect();w=Math.max(1,Math.round(r.width));h=Math.max(1,Math.round(r.height));
-    dpr=Math.min(devicePixelRatio||1,compact()?1.0:1.25);frameMs=compact()?20:16.6;
+    dpr=Math.min(devicePixelRatio||1,compact()?1:1.25);frameMs=compact()?33:0;
     astralCanvas.width=Math.round(w*dpr);astralCanvas.height=Math.round(h*dpr);astralCanvas.style.width=w+'px';astralCanvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);rebuild();draw(performance.now(),true);
   };
   const col=t=>t==='gold'?GOLD:t==='green'?GREEN:COOL;
@@ -196,7 +218,6 @@ if (astralCanvas) {
     const local=Math.max(0,Math.min(1,(grow*8-s.birth)/1.1));if(local<=0)return;
     const color=col(s.tone), pulse=.56+.22*Math.sin(time*.0007+s.phase*6.28), ex=s.x1+(s.x2-s.x1)*local, ey=s.y1+(s.y2-s.y1)*local;
     const mx=(s.x1+ex)/2,my=(s.y1+ey)/2,b=s.bend*local;
-    ctx.beginPath();ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-b*.18+pointerX,my+b+pointerY,ex+pointerX,ey+pointerY);ctx.strokeStyle=`rgba(${color},${(.10+s.depth*.018)*pulse})`;ctx.lineWidth=1.65+s.depth*.22;ctx.stroke();
     ctx.beginPath();ctx.moveTo(s.x1+pointerX,s.y1+pointerY);ctx.quadraticCurveTo(mx-b*.18+pointerX,my+b+pointerY,ex+pointerX,ey+pointerY);ctx.strokeStyle=`rgba(${color},${(.30+s.depth*.045)*pulse})`;ctx.lineWidth=.45+s.depth*.12;ctx.stroke();
     if(local>.92&&s.depth<=1){ctx.beginPath();ctx.arc(ex+pointerX,ey+pointerY,.75,0,6.283);ctx.fillStyle=`rgba(${color},.72)`;ctx.fill();}
   };
@@ -208,15 +229,32 @@ if (astralCanvas) {
     for(const s of segments)curve(s,time,grow);
     for(const l of links){const alpha=.035*(1-l.d/l.max);ctx.beginPath();ctx.moveTo(l.a.x+pointerX,l.a.y+pointerY);ctx.lineTo(l.b.x+pointerX,l.b.y+pointerY);ctx.strokeStyle=`rgba(${col(l.tone)},${alpha})`;ctx.lineWidth=.45;ctx.stroke();}
     for(const a of nodes){const c=col(a.tone),glow=.6+.4*Math.sin(time*.0013+a.p*8);ctx.beginPath();ctx.arc(a.x+pointerX,a.y+pointerY,.95+glow*.38,0,6.283);ctx.fillStyle=`rgba(${c},${.28+glow*.24})`;ctx.fill();}
+    for(const e of causal){
+      ctx.beginPath();ctx.moveTo(e.x1,e.y1);ctx.lineTo(e.x2,e.y2);
+      ctx.strokeStyle=`rgba(${e.tone},.14)`;ctx.lineWidth=.7;ctx.stroke();
+      const progress=staticFrame?.48:(time*.00016+e.phase)%1;
+      ctx.beginPath();ctx.arc(e.x1+(e.x2-e.x1)*progress,e.y1+(e.y2-e.y1)*progress,1.35,0,6.283);
+      ctx.fillStyle=`rgba(${e.tone},.43)`;ctx.fill();
+    }
     ctx.globalCompositeOperation='source-over';if(!staticFrame&&active&&!reducedMotion.matches)raf=requestAnimationFrame(loop);
   };
-  const loop=time=>{if(time-last<frameMs){raf=requestAnimationFrame(loop);return}last=time;draw(time)};
+  const loop=time=>{if(frameMs&&time-last<frameMs){raf=requestAnimationFrame(loop);return}last=time;draw(time)};
+  const syncMotion=()=>{
+    const shouldRun=heroVisible&&!document.hidden&&!reducedMotion.matches&&!navigator.connection?.saveData;
+    active=shouldRun;
+    if(active&&!raf)raf=requestAnimationFrame(loop);
+    if(!active&&raf){cancelAnimationFrame(raf);raf=0;}
+  };
   if(!coarse)hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();targetX=(e.clientX-r.left-r.width/2)*.010;targetY=(e.clientY-r.top-r.height/2)*.010},{passive:true});
   hero.addEventListener('pointerleave',()=>{targetX=0;targetY=0},{passive:true});
-  new ResizeObserver(()=>requestAnimationFrame(resize)).observe(hero);
-  if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{active=entry.isIntersecting&&!document.hidden;if(active&&!raf&&!reducedMotion.matches)raf=requestAnimationFrame(loop);if(!active&&raf){cancelAnimationFrame(raf);raf=0;}},{threshold:.01}).observe(hero);
-  document.addEventListener('visibilitychange',()=>{active=!document.hidden;if(active&&!reducedMotion.matches){if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)}else if(raf){cancelAnimationFrame(raf);raf=0}});
-  resize();if(!reducedMotion.matches)raf=requestAnimationFrame(loop);
+  let resizeFrame=0;
+  const scheduleResize=()=>{if(!resizeFrame)resizeFrame=requestAnimationFrame(()=>{resizeFrame=0;resize()})};
+  if('ResizeObserver'in window)new ResizeObserver(scheduleResize).observe(hero);
+  else window.addEventListener('resize',scheduleResize,{passive:true});
+  if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{heroVisible=entry.isIntersecting;syncMotion()},{threshold:.01}).observe(hero);
+  document.addEventListener('visibilitychange',syncMotion);
+  reducedMotion.addEventListener?.('change',()=>{draw(performance.now(),true);syncMotion()});
+  resize();syncMotion();
 }
 
 // Animate registry-derived metrics only when they enter the viewport.
