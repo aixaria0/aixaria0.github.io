@@ -1,0 +1,5 @@
+:HL["/shahnameh-lite/_next/static/media/4ff1260a1bda0420-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/shahnameh-lite/_next/static/css/45c9d7259d66ae1f.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"_not-found","h":96,"c":"$Q2"}]]
+0:{"b":"FgSYSQkfWbmje6jBSzqgY","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
