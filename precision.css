@@ -25,6 +25,22 @@ html { scroll-padding-top: 88px; }
 .desktop-nav a { transition: color .2s ease; }
 .desktop-nav a:hover, .desktop-nav a[aria-current="location"] { color: var(--accent-strong); }
 .header-status { color: #b5ab9a; }
+.locale-switch {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 5px 12px;
+  border: 1px solid rgba(224, 182, 124, .38);
+  border-radius: 3px;
+  color: #f0d7aa;
+  background: rgba(224, 182, 124, .07);
+  font: 500 12px/1.5 var(--sans);
+  white-space: nowrap;
+  transition: background .18s ease, border-color .18s ease;
+}
+.locale-switch:hover { background: rgba(224, 182, 124, .18); border-color: rgba(224, 182, 124, .7); }
 
 /* The page leads with substantial work; figures support it without taking over. */
 .metrics-section { padding-block: 46px 56px; }
