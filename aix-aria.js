@@ -42,6 +42,7 @@ let registry = null;
 let knowledge = [];
 let lastMatches = [];
 let answerFa = isFa;
+let knowledgeReady;
 
 const faStop = new Set('از به در با برای که این آن را رو و یا یک چه چی چیه چیست کی چرا چطور چگونه میشه می شود میکند میکنه کرده کن درباره راجع توضیح بده بگو لطفا پروژه پروژه‌ها پروژه ها کار سیستم سامانه'.split(/\s+/));
 const enStop = new Set('a an the and or of to in on for with about what which who why how is are was were does do did explain tell me project projects system systems please'.split(/\s+/));
@@ -389,6 +390,7 @@ async function submit(forced) {
   quick.hidden=true;
   addMessage('user',query);
   typing(true);
+  await knowledgeReady;
   await new Promise(resolve=>setTimeout(resolve,120));
   const answer = localAnswer(query);
   typing(false);
@@ -410,4 +412,4 @@ async function loadKnowledge() {
     if (!messages.childElementCount) addMessage('assistant',strings.error);
   }
 }
-loadKnowledge();
+knowledgeReady = loadKnowledge();
