@@ -133,3 +133,8 @@ h1,h2,h3,.brand,.hero-manifesto,.metric-card strong,.family-lede{font-family:var
 }
 
 @media(orientation:landscape) and (max-height:620px){.hero-mark-wrap{left:25%;top:68px;width:min(44vw,370px)}.hero-stage::before{left:25%}}
+
+/* Compact locale control shared by the English and Persian surfaces. */
+.locale-switch{min-width:44px;min-height:40px;padding:0 11px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font:10px/1 var(--mono);letter-spacing:.03em;color:#d9c19b;background:rgba(15,14,12,.48);white-space:nowrap}
+.locale-switch:hover{border-color:rgba(215,173,114,.44);color:var(--ink);background:rgba(71,52,31,.22)}
+@media(max-width:1150px){.locale-switch{margin-inline-start:auto}}

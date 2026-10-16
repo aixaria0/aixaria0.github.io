@@ -2,6 +2,24 @@ import './system-field.js';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const isFa = document.documentElement.lang.toLowerCase().startsWith('fa');
+const ui = isFa ? {
+  projectCount:n=>`${new Intl.NumberFormat('fa-IR').format(n)} پروژه`,
+  selected:'بازگشت به پروژه‌های منتخب ↖', all:n=>`مشاهدهٔ هر ${new Intl.NumberFormat('fa-IR').format(n)} پروژه ↗`,
+  openNav:'باز کردن ناوبری', closeNav:'بستن ناوبری',
+  noActivity:'فعالیت عمومی تازه‌ای از مخزن‌ها برنگشت. لینک‌های منبع بالا را بررسی کنید.',
+  cached:d=>`فعالیت ذخیره‌شدهٔ GitHub · ${d}`, checking:'در حال بررسی فعالیت عمومی GitHub…',
+  updated:'به‌روزرسانی‌شده از مخزن‌های عمومی GitHub', noMatch:'GitHub فعالیت عمومی منطبق برنگرداند',
+  unavailableCached:'GitHub در دسترس نیست · فعالیت ذخیره‌شده نمایش داده می‌شود', unavailableSnapshot:'GitHub در دسترس نیست · نمای ثبت‌شدهٔ مخزن‌ها نمایش داده می‌شود'
+} : {
+  projectCount:n=>`${n} project${n === 1 ? '' : 's'}`,
+  selected:'Back to selected work ↖', all:n=>`Explore all ${n} projects ↗`,
+  openNav:'Open navigation', closeNav:'Close navigation',
+  noActivity:'No recent public repository activity was returned. Explore the source links above.',
+  cached:d=>`Cached GitHub activity · ${d}`, checking:'Checking public GitHub activity…',
+  updated:'Updated from public GitHub repositories', noMatch:'GitHub returned no matching public activity',
+  unavailableCached:'GitHub unavailable · showing cached activity', unavailableSnapshot:'GitHub unavailable · showing repository snapshot'
+};
 const projects = $$('[data-project]');
 let category = 'all';
 let expanded = false;
@@ -15,12 +33,12 @@ function filterProjects(animate = false) {
     if (show) { count++; if (animate && !reducedMotion.matches) project.classList.add('filter-enter'); }
   }
   $$('.filter').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
-  $('#work-count').textContent = `${count} project${count === 1 ? '' : 's'}`;
+  $('#work-count').textContent = ui.projectCount(count);
   $('#work-empty').hidden = count > 0;
   const showAll = $('#show-all');
   showAll.hidden = category !== 'all';
   showAll.setAttribute('aria-expanded', String(expanded));
-  showAll.textContent = expanded ? 'Back to selected work ↖' : `Explore all ${projects.length} projects ↗`;
+  showAll.textContent = expanded ? ui.selected : ui.all(projects.length);
 }
 // Install handlers before revealing progressively enhanced controls.
 $$('.filter').forEach(button => button.addEventListener('click', () => {
@@ -41,14 +59,14 @@ const menu = $('#mobile-nav');
 function closeMenu(restoreFocus = false) {
   menu.hidden = true;
   menuButton.setAttribute('aria-expanded','false');
-  menuButton.setAttribute('aria-label','Open navigation');
+  menuButton.setAttribute('aria-label',ui.openNav);
   if (restoreFocus) menuButton.focus();
 }
 menuButton.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') !== 'true';
   menu.hidden = !open;
   menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.setAttribute('aria-label',open ? 'Close navigation' : 'Open navigation');
+  menuButton.setAttribute('aria-label',open ? ui.closeNav : ui.openNav);
 });
 menu.addEventListener('click', event => { if(event.target.closest('a')) closeMenu(); });
 document.addEventListener('keydown', event => { if(event.key === 'Escape' && !menu.hidden) closeMenu(true); });
@@ -56,12 +74,15 @@ document.addEventListener('click', event => { if(!menu.hidden && !event.target.c
 window.matchMedia('(min-width:601px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
 
 const persianDialog = $('#persian-dialog');
-$('#open-persian').addEventListener('click', () => persianDialog.showModal());
-persianDialog.querySelector('.dialog-close').addEventListener('click', () => persianDialog.close());
-persianDialog.addEventListener('click',event=>{
-  const r=persianDialog.getBoundingClientRect();
-  if(event.target === persianDialog && (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom)) persianDialog.close();
-});
+const persianTrigger = $('#open-persian');
+if (persianDialog && persianTrigger) {
+  persianTrigger.addEventListener('click', () => persianDialog.showModal());
+  persianDialog.querySelector('.dialog-close')?.addEventListener('click', () => persianDialog.close());
+  persianDialog.addEventListener('click',event=>{
+    const r=persianDialog.getBoundingClientRect();
+    if(event.target === persianDialog && (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom)) persianDialog.close();
+  });
+}
 $('#year').textContent = new Date().getFullYear();
 
 if ('IntersectionObserver' in window) {
@@ -97,7 +118,7 @@ function validRows(rows) {
 }
 function showActivity(rows) {
   const fragment=document.createDocumentFragment();
-  if(!rows.length){ const message=document.createElement('p'); message.className='activity-empty'; message.textContent='No recent public repository activity was returned. Explore the source links above.'; fragment.append(message); }
+  if(!rows.length){ const message=document.createElement('p'); message.className='activity-empty'; message.textContent=ui.noActivity; fragment.append(message); }
   for(const row of rows){
     const item=document.createElement('div'); item.className='activity-row';
     const anchor=document.createElement('a'); anchor.href=row.html_url; anchor.target='_blank'; anchor.rel='noopener noreferrer'; anchor.textContent=row.name+' ↗';
@@ -111,10 +132,10 @@ async function refreshActivity(force = false) {
   if(busy)return;
   const cached=readCache();
   const status=$('#github-status');
-  if(cached){ showActivity(cached.rows); status.textContent='Cached GitHub activity · '+new Date(cached.time).toLocaleDateString('en-GB',{day:'numeric',month:'short'}); if(!force && Date.now()-cached.time < TTL)return; }
+  if(cached){ showActivity(cached.rows); status.textContent=ui.cached(new Date(cached.time).toLocaleDateString(isFa?'fa-IR':'en-GB',{day:'numeric',month:'short'})); if(!force && Date.now()-cached.time < TTL)return; }
   busy=true;
   const button=$('#refresh-activity');button.disabled=true;button.setAttribute('aria-busy','true');
-  status.textContent='Checking public GitHub activity…';
+  status.textContent=ui.checking;
   const controller=new AbortController();
   const timeout=setTimeout(()=>controller.abort(),6000);
   try {
@@ -123,9 +144,9 @@ async function refreshActivity(force = false) {
     const rows=validRows(await response.json());
     showActivity(rows);
     try {localStorage.setItem(CACHE_KEY,JSON.stringify({time:Date.now(),rows}));}catch{}
-    status.textContent=rows.length ? 'Updated from public GitHub repositories' : 'GitHub returned no matching public activity';
+    status.textContent=rows.length ? ui.updated : ui.noMatch;
   } catch {
-    status.textContent=cached ? 'GitHub unavailable · showing cached activity' : 'GitHub unavailable · showing repository snapshot';
+    status.textContent=cached ? ui.unavailableCached : ui.unavailableSnapshot;
   } finally {
     clearTimeout(timeout);busy=false;button.disabled=false;button.removeAttribute('aria-busy');
   }
@@ -259,7 +280,7 @@ if (astralCanvas) {
 
 // Animate registry-derived metrics only when they enter the viewport.
 const metricValues=$$('[data-count]');
-const formatMetric=n=>new Intl.NumberFormat('en-US').format(Math.round(n));
+const formatMetric=n=>new Intl.NumberFormat(isFa?'fa-IR':'en-US').format(Math.round(n));
 const animateMetric=el=>{
   const end=Number(el.dataset.count);if(!Number.isFinite(end)||reducedMotion.matches){el.textContent=formatMetric(end||0);return}
   const start=performance.now(),duration=780;

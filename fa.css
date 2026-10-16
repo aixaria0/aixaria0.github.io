@@ -1,0 +1,46 @@
+@font-face{font-family:Vazirmatn;src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn%5Bwght%5D.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+.locale-switch{min-width:44px;min-height:40px;padding:0 11px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font:10px/1 var(--mono);letter-spacing:.03em;color:#d9c19b;background:rgba(15,14,12,.48);white-space:nowrap}
+.locale-switch:hover{border-color:rgba(215,173,114,.44);color:var(--ink);background:rgba(71,52,31,.22)}
+.fa-page body{font-family:Vazirmatn,Tahoma,'Segoe UI',Arial,sans-serif;line-height:1.9;text-align:right}
+.fa-page .mono,.fa-page .eyebrow,.fa-page .project-meta,.fa-page .technologies,.fa-page .atlas-card-top,.fa-page .atlas-langs,.fa-page .atlas-metrics,.fa-page .research-state,.fa-page .activity-status,.fa-page .activity-row span,.fa-page .activity-row time,.fa-page .capability-number{font-family:Vazirmatn,'JetBrains Mono',Tahoma,sans-serif}
+.fa-page h2,.fa-page .section-heading h2,.fa-page .atlas-subhead h3,.fa-page .research-entry h3,.fa-page .activity-intro h2,.fa-page .about-section h2,.fa-page .contact-section h2,.fa-page .family-gate strong{font-family:Vazirmatn,Tahoma,sans-serif;letter-spacing:-.025em}
+.fa-page .hero-core h1,.fa-page .project:not(.featured) h3,.fa-page .atlas-card h4,.fa-page .brand{font-family:'Instrument Serif',Georgia,serif;direction:ltr;unicode-bidi:isolate}
+.fa-page .project:not(.featured) h3,.fa-page .atlas-card h4{text-align:right}
+.fa-page .featured h3{font-family:Vazirmatn,Tahoma,sans-serif;direction:rtl;text-align:right;letter-spacing:-.02em}
+.fa-page .hero-core{direction:rtl}
+.fa-page .hero-core h1{align-self:center;text-align:center}
+.fa-page .hero-manifesto{font-family:Vazirmatn,Tahoma,sans-serif;letter-spacing:-.015em;line-height:1.65}
+.fa-page .hero-description{line-height:2}
+.fa-page .hero-domains{direction:rtl;unicode-bidi:isolate}
+.fa-page .technologies,.fa-page .atlas-langs,.fa-page .atlas-metrics{direction:ltr;unicode-bidi:isolate;text-align:right}
+.fa-page .project-links,.fa-page .atlas-links,.fa-page .contact-links,.fa-page .family-node-links{unicode-bidi:isolate}
+.fa-page .project-links a,.fa-page .atlas-links a,.fa-page .activity-row a,.fa-page .contact-links a{unicode-bidi:isolate}
+.fa-page .project-description,.fa-page .project-detail p,.fa-page .atlas-card>p,.fa-page .section-heading>p,.fa-page .metrics-note,.fa-page .about-copy p,.fa-page .contact-section p{line-height:1.95}
+.fa-page .desktop-nav{direction:rtl}
+.fa-page .desktop-nav a{font-family:Vazirmatn,Tahoma,sans-serif;letter-spacing:0;text-transform:none;font-size:12px}
+.fa-page .header-status{font-family:Vazirmatn,Tahoma,sans-serif}
+.fa-page .mobile-nav{text-align:right}
+.fa-page .menu-toggle{font-family:Vazirmatn,Tahoma,sans-serif}
+.fa-page .hero-pole-left{left:auto;right:0;text-align:right}.fa-page .hero-pole-right{right:auto;left:0;text-align:left}
+.fa-page .hero-actions{direction:rtl}.fa-page .hero-actions .button,.fa-page .hero-actions .text-link{font-family:Vazirmatn,Tahoma,sans-serif}
+.fa-page .metrics-heading>p{text-align:left}
+.fa-page .metric-card>span:not(.metric-index){font-family:Vazirmatn,Tahoma,sans-serif;letter-spacing:0;text-transform:none}
+.fa-page .project-meta .project-category{text-transform:none}
+.fa-page .project-meta,.fa-page .featured-top,.fa-page .figure-heading{letter-spacing:0}
+.fa-page .featured-top>span:last-child{direction:ltr;unicode-bidi:isolate}
+.fa-page .case-details>summary>span{margin-right:0;margin-left:auto}
+.fa-page .project-detail ul{padding-left:0;padding-right:18px}
+.fa-page .research-method{grid-template-columns:70px 1fr}.fa-page .research-method dd{text-align:right}
+.fa-page .activity-row time{text-align:left;direction:ltr;unicode-bidi:isolate}
+.fa-page .atlas-filters{justify-content:flex-start}.fa-page .atlas-filters button{font-family:Vazirmatn,Tahoma,sans-serif;text-transform:none}
+.fa-page .atlas-card-top>span:first-child{font-family:Vazirmatn,Tahoma,sans-serif}.fa-page .atlas-card-top>span:last-child{font-family:Vazirmatn,Tahoma,sans-serif}
+.fa-page .private-index summary>span{margin-left:0;margin-right:auto}
+.fa-page .site-footer .brand{direction:ltr}.fa-page .footer-meta{direction:rtl}
+.fa-page .architecture-figure svg text{font-family:Vazirmatn,Tahoma,Arial,sans-serif!important}
+.fa-page .architecture-figure figcaption{font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9}
+.fa-page .research-instruments span,.fa-page .research-instruments small{font-family:Vazirmatn,Tahoma,sans-serif}
+.fa-page bdi,.fa-page [dir=ltr]{unicode-bidi:isolate}
+@media(max-width:1150px){.locale-switch{margin-inline-start:auto}.fa-page .header-status{display:none}}
+@media(max-width:820px){.fa-page .metrics-heading>p{text-align:right}.fa-page .research-method{grid-template-columns:1fr}}
+@media(max-width:600px){.locale-switch{min-height:38px;padding-inline:9px}.fa-page .header-inner{gap:10px}.fa-page .hero-core{text-align:center}.fa-page .section-heading,.fa-page .atlas-subhead{text-align:right}.fa-page .research-method{grid-template-columns:72px 1fr}.fa-page .activity-row time{text-align:left}.fa-page .contact-links{direction:rtl}}
+@media(orientation:landscape) and (max-height:620px){.fa-page .hero-core{align-items:flex-start;text-align:right}.fa-page .hero-core h1{align-self:flex-start;text-align:right}.fa-page .hero-manifesto,.fa-page .hero-description{text-align:right}.fa-page .hero-domains,.fa-page .hero-actions{justify-content:flex-start}}
