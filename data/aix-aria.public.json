@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "name": "AIX Aria",
+  "scope": "Public-safe professional and project context for the Sunaria site assistant.",
+  "privacy": {
+    "rule": "Only answer from this public pack, the public Sunaria registry, and visible site content. Never infer or expose private ChatGPT conversations, credentials, health, finances, family matters, private contact data, or undisclosed personal details.",
+    "unknown_policy": "If evidence is missing, say that the verified public context is insufficient rather than guessing."
+  },
+  "profile": {
+    "name": "Aria Fani",
+    "public_identity": "AIX Aria",
+    "github": "aixaria0",
+    "summary_en": "Aria is a systems architect, engineer, and independent researcher working across distributed systems, evidence-carrying runtimes, formal methods, quantum experiments, security, and intelligent systems. His public work emphasizes reproducibility, explicit trust boundaries, deterministic replay, and claims that can be checked against source and evidence.",
+    "summary_fa": "آریا فانی با هویت حرفه‌ای AIX Aria معمار سیستم، مهندس و پژوهشگر مستقل است. محور کار او سیستم‌های توزیع‌شده، runtimeهای مبتنی بر شواهد، روش‌های صوری، آزمایش‌های کوانتومی، امنیت و سامانه‌های هوشمند است. در کار عمومی او تکرارپذیری، مرزهای اعتمادِ صریح، replay قطعی و ادعاهای قابل‌بررسی اهمیت محوری دارند.",
+    "domains": [
+      "Distributed Systems",
+      "RChain / Casper CBC research",
+      "Formal Verification / Lean 4",
+      "Quantum Computing / VQE",
+      "Security / adversarial testing",
+      "Evidence and provenance systems",
+      "Local language models and intelligent automation",
+      "Linux / Android engineering environments"
+    ],
+    "communication_en": "Precise, technical, evidence-led, restrained, and explicit about limitations. Distinguish production systems, prototypes, experiments, drafts, and future directions.",
+    "communication_fa": "دقیق، فنی، مبتنی بر شواهد و بدون اغراق. میان محصول عملیاتی، نمونهٔ پژوهشی، آزمایش، پیش‌نویس و جهت‌گیری آینده تفاوت روشن بگذار.",
+    "background": [
+      {
+        "title": "Technical analysis and markets",
+        "en": "Before the current systems focus, Aria spent years trading and teaching technical analysis, including fractals, geometry, Fibonacci, Gann-style structures, and price action. That background still influences his interest in structure, recurrence, causal patterns, and measurable claims.",
+        "fa": "پیش از تمرکز فعلی بر مهندسی سیستم‌ها، آریا سال‌ها در معامله‌گری و آموزش تحلیل تکنیکال فعالیت داشته؛ از فراکتال و هندسه تا فیبوناچی، ساختارهای گن و پرایس‌اکشن. این سابقه هنوز در علاقهٔ او به ساختار، تکرار، الگوهای علّی و ادعاهای قابل‌اندازه‌گیری دیده می‌شود."
+      }
+    ]
+  },
+  "directions": [
+    {
+      "id": "intelligence-lattice",
+      "title": "Intelligence Lattice",
+      "status": "long-term research direction",
+      "aliases": ["intelligence lattice", "lattice intelligence", "شبکه هوش", "شبکهٔ هوش", "هوش جمعی"],
+      "summary_en": "A long-term direction toward distributed collective intelligence: multiple independently inspectable systems coordinating without collapsing trust into one opaque component.",
+      "summary_fa": "یک جهت‌گیری بلندمدت برای هوش جمعی توزیع‌شده؛ مجموعه‌ای از سامانه‌های مستقل و قابل‌بررسی که بدون تبدیل اعتماد به یک جزء مبهم واحد با هم هماهنگ می‌شوند."
+    }
+  ],
+  "project_context": [
+    {
+      "id": "rchain-assurance",
+      "title": "RChain Assurance",
+      "status": "multi-repository assurance architecture",
+      "aliases": ["rchain assurance", "rchain", "آرچین", "رچین", "assurance"],
+      "summary_en": "A layered assurance path spanning Rholox, Sentinel, an assurance package, and RCHAIN-COMPLIER. The goal is to keep transport integrity, evidence provenance, verifier trust, and application verdicts distinct rather than treating one digest or one process as universal proof.",
+      "summary_fa": "یک مسیر چندلایهٔ اطمینان که Rholox، Sentinel، بستهٔ assurance و RCHAIN-COMPLIER را به هم وصل می‌کند. هدف این است که یکپارچگی انتقال، منشأ شواهد، اعتماد به verifier و verdict نهایی برنامه با هم قاطی نشوند و یک digest یا یک فرایند به‌اشتباه «اثبات همه‌چیز» تلقی نشود."
+    },
+    {
+      "id": "rchain-complier",
+      "title": "RCHAIN-COMPLIER",
+      "status": "evidence and verification harness",
+      "aliases": ["rchain complier", "complier", "کامپلایر", "کامپلیر", "کمپلایر"],
+      "summary_en": "A reproducibility and verification harness around RChain/Casper CBC experiments. It packages bounded claims with evidence, replay paths, reviewer-supplied trust pins, and independent verification surfaces.",
+      "summary_fa": "یک harness برای تکرارپذیری و verification آزمایش‌های RChain/Casper CBC. ادعاهای محدودشده را همراه با شواهد، مسیر replay، trust pinهای تعیین‌شده توسط reviewer و سطح‌های بررسی مستقل بسته‌بندی می‌کند."
+    },
+    {
+      "id": "rchain-sentinel",
+      "title": "rchain-sentinel",
+      "status": "observation and inspection surface",
+      "aliases": ["sentinel", "سنتینل", "rchain sentinel"],
+      "summary_en": "An observation layer for inspecting RChain state and exposing machine-readable assurance or health information without pretending observation alone proves correctness.",
+      "summary_fa": "یک لایهٔ مشاهده برای بررسی state در RChain و ارائهٔ اطلاعات machine-readable دربارهٔ سلامت یا assurance؛ با این مرز روشن که مشاهده به‌تنهایی اثبات درستی نیست."
+    },
+    {
+      "id": "rlsenti",
+      "title": "rlsenti",
+      "status": "evidence adapter / synthetic workbench",
+      "aliases": ["rlsenti", "رل‌سنتی"],
+      "summary_en": "An evidence-adapter and synthetic workbench used to shape and inspect evidence flows around RChain-oriented verification work.",
+      "summary_fa": "یک evidence adapter و workbench مصنوعی برای شکل‌دادن و بررسی جریان شواهد در کارهای verification مرتبط با RChain."
+    },
+    {
+      "id": "rholox",
+      "title": "Rholox",
+      "status": "testnet application / assurance consumer",
+      "aliases": ["rholox", "رولوکس"],
+      "summary_en": "An application-facing surface that can consume assurance results rather than trusting raw transport data. In the assurance architecture it sits above Sentinel and the verification package.",
+      "summary_fa": "یک سطح application-facing که می‌تواند verdictهای assurance را مصرف کند، به‌جای این‌که صرفاً به دادهٔ خامِ انتقال اعتماد کند. در معماری assurance بالاتر از Sentinel و بستهٔ verification قرار می‌گیرد."
+    },
+    {
+      "id": "chimera-omega",
+      "title": "CHIMERA-OMEGA",
+      "status": "proof-carrying evidence runtime",
+      "aliases": ["chimera omega", "omega", "چیمرا امگا", "امگا"],
+      "summary_en": "A proof-carrying evidence runtime centered on a verdict kernel, sealed evidence DAGs, and verifier-selected adapters. The design goal is for a result to carry enough structured evidence that another verifier can inspect how that result was obtained.",
+      "summary_fa": "یک runtime مبتنی بر proof-carrying evidence با verdict kernel، evidence DAG مهروموم‌شده و adapterهایی که verifier انتخاب می‌کند. هدف این است که نتیجه فقط ادعا نباشد و شواهد ساختاریافته‌ای همراهش باشد تا verifier دیگری بتواند مسیر رسیدن به آن را بررسی کند."
+    },
+    {
+      "id": "chimera-one",
+      "title": "CHIMERA-ONE",
+      "status": "control-plane / provider orchestration hub",
+      "aliases": ["chimera one", "چیمرا وان", "chimera-1"],
+      "summary_en": "The control-plane hub of the CHIMERA constellation. It focuses on provider discovery, runtime health, orchestration, and connecting higher-level workflows to CHIMERA-OMEGA evidence semantics.",
+      "summary_fa": "هاب control-plane در خانوادهٔ CHIMERA. تمرکز آن روی provider discovery، سلامت runtime، orchestration و اتصال workflowهای سطح بالاتر به semantics شواهد در CHIMERA-OMEGA است."
+    },
+    {
+      "id": "chimera-ag",
+      "title": "Chimera-AG",
+      "status": "connected experimental system",
+      "aliases": ["chimera ag", "چیمرا ای جی"],
+      "summary_en": "A connected experimental system in the wider CHIMERA evidence-runtime constellation. It should be described as an experimental node, not as a completed universal platform.",
+      "summary_fa": "یکی از سیستم‌های آزمایشی متصل به constellation گستردهٔ CHIMERA. باید به‌عنوان یک گره پژوهشی/آزمایشی توصیف شود، نه یک پلتفرم کامل و جهان‌شمول."
+    },
+    {
+      "id": "ritualgraph",
+      "title": "RitualGraph",
+      "status": "graph-oriented experimental system",
+      "aliases": ["ritualgraph", "ritual graph", "ریچوال گراف"],
+      "summary_en": "A graph-oriented experimental system in the CHIMERA constellation, aligned with explicit relationships, provenance, and inspectable execution structure.",
+      "summary_fa": "یک سیستم آزمایشی graph-oriented در خانوادهٔ CHIMERA که روی رابطه‌های صریح، provenance و ساختار اجرای قابل‌بررسی متمرکز است."
+    },
+    {
+      "id": "aether-runtime",
+      "title": "aether-runtime",
+      "status": "bounded local runtime",
+      "aliases": ["aether runtime", "aether", "ایتر ران‌تایم", "اتر ران‌تایم"],
+      "summary_en": "A bounded execution runtime with a Rust control plane and C++ route, durable identities, operation contracts, replay-oriented records, and signed execution receipts.",
+      "summary_fa": "یک runtime اجرای محدودشده با control plane در Rust و مسیر C++، هویت‌های پایدار، قرارداد عملیات، رکوردهای مناسب replay و execution receiptهای امضاشده."
+    },
+    {
+      "id": "sovereign-lattice",
+      "title": "Sovereign-Lattice",
+      "status": "research prototype",
+      "aliases": ["sovereign lattice", "سوورین لتیس", "pbft"],
+      "summary_en": "A Rust research prototype for PBFT-style consensus, cryptographic certificates, durable state, and selected formal artifacts. Formal files are scoped artifacts, not a blanket proof of the complete distributed system.",
+      "summary_fa": "یک نمونهٔ پژوهشی Rust برای consensus به سبک PBFT، certificateهای رمزنگاری، state پایدار و artifactهای صوری محدودشده. وجود فایل‌های formal به معنی اثبات کامل کل سیستم توزیع‌شده نیست."
+    },
+    {
+      "id": "nexus-quantum",
+      "title": "nexus-quantum",
+      "status": "quantum + formal research experiment",
+      "aliases": ["nexus quantum", "نکسوس کوانتوم", "lean 4", "qiskit"],
+      "summary_en": "A research line combining VQE and quantum simulation with Lean 4 artifacts and explicit mathematical constraints, while keeping heuristic numerical results separate from theorem scope.",
+      "summary_fa": "یک مسیر پژوهشی که VQE و شبیه‌سازی کوانتومی را کنار artifactهای Lean 4 و قیود ریاضی صریح قرار می‌دهد و نتیجهٔ heuristic عددی را از محدودهٔ theorem جدا نگه می‌دارد."
+    },
+    {
+      "id": "vqe-analyzer",
+      "title": "vqe-analyzer",
+      "status": "interactive quantum optimization workbench",
+      "aliases": ["vqe analyzer", "vqe", "وی‌کیو‌ای", "وی کیو ای"],
+      "summary_en": "An interactive browser workbench for small-circuit VQE-style optimization with statevector evaluation, fresh randomized starts, best-parameter retention, and exact-reference comparisons. It does not claim quantum advantage.",
+      "summary_fa": "یک workbench مرورگری برای optimization به سبک VQE روی مدارهای کوچک، با statevector evaluation، شروع‌های تصادفی تازه، نگه‌داشتن بهترین پارامتر و مقایسه با مرجع دقیق. ادعای quantum advantage ندارد."
+    },
+    {
+      "id": "omni",
+      "title": "Omni",
+      "status": "OSINT / evidence stress-test research workspace",
+      "aliases": ["omni", "اومنی", "osint", "اوسینت"],
+      "summary_en": "A research workspace for testing how investigations behave when evidence is challenged, removed, contradicted, or replayed. It emphasizes competing hypotheses, provenance, portable receipts, and the distinction between integrity and truth.",
+      "summary_fa": "یک workspace پژوهشی برای سنجش این‌که investigation وقتی شواهدش به چالش کشیده، حذف، متناقض یا replay می‌شوند چه رفتاری دارد. روی competing hypothesis، provenance، receiptهای قابل‌انتقال و تفاوت integrity با truth تأکید می‌کند."
+    },
+    {
+      "id": "strategic-intelligence-lattice",
+      "title": "Strategic-Intelligence-Lattice",
+      "status": "synthetic decision research",
+      "aliases": ["strategic intelligence lattice", "sil", "لتیس استراتژیک"],
+      "summary_en": "A reproducible synthetic decision laboratory comparing adaptive computation policies under equal budgets. Negative and neutral results are retained; adaptive allocation is not presented as universally superior.",
+      "summary_fa": "یک آزمایشگاه تصمیم‌گیری مصنوعی و تکرارپذیر برای مقایسهٔ سیاست‌های تخصیص محاسبه تحت بودجهٔ برابر. نتیجه‌های منفی و خنثی حفظ می‌شوند و adaptive allocation به‌عنوان برتری جهان‌شمول معرفی نمی‌شود."
+    },
+    {
+      "id": "shahnameh-lite",
+      "title": "Shahnameh-lite",
+      "status": "independent digital reading experience",
+      "aliases": ["shahnameh lite", "شاهنامه لایت", "شاهنامه"],
+      "summary_en": "A Persian-first digital Shahnameh reading experience with local search, narrative maps, characters, glossary, verses, and a distinctive Hakim-e Tus narration style. Core reading features are independent of external model services.",
+      "summary_fa": "یک تجربهٔ فارسی‌محور برای خواندن شاهنامه با جست‌وجوی محلی، نقشهٔ روایت‌ها، شخصیت‌ها، واژه‌نامه، ابیات و لحن روایی اختصاصی «حکیم توس». قابلیت‌های اصلی خواندن مستقل از سرویس‌های مدل بیرونی‌اند."
+    }
+  ],
+  "answering_rules": [
+    "Prefer verified project facts over broad biography.",
+    "Preserve technical project identifiers such as RCHAIN-COMPLIER, CHIMERA-OMEGA, Lean 4, VQE, Rholox, and RChain.",
+    "In Persian, write natural technical Persian and keep English identifiers isolated so RTL text stays readable.",
+    "Never upgrade a prototype, experiment, draft, or research artifact into a production claim.",
+    "Never invent repository metrics, employment titles, certifications, or project states.",
+    "When a question is subjective, explain the criterion instead of presenting preference as fact."
+  ]
+}
