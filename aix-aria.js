@@ -1,6 +1,6 @@
 const providerUrl = new URL('./aix-aria-provider.js', import.meta.url);
 providerUrl.search = new URL(import.meta.url).search;
-const {MODEL_NAME, MODEL_DOWNLOAD, modelAvailable, generateWithLocalModel, AIXProviderError} = await import(providerUrl.href);
+const {MODEL_NAME, modelAvailable, generateWithAI, AIXProviderError} = await import(providerUrl.href);
 const doc = document;
 const root = doc.documentElement;
 const isFa = root.lang === 'fa';
@@ -23,18 +23,17 @@ const strings = {
   ),
   error: t('The local knowledge pack could not be loaded. The site itself is still available.', 'بستهٔ دانش محلی بارگذاری نشد. خود سایت همچنان در دسترس است.'),
   unknown: t(
-    'I can still explain Sunaria’s published projects. General questions need a compatible browser for the local model.',
-    'پروژه‌های منتشرشدهٔ ساناریا را می‌توانم توضیح بدهم. پاسخ‌گویی عمومی به مرورگری نیاز دارد که اجرای مدل محلی را پشتیبانی کند.'
+    'The AI service is temporarily unavailable. I can still explain Sunaria’s published projects.',
+    'سرویس هوش مصنوعی موقتاً در دسترس نیست؛ پروژه‌های منتشرشدهٔ ساناریا را همچنان می‌توانم توضیح بدهم.'
   ),
   settings: t('About AIX Aria', 'دربارهٔ AIX Aria'),
   settingsTitle: t('How AIX Aria answers', 'AIX Aria چطور پاسخ می‌دهد'),
   settingsIntro: t('Ask general questions freely. For Sunaria projects, answers use only the published project context and distinguish research from production.', 'هر سؤال عمومی را راحت بپرس. دربارهٔ پروژه‌های ساناریا، پاسخ به اطلاعات عمومی منتشرشده متکی است و پژوهش را از محصول عملیاتی جدا می‌کند.'),
-  privacy: t(`General answers run on this device. The first general question downloads ${MODEL_DOWNLOAD} from Hugging Face and jsDelivr; later visits may use the browser cache. Your question and conversation stay in this browser and are not sent to an AI service. Project explanations work immediately without downloading the model. WebGPU is required.`, `پاسخ‌های عمومی روی همین دستگاه ساخته می‌شوند. نخستین پرسش عمومی، مدلی با حجم ${MODEL_DOWNLOAD} را از Hugging Face و jsDelivr می‌گیرد؛ در بازدیدهای بعدی ممکن است از حافظهٔ مرورگر استفاده شود. پرسش و گفت‌وگو از این مرورگر به سرویس هوش مصنوعی فرستاده نمی‌شوند. توضیح پروژه‌ها بدون دریافت مدل و فوری در دسترس است. پشتیبانی WebGPU لازم است.`),
+  privacy: t('Your question, up to eight recent messages, and relevant public project context are sent to Pollinations for AI answers. No account, API key, or model download is required. Avoid sending sensitive information. The project guide remains available if the public service is busy.', 'پرسش، حداکثر هشت پیام اخیر و زمینهٔ عمومیِ مرتبط با پروژه برای پاسخ‌گویی به Pollinations فرستاده می‌شوند. به حساب، کلید یا دریافت مدل نیاز نداری. اطلاعات حساس نفرست. اگر سرویس عمومی مشغول باشد، راهنمای پروژه‌ها همچنان در دسترس است.'),
   coreStatus: t('AIX Core · always available', 'هستهٔ AIX · همیشه در دسترس'),
-  extendedStatus: t('AIX Aria · local model', 'AIX Aria · مدل محلی'),
-  fallbackStatus: t('Project guide · local model unavailable', 'راهنمای پروژه‌ها · مدل محلی در دسترس نیست'),
-  loadingModel: t('Downloading and preparing the local model…', 'در حال دریافت و آماده‌سازی مدل محلی…'),
-  modelProgress: percent => t(`Preparing local model · ${percent}%`, `آماده‌سازی مدل محلی · ${faDigits(percent)}٪`),
+  extendedStatus: t('AIX Aria · online AI', 'AIX Aria · هوش آنلاین'),
+  fallbackStatus: t('Project guide · AI temporarily unavailable', 'راهنمای پروژه‌ها · هوش آنلاین موقتاً قطع است'),
+
 };
 
 const quickPrompts = isFa ? [
@@ -310,13 +309,10 @@ function verifiedIds(query, local) {
 }
 
 function providerErrorText(error) {
-  const code = error instanceof AIXProviderError ? error.code : 'UNKNOWN';
-  if (answerFa) {
-    if (code === 'WEBGPU_UNAVAILABLE') return 'این مرورگر اجرای WebGPU را پشتیبانی نمی‌کند؛ راهنمای پروژه‌ها همچنان در دسترس است.';
-    return 'مدل محلی آماده نشد؛ راهنمای پروژه‌ها همچنان در دسترس است. اتصال اینترنت و پشتیبانی WebGPU را بررسی کن.';
-  }
-  if (code === 'WEBGPU_UNAVAILABLE') return 'This browser does not support WebGPU; the project guide remains available.';
-  return 'The local model could not be prepared; the project guide remains available. Check your connection and WebGPU support.';
+  const limited = error instanceof AIXProviderError && error.code === 'RATE_LIMITED';
+  return answerFa
+    ? (limited ? 'سرویس رایگان فعلاً شلوغ است؛ کمی بعد دوباره امتحان کن. راهنمای پروژه‌ها همچنان کار می‌کند.' : 'پاسخ‌گویی آنلاین فعلاً در دسترس نیست؛ کمی بعد دوباره امتحان کن. راهنمای پروژه‌ها همچنان کار می‌کند.')
+    : (limited ? 'The free service is busy. Please try again shortly. The project guide still works.' : 'Online AI is temporarily unavailable. Please try again shortly. The project guide still works.');
 }
 
 function verifiedContext(query, local) {
@@ -335,14 +331,12 @@ function verifiedContext(query, local) {
 
 async function extendedAnswer(query, local) {
   const controller = new AbortController();
-  const progress = percent => { providerNote.textContent = strings.modelProgress(percent); };
-  const text = await generateWithLocalModel({
+  const text = await generateWithAI({
     history: conversation,
     prompt: query,
     context: verifiedContext(query, local),
     language: answerFa ? 'fa' : 'en',
     signal: controller.signal,
-    onProgress: progress,
   });
   return {text, refs:local.refs || [], extended:true};
 }
@@ -375,7 +369,7 @@ function element(tag, className, text) {
 function addMessage(role, text, refs=[], mode='') {
   const wrap = element('div', `aix-message ${role}`);
   wrap.dir = /[\u0600-\u06ff]/.test(text) ? 'rtl' : 'ltr';
-  const assistantLabel = mode === 'extended' ? 'AIX Aria · local model' : mode === 'core' ? t('AIX Aria · project guide','AIX Aria · راهنمای پروژه‌ها') : 'AIX Aria';
+  const assistantLabel = mode === 'extended' ? 'AIX Aria · online AI' : mode === 'core' ? t('AIX Aria · project guide','AIX Aria · راهنمای پروژه‌ها') : 'AIX Aria';
   const label = element('span', 'aix-message-label', role === 'user' ? t('You','تو') : assistantLabel);
   const body = element('p', 'aix-message-body', text);
   wrap.append(label, body);
@@ -440,8 +434,8 @@ head.append(headAvatar, headCopy, settingsButton, close);
 const settingsPane = element('section','aix-settings'); settingsPane.hidden=true; settingsPane.setAttribute('aria-label',strings.settings);
 const settingsTop = element('div','aix-settings-top');
 settingsTop.append(element('p','aix-settings-kicker',t('AIX / MODEL LAYER','AIX / لایهٔ مدل')), element('h3','',strings.settingsTitle), element('p','aix-settings-intro',strings.settingsIntro));
-const modelRow = element('div','aix-model-row'); modelRow.append(element('span','',t('Model','مدل')), element('b','',MODEL_NAME), element('em','',t('Runs on this device','روی همین دستگاه اجرا می‌شود')));
-const providerNote = element('p','aix-provider-note',modelAvailable ? t(`First general question downloads ${MODEL_DOWNLOAD}.`, `نخستین پرسش عمومی ${MODEL_DOWNLOAD} داده دریافت می‌کند.`) : t('The project guide is available while the model is being connected.','تا زمان اتصال مدل، راهنمای پروژه‌ها در دسترس است.'));
+const modelRow = element('div','aix-model-row'); modelRow.append(element('span','',t('Model','مدل')), element('b','',MODEL_NAME), element('em','',t('Free online service','سرویس آنلاین رایگان')));
+const providerNote = element('p','aix-provider-note',t('Ask directly. No signup, API key, or model download.','مستقیم سؤال بپرس؛ بدون ثبت‌نام، کلید یا دریافت مدل.'));
 const privacy = element('p','aix-settings-privacy',strings.privacy);
 settingsPane.append(settingsTop,modelRow,providerNote,privacy);
 
@@ -460,7 +454,7 @@ form.append(input,send);
 const foot = element('div','aix-foot');
 const footMode = element('span','aix-online','AIX ARIA');
 footMode.dataset.mode = 'core';
-foot.append(element('span','',t('Public sources for project facts · General questions welcome','منابع عمومی برای پروژه‌ها · پرسش عمومی آزاد')), footMode);
+foot.append(element('span','',t('Online AI via Pollinations · Public project context','هوش آنلاین با Pollinations · زمینهٔ عمومی پروژه‌ها')), footMode);
 panel.append(head,settingsPane,messages,quick,form,foot);
 
 doc.body.append(launcher,panel);
@@ -511,11 +505,7 @@ async function submit(forced) {
   let answer = local;
   let mode = 'core';
   try {
-    if (local.refs?.length) {
-      answer = local;
-      mode = 'core';
-      setProviderStatus('core');
-    } else if (modelAvailable) {
+    if (modelAvailable) {
       answer = await extendedAnswer(query,local);
       mode = 'extended';
       setProviderStatus('extended');

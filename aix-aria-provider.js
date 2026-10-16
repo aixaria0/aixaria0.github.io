@@ -1,42 +1,13 @@
-export const MODEL_NAME = 'Qwen3 0.6B · ONNX Community';
-export const MODEL_ID = 'onnx-community/Qwen3-0.6B-DQ-ONNX';
-export const MODEL_DOWNLOAD = 'about 370 MB';
+export const MODEL_NAME = 'GPT-OSS 20B · Pollinations';
+export const API_URL = 'https://text.pollinations.ai/openai';
 export const modelAvailable = true;
 
 export class AIXProviderError extends Error {
-  constructor(message, code = 'MODEL_ERROR') {
+  constructor(message, code = 'PROVIDER_ERROR') {
     super(message);
     this.name = 'AIXProviderError';
     this.code = code;
   }
-}
-
-let generatorPromise;
-
-async function loadGenerator(onProgress) {
-  if (!globalThis.navigator?.gpu) {
-    throw new AIXProviderError('This browser does not expose WebGPU.', 'WEBGPU_UNAVAILABLE');
-  }
-  if (!generatorPromise) {
-    generatorPromise = (async () => {
-      const {pipeline, env} = await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.1');
-      env.allowLocalModels = false;
-      env.useBrowserCache = true;
-      return pipeline('text-generation', MODEL_ID, {
-        device: 'webgpu',
-        dtype: 'q4f16',
-        progress_callback: event => {
-          if (event?.status === 'progress' && Number.isFinite(event.progress)) {
-            onProgress?.(Math.max(0, Math.min(100, Math.round(event.progress))));
-          }
-        },
-      });
-    })().catch(error => {
-      generatorPromise = null;
-      throw new AIXProviderError(error?.message || 'The local model could not be loaded.', 'MODEL_LOAD_FAILED');
-    });
-  }
-  return generatorPromise;
 }
 
 export function makeMessages({history = [], prompt, context = '', language = 'en'}) {
@@ -50,25 +21,32 @@ export function makeMessages({history = [], prompt, context = '', language = 'en
   return [{role:'system',content:system}, ...turns];
 }
 
-export async function generateWithLocalModel({history = [], prompt, context = '', language = 'en', signal, onProgress}) {
-  if (signal?.aborted) throw new AIXProviderError('The request was cancelled.', 'ABORTED');
-  const generator = await loadGenerator(onProgress);
-  if (signal?.aborted) throw new AIXProviderError('The request was cancelled.', 'ABORTED');
-  let output;
+export async function generateWithAI({history = [], prompt, context = '', language = 'en', signal}) {
+  const controller = new AbortController();
+  const abort = () => controller.abort();
+  signal?.addEventListener('abort', abort, {once:true});
+  if (signal?.aborted) controller.abort();
+  const timeout = setTimeout(abort, 35000);
   try {
-    output = await generator(makeMessages({history, prompt, context, language}), {
-      max_new_tokens: 240,
-      do_sample: true,
-      temperature: 0.45,
-      top_p: 0.82,
-      repetition_penalty: 1.08,
+    const response = await fetch(API_URL, {
+      method:'POST', mode:'cors', credentials:'omit', cache:'no-store',
+      referrerPolicy:'no-referrer', signal:controller.signal,
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'openai-fast', messages:makeMessages({history,prompt,context,language}),
+        stream:false, temperature:0.4, max_tokens:800,
+      }),
     });
+    if (!response.ok) throw new AIXProviderError('The public AI service is unavailable.', response.status === 429 ? 'RATE_LIMITED' : 'PROVIDER_UNAVAILABLE');
+    const payload = await response.json();
+    const text = payload?.choices?.[0]?.message?.content;
+    if (typeof text !== 'string' || !text.trim()) throw new AIXProviderError('The AI service returned no answer.', 'EMPTY_RESPONSE');
+    return text.trim().slice(0,7000);
   } catch (error) {
-    throw new AIXProviderError(error?.message || 'Local generation failed.', 'GENERATION_FAILED');
+    if (error instanceof AIXProviderError) throw error;
+    throw new AIXProviderError('The public AI service could not be reached.', controller.signal.aborted ? 'TIMEOUT' : 'NETWORK_ERROR');
+  } finally {
+    clearTimeout(timeout);
+    signal?.removeEventListener('abort', abort);
   }
-  const result = output?.[0]?.generated_text;
-  const text = (Array.isArray(result) ? result.at(-1)?.content : result)?.trim?.();
-  const cleaned = typeof text === 'string' ? text.replace(/<think>[\s\S]*?<\/think>/gi, '').trim() : '';
-  if (!cleaned) throw new AIXProviderError('No answer was returned by the local model.', 'EMPTY_RESPONSE');
-  return cleaned.slice(0, 5000);
 }
