@@ -1,4 +1,6 @@
-import {MODEL_NAME, MODEL_DOWNLOAD, modelAvailable, generateWithLocalModel, AIXProviderError} from './aix-aria-provider.js';
+const providerUrl = new URL('./aix-aria-provider.js', import.meta.url);
+providerUrl.search = new URL(import.meta.url).search;
+const {MODEL_NAME, MODEL_DOWNLOAD, modelAvailable, generateWithLocalModel, AIXProviderError} = await import(providerUrl.href);
 const doc = document;
 const root = doc.documentElement;
 const isFa = root.lang === 'fa';
