@@ -21,8 +21,8 @@ const response=await fetch('./current.json?v='+Date.now(),{cache:'no-store'});
 if(!response.ok)throw Error('No active link');
 const data=await response.json();
 const endpoint=new URL(data.url);
-if(endpoint.protocol!=='https:'|| !/^[a-z0-9-]+\.trycloudflare\.com$/.test(endpoint.hostname)||endpoint.username||endpoint.password||endpoint.port||endpoint.pathname!=='/'||endpoint.search||endpoint.hash)throw Error('Invalid remote endpoint');
-status.textContent='PRIVATE RUNTIME · CONNECTION AVAILABLE';
+if(endpoint.protocol!=='https:'|| !/^[a-z0-9-]+\.(trycloudflare\.com|lhr\.life)$/.test(endpoint.hostname)||endpoint.username||endpoint.password||endpoint.port||endpoint.pathname!=='/'||endpoint.search||endpoint.hash)throw Error('Invalid remote endpoint');
+status.textContent='PRIVATE LINK · PASSWORD REQUIRED';
 enter.href=endpoint.href;enter.hidden=false;
 setTimeout(()=>{window.location.replace(endpoint.href)},1400);
 }catch{status.textContent='PRIVATE DEVICE OFFLINE OR LINK UNAVAILABLE';document.querySelector('#note').textContent='The runtime is reachable only while the tablet and its tunnel are running.';}
