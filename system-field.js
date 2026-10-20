@@ -3,7 +3,7 @@ if(canvas){
   const ctx=canvas.getContext('2d',{alpha:true,desynchronized:true});
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const hero=document.querySelector('.astral-hero');
-  const GOLD='205,160,96',SILVER='185,204,214',GREEN='104,190,145';
+  const GOLD='225,179,105',SILVER='157,190,158',GREEN='115,216,150';
   const PHI=(1+Math.sqrt(5))/2,GOLDEN=Math.PI*2*(1-1/PHI);
   let w=0,h=0,dpr=1,raf=0,last=0,segments=[],tips=[],tipLinks=[],stars=[],heroVisible=!!hero,running=!hero;
   const seed=()=>{let x=(innerWidth*2654435761^innerHeight*1597334677)>>>0;return()=>((x=Math.imul(x^x>>>15,1|x),x^=x+Math.imul(x^x>>>7,61|x),(x^x>>>14)>>>0)/4294967296)};

@@ -156,18 +156,12 @@ function buildKnowledge() {
       live_url: detail.live_url || x.live_url || null,
     };
   });
-  const privateSafe = (registry?.private_projects || []).filter(x => x?.id && !seen.has(x.id)).map(x => ({
-    id: x.id,
-    title: x.name || x.id,
-    status: x.status || 'private research index',
-    family: x.family || '',
-    relation: x.relation || '',
-    aliases: [x.name, x.id].filter(Boolean),
-    summary_en: `A private project identity indexed by Sunaria. Public details are intentionally limited to its family, relation, and status.`,
-    summary_fa: `یک هویت پروژهٔ خصوصی در فهرست Sunaria. جزئیات عمومی عمداً به خانواده، رابطه و وضعیت پروژه محدود شده‌اند.`,
-    technologies: [],
-    repository_url: null,
-    live_url: x.live_url || null,
+  const privateSafe = (registry?.private_projects || []).filter(x => x?.name).map(x => ({
+    title: x.name,
+    status: x.status,
+    family: x.family,
+    summary_en: x.description?.en || '',
+    summary_fa: x.description?.fa || '',
   }));
   const identity = {
     id: 'aria-profile',

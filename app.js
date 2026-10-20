@@ -161,7 +161,7 @@ const astralCanvas = $('#astral-field');
 if (astralCanvas) {
   const hero = astralCanvas.closest('.astral-hero');
   const ctx = astralCanvas.getContext('2d', {alpha:true, desynchronized:true});
-  const GOLD='190,142,79', COOL='182,207,219', GREEN='104,184,139', IVORY='239,232,219';
+  const GOLD='228,183,107', COOL='161,204,168', GREEN='121,216,151', IVORY='237,239,214';
   const PHI=(1+Math.sqrt(5))/2, GOLDEN=Math.PI*(3-Math.sqrt(5));
   const coarse=matchMedia('(pointer:coarse)').matches, compact=()=>innerWidth<760||innerHeight<560;
   let w=0,h=0,dpr=1,raf=0,last=0,active=false,heroVisible=true,stars=[],segments=[],nodes=[],links=[],causal=[];
@@ -184,8 +184,8 @@ if (astralCanvas) {
     tree(w*.012,h*.36,-.08,w*(small?.22:.205),depth,'gold');
     tree(w*.03,h*.61,-.28,w*(small?.18:.17),depth,'gold');
     if(!small)tree(w*.12,h*.26,.10,w*.125,5,'gold');
-    tree(w*.988,h*.36,Math.PI+.08,w*(small?.22:.205),depth,'cool');
-    tree(w*.97,h*.61,Math.PI+.28,w*(small?.18:.17),depth,'cool');
+    tree(w*.988,h*.36,Math.PI+.08,w*(small?.22:.205),depth,'green');
+    tree(w*.97,h*.61,Math.PI+.28,w*(small?.18:.17),depth,'green');
     if(!small)tree(w*.88,h*.26,Math.PI-.10,w*.125,5,'green');
     const n=small?14:24;
     for(let i=0;i<n;i++){
@@ -233,7 +233,7 @@ if (astralCanvas) {
     if(!ctx||!w||!h)return;ctx.clearRect(0,0,w,h);pointerX+=(targetX-pointerX)*.045;pointerY+=(targetY-pointerY)*.045;ctx.globalCompositeOperation='lighter';
     for(const s of stars){const tw=staticFrame?1:(.68+.32*Math.sin(time*.0011+s.p));ctx.beginPath();ctx.arc(s.x+pointerX*.18,s.y+pointerY*.18,s.r,0,6.283);ctx.fillStyle=`rgba(${IVORY},${s.a*tw})`;ctx.fill();}
     const cx=w*.5,cy=h*.37,cycle=(time%12000)/12000,grow=cycle<.72?Math.min(1,cycle/.54):1;
-    orbit(cx,cy,w*.29,h*.13,time*.000014,GOLD,.15,[2,8]);orbit(cx,cy,w*.225,h*.19,-time*.000011,COOL,.10,[1,10]);orbit(cx,cy,w*.355,h*.09,time*.000007,GREEN,.065,[1,14]);
+    orbit(cx,cy,w*.29,h*.13,time*.000014,GOLD,.15,[2,8]);orbit(cx,cy,w*.225,h*.19,-time*.000011,GREEN,.12,[1,10]);orbit(cx,cy,w*.355,h*.09,time*.000007,GREEN,.065,[1,14]);
     for(const s of segments)curve(s,time,grow);
     for(const l of links){const alpha=.035*(1-l.d/l.max);ctx.beginPath();ctx.moveTo(l.a.x+pointerX,l.a.y+pointerY);ctx.lineTo(l.b.x+pointerX,l.b.y+pointerY);ctx.strokeStyle=`rgba(${col(l.tone)},${alpha})`;ctx.lineWidth=.45;ctx.stroke();}
     for(const a of nodes){const c=col(a.tone),glow=.6+.4*Math.sin(time*.0013+a.p*8);ctx.beginPath();ctx.arc(a.x+pointerX,a.y+pointerY,.95+glow*.38,0,6.283);ctx.fillStyle=`rgba(${c},${.28+glow*.24})`;ctx.fill();}

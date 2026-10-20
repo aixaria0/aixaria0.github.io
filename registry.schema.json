@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://sunaria.si/registry.schema.json",
+  "title":"Sunaria public registry feed",
+  "type":"object",
+  "required":["snapshotDate","methodology","source","projects","privateProjects"],
+  "properties":{
+    "snapshotDate":{"type":["string","null"],"format":"date"},
+    "methodology":{"type":"object","required":["en","fa"],"properties":{"en":{"type":"string"},"fa":{"type":"string"}},"additionalProperties":false},
+    "source":{"type":"object","required":["name","query","contentHash"],"properties":{"name":{"type":"string"},"query":{"type":"string"},"contentHash":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}},"additionalProperties":false},
+    "projects":{"type":"array","items":{"$ref":"#/$defs/publicProject"}},
+    "privateProjects":{"type":"array","items":{"type":"object","required":["name","family","status","description"],"properties":{"name":{"type":"string"},"family":{"type":"string"},"status":{"type":["string","null"]},"description":{"$ref":"#/$defs/bilingual"}},"additionalProperties":false}}
+  },
+  "$defs":{
+    "bilingual":{"type":"object","required":["en","fa"],"properties":{"en":{"type":["string","null"]},"fa":{"type":["string","null"]}},"additionalProperties":false},
+    "publicProject":{"type":"object","required":["id","name","visibility","kind","family","status","featured","order","description","scope","stack","languages","links","metrics"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"visibility":{"const":"public"},"kind":{"enum":["original","fork","mirror","duplicate","stub"]},"family":{"type":"string"},"status":{"type":["string","null"]},"featured":{"type":"boolean"},"order":{"type":"integer"},"description":{"$ref":"#/$defs/bilingual"},"scope":{"type":"object","required":["summary","limits"],"properties":{"summary":{"$ref":"#/$defs/bilingual"},"limits":{"type":"object","required":["en","fa"],"properties":{"en":{"type":"array","items":{"type":"string"}},"fa":{"type":"array","items":{"type":"string"}}},"additionalProperties":false}},"additionalProperties":false},"stack":{"type":"array","items":{"type":"string"}},"languages":{"type":"array","items":{"type":"string"}},"links":{"type":"object","required":["source","live","docs","evidence"],"properties":{"source":{"type":["string","null"],"format":"uri"},"live":{"type":["string","null"],"format":"uri"},"docs":{"type":["string","null"],"format":"uri"},"evidence":{"type":["string","null"],"format":"uri"}},"additionalProperties":false},"metrics":{"type":"object","required":["commits","prs","mergedPrs","ciRuns","evidence"],"properties":{"commits":{"type":["integer","null"]},"prs":{"type":["integer","null"]},"mergedPrs":{"type":["integer","null"]},"ciRuns":{"type":["integer","null"]},"evidence":{"type":"object","required":["score","criteria"],"properties":{"score":{"type":["integer","null"]},"criteria":{"type":"array","minItems":14,"maxItems":14}},"additionalProperties":false}},"additionalProperties":false}},"additionalProperties":false}
+  },
+  "additionalProperties":false
+}

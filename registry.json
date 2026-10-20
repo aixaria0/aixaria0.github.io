@@ -1,0 +1,4295 @@
+{
+  "snapshotDate": "2026-10-13",
+  "methodology": {
+    "en": "Repository metadata and languages come from the GitHub REST API; activity and workflow observations come from the generated registry snapshot. Missing values remain null. Evidence rubric criteria require owner approval.",
+    "fa": "فراداده و زبان‌های مخزن از API رسمی GitHub دریافت می‌شود؛ داده‌های فعالیت و گردش‌کار از snapshot رجیستری تولیدشده‌اند. دادهٔ ناموجود null می‌ماند. معیارهای روبریک شواهد نیازمند تأیید مالک‌اند."
+  },
+  "source": {
+    "name": "GitHub REST API and repository snapshot",
+    "query": "gh api --paginate -X GET user/repos -f affiliation=owner -f per_page=100 --slurp",
+    "contentHash": "sha256:d6b34d66fe387acf9799cb2019a5cdac6533902901df010156acbf65a047a826"
+  },
+  "projects": [
+    {
+      "id": "apex-dee",
+      "name": "Apex Deep Quant",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantitative-systems",
+      "status": "legacy",
+      "featured": false,
+      "order": 0,
+      "description": {
+        "en": "An early quantitative systems prototype; lineage remains unclassified.",
+        "fa": "نمونهٔ اولیه‌ای در سامانه‌های کمّی؛ تبار آن هنوز طبقه‌بندی نشده است."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "HTML",
+        "Python"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/-Apex-Dee",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 35,
+        "prs": 2,
+        "mergedPrs": 2,
+        "ciRuns": 20,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aether-runtime",
+      "name": "Aether Runtime",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "featured": true,
+      "order": 2,
+      "description": {
+        "en": "Keep a verifiable record of bounded execution across routing failures, restarts, and replay.",
+        "fa": "برای اجرای محدود، هنگام خطای مسیریابی، راه‌اندازی دوباره و بازپخش، سابقه‌ای قابل راستی‌آزمایی نگه می‌دارد."
+      },
+      "scope": {
+        "summary": {
+          "en": "A Rust control plane and C++ route share an operation contract. Persisted Ed25519 identities sign execution receipts. Current admitted operations are echo, ASCII uppercase, and sha256.",
+          "fa": "بخش کنترلِ نوشته‌شده با راست و مسیر اجراییِ سی‌پلاس‌پلاس، قرارداد عملیات مشترک دارند. هویت‌های پایدار با الگوریتم Ed25519 رسید اجرا را امضا می‌کنند. عملیات پذیرفته‌شدهٔ کنونی فقط بازتاب پیام، تبدیل حروف انگلیسی به بزرگ و محاسبهٔ هش SHA-256 است."
+        },
+        "limits": {
+          "en": [
+            "no blanket remote-attestation claim",
+            "no distributed-consensus claim",
+            "no arbitrary-shell safety claim"
+          ],
+          "fa": [
+            "این کار ادعای گواهی کلی دربارهٔ اجرای راه‌دور ندارد.",
+            "این محیط، ادعای اجماع توزیع‌شده ندارد.",
+            "ایمنی اجرای فرمان دلخواه در پوسته ادعا نمی‌شود."
+          ]
+        }
+      },
+      "stack": [
+        "Rust",
+        "C++",
+        "gRPC",
+        "SQLite WAL"
+      ],
+      "languages": [
+        "Rust",
+        "Python",
+        "HTML",
+        "C++",
+        "Shell",
+        "CMake",
+        "Dockerfile"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/aether-runtime",
+        "live": null,
+        "docs": "https://github.com/aixaria0/aether-runtime/blob/main/docs/architecture-decisions.md",
+        "evidence": "https://github.com/aixaria0/aether-runtime/blob/main/README.md"
+      },
+      "metrics": {
+        "commits": 53,
+        "prs": 12,
+        "mergedPrs": 11,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 9,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aether-runtime-os",
+      "name": "Aether Runtime OS",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "featured": false,
+      "order": 3,
+      "description": {
+        "en": "Multi-process Aether runtime research generation focused on recovery, signed evidence, WAL-backed persistence, and deterministic replay.",
+        "fa": "نسل پژوهشیِ چندفرایندی برای بازیابی اجرا، شواهد امضاشده، ماندگاری داده و بازپخش قطعی."
+      },
+      "scope": {
+        "summary": {
+          "en": "Multi-process Aether runtime research generation focused on recovery, signed evidence, WAL-backed persistence, and deterministic replay.",
+          "fa": "توالی زمانی مخزن‌ها به‌تنهایی نشان نمی‌دهد این پایگاه کد پیش از محیط اجرای کنونی ساخته شده باشد."
+        },
+        "limits": {
+          "en": [
+            "repository chronology does not establish that this codebase predates aether-runtime",
+            "runtime/replay evidence is not a formal correctness proof"
+          ],
+          "fa": [
+            "تاریخچهٔ مخزن به‌تنهایی تقدم زمانی این پایگاه کد را ثابت نمی‌کند.",
+            "شواهد اجرا و بازپخش، اثبات صوریِ درستی نیستند."
+          ]
+        }
+      },
+      "stack": [
+        "GitHub Actions",
+        "Rust",
+        "Rust/Cargo"
+      ],
+      "languages": [
+        "Rust"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Aether-Runtime-OS",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 5,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 7,
+        "evidence": {
+          "score": 5,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ariatrading-github-io",
+      "name": "AriaTrading Showcase",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantitative-systems",
+      "status": "legacy",
+      "featured": false,
+      "order": 10,
+      "description": {
+        "en": "Public presentation and deployment surface for the AriaTrading project.",
+        "fa": "سطح عمومیِ معرفی و انتشار پروژهٔ AriaTrading."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript"
+      ],
+      "links": {
+        "source": null,
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 1,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 1,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ariatrading0",
+      "name": "AriaTrading0",
+      "visibility": "public",
+      "kind": "mirror",
+      "family": "quantitative-systems",
+      "status": "legacy",
+      "featured": false,
+      "order": 11,
+      "description": {
+        "en": "A historical AriaTrading mirror with ancestry not yet verified.",
+        "fa": "مخزن آینه‌ای یا قدیمی از AriaTrading که تبار آن هنوز تأیید نشده است."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript"
+      ],
+      "links": {
+        "source": null,
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 1,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "bookofkings",
+      "name": "Book of Kings",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "status": "active",
+      "featured": false,
+      "order": 13,
+      "description": {
+        "en": "Local-first Persian cultural reflection product built around a structured daily ritual and Shahnameh-inspired visual language.",
+        "fa": "محصولی فرهنگی با اولویت استفادهٔ محلی، بر پایهٔ آیینی روزانه و زبان تصویریِ الهام‌گرفته از شاهنامه."
+      },
+      "scope": {
+        "summary": {
+          "en": "Local-first Persian cultural reflection product built around a structured daily ritual and Shahnameh-inspired visual language.",
+          "fa": "این یک محصول فرهنگی برای مخاطب عمومی است، نه ادعایی دربارهٔ راستی‌آزمایی مهندسی."
+        },
+        "limits": {
+          "en": [
+            "consumer/cultural product rather than an engineering-verification claim"
+          ],
+          "fa": [
+            "این محصول فرهنگی است و ادعای راستی‌آزمایی مهندسی ندارد."
+          ]
+        }
+      },
+      "stack": [
+        "CSS",
+        "JavaScript",
+        "Next.js",
+        "Node.js",
+        "TypeScript"
+      ],
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Bookofkings",
+        "live": "https://aixaria0.github.io/Bookofkings/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 12,
+        "prs": 11,
+        "mergedPrs": 11,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 5,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "faaal",
+      "name": "Faal",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "featured": false,
+      "order": 21,
+      "description": {
+        "en": "A minimal historical prototype in the Faal project family.",
+        "fa": "نمونه‌ای تاریخی و حداقلی در خانوادهٔ پروژهٔ Faal."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "HTML"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Faaal",
+        "live": "https://aixaria0.github.io/Faaal/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 3,
+        "prs": 2,
+        "mergedPrs": 2,
+        "ciRuns": 6,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "faal",
+      "name": "Faal",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "featured": false,
+      "order": 22,
+      "description": {
+        "en": "A minimal historical prototype in the Faal project family.",
+        "fa": "نمونه‌ای تاریخی و حداقلی در خانوادهٔ پروژهٔ Faal."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [],
+      "links": {
+        "source": "https://github.com/aixaria0/Faal",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 1,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "forgeos",
+      "name": "ForgeOS",
+      "visibility": "public",
+      "kind": "original",
+      "family": "legacy-scratch",
+      "status": "legacy",
+      "featured": false,
+      "order": 23,
+      "description": {
+        "en": "A legacy experiment whose deeper lineage has not yet been audited.",
+        "fa": "آزمایش پیشین؛ نسبت آن با پروژه‌های دیگر هنوز به بررسی بیشتر نیاز دارد."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [],
+      "links": {
+        "source": "https://github.com/aixaria0/forgeos",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 1,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fun",
+      "name": "Empire of Free LLMs",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "featured": false,
+      "order": 24,
+      "description": {
+        "en": "A prototype for parallel language-model fan-out and response synthesis.",
+        "fa": "نمونه‌ای اولیه برای اجرای موازی مدل‌های زبانی و ترکیب پاسخ‌ها."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "HTML"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Fun",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 3,
+        "prs": 2,
+        "mergedPrs": 2,
+        "ciRuns": 13,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "gggg",
+      "name": "Gggg",
+      "visibility": "public",
+      "kind": "original",
+      "family": "legacy-scratch",
+      "status": "legacy",
+      "featured": false,
+      "order": 25,
+      "description": {
+        "en": "A minimal scratch repository with no further verified project description.",
+        "fa": "مخزن آزمایشی حداقلی که توضیح تأییدشدهٔ بیشتری برای آن ثبت نشده است."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [],
+      "links": {
+        "source": "https://github.com/aixaria0/Gggg",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 1,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "gggg1",
+      "name": "Gggg1",
+      "visibility": "public",
+      "kind": "original",
+      "family": "legacy-scratch",
+      "status": "legacy",
+      "featured": false,
+      "order": 26,
+      "description": {
+        "en": "A minimal scratch repository with no further verified project description.",
+        "fa": "مخزن آزمایشی حداقلی که توضیح تأییدشدهٔ بیشتری برای آن ثبت نشده است."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Gggg1",
+        "live": "https://aixaria0.github.io/Gggg1/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 2,
+        "prs": 1,
+        "mergedPrs": 1,
+        "ciRuns": 5,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-security-poc",
+      "name": "LLM Security PoC",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "status": "research",
+      "featured": false,
+      "order": 27,
+      "description": {
+        "en": "Forensic red-team proof-of-concept repository for testing security failure modes in dynamic model/application architectures.",
+        "fa": "نمونه‌ای پژوهشی برای بررسی حالت‌های شکست امنیتی در معماری‌های پویا و مبتنی بر مدل‌های زبانی بزرگ."
+      },
+      "scope": {
+        "summary": {
+          "en": "Forensic red-team proof-of-concept repository for testing security failure modes in dynamic model/application architectures.",
+          "fa": "فرضیه‌های امنیتی تا زمانی که برای هدف مشخص بازتولید و مستند نشوند، آسیب‌پذیری تأییدشده به شمار نمی‌آیند."
+        },
+        "limits": {
+          "en": [
+            "PoC labels are not treated as established vulnerabilities in third-party targets without target-specific reproduction and evidence",
+            "severity language remains scoped to demonstrated conditions"
+          ],
+          "fa": [
+            "نام‌گذاری اثبات مفهوم به‌تنهایی وجود آسیب‌پذیری در سامانهٔ دیگر را ثابت نمی‌کند.",
+            "شدت آسیب‌پذیری فقط در چارچوب شرایط نشان‌داده‌شده بیان می‌شود."
+          ]
+        }
+      },
+      "stack": [
+        "Python"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/llm-security-poc",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 4,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": 3,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "my-little-baddies",
+      "name": "My Little Baddies",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "featured": false,
+      "order": 29,
+      "description": {
+        "en": "Historical consumer/creative experiment.",
+        "fa": "آزمایش خلاقانه و محصولی از دوره‌های پیشین."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "HTML",
+        "Python"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/My-little-baddies-",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 7,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 3,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "nexus-quantum",
+      "name": "Nexus Quantum",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantum-formal",
+      "status": "research",
+      "featured": false,
+      "order": 30,
+      "description": {
+        "en": "Research workspace for quantum error mitigation experiments (VQE, zero-noise extrapolation) with Lean 4 proof artifacts.",
+        "fa": "فضای پژوهشی برای آزمایش‌های کاهش خطای کوانتومی، بهینه‌سازی واریاسیونی و برون‌یابی نویز صفر، همراه با آثار اثباتی لین ۴."
+      },
+      "scope": {
+        "summary": {
+          "en": "VQE, zero-noise extrapolation, and spectral/geometric proof experiments. The existence of Lean files is not a certification of the complete system.",
+          "fa": "آزمایش‌های الگوریتم ویژه‌مقدار متغیر و برون‌یابی نویز صفر همراه با آثار اثباتی طیفی و هندسی. وجود پرونده‌های لین به‌معنای تأیید صوری کل سامانه نیست."
+        },
+        "limits": {
+          "en": [
+            "presence of Lean artifacts does not certify the full system",
+            "formal scope must be audited theorem-by-theorem before a formally-verified badge is used"
+          ],
+          "fa": [
+            "وجود آثار لین، کل سامانه را تأیید صوری نمی‌کند.",
+            "پیش از هر نشانِ «تأییدشده به روش صوری»، دامنهٔ هر قضیه باید جداگانه بررسی شود."
+          ]
+        }
+      },
+      "stack": [
+        "Lean 4",
+        "Python",
+        "Qiskit",
+        "FastAPI"
+      ],
+      "languages": [
+        "Python",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Lean"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/nexus-quantum",
+        "live": "https://aixaria0.github.io/nexus-quantum/",
+        "docs": "https://github.com/aixaria0/nexus-quantum/blob/main/README_AGENT_VQE.md",
+        "evidence": "https://github.com/aixaria0/nexus-quantum/blob/main/README.md"
+      },
+      "metrics": {
+        "commits": 31,
+        "prs": 3,
+        "mergedPrs": 1,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 7,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "omni",
+      "name": "Omni",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "status": "active",
+      "featured": true,
+      "order": 31,
+      "description": {
+        "en": "Test how robust an investigation is when its evidence is challenged, removed, or replayed.",
+        "fa": "می‌آزماید وقتی شواهد یک بررسی به چالش کشیده، حذف یا بازپخش شوند، نتیجه چقدر پایدار می‌ماند."
+      },
+      "scope": {
+        "summary": {
+          "en": "Public-source collection, competing hypotheses, evidence stress tests, and portable run receipts. Integrity verifies binding and consistency; it does not establish the truth of a source.",
+          "fa": "گردآوری منابع عمومی، فرضیه‌های رقیب، آزمون فشار بر شواهد و رسیدهای قابل انتقالِ هر اجرا. سنجش یکپارچگی، پیوند و سازگاری داده را بررسی می‌کند؛ حقیقتِ منبع را ثابت نمی‌کند."
+        },
+        "limits": {
+          "en": [
+            "integrity mechanisms demonstrate binding/consistency, not truth",
+            "quantum-adjacent artifacts do not imply quantum advantage"
+          ],
+          "fa": [
+            "سازوکارهای یکپارچگی، سازگاری و پیوند شواهد را نشان می‌دهند، نه درستی خودِ منبع را.",
+            "آثار مرتبط با پژوهش کوانتومی به معنای برتری کوانتومی نیستند."
+          ]
+        }
+      },
+      "stack": [
+        "TypeScript",
+        "React",
+        "Python",
+        "Ed25519"
+      ],
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "CSS",
+        "HTML",
+        "Shell"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Omni",
+        "live": "https://aixaria0.github.io/Omni/",
+        "docs": "https://github.com/aixaria0/Omni/blob/main/docs/ARCHITECTURE.md",
+        "evidence": "https://github.com/aixaria0/Omni/blob/main/README.md"
+      },
+      "metrics": {
+        "commits": 6,
+        "prs": 6,
+        "mergedPrs": 6,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 7,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "osint",
+      "name": "OmniTrace / OSint",
+      "visibility": "public",
+      "kind": "duplicate",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "featured": false,
+      "order": 32,
+      "description": {
+        "en": "Earlier OmniTrace/OSINT implementation.",
+        "fa": "نسخهٔ پیشینِ سامانهٔ جست‌وجو و تحلیل منابع آشکار."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "Python",
+        "TypeScript",
+        "CSS",
+        "Shell",
+        "Dockerfile",
+        "JavaScript"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/OSint",
+        "live": "https://aixaria0.github.io/OSint/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 31,
+        "prs": 53,
+        "mergedPrs": 52,
+        "ciRuns": 20,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "oss",
+      "name": "OmniTrace / Oss",
+      "visibility": "public",
+      "kind": "mirror",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "featured": false,
+      "order": 33,
+      "description": {
+        "en": "A near-duplicate or mirror of OSint.",
+        "fa": "نسخه‌ای بسیار نزدیک یا آینه‌ای از پروژهٔ جست‌وجوی منابع آشکار."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "Python",
+        "TypeScript",
+        "HTML",
+        "Shell",
+        "Dockerfile",
+        "JavaScript",
+        "CSS"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Oss",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 1,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 3,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "qlm",
+      "name": "QLM",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantum-formal",
+      "status": "legacy",
+      "featured": false,
+      "order": 36,
+      "description": {
+        "en": "Historical quantum/formal prototype.",
+        "fa": "نمونهٔ قدیمی در حوزهٔ محاسبات کوانتومی و روش‌های صوری."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Qlm",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 5,
+        "prs": 5,
+        "mergedPrs": 4,
+        "ciRuns": 2,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rchain-complier",
+      "name": "RCHAIN-COMPLIER",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "status": "active",
+      "featured": true,
+      "order": 39,
+      "description": {
+        "en": "Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.",
+        "fa": "ادعاهای مربوط به اجرای سامانه را با شواهد امضاشده، بازیابی پایدار و راستی‌آزمایی قطعی، به‌طور مستقل قابل بررسی می‌کند."
+      },
+      "scope": {
+        "summary": {
+          "en": "Two non-submitter identities reproduce a task-bound claim against reviewer-supplied trust pins. Fixed membership and trusted local execution remain explicit boundaries.",
+          "fa": "دو فرایند مستقل از ارسال‌کننده، ادعای وابسته به یک وظیفه را با قیود اعتمادِ تعیین‌شده از سوی بازبین بازتولید می‌کنند. اعضای ثابت و اجرای محلیِ مورد اعتماد همچنان محدودیت‌های صریح سامانه‌اند."
+        },
+        "limits": {
+          "en": [
+            "does not treat a passing harness as a protocol safety theorem",
+            "formal-verification claims require separate formal artifacts",
+            "live-network conclusions must be tied to captured runtime evidence"
+          ],
+          "fa": [
+            "پاس‌شدن آزمون‌های محیط، اثبات ایمنی کل پروتکل نیست.",
+            "ادعای اثبات صوری به آثار صوری جداگانه نیاز دارد.",
+            "نتیجه‌گیری دربارهٔ شبکهٔ زنده باید به دادهٔ ثبت‌شده از همان اجرا متکی باشد."
+          ]
+        }
+      },
+      "stack": [
+        "TypeScript",
+        "Node.js",
+        "Ed25519",
+        "SQLite WAL"
+      ],
+      "languages": [
+        "TypeScript",
+        "Python",
+        "JavaScript",
+        "HTML",
+        "Rust",
+        "CSS",
+        "Shell"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/RCHAIN-COMPLIER",
+        "live": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
+        "docs": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/docs/ASSURANCE_ENGINE.md",
+        "evidence": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/README.md"
+      },
+      "metrics": {
+        "commits": 446,
+        "prs": 38,
+        "mergedPrs": 20,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 10,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rchain-rust",
+      "name": "rchain-rust fork",
+      "visibility": "public",
+      "kind": "fork",
+      "family": "rchain-assurance",
+      "status": "active",
+      "featured": false,
+      "order": 41,
+      "description": {
+        "en": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution.",
+        "fa": "انشعابی از بستر قرارداد هوشمند آرچین، با اجماع کاسپر و زبان اجرای هم‌زمان رولنگ."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "Rust",
+        "Lean",
+        "Shell",
+        "Python",
+        "Rocq Prover",
+        "Makefile",
+        "Dockerfile"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/rchain-rust",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 0,
+        "prs": 1,
+        "mergedPrs": 0,
+        "ciRuns": 6,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rchain-sentinel",
+      "name": "RChain Sentinel",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "status": "active",
+      "featured": false,
+      "order": 42,
+      "description": {
+        "en": "Independent observation and evidence layer for RChain node/block behavior.",
+        "fa": "لایه‌ای مستقل برای مشاهدهٔ رفتار گره‌ها و بلوک‌های آرچین و ثبت شواهد آن فراهم می‌کند."
+      },
+      "scope": {
+        "summary": {
+          "en": "Independent observation and evidence layer for RChain node/block behavior.",
+          "fa": "مشاهده‌های گره از اثبات در سطح پروتکل جدا نگه داشته می‌شوند."
+        },
+        "limits": {
+          "en": [
+            "does not claim independent stake-weighted Casper finality",
+            "observations are separated from protocol-level proof"
+          ],
+          "fa": [
+            "نهایی‌شدن مستقل و وزن‌دار بر پایهٔ سهام در این ابزار ادعا نمی‌شود.",
+            "مشاهده‌ها جای اثبات در سطح پروتکل را نمی‌گیرند."
+          ]
+        }
+      },
+      "stack": [
+        "C",
+        "DTrace",
+        "Docker",
+        "Dockerfile",
+        "GitHub Actions",
+        "HTML",
+        "Makefile",
+        "Rust",
+        "Rust/Cargo",
+        "Shell"
+      ],
+      "languages": [
+        "Makefile",
+        "Rust",
+        "HTML",
+        "DTrace",
+        "Shell",
+        "Dockerfile",
+        "C"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/rchain-sentinel",
+        "live": "https://aixaria0.github.io/rchain-sentinel/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 141,
+        "prs": 7,
+        "mergedPrs": 0,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 7,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rholox",
+      "name": "Rholox",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "status": "active",
+      "featured": true,
+      "order": 43,
+      "description": {
+        "en": "Evidence-first public-testnet product surface for RChain interaction and verification.",
+        "fa": "محصولی برای کار با شبکهٔ آزمایشی عمومی آرچین و مشاهدهٔ شواهد تعامل با آن."
+      },
+      "scope": {
+        "summary": {
+          "en": "Evidence-first public-testnet product surface for RChain interaction and verification.",
+          "fa": "وضعیت شبکه و داده‌های نمایشی باید از گرهٔ واقعی دریافت شوند؛ این محصول هنوز برای شبکهٔ اصلی یا نگه‌داری دارایی ادعایی ندارد."
+        },
+        "limits": {
+          "en": [
+            "public-testnet scope",
+            "no mainnet status claim",
+            "no production custody claim",
+            "telemetry must come from real node data"
+          ],
+          "fa": [
+            "دامنهٔ فعلی شبکهٔ آزمایشی عمومی است.",
+            "وضعیت شبکهٔ اصلی ادعا نمی‌شود.",
+            "نگه‌داری دارایی در محیط بهره‌برداری ادعا نمی‌شود.",
+            "دادهٔ پایش باید از گرهٔ واقعی بیاید."
+          ]
+        }
+      },
+      "stack": [
+        "CSS",
+        "GitHub Actions",
+        "HTML",
+        "JavaScript",
+        "Node.js",
+        "TypeScript",
+        "Vite"
+      ],
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Rholox",
+        "live": "https://rholox.com/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 37,
+        "prs": 12,
+        "mergedPrs": 12,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 5,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "rlsenti",
+      "name": "rlsenti",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "status": "research",
+      "featured": false,
+      "order": 45,
+      "description": {
+        "en": "Deterministic RChain reality/sentinel workbench for provenance, bounded language experiments, certificates, and synthetic node observations.",
+        "fa": "میزکاری قطعی برای ردیابی منشأ داده، آزمایش‌های محدود زبان و مشاهده‌های مصنوعی از گره‌های آرچین."
+      },
+      "scope": {
+        "summary": {
+          "en": "Deterministic RChain reality/sentinel workbench for provenance, bounded language experiments, certificates, and synthetic node observations.",
+          "fa": "تا وقتی اتصال به شواهد زنده صریحاً نشان داده نشده، داده‌های کنونی مستقل و مصنوعی‌اند."
+        },
+        "limits": {
+          "en": [
+            "current workbench data is self-contained/synthetic unless explicitly connected to live evidence",
+            "not represented as an independent live Casper-finality verifier"
+          ],
+          "fa": [
+            "دادهٔ میزکار تا زمان اتصال صریح به شواهد زنده، مصنوعی است.",
+            "راستی‌آزمایی مستقلِ نهایی‌شدن زندهٔ پروتکل ادعا نمی‌شود."
+          ]
+        }
+      },
+      "stack": [
+        "CSS",
+        "GitHub Actions",
+        "HTML",
+        "JavaScript",
+        "Node.js",
+        "Shell",
+        "TypeScript",
+        "Vite"
+      ],
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Shell"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/rlsenti",
+        "live": "https://aixaria0.github.io/rlsenti/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 64,
+        "prs": 3,
+        "mergedPrs": 0,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 8,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "shahnamehresonance",
+      "name": "Shahnameh Resonance",
+      "visibility": "public",
+      "kind": "duplicate",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "featured": false,
+      "order": 47,
+      "description": {
+        "en": "Make communication with ferdowsi and the whole book itself from thousands years ago ",
+        "fa": "آزمایشی برای تعامل با آثار فردوسی و متن شاهنامه."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Shahnamehresonance-",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 5,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 16,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sovereign-lattice",
+      "name": "Sovereign Lattice",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantum-formal",
+      "status": "research",
+      "featured": true,
+      "order": 49,
+      "description": {
+        "en": "Explore PBFT-style consensus with cryptographic certificates, durable state, and scoped formal artifacts.",
+        "fa": "اجماع به سبک تحمل خطای بیزانسی را با گواهی‌های رمزنگاری، وضعیت پایدار و آثار صوریِ محدود به دامنه‌ای مشخص بررسی می‌کند."
+      },
+      "scope": {
+        "summary": {
+          "en": "Quorum and view-change logic are studied alongside persistence and selected formal invariants. Research artifacts are not presented as a production consensus guarantee.",
+          "fa": "منطق حد نصاب و تغییر دیدگاه در کنار ماندگاری وضعیت و چند ناوردای صوری بررسی می‌شود. این آثار پژوهشی تضمینِ اجماع آمادهٔ بهره‌برداری نیستند."
+        },
+        "limits": {
+          "en": [
+            "formal artifacts must be scoped precisely",
+            "README-level mathematical claims are not promoted to registry facts without artifact-level verification"
+          ],
+          "fa": [
+            "دامنهٔ آثار صوری باید دقیق مشخص شود.",
+            "ادعاهای ریاضیِ نوشته‌شده در راهنمای مخزن بدون بررسی خود آثار، واقعیت تأییدشده تلقی نمی‌شوند."
+          ]
+        }
+      },
+      "stack": [
+        "Rust",
+        "BLS12-381",
+        "Lean 4",
+        "WAL"
+      ],
+      "languages": [
+        "Makefile",
+        "Rust",
+        "HTML",
+        "Lean",
+        "DTrace",
+        "Shell"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Sovereign-Lattice",
+        "live": "https://aixaria0.github.io/Sovereign-Lattice/",
+        "docs": "https://github.com/aixaria0/Sovereign-Lattice#readme",
+        "evidence": "https://github.com/aixaria0/Sovereign-Lattice"
+      },
+      "metrics": {
+        "commits": 470,
+        "prs": 4,
+        "mergedPrs": 0,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 12,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "strategic-intelligence-lattice",
+      "name": "Strategic Intelligence Lattice",
+      "visibility": "public",
+      "kind": "original",
+      "family": "research-operations",
+      "status": "research",
+      "featured": true,
+      "order": 51,
+      "description": {
+        "en": "Compare adaptive computation policies under equal budgets in a reproducible synthetic decision laboratory.",
+        "fa": "سیاست‌های تخصیص تطبیقیِ توان محاسباتی را با بودجهٔ یکسان در آزمایشگاهی مصنوعی و تکرارپذیر مقایسه می‌کند."
+      },
+      "scope": {
+        "summary": {
+          "en": "Uniform allocation remains the baseline after exploratory adaptive methods failed to establish a general advantage. Negative and neutral results are retained.",
+          "fa": "پس از آنکه روش‌های تطبیقیِ آزمایشی برتری عمومی نشان ندادند، تخصیص یکنواخت معیار پایه باقی ماند. نتیجه‌های خنثی و منفی نیز حفظ شده‌اند."
+        },
+        "limits": {
+          "en": [
+            "failed or neutral experiments remain recorded",
+            "experimental wins are not generalized beyond their measured conditions"
+          ],
+          "fa": [
+            "آزمایش‌های ناموفق یا خنثی ثبت می‌شوند.",
+            "برتری‌های آزمایشی فراتر از شرایط اندازه‌گیری‌شده تعمیم داده نمی‌شوند."
+          ]
+        }
+      },
+      "stack": [
+        "Python",
+        "Streamlit",
+        "Docker"
+      ],
+      "languages": [
+        "Python",
+        "TeX",
+        "Dockerfile"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/strategic-intelligence-lattice",
+        "live": null,
+        "docs": "https://github.com/aixaria0/strategic-intelligence-lattice/blob/main/docs/QUERY_LAB_RESULTS.md",
+        "evidence": "https://github.com/aixaria0/strategic-intelligence-lattice/blob/main/README.md"
+      },
+      "metrics": {
+        "commits": 160,
+        "prs": 2,
+        "mergedPrs": 2,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 8,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "studious-guide",
+      "name": "Studious Guide",
+      "visibility": "public",
+      "kind": "original",
+      "family": "legacy-scratch",
+      "status": "legacy",
+      "featured": false,
+      "order": 52,
+      "description": {
+        "en": "Empty/minimal legacy repository.",
+        "fa": "مخزن پیشین با محتوای اندک یا خالی."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [],
+      "links": {
+        "source": "https://github.com/aixaria0/studious-guide",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": null,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "thebookofkings",
+      "name": "The Book of Kings",
+      "visibility": "public",
+      "kind": "duplicate",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "featured": false,
+      "order": 53,
+      "description": {
+        "en": "The book of kings matrix ",
+        "fa": "نمونهٔ پیشینِ طرحی با محور شاهنامه."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [],
+      "links": {
+        "source": "https://github.com/aixaria0/Thebookofkings",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 7,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "theshahnameh",
+      "name": "The Shahnameh",
+      "visibility": "public",
+      "kind": "duplicate",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "featured": false,
+      "order": 54,
+      "description": {
+        "en": "The book of kings matrix ",
+        "fa": "نمونهٔ پیشینِ طرحی با محور شاهنامه."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [],
+      "links": {
+        "source": "https://github.com/aixaria0/Theshahnameh",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 1,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 0,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tr",
+      "name": "AriaTrading / Tr",
+      "visibility": "public",
+      "kind": "mirror",
+      "family": "quantitative-systems",
+      "status": "legacy",
+      "featured": false,
+      "order": 55,
+      "description": {
+        "en": "A historical AriaTrading mirror with ancestry not yet verified.",
+        "fa": "نمونه‌ای تاریخی یا آینه‌ای از AriaTrading که تبار آن هنوز تأیید نشده است."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/Tr",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 2,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 1,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "vqe-analyzer",
+      "name": "VQE Analyzer",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantum-formal",
+      "status": "active",
+      "featured": true,
+      "order": 58,
+      "description": {
+        "en": "Browser workbench for small-circuit variational quantum optimization: real statevector evaluation, exact-reference comparison and retained best parameters. Simulator only.",
+        "fa": "میزکار مرورگری برای بهینه‌سازی واریاسیونی مدارهای کوچک: ارزیابی واقعی بردار حالت، مقایسه با مرجع دقیق و نگهداری بهترین پارامترها. فقط شبیه‌ساز."
+      },
+      "scope": {
+        "summary": {
+          "en": "RY/CX circuits, exact-reference comparisons, fresh random starts, and persistent search memory. A simulator for small circuits; hardware execution and quantum advantage are not claimed.",
+          "fa": "مدارهای چرخش و درهم‌تنیدگی، مقایسه با مرجع دقیق، شروع‌های تصادفی تازه و حافظهٔ ماندگار برای بهترین نتیجه. این شبیه‌ساز برای مدارهای کوچک است؛ اجرای سخت‌افزاری و برتری کوانتومی ادعا نمی‌شود."
+        },
+        "limits": {
+          "en": [
+            "no quantum-advantage claim",
+            "no hardware-execution claim",
+            "no global-convergence guarantee",
+            "not presented as QAOA"
+          ],
+          "fa": [
+            "برتری کوانتومی ادعا نمی‌شود.",
+            "اجرای واقعی روی سخت‌افزار کوانتومی ادعا نمی‌شود.",
+            "همگرایی به بهترین پاسخ سراسری تضمین نشده است.",
+            "این پروژه به‌عنوان الگوریتم بهینه‌سازی تقریبی کوانتومی معرفی نمی‌شود."
+          ]
+        }
+      },
+      "stack": [
+        "JavaScript",
+        "Python",
+        "Statevectors"
+      ],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Python"
+      ],
+      "links": {
+        "source": null,
+        "live": "https://aixaria0.github.io/vqe-analyzer/",
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 19,
+        "prs": 17,
+        "mergedPrs": 16,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 6,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "x000000",
+      "name": "AixAria CHIMERA Engine",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "status": "legacy",
+      "featured": false,
+      "order": 60,
+      "description": {
+        "en": "An earlier CHIMERA engine prototype stored under a temporary repository name.",
+        "fa": "نمونهٔ اولیهٔ پیشین موتور CHIMERA که با نام موقت مخزن نگهداری شده است."
+      },
+      "scope": {
+        "summary": {
+          "en": null,
+          "fa": null
+        },
+        "limits": {
+          "en": [],
+          "fa": []
+        }
+      },
+      "stack": [],
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/X000000",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": 4,
+        "prs": 0,
+        "mergedPrs": 0,
+        "ciRuns": 1,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "privateProjects": [
+    {
+      "name": "Lattice",
+      "family": "quantum-formal",
+      "status": "research",
+      "description": {
+        "en": "A hybrid quantum and formal-methods application under a temporary repository name.",
+        "fa": "برنامه‌ای با قابلیت‌های ترکیبی کوانتومی و روش‌های صوری که با نام موقت مخزن نگهداری می‌شود."
+      }
+    },
+    {
+      "name": "Aether Forge",
+      "family": "quantum-formal",
+      "status": "active-research",
+      "description": {
+        "en": "A private Aether-related product and research surface.",
+        "fa": "بستر خصوصیِ محصول و پژوهش مرتبط با خانوادهٔ ایثر."
+      }
+    },
+    {
+      "name": "Aix",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "description": {
+        "en": "A prototype mobile security-testing platform.",
+        "fa": "نمونهٔ اولیهٔ بستری برای آزمون امنیت موبایل."
+      }
+    },
+    {
+      "name": "Aix Registry",
+      "family": "registry-meta",
+      "status": "active",
+      "description": {
+        "en": "A structured registry for projects and the published portfolio source of truth.",
+        "fa": "دفتر ثبت ساخت‌یافتهٔ پروژه‌ها و مرجع اصلی اطلاعات منتشرشده در این مجموعه."
+      }
+    },
+    {
+      "name": "Aixaria Registry (superseded)",
+      "family": "registry-meta",
+      "status": "legacy",
+      "description": {
+        "en": "An earlier registry of projects, contributions, evidence, and their relationships.",
+        "fa": "نسخهٔ پیشینِ دفتر ثبت پروژه‌ها، مشارکت‌ها، شواهد و پیوندهای میان آن‌ها."
+      }
+    },
+    {
+      "name": "ARIA Lab",
+      "family": "research-operations",
+      "status": "research",
+      "description": {
+        "en": "A private research workspace focused on protein design.",
+        "fa": "محیط پژوهش خصوصی در طراحی پروتئین."
+      }
+    },
+    {
+      "name": "AriaTrading",
+      "family": "quantitative-systems",
+      "status": "active",
+      "description": {
+        "en": "A quantitative intelligence core.",
+        "fa": "هسته‌ای برای هوش کمّی."
+      }
+    },
+    {
+      "name": "CHIMERA Hybrid Command Lattice",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "A private CHIMERA prototype for a hybrid classical and quantum command lattice.",
+        "fa": "نمونهٔ خصوصیِ سامانهٔ فرماندهی ترکیبیِ کلاسیک و کوانتومی در خانوادهٔ کایمرا."
+      }
+    },
+    {
+      "name": "Chimera-AG",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "A coordination engine within the CHIMERA constellation.",
+        "fa": "موتور هماهنگی در مجموعهٔ کایمرا."
+      }
+    },
+    {
+      "name": "CHIMERA-OMEGA",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "An evidence kernel for claims accompanied by inspectable data.",
+        "fa": "هستهٔ شواهدی که ادعاهایش همراه با دادهٔ قابل بررسی ارائه می‌شوند."
+      }
+    },
+    {
+      "name": "CHIMERA-ONE",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "The control and coordination hub of the CHIMERA constellation.",
+        "fa": "هستهٔ کنترل و هماهنگیِ منظومهٔ کایمرا."
+      }
+    },
+    {
+      "name": "CHIMERA RChain Staking Audit",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "A domain-specific evidence-first audit pack for RChain staking.",
+        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
+      }
+    },
+    {
+      "name": "Demo Repository",
+      "family": "legacy-scratch",
+      "status": "legacy",
+      "description": {
+        "en": "A demonstration repository presenting selected GitHub platform features.",
+        "fa": "مخزنی نمایشی برای آشنایی با امکانات گیت‌هاب."
+      }
+    },
+    {
+      "name": "Empire Aix",
+      "family": "legacy-scratch",
+      "status": "legacy",
+      "description": {
+        "en": "A legacy experiment whose classification may be refined with further review.",
+        "fa": "آزمایش قدیمی؛ دسته‌بندی آن ممکن است با بررسی بیشتر دقیق‌تر شود."
+      }
+    },
+    {
+      "name": "Empire Chat PWA",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "description": {
+        "en": "An installable browser chat prototype using an in-browser language model.",
+        "fa": "گفت‌وگوی قابل نصب در مرورگر با مدل زبانیِ درون مرورگر و امکان کار بدون اتصال."
+      }
+    },
+    {
+      "name": "masspropa",
+      "family": "research-operations",
+      "status": "pending",
+      "description": {
+        "en": "A private repository retained while its identity and lineage are classified.",
+        "fa": "مخزن خصوصی که هویت و پیوند آن با سایر پروژه‌ها هنوز دسته‌بندی نشده است."
+      }
+    },
+    {
+      "name": "Personal LLM Sanctum",
+      "family": "intelligence-security",
+      "status": "research",
+      "description": {
+        "en": "A local-first adaptive multi-model language-model orchestration workspace.",
+        "fa": "محیط محلی برای هماهنگی تطبیقیِ چند مدل زبانی، با امکان استفاده از توان پردازشی راه‌دور."
+      }
+    },
+    {
+      "name": "QLF",
+      "family": "quantum-formal",
+      "status": "research",
+      "description": {
+        "en": "A private formal-methods workspace with protocol and logic specifications.",
+        "fa": "محیط خصوصیِ روش‌های صوری با مشخصات پروتکل و منطق."
+      }
+    },
+    {
+      "name": "Lattice",
+      "family": "quantum-formal",
+      "status": "research",
+      "description": {
+        "en": "A private local application for a 12-qubit register.",
+        "fa": "برنامهٔ محلیِ خصوصی با رجیستر کوانتومی ۱۲ کیوبیتی."
+      }
+    },
+    {
+      "name": "Aether",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "A private application identified as Aether; its repository lineage is unresolved.",
+        "fa": "مخزن خصوصیِ برنامه‌ای با نام ایثر؛ نسبت دقیق آن با پروژه‌های هم‌نام هنوز روشن نشده است."
+      }
+    },
+    {
+      "name": "RChain Reality Compiler",
+      "family": "rchain-assurance",
+      "status": "research",
+      "description": {
+        "en": "An in-browser compiler and workbench that does not provide live RChain network evidence.",
+        "fa": "کامپایلر و میزکار مرورگری؛ شواهد آن به شبکهٔ زندهٔ آرچین مربوط نیست."
+      }
+    },
+    {
+      "name": "RitualGraph",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "A compiler and simulation engine for executable threat models, security invariants, attack graphs, and evidence-driven CI checks.",
+        "fa": "موتور کامپایل و شبیه‌سازیِ مدل‌های تهدید اجرایی، ناورداهای امنیتی، گراف حمله و دروازه‌های بررسی مبتنی بر شواهد."
+      }
+    },
+    {
+      "name": "Shahnameh Lite",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "description": {
+        "en": "An earlier cultural product implementation.",
+        "fa": "پیاده‌سازی پیشین یک محصول فرهنگی."
+      }
+    },
+    {
+      "name": "smm",
+      "family": "legacy-scratch",
+      "status": "pending",
+      "description": {
+        "en": "A stateful, model-agnostic runtime combining local memory, independent views, verification, and a hash-chained execution ledger.",
+        "fa": "محیط اجراییِ حالت‌مند و مستقل از مدل که حافظهٔ محلی، دیدگاه‌های مستقل، راستی‌آزمایی و دفتر ثبت اجرای زنجیره‌ای از هش‌ها را ترکیب می‌کند."
+      }
+    },
+    {
+      "name": "Sovereign Quantum Stack",
+      "family": "quantum-formal",
+      "status": "research",
+      "description": {
+        "en": "A quantum security and deserialization proof of concept.",
+        "fa": "نمونهٔ اثبات مفهوم برای امنیت کوانتومی و دی‌سریال‌سازی."
+      }
+    },
+    {
+      "name": "VERITAS Sovereign Prime",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "description": {
+        "en": "A legacy product and business experiment; marketing claims are not treated as verified results.",
+        "fa": "آزمایش قدیمیِ محصول و کسب‌وکار؛ ادعاهای تبلیغی آن دستاورد تأییدشده تلقی نمی‌شوند."
+      }
+    },
+    {
+      "name": "VQE",
+      "family": "quantum-formal",
+      "status": "legacy",
+      "description": {
+        "en": "A historical prototype related to quantum computing.",
+        "fa": "آزمایش پیشین در حوزهٔ محاسبات کوانتومی."
+      }
+    },
+    {
+      "name": "Fracture Archive",
+      "family": "research-operations",
+      "status": "research",
+      "description": {
+        "en": "A private research-operations dashboard for post-quantum cryptography, gravity, and cosmology.",
+        "fa": "داشبورد خصوصیِ عملیات پژوهشی برای رمزنگاری پساکوانتومی، گرانش و کیهان‌شناسی."
+      }
+    },
+    {
+      "name": "x1111",
+      "family": "legacy-scratch",
+      "status": "pending",
+      "description": {
+        "en": "A private repository retained while its classification is unresolved.",
+        "fa": "مخزن خصوصی که دسته‌بندی دقیق آن هنوز مشخص نشده است."
+      }
+    }
+  ]
+}
