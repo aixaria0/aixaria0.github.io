@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1-resume-surface",
-  "built_at": "2026-10-16T16:50:39.804Z",
+  "built_at": "2026-10-20T18:22:56.606Z",
   "observed_at": "2026-10-13T19:08:07.041Z",
   "owner": "aixaria0",
   "principle": "Systems that make claims carry evidence.",
@@ -91,7 +91,7 @@
       "relation": "canonical",
       "status": "active",
       "evidence_grade": "replay-verified",
-      "description": "Evidence-oriented Casper CBC / assurance workbench.",
+      "description": "Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.",
       "repository_url": "https://github.com/aixaria0/RCHAIN-COMPLIER",
       "live_url": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
       "live_label": "Open live site",
@@ -120,7 +120,7 @@
       "relation": "canonical",
       "status": "research",
       "evidence_grade": "experimental",
-      "description": "Distributed consensus / formal-methods research; formal claims require artifact-level audit.",
+      "description": "Explore PBFT-style consensus with cryptographic certificates, durable state, and scoped formal artifacts.",
       "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
       "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
       "live_label": "Open live site",
@@ -149,7 +149,7 @@
       "relation": "canonical",
       "status": "active",
       "evidence_grade": "replay-verified",
-      "description": "Rust/C++ hybrid execution kernel",
+      "description": "Keep a verifiable record of bounded execution across routing failures, restarts, and replay.",
       "repository_url": "https://github.com/aixaria0/aether-runtime",
       "live_url": null,
       "live_label": null,
@@ -178,7 +178,7 @@
       "relation": "canonical",
       "status": "active",
       "evidence_grade": "replay-verified",
-      "description": "Evidence-stress and proof-carrying investigation workspace with Quantum Fabric.",
+      "description": "Test how robust an investigation is when its evidence is challenged, removed, or replayed.",
       "repository_url": "https://github.com/aixaria0/Omni",
       "live_url": "https://aixaria0.github.io/Omni/",
       "live_label": "Open Omni",
@@ -207,7 +207,7 @@
       "relation": "canonical",
       "status": "research",
       "evidence_grade": "experimental",
-      "description": "I-Powered Quantum Error Mitigation Platform",
+      "description": "Research workspace for quantum error mitigation experiments (VQE, zero-noise extrapolation) with Lean 4 proof artifacts.",
       "repository_url": "https://github.com/aixaria0/nexus-quantum",
       "live_url": "https://aixaria0.github.io/nexus-quantum/",
       "live_label": "Open live site",
@@ -236,7 +236,7 @@
       "relation": "canonical",
       "status": "active",
       "evidence_grade": "independently-verified",
-      "description": "This tool renders complex algorithmic performance landscapes in real-time using zero-dependency Vanilla JavaScript. While built for Quantum VQE, the underlying engine is production-ready for financial and industrial applications.",
+      "description": "Browser workbench for small-circuit variational quantum optimization: real statevector evaluation, exact-reference comparison and retained best parameters. Simulator only.",
       "repository_url": "https://github.com/aixaria0/vqe-analyzer",
       "live_url": "https://aixaria0.github.io/vqe-analyzer/",
       "live_label": "Open VQE Analyzer",
@@ -294,7 +294,7 @@
       "relation": "canonical",
       "status": "research",
       "evidence_grade": "replay-verified",
-      "description": "Reproducible multi-agent research and evaluation framework.",
+      "description": "Compare adaptive computation policies under equal budgets in a reproducible synthetic decision laboratory.",
       "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
       "live_url": null,
       "live_label": null,
@@ -932,7 +932,7 @@
       "name": "rchain-rust fork",
       "visibility": "public",
       "family": "rchain-assurance",
-      "relation": "mirror",
+      "relation": "upstream fork",
       "status": "active",
       "evidence_grade": "observed",
       "description": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution.",
@@ -1044,7 +1044,7 @@
       "id": "aetherforge",
       "name": "Aether Forge",
       "visibility": "private",
-      "family": "chimera-evidence-runtime",
+      "family": "quantum-formal",
       "relation": "component",
       "status": "research",
       "evidence_grade": "experimental",
@@ -1786,14 +1786,14 @@
   "family_pages": [
     {
       "slug": "rchain",
-      "kicker": "RCHAIN / FOUR-REPOSITORY FAMILY",
+      "kicker": "RCHAIN / CONCEPTUAL FAMILY",
       "title": "RChain Assurance",
-      "description": "Four repositories exploring observation, provenance, evidence, and application surfaces around RChain.",
-      "count": 4
+      "description": "A conceptual family grouped by observation, provenance, and evidence; it does not imply a linear lineage.",
+      "count": 6
     },
     {
       "slug": "chimera",
-      "kicker": "CHIMERA / ONE HUB + SIX CONNECTED SYSTEMS",
+      "kicker": "CHIMERA / CONSTELLATION",
       "title": "CHIMERA-ONE Constellation",
       "description": "CHIMERA-ONE is the control-plane hub. Six connected systems form the surrounding evidence-runtime constellation.",
       "count": 7
@@ -1803,7 +1803,7 @@
       "kicker": "QUANTUM / FORMAL FAMILY",
       "title": "Quantum + Formal Systems",
       "description": "The quantum and formal-methods lineage: optimization workbenches, theorem artifacts, lattice experiments, and sovereign-system prototypes.",
-      "count": 9
+      "count": 10
     }
   ],
   "projects": [

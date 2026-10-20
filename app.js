@@ -60,7 +60,9 @@ document.addEventListener('click', event => { if(!menu.hidden && !event.target.c
 window.matchMedia('(min-width:601px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
 
 const persianDialog = $('#persian-dialog');
-$('#open-persian').addEventListener('click', () => persianDialog.showModal());
+const dialogTrigger = $('#open-persian');
+dialogTrigger.addEventListener('click', () => persianDialog.showModal());
+persianDialog.addEventListener('close', () => dialogTrigger.focus());
 persianDialog.querySelector('.dialog-close').addEventListener('click', () => persianDialog.close());
 persianDialog.addEventListener('click',event=>{
   const r=persianDialog.getBoundingClientRect();
