@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#000000">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self' https://*.lhr.life https://*.trycloudflare.com; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self' https://*.lhr.life https://*.trycloudflare.com https://*.free.pinggy.net; base-uri 'none'; form-action 'none'">
 <title>UFCLUX — AIXARIA</title>
 <style>
 :root{color-scheme:dark}*{box-sizing:border-box}html,body{height:100%;margin:0;background:#000;color:#ff2348;font-family:ui-sans-serif,system-ui,sans-serif}header{position:absolute;top:27px;left:28px;letter-spacing:.53em;color:#28ffc0;font-size:12px;font-weight:700}main{height:100%;display:flex;justify-content:center;align-items:center;padding:28px}.console{text-align:center;width:min(540px,95vw);margin-top:-9vh}h1{font-weight:400;letter-spacing:.24em;padding-left:.24em;font-size:clamp(48px,9vw,88px);text-shadow:0 0 24px #ff234850;margin:0 0 40px}.state{font-family:ui-monospace,monospace;letter-spacing:.17em;font-size:11px;color:#b56677;line-height:2}a{display:inline-block;margin-top:24px;padding:17px 38px;letter-spacing:.22em;text-decoration:none;color:#ff5170;background:#130006;border:1px solid #c52a46;font-size:12px;cursor:pointer}a:hover{background:#2a0611}.orb{position:absolute;left:50%;bottom:12vh;transform:translateX(-50%);width:90px;height:90px;border:1px solid #ff2448;border-radius:50%;box-shadow:0 0 0 8px #000,0 0 0 9px #ff244880,0 0 28px #ff244834;background:radial-gradient(circle at 50% 100%,#2d000e,#040002 70%)}.small{color:#73505a;font-size:11px;margin-top:16px}
@@ -21,7 +21,7 @@ const response=await fetch('./current.json?v='+Date.now(),{cache:'no-store'});
 if(!response.ok)throw Error('No active link');
 const data=await response.json();
 const endpoint=new URL(data.url);
-if(endpoint.protocol!=='https:'|| !/^[a-z0-9-]+\.(trycloudflare\.com|lhr\.life)$/.test(endpoint.hostname)||endpoint.username||endpoint.password||endpoint.port||endpoint.pathname!=='/'||endpoint.search||endpoint.hash)throw Error('Invalid remote endpoint');
+if(endpoint.protocol!=='https:'|| !/^[a-z0-9-]+\.(trycloudflare\.com|lhr\.life|free\.pinggy\.net)$/.test(endpoint.hostname)||endpoint.username||endpoint.password||endpoint.port||endpoint.pathname!=='/'||endpoint.search||endpoint.hash)throw Error('Invalid remote endpoint');
 enter.href=endpoint.href;enter.hidden=false;
 status.textContent='CHECKING PRIVATE CONNECTION...';
 try {
@@ -33,7 +33,7 @@ try {
   setTimeout(()=>{window.location.replace(endpoint.href)},1400);
 } catch {
   status.textContent='PRIVATE LINK DNS / NETWORK ERROR';
-  document.querySelector('#note').textContent='Brave: Settings → Brave Shields & privacy → Use secure DNS → Cloudflare (1.1.1.1), then reload this page.';
+  document.querySelector('#note').textContent='Connection cannot reach the private tunnel. Try another network or adjust Android Private DNS, then reload this page.';
 }
 }catch{status.textContent='PRIVATE DEVICE OFFLINE OR LINK UNAVAILABLE';document.querySelector('#note').textContent='The runtime is reachable only while the tablet and its tunnel are running.';}
 })();
