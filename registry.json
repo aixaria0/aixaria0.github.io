@@ -1,5 +1,5 @@
 {
-  "snapshotDate": "2026-10-13",
+  "snapshotDate": "2026-10-26",
   "methodology": {
     "en": "Repository metadata and languages come from the GitHub REST API; activity and workflow observations come from the generated registry snapshot. Missing values remain null. Evidence rubric criteria require owner approval.",
     "fa": "فراداده و زبان‌های مخزن از API رسمی GitHub دریافت می‌شود؛ داده‌های فعالیت و گردش‌کار از snapshot رجیستری تولیدشده‌اند. دادهٔ ناموجود null می‌ماند. معیارهای روبریک شواهد نیازمند تأیید مالک‌اند."
@@ -11,46 +11,64 @@
   },
   "projects": [
     {
-      "id": "apex-dee",
-      "name": "Apex Deep Quant",
+      "id": "rchain-complier",
+      "name": "RCHAIN-COMPLIER",
       "visibility": "public",
       "kind": "original",
-      "family": "quantitative-systems",
-      "status": "legacy",
-      "featured": false,
-      "order": 0,
+      "family": "rchain-assurance",
+      "status": "active",
+      "featured": true,
+      "order": 39,
       "description": {
-        "en": "An early quantitative systems prototype; lineage remains unclassified.",
-        "fa": "نمونهٔ اولیه‌ای در سامانه‌های کمّی؛ تبار آن هنوز طبقه‌بندی نشده است."
+        "en": "Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.",
+        "fa": "ادعاهای مربوط به اجرای سامانه را با شواهد امضاشده، بازیابی پایدار و راستی‌آزمایی قطعی، به‌طور مستقل قابل بررسی می‌کند."
       },
       "scope": {
         "summary": {
-          "en": null,
-          "fa": null
+          "en": "Two non-submitter identities reproduce a task-bound claim against reviewer-supplied trust pins. Fixed membership and trusted local execution remain explicit boundaries.",
+          "fa": "دو فرایند مستقل از ارسال‌کننده، ادعای وابسته به یک وظیفه را با قیود اعتمادِ تعیین‌شده از سوی بازبین بازتولید می‌کنند. اعضای ثابت و اجرای محلیِ مورد اعتماد همچنان محدودیت‌های صریح سامانه‌اند."
         },
         "limits": {
-          "en": [],
-          "fa": []
+          "en": [
+            "does not treat a passing harness as a protocol safety theorem",
+            "formal-verification claims require separate formal artifacts",
+            "live-network conclusions must be tied to captured runtime evidence"
+          ],
+          "fa": [
+            "پاس‌شدن آزمون‌های محیط، اثبات ایمنی کل پروتکل نیست.",
+            "ادعای اثبات صوری به آثار صوری جداگانه نیاز دارد.",
+            "نتیجه‌گیری دربارهٔ شبکهٔ زنده باید به دادهٔ ثبت‌شده از همان اجرا متکی باشد."
+          ]
         }
       },
-      "stack": [],
+      "stack": [
+        "TypeScript",
+        "Node.js",
+        "Ed25519",
+        "SQLite WAL"
+      ],
       "languages": [
+        "TypeScript",
+        "Python",
+        "JavaScript",
         "HTML",
-        "Python"
+        "Rust",
+        "CSS",
+        "Shell"
       ],
       "links": {
-        "source": "https://github.com/aixaria0/-Apex-Dee",
-        "live": null,
-        "docs": null,
-        "evidence": null
+        "source": "https://github.com/aixaria0/RCHAIN-COMPLIER",
+        "live": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
+        "docs": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/docs/ASSURANCE_ENGINE.md",
+        "evidence": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/README.md"
       },
       "metrics": {
-        "commits": 35,
-        "prs": 2,
-        "mergedPrs": 2,
+        "commits": 446,
+        "prs": 38,
+        "mergedPrs": 20,
         "ciRuns": 20,
         "evidence": {
-          "score": null,
+          "score": 10,
           "criteria": [
             {
               "id": "criterion-01",
@@ -124,6 +142,108 @@
             }
           ]
         }
+      }
+    },
+    {
+      "id": "chimera-one",
+      "name": "CHIMERA-ONE",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "Coordinated execution, pinned capabilities, and evidence-bound verification.",
+        "fa": "هماهنگی اجرای محدود، اتصال قابلیت‌ها به نسخهٔ مشخص و راستی‌آزمایی مبتنی بر شواهد."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/CHIMERA-ONE",
+        "live": "/CHIMERA-ONE/",
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "ritualgraph",
+      "name": "RitualGraph",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "Executable threat graphs, deterministic simulation, and CI-checkable security invariants.",
+        "fa": "گراف‌های تهدید اجرایی، شبیه‌سازی قطعی و ناورداهای امنیتی قابل آزمون در فرایند ساخت."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/RitualGraph",
+        "live": "/RitualGraph/",
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "chimera-ag",
+      "name": "Chimera-AG",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "Self-hosted orchestration with measured routing and reproducible verification.",
+        "fa": "هماهنگ‌سازی خودمیزبان با مسیریابی قابل اندازه‌گیری و راستی‌آزمایی بازتولیدپذیر."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/Chimera-AG",
+        "live": "/Chimera-AG/",
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "aetherforge",
+      "name": "Aether Forge",
+      "visibility": "public",
+      "family": "quantum-formal",
+      "status": "active-research",
+      "description": {
+        "en": "Interactive quantum-gravity research laboratory with explicit approximation and synthetic-data boundaries.",
+        "fa": "آزمایشگاه تعاملی پژوهش گرانش کوانتومی با مرزبندی روشنِ تقریب‌ها و داده‌های ساختگی."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/aetherforge",
+        "live": "/aetherforge/",
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "personal-llm-sanctum",
+      "name": "Personal LLM Sanctum",
+      "visibility": "public",
+      "family": "intelligence-security",
+      "status": "research",
+      "description": {
+        "en": "Local-first Rust runtime with recorded runs, routing, memory and replay.",
+        "fa": "محیط اجرای محلی با زبان راست، همراه با ثبت اجراها، مسیریابی، حافظه و بازپخش."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "shahnameh-lite",
+      "name": "Shahnameh Lite",
+      "visibility": "public",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "description": {
+        "en": "Persian-first storytelling and reading guide with offline search and browser narration.",
+        "fa": "راهنمای فارسیِ روایت و خوانش شاهنامه با جست‌وجوی آفلاین و روایت صوتی مرورگر."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/Shahnameh-lite",
+        "live": "/shahnameh-lite/",
+        "docs": null,
+        "evidence": null
       }
     },
     {
@@ -386,6 +506,91 @@
       }
     },
     {
+      "id": "aix",
+      "name": "Aix",
+      "visibility": "public",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "description": {
+        "en": "private",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/Aix",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "aixaria0-github-io",
+      "name": "aixaria0.github.io",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "AIX — Engineering Intelligence Registry",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/aixaria0.github.io",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "apex-quant-prototype",
+      "name": "apex-quant-prototype",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Apex Quant: an experimental quantitative research prototype with Python and browser components.",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/apex-quant-prototype",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "aria-lab",
+      "name": "ARIA Lab",
+      "visibility": "public",
+      "family": "research-operations",
+      "status": "research",
+      "description": {
+        "en": "Experimental research workspace for protein-design studies and interactive analysis.",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/Aria-Lab",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "aria-trading-legacy",
+      "name": "aria-trading-legacy",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Trade ",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/aria-trading-legacy",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
       "id": "ariatrading-github-io",
       "name": "AriaTrading Showcase",
       "visibility": "public",
@@ -413,7 +618,7 @@
         "TypeScript"
       ],
       "links": {
-        "source": null,
+        "source": "https://github.com/aixaria0/AriaTrading.github.io",
         "live": null,
         "docs": null,
         "evidence": null
@@ -528,7 +733,7 @@
         "TypeScript"
       ],
       "links": {
-        "source": null,
+        "source": "https://github.com/aixaria0/AriaTrading0",
         "live": null,
         "docs": null,
         "evidence": null
@@ -743,231 +948,156 @@
       }
     },
     {
-      "id": "faaal",
-      "name": "Faal",
+      "id": "chimera-command-lab",
+      "name": "chimera-command-lab",
       "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "status": "legacy",
-      "featured": false,
-      "order": 21,
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A minimal historical prototype in the Faal project family.",
-        "fa": "نمونه‌ای تاریخی و حداقلی در خانوادهٔ پروژهٔ Faal."
+        "en": "Experimental CHIMERA command-lattice workspace for classical and quantum research.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [
-        "HTML"
-      ],
       "links": {
-        "source": "https://github.com/aixaria0/Faaal",
-        "live": "https://aixaria0.github.io/Faaal/",
-        "docs": null,
-        "evidence": null
-      },
-      "metrics": {
-        "commits": 3,
-        "prs": 2,
-        "mergedPrs": 2,
-        "ciRuns": 6,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "faal",
-      "name": "Faal",
-      "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "status": "legacy",
-      "featured": false,
-      "order": 22,
-      "description": {
-        "en": "A minimal historical prototype in the Faal project family.",
-        "fa": "نمونه‌ای تاریخی و حداقلی در خانوادهٔ پروژهٔ Faal."
-      },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [],
-      "links": {
-        "source": "https://github.com/aixaria0/Faal",
+        "source": "https://github.com/aixaria0/chimera-command-lab",
         "live": null,
         "docs": null,
         "evidence": null
+      }
+    },
+    {
+      "id": "chimera-desk",
+      "name": "CHIMERA-DESK",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Browser research control surface for quantum simulation, consensus, proofs, markets and technical research.",
+        "fa": "منبع عمومی پروژه."
       },
-      "metrics": {
-        "commits": 1,
-        "prs": 0,
-        "mergedPrs": 0,
-        "ciRuns": 0,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
+      "links": {
+        "source": "https://github.com/aixaria0/CHIMERA-DESK",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "chimera-engine-prototype",
+      "name": "chimera-engine-prototype",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Historical CHIMERA engine prototype with an interactive TypeScript research interface.",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/chimera-engine-prototype",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "chimera-omega-public",
+      "name": "CHIMERA-OMEGA-public",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "CHIMERA OMEGA — bounded proof-carrying evidence verifier (AGPL-3.0-or-later)",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/CHIMERA-OMEGA-public",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "chimera-redteam-web",
+      "name": "chimera-redteam-web",
+      "visibility": "public",
+      "family": "research-operations",
+      "status": "research",
+      "description": {
+        "en": "Public web console and documentation for CHIMERA Red Team",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/chimera-redteam-web",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "empire-pwa",
+      "name": "Empire Chat PWA",
+      "visibility": "public",
+      "family": "intelligence-security",
+      "status": "legacy",
+      "description": {
+        "en": "Empire Chat PWA — WebLLM in-browser AI, installable, offline-capable",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/empire-pwa",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "ensemble-chat-prototype",
+      "name": "ensemble-chat-prototype",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Just for fun",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/ensemble-chat-prototype",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "faal-scaffold",
+      "name": "faal-scaffold",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Faal",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/faal-scaffold",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "faal-web",
+      "name": "faal-web",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Faal Web: a standalone browser prototype for interactive reflection.",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/faal-web",
+        "live": null,
+        "docs": null,
+        "evidence": null
       }
     },
     {
@@ -1084,350 +1214,71 @@
       }
     },
     {
-      "id": "fun",
-      "name": "Empire of Free LLMs",
+      "id": "fracture-archive",
+      "name": "fracture-archive",
       "visibility": "public",
-      "kind": "original",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "featured": false,
-      "order": 24,
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A prototype for parallel language-model fan-out and response synthesis.",
-        "fa": "نمونه‌ای اولیه برای اجرای موازی مدل‌های زبانی و ترکیب پاسخ‌ها."
+        "en": "Fracture Archive — local-first research desk for post-quantum cryptography, holography, Hawking radiation, and primordial cosmology.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [
-        "TypeScript",
-        "CSS",
-        "HTML"
-      ],
       "links": {
-        "source": "https://github.com/aixaria0/Fun",
+        "source": "https://github.com/aixaria0/fracture-archive",
         "live": null,
         "docs": null,
         "evidence": null
-      },
-      "metrics": {
-        "commits": 3,
-        "prs": 2,
-        "mergedPrs": 2,
-        "ciRuns": 13,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
       }
     },
     {
-      "id": "gggg",
-      "name": "Gggg",
+      "id": "jimscarversqlf",
+      "name": "jimscarversQLF",
       "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "status": "legacy",
-      "featured": false,
-      "order": 25,
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A minimal scratch repository with no further verified project description.",
-        "fa": "مخزن آزمایشی حداقلی که توضیح تأییدشدهٔ بیشتری برای آن ثبت نشده است."
+        "en": "Educational consensus workbench for protocol simulations, formal specifications, invariants, and execution traces.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [],
       "links": {
-        "source": "https://github.com/aixaria0/Gggg",
+        "source": "https://github.com/aixaria0/jimscarversQLF",
         "live": null,
         "docs": null,
         "evidence": null
-      },
-      "metrics": {
-        "commits": 1,
-        "prs": 0,
-        "mergedPrs": 0,
-        "ciRuns": 0,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
       }
     },
     {
-      "id": "gggg1",
-      "name": "Gggg1",
+      "id": "lattice-workbench",
+      "name": "lattice-workbench",
       "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "status": "legacy",
-      "featured": false,
-      "order": 26,
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A minimal scratch repository with no further verified project description.",
-        "fa": "مخزن آزمایشی حداقلی که توضیح تأییدشدهٔ بیشتری برای آن ثبت نشده است."
+        "en": "Lattice research prototype combining interactive quantum and formal-methods exploration.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS"
-      ],
       "links": {
-        "source": "https://github.com/aixaria0/Gggg1",
-        "live": "https://aixaria0.github.io/Gggg1/",
+        "source": "https://github.com/aixaria0/lattice-workbench",
+        "live": null,
         "docs": null,
         "evidence": null
+      }
+    },
+    {
+      "id": "live-veil",
+      "name": "live-veil",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Live Veil: a shared-intention web prototype with live updates, echoes, and interactive visuals.",
+        "fa": "منبع عمومی پروژه."
       },
-      "metrics": {
-        "commits": 2,
-        "prs": 1,
-        "mergedPrs": 1,
-        "ciRuns": 5,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
+      "links": {
+        "source": "https://github.com/aixaria0/live-veil",
+        "live": null,
+        "docs": null,
+        "evidence": null
       }
     },
     {
@@ -1931,6 +1782,23 @@
       }
     },
     {
+      "id": "omnitrace-variant",
+      "name": "omnitrace-variant",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "OmniTrace variant with a public-data investigation frontend, backend services, and observability configuration.",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/omnitrace-variant",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
       "id": "osint",
       "name": "OmniTrace / OSint",
       "visibility": "public",
@@ -2051,373 +1919,54 @@
       }
     },
     {
-      "id": "oss",
-      "name": "OmniTrace / Oss",
+      "id": "qlf",
+      "name": "QLF",
       "visibility": "public",
-      "kind": "mirror",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "featured": false,
-      "order": 33,
-      "description": {
-        "en": "A near-duplicate or mirror of OSint.",
-        "fa": "نسخه‌ای بسیار نزدیک یا آینه‌ای از پروژهٔ جست‌وجوی منابع آشکار."
-      },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [
-        "Python",
-        "TypeScript",
-        "HTML",
-        "Shell",
-        "Dockerfile",
-        "JavaScript",
-        "CSS"
-      ],
-      "links": {
-        "source": "https://github.com/aixaria0/Oss",
-        "live": null,
-        "docs": null,
-        "evidence": null
-      },
-      "metrics": {
-        "commits": 1,
-        "prs": 0,
-        "mergedPrs": 0,
-        "ciRuns": 3,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": "qlm",
-      "name": "QLM",
-      "visibility": "public",
-      "kind": "original",
       "family": "quantum-formal",
-      "status": "legacy",
-      "featured": false,
-      "order": 36,
+      "status": "research",
       "description": {
-        "en": "Historical quantum/formal prototype.",
-        "fa": "نمونهٔ قدیمی در حوزهٔ محاسبات کوانتومی و روش‌های صوری."
+        "en": "Research workspace for protocol models, logic specifications, and interactive formal-methods exploration.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [
-        "TypeScript"
-      ],
       "links": {
-        "source": "https://github.com/aixaria0/Qlm",
+        "source": "https://github.com/aixaria0/QLF",
         "live": null,
         "docs": null,
         "evidence": null
-      },
-      "metrics": {
-        "commits": 5,
-        "prs": 5,
-        "mergedPrs": 4,
-        "ciRuns": 2,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
       }
     },
     {
-      "id": "rchain-complier",
-      "name": "RCHAIN-COMPLIER",
+      "id": "quantum-os-workspace",
+      "name": "quantum-os-workspace",
       "visibility": "public",
-      "kind": "original",
-      "family": "rchain-assurance",
-      "status": "active",
-      "featured": true,
-      "order": 39,
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.",
-        "fa": "ادعاهای مربوط به اجرای سامانه را با شواهد امضاشده، بازیابی پایدار و راستی‌آزمایی قطعی، به‌طور مستقل قابل بررسی می‌کند."
+        "en": "QuantumOS development workspace for browser peer-to-peer collaboration, capability transport, and Rust/WASM components.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": "Two non-submitter identities reproduce a task-bound claim against reviewer-supplied trust pins. Fixed membership and trusted local execution remain explicit boundaries.",
-          "fa": "دو فرایند مستقل از ارسال‌کننده، ادعای وابسته به یک وظیفه را با قیود اعتمادِ تعیین‌شده از سوی بازبین بازتولید می‌کنند. اعضای ثابت و اجرای محلیِ مورد اعتماد همچنان محدودیت‌های صریح سامانه‌اند."
-        },
-        "limits": {
-          "en": [
-            "does not treat a passing harness as a protocol safety theorem",
-            "formal-verification claims require separate formal artifacts",
-            "live-network conclusions must be tied to captured runtime evidence"
-          ],
-          "fa": [
-            "پاس‌شدن آزمون‌های محیط، اثبات ایمنی کل پروتکل نیست.",
-            "ادعای اثبات صوری به آثار صوری جداگانه نیاز دارد.",
-            "نتیجه‌گیری دربارهٔ شبکهٔ زنده باید به دادهٔ ثبت‌شده از همان اجرا متکی باشد."
-          ]
-        }
-      },
-      "stack": [
-        "TypeScript",
-        "Node.js",
-        "Ed25519",
-        "SQLite WAL"
-      ],
-      "languages": [
-        "TypeScript",
-        "Python",
-        "JavaScript",
-        "HTML",
-        "Rust",
-        "CSS",
-        "Shell"
-      ],
       "links": {
-        "source": "https://github.com/aixaria0/RCHAIN-COMPLIER",
-        "live": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
-        "docs": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/docs/ASSURANCE_ENGINE.md",
-        "evidence": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/README.md"
+        "source": "https://github.com/aixaria0/quantum-os-workspace",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "quantum001",
+      "name": "Aether",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "Interactive quantum research studio with a twelve-qubit circuit composer and inspectable experiment records.",
+        "fa": "منبع عمومی پروژه."
       },
-      "metrics": {
-        "commits": 446,
-        "prs": 38,
-        "mergedPrs": 20,
-        "ciRuns": 20,
-        "evidence": {
-          "score": 10,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
+      "links": {
+        "source": "https://github.com/aixaria0/Quantum001",
+        "live": null,
+        "docs": null,
+        "evidence": null
       }
     },
     {
@@ -2950,6 +2499,23 @@
       }
     },
     {
+      "id": "scratch-notes",
+      "name": "scratch-notes",
+      "visibility": "public",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Gg",
+        "fa": "منبع عمومی پروژه."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/scratch-notes",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      }
+    },
+    {
       "id": "shahnamehresonance",
       "name": "Shahnameh Resonance",
       "visibility": "public",
@@ -3325,119 +2891,6 @@
       }
     },
     {
-      "id": "studious-guide",
-      "name": "Studious Guide",
-      "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "status": "legacy",
-      "featured": false,
-      "order": 52,
-      "description": {
-        "en": "Empty/minimal legacy repository.",
-        "fa": "مخزن پیشین با محتوای اندک یا خالی."
-      },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [],
-      "links": {
-        "source": "https://github.com/aixaria0/studious-guide",
-        "live": null,
-        "docs": null,
-        "evidence": null
-      },
-      "metrics": {
-        "commits": null,
-        "prs": 0,
-        "mergedPrs": 0,
-        "ciRuns": 0,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
-      }
-    },
-    {
       "id": "thebookofkings",
       "name": "The Book of Kings",
       "visibility": "public",
@@ -3664,118 +3117,20 @@
       }
     },
     {
-      "id": "tr",
-      "name": "AriaTrading / Tr",
+      "id": "training-configurations",
+      "name": "training-configurations",
       "visibility": "public",
-      "kind": "mirror",
-      "family": "quantitative-systems",
-      "status": "legacy",
-      "featured": false,
-      "order": 55,
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A historical AriaTrading mirror with ancestry not yet verified.",
-        "fa": "نمونه‌ای تاریخی یا آینه‌ای از AriaTrading که تبار آن هنوز تأیید نشده است."
+        "en": "Experimental TypeScript workspace containing local application configurations and training recipes.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [
-        "TypeScript"
-      ],
       "links": {
-        "source": "https://github.com/aixaria0/Tr",
+        "source": "https://github.com/aixaria0/training-configurations",
         "live": null,
         "docs": null,
         "evidence": null
-      },
-      "metrics": {
-        "commits": 2,
-        "prs": 0,
-        "mergedPrs": 0,
-        "ciRuns": 1,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
       }
     },
     {
@@ -3823,7 +3178,7 @@
         "Python"
       ],
       "links": {
-        "source": null,
+        "source": "https://github.com/aixaria0/vqe-analyzer",
         "live": "https://aixaria0.github.io/vqe-analyzer/",
         "docs": null,
         "evidence": null
@@ -3911,152 +3266,24 @@
       }
     },
     {
-      "id": "x000000",
-      "name": "AixAria CHIMERA Engine",
+      "id": "webapp-scaffold-lab",
+      "name": "webapp-scaffold-lab",
       "visibility": "public",
-      "kind": "original",
-      "family": "chimera-evidence-runtime",
-      "status": "legacy",
-      "featured": false,
-      "order": 60,
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "An earlier CHIMERA engine prototype stored under a temporary repository name.",
-        "fa": "نمونهٔ اولیهٔ پیشین موتور CHIMERA که با نام موقت مخزن نگهداری شده است."
+        "en": "Experimental TypeScript web workspace with client, server, and migration components.",
+        "fa": "منبع عمومی پروژه."
       },
-      "scope": {
-        "summary": {
-          "en": null,
-          "fa": null
-        },
-        "limits": {
-          "en": [],
-          "fa": []
-        }
-      },
-      "stack": [],
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "HTML"
-      ],
       "links": {
-        "source": "https://github.com/aixaria0/X000000",
+        "source": "https://github.com/aixaria0/webapp-scaffold-lab",
         "live": null,
         "docs": null,
         "evidence": null
-      },
-      "metrics": {
-        "commits": 4,
-        "prs": 0,
-        "mergedPrs": 0,
-        "ciRuns": 1,
-        "evidence": {
-          "score": null,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
       }
     }
   ],
   "privateProjects": [
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A hybrid quantum and formal-methods application under a temporary repository name.",
-        "fa": "برنامه‌ای با قابلیت‌های ترکیبی کوانتومی و روش‌های صوری که با نام موقت مخزن نگهداری می‌شود."
-      }
-    },
-    {
-      "name": "Aether Forge",
-      "family": "quantum-formal",
-      "status": "active-research",
-      "description": {
-        "en": "A private Aether-related product and research surface.",
-        "fa": "بستر خصوصیِ محصول و پژوهش مرتبط با خانوادهٔ ایثر."
-      }
-    },
-    {
-      "name": "Aix",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "A prototype mobile security-testing platform.",
-        "fa": "نمونهٔ اولیهٔ بستری برای آزمون امنیت موبایل."
-      }
-    },
     {
       "name": "Aix Registry",
       "family": "registry-meta",
@@ -4076,15 +3303,6 @@
       }
     },
     {
-      "name": "ARIA Lab",
-      "family": "research-operations",
-      "status": "research",
-      "description": {
-        "en": "A private research workspace focused on protein design.",
-        "fa": "محیط پژوهش خصوصی در طراحی پروتئین."
-      }
-    },
-    {
       "name": "AriaTrading",
       "family": "quantitative-systems",
       "status": "active",
@@ -4094,21 +3312,12 @@
       }
     },
     {
-      "name": "CHIMERA Hybrid Command Lattice",
+      "name": "CHIMERA RChain Staking Audit",
       "family": "chimera-evidence-runtime",
       "status": "research",
       "description": {
-        "en": "A private CHIMERA prototype for a hybrid classical and quantum command lattice.",
-        "fa": "نمونهٔ خصوصیِ سامانهٔ فرماندهی ترکیبیِ کلاسیک و کوانتومی در خانوادهٔ کایمرا."
-      }
-    },
-    {
-      "name": "Chimera-AG",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "A coordination engine within the CHIMERA constellation.",
-        "fa": "موتور هماهنگی در مجموعهٔ کایمرا."
+        "en": "A domain-specific evidence-first audit pack for RChain staking.",
+        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
       }
     },
     {
@@ -4121,21 +3330,21 @@
       }
     },
     {
-      "name": "CHIMERA-ONE",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
+      "name": "chimera-redteam",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "The control and coordination hub of the CHIMERA constellation.",
-        "fa": "هستهٔ کنترل و هماهنگیِ منظومهٔ کایمرا."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
-      "name": "CHIMERA RChain Staking Audit",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
+      "name": "cobordism",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A domain-specific evidence-first audit pack for RChain staking.",
-        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -4157,57 +3366,21 @@
       }
     },
     {
-      "name": "Empire Chat PWA",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "An installable browser chat prototype using an in-browser language model.",
-        "fa": "گفت‌وگوی قابل نصب در مرورگر با مدل زبانیِ درون مرورگر و امکان کار بدون اتصال."
-      }
-    },
-    {
-      "name": "masspropa",
-      "family": "research-operations",
+      "name": "Fracturebench",
+      "family": "pending-classification",
       "status": "pending",
       "description": {
-        "en": "A private repository retained while its identity and lineage are classified.",
-        "fa": "مخزن خصوصی که هویت و پیوند آن با سایر پروژه‌ها هنوز دسته‌بندی نشده است."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
-      "name": "Personal LLM Sanctum",
-      "family": "intelligence-security",
-      "status": "research",
+      "name": "lattice-register",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A local-first adaptive multi-model language-model orchestration workspace.",
-        "fa": "محیط محلی برای هماهنگی تطبیقیِ چند مدل زبانی، با امکان استفاده از توان پردازشی راه‌دور."
-      }
-    },
-    {
-      "name": "QLF",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private formal-methods workspace with protocol and logic specifications.",
-        "fa": "محیط خصوصیِ روش‌های صوری با مشخصات پروتکل و منطق."
-      }
-    },
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private local application for a 12-qubit register.",
-        "fa": "برنامهٔ محلیِ خصوصی با رجیستر کوانتومی ۱۲ کیوبیتی."
-      }
-    },
-    {
-      "name": "Aether",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A private application identified as Aether; its repository lineage is unresolved.",
-        "fa": "مخزن خصوصیِ برنامه‌ای با نام ایثر؛ نسبت دقیق آن با پروژه‌های هم‌نام هنوز روشن نشده است."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -4217,24 +3390,6 @@
       "description": {
         "en": "An in-browser compiler and workbench that does not provide live RChain network evidence.",
         "fa": "کامپایلر و میزکار مرورگری؛ شواهد آن به شبکهٔ زندهٔ آرچین مربوط نیست."
-      }
-    },
-    {
-      "name": "RitualGraph",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A compiler and simulation engine for executable threat models, security invariants, attack graphs, and evidence-driven CI checks.",
-        "fa": "موتور کامپایل و شبیه‌سازیِ مدل‌های تهدید اجرایی، ناورداهای امنیتی، گراف حمله و دروازه‌های بررسی مبتنی بر شواهد."
-      }
-    },
-    {
-      "name": "Shahnameh Lite",
-      "family": "cultural-consumer",
-      "status": "legacy",
-      "description": {
-        "en": "An earlier cultural product implementation.",
-        "fa": "پیاده‌سازی پیشین یک محصول فرهنگی."
       }
     },
     {
@@ -4256,12 +3411,12 @@
       }
     },
     {
-      "name": "VERITAS Sovereign Prime",
-      "family": "intelligence-security",
-      "status": "legacy",
+      "name": "veritas-prototype",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A legacy product and business experiment; marketing claims are not treated as verified results.",
-        "fa": "آزمایش قدیمیِ محصول و کسب‌وکار؛ ادعاهای تبلیغی آن دستاورد تأییدشده تلقی نمی‌شوند."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -4274,22 +3429,14 @@
       }
     },
     {
-      "name": "Fracture Archive",
-      "family": "research-operations",
-      "status": "research",
-      "description": {
-        "en": "A private research-operations dashboard for post-quantum cryptography, gravity, and cosmology.",
-        "fa": "داشبورد خصوصیِ عملیات پژوهشی برای رمزنگاری پساکوانتومی، گرانش و کیهان‌شناسی."
-      }
-    },
-    {
-      "name": "x1111",
-      "family": "legacy-scratch",
+      "name": "webapp-scaffold",
+      "family": "pending-classification",
       "status": "pending",
       "description": {
-        "en": "A private repository retained while its classification is unresolved.",
-        "fa": "مخزن خصوصی که دسته‌بندی دقیق آن هنوز مشخص نشده است."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     }
-  ]
+  ],
+  "inventoryObservedAt": "2026-10-26"
 }

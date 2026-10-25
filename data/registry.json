@@ -5,7 +5,7 @@
   "owner": "aixaria0",
   "principle": "Systems that make claims carry evidence.",
   "summary": {
-    "tracked_repositories": 62,
+    "tracked_repositories": 70,
     "public_projects": 13,
     "projects_with_ci": 41,
     "projects_with_tests": 32,
@@ -16,10 +16,10 @@
     "external_reviewed_prs": 16
   },
   "engineering": {
-    "owned_repositories": 62,
+    "owned_repositories": 70,
     "distinct_codebases": 51,
-    "public_repositories": 33,
-    "private_repositories": 29,
+    "public_repositories": 53,
+    "private_repositories": 17,
     "live_sites": 12,
     "authored_commits": 1899,
     "default_branch_commits": 17835,
@@ -112,37 +112,115 @@
       "tests": 60,
       "formal_artifacts": 0,
       "evidence_artifacts": 53,
-      "pushed_at": "2026-10-10T03:11:39Z"
+      "pushed_at": "2026-10-15T21:54:44Z"
     },
     {
-      "id": "sovereign-lattice",
-      "name": "Sovereign Lattice",
+      "id": "chimera-one",
+      "name": "CHIMERA-ONE",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "runtime-verified",
+      "description": "Coordinated execution, pinned capabilities, and evidence-bound verification.",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-ONE",
+      "live_url": "/CHIMERA-ONE/",
+      "live_label": "Open live site",
+      "languages": [
+        "Rust"
+      ],
+      "pushed_at": "2026-10-25T22:33:04Z"
+    },
+    {
+      "id": "ritualgraph",
+      "name": "RitualGraph",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "runtime-verified",
+      "description": "Executable threat graphs, deterministic simulation, and CI-checkable security invariants.",
+      "repository_url": "https://github.com/aixaria0/RitualGraph",
+      "live_url": "/RitualGraph/",
+      "live_label": "Open live site",
+      "languages": [
+        "Python"
+      ],
+      "pushed_at": "2026-10-05T01:46:35Z"
+    },
+    {
+      "id": "chimera-ag",
+      "name": "Chimera-AG",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "active",
+      "evidence_grade": "runtime-verified",
+      "description": "Self-hosted orchestration with measured routing and reproducible verification.",
+      "repository_url": "https://github.com/aixaria0/Chimera-AG",
+      "live_url": "/Chimera-AG/",
+      "live_label": "Open live site",
+      "languages": [
+        "Python"
+      ],
+      "pushed_at": "2026-10-08T23:08:15Z"
+    },
+    {
+      "id": "aetherforge",
+      "name": "Aether Forge",
       "visibility": "public",
       "kind": "original",
       "family": "quantum-formal",
-      "relation": "canonical",
-      "status": "research",
+      "relation": "research-lab",
+      "status": "active-research",
       "evidence_grade": "experimental",
-      "description": "Explore PBFT-style consensus with cryptographic certificates, durable state, and scoped formal artifacts.",
-      "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
-      "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
+      "description": "Interactive quantum-gravity research laboratory with explicit approximation and synthetic-data boundaries.",
+      "repository_url": "https://github.com/aixaria0/aetherforge",
+      "live_url": "/aetherforge/",
       "live_label": "Open live site",
       "languages": [
-        "Makefile",
-        "Rust",
-        "HTML",
-        "Lean"
+        "TypeScript"
       ],
-      "authored_commits": 470,
-      "commits": 470,
-      "authored_prs": 4,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 5,
-      "tests": 7,
-      "formal_artifacts": 3,
-      "evidence_artifacts": 13,
-      "pushed_at": "2026-10-10T02:54:15Z"
+      "pushed_at": "2026-10-25T22:34:01Z"
+    },
+    {
+      "id": "personal-llm-sanctum",
+      "name": "Personal LLM Sanctum",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "runtime-verified",
+      "description": "Local-first Rust runtime with recorded runs, routing, memory and replay.",
+      "repository_url": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Rust"
+      ],
+      "pushed_at": "2026-10-25T22:33:07Z"
+    },
+    {
+      "id": "shahnameh-lite",
+      "name": "Shahnameh Lite",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "relation": "predecessor",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Persian-first storytelling and reading guide with offline search and browser narration.",
+      "repository_url": "https://github.com/aixaria0/Shahnameh-lite",
+      "live_url": "/shahnameh-lite/",
+      "live_label": "Open live site",
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-10-25T22:34:04Z"
     },
     {
       "id": "aether-runtime",
@@ -172,37 +250,501 @@
       "tests": 8,
       "formal_artifacts": 0,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-10-07T03:45:48Z"
+      "pushed_at": "2026-10-15T02:55:56Z"
     },
     {
-      "id": "omni",
-      "name": "Omni",
+      "id": "aether-runtime-os",
+      "name": "Aether Runtime OS",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "replay-verified",
+      "description": "A fault-tolerant, evidence-carrying runtime for autonomous and distributed AI execution.",
+      "repository_url": "https://github.com/aixaria0/Aether-Runtime-OS",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Rust"
+      ],
+      "authored_commits": 5,
+      "commits": 5,
+      "authored_prs": 0,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 1,
+      "tests": 0,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 3,
+      "pushed_at": "2026-10-06T06:08:23Z"
+    },
+    {
+      "id": "aix",
+      "name": "Aix",
       "visibility": "public",
       "kind": "original",
       "family": "intelligence-security",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "private",
+      "repository_url": "https://github.com/aixaria0/Aix",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Python"
+      ],
+      "pushed_at": "2026-10-15T02:26:55Z"
+    },
+    {
+      "id": "aixaria0-github-io",
+      "name": "aixaria0.github.io",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "AIX — Engineering Intelligence Registry",
+      "repository_url": "https://github.com/aixaria0/aixaria0.github.io",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-10-22T01:44:40Z"
+    },
+    {
+      "id": "apex-quant-prototype",
+      "name": "apex-quant-prototype",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Apex Quant: an experimental quantitative research prototype with Python and browser components.",
+      "repository_url": "https://github.com/aixaria0/apex-quant-prototype",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-07-23T16:06:47Z"
+    },
+    {
+      "id": "aria-lab",
+      "name": "ARIA Lab",
+      "visibility": "public",
+      "kind": "original",
+      "family": "research-operations",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Experimental research workspace for protein-design studies and interactive analysis.",
+      "repository_url": "https://github.com/aixaria0/Aria-Lab",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-22T14:43:03Z"
+    },
+    {
+      "id": "aria-trading-legacy",
+      "name": "aria-trading-legacy",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Trade ",
+      "repository_url": "https://github.com/aixaria0/aria-trading-legacy",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-21T16:36:12Z"
+    },
+    {
+      "id": "ariatrading-github-io",
+      "name": "AriaTrading Showcase",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantitative-systems",
+      "relation": "showcase",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Site",
+      "repository_url": "https://github.com/aixaria0/AriaTrading.github.io",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-16T22:01:29Z"
+    },
+    {
+      "id": "ariatrading0",
+      "name": "AriaTrading0",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantitative-systems",
+      "relation": "mirror",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Legacy AriaTrading implementation retained as a separate development snapshot.",
+      "repository_url": "https://github.com/aixaria0/AriaTrading0",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-17T22:38:35Z"
+    },
+    {
+      "id": "bookofkings",
+      "name": "Book of Kings",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
       "relation": "canonical",
       "status": "active",
-      "evidence_grade": "replay-verified",
-      "description": "Test how robust an investigation is when its evidence is challenged, removed, or replayed.",
-      "repository_url": "https://github.com/aixaria0/Omni",
-      "live_url": "https://aixaria0.github.io/Omni/",
-      "live_label": "Open Omni",
+      "evidence_grade": "runtime-verified",
+      "description": "The shahnameh",
+      "repository_url": "https://github.com/aixaria0/Bookofkings",
+      "live_url": "https://aixaria0.github.io/Bookofkings/",
+      "live_label": "Open live site",
       "languages": [
-        "JavaScript",
         "TypeScript",
-        "Python",
-        "CSS"
+        "CSS",
+        "JavaScript"
       ],
-      "authored_commits": 6,
+      "authored_commits": 12,
+      "commits": 39,
+      "authored_prs": 11,
+      "merged_prs": 11,
+      "reviews": 10,
+      "ci_workflows": 4,
+      "tests": 15,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 0,
+      "pushed_at": "2026-10-13T23:44:30Z"
+    },
+    {
+      "id": "chimera-command-lab",
+      "name": "chimera-command-lab",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Experimental CHIMERA command-lattice workspace for classical and quantum research.",
+      "repository_url": "https://github.com/aixaria0/chimera-command-lab",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-23T18:26:30Z"
+    },
+    {
+      "id": "chimera-desk",
+      "name": "CHIMERA-DESK",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Browser research control surface for quantum simulation, consensus, proofs, markets and technical research.",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-DESK",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-10-17T17:19:10Z"
+    },
+    {
+      "id": "chimera-engine-prototype",
+      "name": "chimera-engine-prototype",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Historical CHIMERA engine prototype with an interactive TypeScript research interface.",
+      "repository_url": "https://github.com/aixaria0/chimera-engine-prototype",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-08-25T04:40:47Z"
+    },
+    {
+      "id": "chimera-omega-public",
+      "name": "CHIMERA-OMEGA-public",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "CHIMERA OMEGA — bounded proof-carrying evidence verifier (AGPL-3.0-or-later)",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-OMEGA-public",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Rust"
+      ],
+      "pushed_at": "2026-10-14T18:27:37Z"
+    },
+    {
+      "id": "chimera-redteam-web",
+      "name": "chimera-redteam-web",
+      "visibility": "public",
+      "kind": "original",
+      "family": "research-operations",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "ungraded",
+      "description": "Public web console and documentation for CHIMERA Red Team",
+      "repository_url": "https://github.com/aixaria0/chimera-redteam-web",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-10-25T23:46:04Z"
+    },
+    {
+      "id": "empire-pwa",
+      "name": "Empire Chat PWA",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Empire Chat PWA — WebLLM in-browser AI, installable, offline-capable",
+      "repository_url": "https://github.com/aixaria0/empire-pwa",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-08-04T15:06:32Z"
+    },
+    {
+      "id": "ensemble-chat-prototype",
+      "name": "ensemble-chat-prototype",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Just for fun",
+      "repository_url": "https://github.com/aixaria0/ensemble-chat-prototype",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-21T18:08:11Z"
+    },
+    {
+      "id": "faal-scaffold",
+      "name": "faal-scaffold",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Faal",
+      "repository_url": "https://github.com/aixaria0/faal-scaffold",
+      "live_url": null,
+      "live_label": null,
+      "languages": [],
+      "pushed_at": "2026-07-22T17:58:17Z"
+    },
+    {
+      "id": "faal-web",
+      "name": "faal-web",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Faal Web: a standalone browser prototype for interactive reflection.",
+      "repository_url": "https://github.com/aixaria0/faal-web",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-07-22T23:07:28Z"
+    },
+    {
+      "id": "forgeos",
+      "name": "ForgeOS",
+      "visibility": "public",
+      "kind": "original",
+      "family": "legacy-scratch",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Legacy experiment; deeper lineage audit pending.",
+      "repository_url": "https://github.com/aixaria0/forgeos",
+      "live_url": null,
+      "live_label": null,
+      "languages": [],
+      "authored_commits": 1,
+      "commits": 1,
+      "authored_prs": 0,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 0,
+      "tests": 0,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 0,
+      "pushed_at": "2026-06-27T22:48:05Z"
+    },
+    {
+      "id": "fracture-archive",
+      "name": "fracture-archive",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Fracture Archive — local-first research desk for post-quantum cryptography, holography, Hawking radiation, and primordial cosmology.",
+      "repository_url": "https://github.com/aixaria0/fracture-archive",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-10-15T01:36:46Z"
+    },
+    {
+      "id": "jimscarversqlf",
+      "name": "jimscarversQLF",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Educational consensus workbench for protocol simulations, formal specifications, invariants, and execution traces.",
+      "repository_url": "https://github.com/aixaria0/jimscarversQLF",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-10-16T01:55:44Z"
+    },
+    {
+      "id": "lattice-workbench",
+      "name": "lattice-workbench",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Lattice research prototype combining interactive quantum and formal-methods exploration.",
+      "repository_url": "https://github.com/aixaria0/lattice-workbench",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-05T04:10:29Z"
+    },
+    {
+      "id": "live-veil",
+      "name": "live-veil",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Live Veil: a shared-intention web prototype with live updates, echoes, and interactive visuals.",
+      "repository_url": "https://github.com/aixaria0/live-veil",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-21T17:57:32Z"
+    },
+    {
+      "id": "llm-security-poc",
+      "name": "LLM Security PoC",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Security hypotheses/PoCs; external or target-specific validation required before stronger vulnerability claims.",
+      "repository_url": "https://github.com/aixaria0/llm-security-poc",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Python"
+      ],
+      "authored_commits": 4,
+      "commits": 4,
+      "authored_prs": 0,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 0,
+      "tests": 1,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 0,
+      "pushed_at": "2026-08-04T22:14:07Z"
+    },
+    {
+      "id": "my-little-baddies",
+      "name": "My Little Baddies",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Historical consumer/creative experiment.",
+      "repository_url": "https://github.com/aixaria0/My-little-baddies-",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML",
+        "Python"
+      ],
+      "authored_commits": 7,
       "commits": 7,
-      "authored_prs": 6,
-      "merged_prs": 6,
+      "authored_prs": 0,
+      "merged_prs": 0,
       "reviews": 0,
       "ci_workflows": 1,
-      "tests": 20,
+      "tests": 0,
       "formal_artifacts": 0,
-      "evidence_artifacts": 5,
-      "pushed_at": "2026-10-10T04:06:00Z"
+      "evidence_artifacts": 0,
+      "pushed_at": "2026-09-01T23:59:08Z"
     },
     {
       "id": "nexus-quantum",
@@ -235,237 +777,52 @@
       "pushed_at": "2026-09-09T16:56:34Z"
     },
     {
-      "id": "vqe-analyzer",
-      "name": "VQE Analyzer",
+      "id": "omni",
+      "name": "Omni",
       "visibility": "public",
       "kind": "original",
-      "family": "quantum-formal",
+      "family": "intelligence-security",
       "relation": "canonical",
       "status": "active",
-      "evidence_grade": "independently-verified",
-      "description": "Browser workbench for small-circuit variational quantum optimization: real statevector evaluation, exact-reference comparison and retained best parameters. Simulator only.",
-      "repository_url": null,
-      "live_url": "https://aixaria0.github.io/vqe-analyzer/",
-      "live_label": "Open VQE Analyzer",
-      "languages": [
-        "JavaScript",
-        "CSS",
-        "HTML",
-        "Python"
-      ],
-      "authored_commits": 19,
-      "commits": 49,
-      "authored_prs": 17,
-      "merged_prs": 16,
-      "reviews": 13,
-      "ci_workflows": 8,
-      "tests": 3,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-10-12T13:01:19Z"
-    },
-    {
-      "id": "rchain-sentinel",
-      "name": "RChain Sentinel",
-      "visibility": "public",
-      "kind": "original",
-      "family": "rchain-assurance",
-      "relation": "component",
-      "status": "active",
-      "evidence_grade": "observed",
-      "description": "RChain transaction, contract, and network verification console",
-      "repository_url": "https://github.com/aixaria0/rchain-sentinel",
-      "live_url": "https://aixaria0.github.io/rchain-sentinel/",
-      "live_label": "Open live site",
-      "languages": [
-        "Makefile",
-        "Rust",
-        "HTML",
-        "DTrace"
-      ],
-      "authored_commits": 141,
-      "commits": 142,
-      "authored_prs": 7,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 4,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 4,
-      "pushed_at": "2026-09-28T01:29:20Z"
-    },
-    {
-      "id": "strategic-intelligence-lattice",
-      "name": "Strategic Intelligence Lattice",
-      "visibility": "public",
-      "kind": "original",
-      "family": "research-operations",
-      "relation": "canonical",
-      "status": "research",
       "evidence_grade": "replay-verified",
-      "description": "Compare adaptive computation policies under equal budgets in a reproducible synthetic decision laboratory.",
-      "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
-      "live_url": null,
-      "live_label": null,
+      "description": "Test how robust an investigation is when its evidence is challenged, removed, or replayed.",
+      "repository_url": "https://github.com/aixaria0/Omni",
+      "live_url": "https://aixaria0.github.io/Omni/",
+      "live_label": "Open Omni",
       "languages": [
+        "JavaScript",
+        "TypeScript",
         "Python",
-        "TeX",
-        "Dockerfile"
-      ],
-      "authored_commits": 160,
-      "commits": 160,
-      "authored_prs": 2,
-      "merged_prs": 2,
-      "reviews": 0,
-      "ci_workflows": 8,
-      "tests": 8,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 12,
-      "pushed_at": "2026-10-05T18:24:57Z"
-    },
-    {
-      "id": "rholox",
-      "name": "Rholox",
-      "visibility": "public",
-      "kind": "original",
-      "family": "rchain-assurance",
-      "relation": "canonical",
-      "status": "active",
-      "evidence_grade": "observed",
-      "description": "Rholox — RChain-native DApp platform and testnet gateway",
-      "repository_url": "https://github.com/aixaria0/Rholox",
-      "live_url": "https://rholox.com/",
-      "live_label": "Open Rholox",
-      "languages": [
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ],
-      "authored_commits": 37,
-      "commits": 37,
-      "authored_prs": 12,
-      "merged_prs": 12,
-      "reviews": 0,
-      "ci_workflows": 2,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 5,
-      "pushed_at": "2026-10-12T13:13:25Z"
-    },
-    {
-      "id": "rlsenti",
-      "name": "rlsenti",
-      "visibility": "public",
-      "kind": "original",
-      "family": "rchain-assurance",
-      "relation": "component",
-      "status": "research",
-      "evidence_grade": "experimental",
-      "description": "Compiler/workbench evidence adapter; synthetic/integration-oriented.",
-      "repository_url": "https://github.com/aixaria0/rlsenti",
-      "live_url": "https://aixaria0.github.io/rlsenti/",
-      "live_label": "Open live site",
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "HTML",
         "CSS"
       ],
-      "authored_commits": 64,
-      "commits": 66,
-      "authored_prs": 3,
-      "merged_prs": 0,
+      "authored_commits": 6,
+      "commits": 7,
+      "authored_prs": 6,
+      "merged_prs": 6,
       "reviews": 0,
       "ci_workflows": 1,
-      "tests": 11,
+      "tests": 20,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-09-28T01:29:24Z"
+      "pushed_at": "2026-10-21T14:55:56Z"
     },
     {
-      "id": "bookofkings",
-      "name": "Book of Kings",
+      "id": "omnitrace-variant",
+      "name": "omnitrace-variant",
       "visibility": "public",
       "kind": "original",
-      "family": "cultural-consumer",
-      "relation": "canonical",
-      "status": "active",
-      "evidence_grade": "runtime-verified",
-      "description": "The shahnameh",
-      "repository_url": "https://github.com/aixaria0/Bookofkings",
-      "live_url": "https://aixaria0.github.io/Bookofkings/",
-      "live_label": "Open live site",
-      "languages": [
-        "TypeScript",
-        "CSS",
-        "JavaScript"
-      ],
-      "authored_commits": 12,
-      "commits": 39,
-      "authored_prs": 11,
-      "merged_prs": 11,
-      "reviews": 10,
-      "ci_workflows": 4,
-      "tests": 15,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-22T07:08:04Z"
-    },
-    {
-      "id": "aether-runtime-os",
-      "name": "Aether Runtime OS",
-      "visibility": "public",
-      "kind": "original",
-      "family": "chimera-evidence-runtime",
-      "relation": "predecessor",
-      "status": "legacy",
-      "evidence_grade": "replay-verified",
-      "description": "A fault-tolerant, evidence-carrying runtime for autonomous and distributed AI execution.",
-      "repository_url": "https://github.com/aixaria0/Aether-Runtime-OS",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "OmniTrace variant with a public-data investigation frontend, backend services, and observability configuration.",
+      "repository_url": "https://github.com/aixaria0/omnitrace-variant",
       "live_url": null,
       "live_label": null,
       "languages": [
-        "Rust"
-      ],
-      "authored_commits": 5,
-      "commits": 5,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 3,
-      "pushed_at": "2026-10-06T06:08:23Z"
-    },
-    {
-      "id": "apex-dee",
-      "name": "Apex Deep Quant",
-      "visibility": "public",
-      "kind": "original",
-      "family": "quantitative-systems",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "....",
-      "repository_url": "https://github.com/aixaria0/-Apex-Dee",
-      "live_url": null,
-      "live_label": "Open live site",
-      "languages": [
-        "HTML",
         "Python"
       ],
-      "authored_commits": 35,
-      "commits": 38,
-      "authored_prs": 2,
-      "merged_prs": 2,
-      "reviews": 1,
-      "ci_workflows": 3,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-23T16:06:47Z"
+      "pushed_at": "2026-07-19T22:48:46Z"
     },
     {
       "id": "osint",
@@ -498,84 +855,194 @@
       "pushed_at": "2026-07-31T21:07:30Z"
     },
     {
-      "id": "my-little-baddies",
-      "name": "My Little Baddies",
-      "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Historical consumer/creative experiment.",
-      "repository_url": "https://github.com/aixaria0/My-little-baddies-",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "HTML",
-        "Python"
-      ],
-      "authored_commits": 7,
-      "commits": 7,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-09-01T23:59:08Z"
-    },
-    {
-      "id": "thebookofkings",
-      "name": "The Book of Kings",
-      "visibility": "public",
-      "kind": "duplicate",
-      "family": "cultural-consumer",
-      "relation": "predecessor",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "The book of kings matrix ",
-      "repository_url": "https://github.com/aixaria0/Thebookofkings",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 7,
-      "commits": 7,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-16T17:54:46Z"
-    },
-    {
-      "id": "qlm",
-      "name": "QLM",
+      "id": "qlf",
+      "name": "QLF",
       "visibility": "public",
       "kind": "original",
       "family": "quantum-formal",
-      "relation": "prototype",
-      "status": "legacy",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Research workspace for protocol models, logic specifications, and interactive formal-methods exploration.",
+      "repository_url": "https://github.com/aixaria0/QLF",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-22T14:42:09Z"
+    },
+    {
+      "id": "quantum-os-workspace",
+      "name": "quantum-os-workspace",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
       "evidence_grade": "historical",
-      "description": "Historical quantum/formal prototype.",
-      "repository_url": "https://github.com/aixaria0/Qlm",
+      "description": "QuantumOS development workspace for browser peer-to-peer collaboration, capability transport, and Rust/WASM components.",
+      "repository_url": "https://github.com/aixaria0/quantum-os-workspace",
       "live_url": null,
       "live_label": null,
       "languages": [
         "TypeScript"
       ],
-      "authored_commits": 5,
-      "commits": 12,
-      "authored_prs": 5,
-      "merged_prs": 4,
-      "reviews": 5,
-      "ci_workflows": 1,
+      "pushed_at": "2026-10-25T00:18:07Z"
+    },
+    {
+      "id": "quantum001",
+      "name": "Aether",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Interactive quantum research studio with a twelve-qubit circuit composer and inspectable experiment records.",
+      "repository_url": "https://github.com/aixaria0/Quantum001",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-10-17T18:16:44Z"
+    },
+    {
+      "id": "rchain-rust",
+      "name": "rchain-rust fork",
+      "visibility": "public",
+      "kind": "fork",
+      "family": "rchain-assurance",
+      "relation": "mirror",
+      "status": "active",
+      "evidence_grade": "observed",
+      "description": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution.",
+      "repository_url": "https://github.com/aixaria0/rchain-rust",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Rust",
+        "Lean",
+        "Shell",
+        "Python"
+      ],
+      "authored_commits": 0,
+      "commits": 15661,
+      "authored_prs": 1,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 6,
+      "tests": 301,
+      "formal_artifacts": 49,
+      "evidence_artifacts": 18,
+      "pushed_at": "2026-10-25T08:58:07Z"
+    },
+    {
+      "id": "rchain-sentinel",
+      "name": "RChain Sentinel",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "relation": "component",
+      "status": "active",
+      "evidence_grade": "observed",
+      "description": "RChain transaction, contract, and network verification console",
+      "repository_url": "https://github.com/aixaria0/rchain-sentinel",
+      "live_url": "https://aixaria0.github.io/rchain-sentinel/",
+      "live_label": "Open live site",
+      "languages": [
+        "Makefile",
+        "Rust",
+        "HTML",
+        "DTrace"
+      ],
+      "authored_commits": 141,
+      "commits": 142,
+      "authored_prs": 7,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 4,
       "tests": 0,
       "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2025-12-11T12:44:43Z"
+      "evidence_artifacts": 4,
+      "pushed_at": "2026-10-23T21:43:09Z"
+    },
+    {
+      "id": "rholox",
+      "name": "Rholox",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "observed",
+      "description": "Rholox — RChain-native DApp platform and testnet gateway",
+      "repository_url": "https://github.com/aixaria0/Rholox",
+      "live_url": "https://rholox.com/",
+      "live_label": "Open Rholox",
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "authored_commits": 37,
+      "commits": 37,
+      "authored_prs": 12,
+      "merged_prs": 12,
+      "reviews": 0,
+      "ci_workflows": 2,
+      "tests": 0,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 5,
+      "pushed_at": "2026-10-23T22:42:34Z"
+    },
+    {
+      "id": "rlsenti",
+      "name": "rlsenti",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Compiler/workbench evidence adapter; synthetic/integration-oriented.",
+      "repository_url": "https://github.com/aixaria0/rlsenti",
+      "live_url": "https://aixaria0.github.io/rlsenti/",
+      "live_label": "Open live site",
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "authored_commits": 64,
+      "commits": 66,
+      "authored_prs": 3,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 1,
+      "tests": 11,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 5,
+      "pushed_at": "2026-10-17T03:01:19Z"
+    },
+    {
+      "id": "scratch-notes",
+      "name": "scratch-notes",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Gg",
+      "repository_url": "https://github.com/aixaria0/scratch-notes",
+      "live_url": null,
+      "live_label": null,
+      "languages": [],
+      "pushed_at": "2026-07-21T17:43:04Z"
     },
     {
       "id": "shahnamehresonance",
@@ -607,332 +1074,88 @@
       "pushed_at": "2026-08-13T21:53:27Z"
     },
     {
-      "id": "x000000",
-      "name": "AixAria CHIMERA Engine",
+      "id": "sovereign-lattice",
+      "name": "Sovereign Lattice",
       "visibility": "public",
       "kind": "original",
-      "family": "chimera-evidence-runtime",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "X000000",
-      "repository_url": "https://github.com/aixaria0/X000000",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "HTML"
-      ],
-      "authored_commits": 4,
-      "commits": 4,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 1,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-08-25T04:40:47Z"
-    },
-    {
-      "id": "llm-security-poc",
-      "name": "LLM Security PoC",
-      "visibility": "public",
-      "kind": "original",
-      "family": "intelligence-security",
-      "relation": "prototype",
+      "family": "quantum-formal",
+      "relation": "canonical",
       "status": "research",
       "evidence_grade": "experimental",
-      "description": "Security hypotheses/PoCs; external or target-specific validation required before stronger vulnerability claims.",
-      "repository_url": "https://github.com/aixaria0/llm-security-poc",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "Python"
-      ],
-      "authored_commits": 4,
-      "commits": 4,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 1,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-08-04T22:14:07Z"
-    },
-    {
-      "id": "fun",
-      "name": "Empire of Free LLMs",
-      "visibility": "public",
-      "kind": "original",
-      "family": "intelligence-security",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "experimental",
-      "description": "Just for fun",
-      "repository_url": "https://github.com/aixaria0/Fun",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript",
-        "CSS",
-        "HTML"
-      ],
-      "authored_commits": 3,
-      "commits": 7,
-      "authored_prs": 2,
-      "merged_prs": 2,
-      "reviews": 2,
-      "ci_workflows": 4,
-      "tests": 3,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-21T18:08:11Z"
-    },
-    {
-      "id": "faaal",
-      "name": "Faal",
-      "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Faal",
-      "repository_url": "https://github.com/aixaria0/Faaal",
-      "live_url": "https://aixaria0.github.io/Faaal/",
+      "description": "Explore PBFT-style consensus with cryptographic certificates, durable state, and scoped formal artifacts.",
+      "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
+      "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
       "live_label": "Open live site",
       "languages": [
-        "HTML"
+        "Makefile",
+        "Rust",
+        "HTML",
+        "Lean"
       ],
-      "authored_commits": 3,
-      "commits": 8,
-      "authored_prs": 2,
-      "merged_prs": 2,
-      "reviews": 1,
-      "ci_workflows": 3,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-22T23:07:28Z"
-    },
-    {
-      "id": "tr",
-      "name": "AriaTrading / Tr",
-      "visibility": "public",
-      "kind": "mirror",
-      "family": "quantitative-systems",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Trade ",
-      "repository_url": "https://github.com/aixaria0/Tr",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript"
-      ],
-      "authored_commits": 2,
-      "commits": 2,
-      "authored_prs": 0,
+      "authored_commits": 470,
+      "commits": 470,
+      "authored_prs": 4,
       "merged_prs": 0,
       "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 20,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-07-21T16:36:12Z"
+      "ci_workflows": 5,
+      "tests": 7,
+      "formal_artifacts": 3,
+      "evidence_artifacts": 13,
+      "pushed_at": "2026-10-14T01:45:23Z"
     },
     {
-      "id": "gggg1",
-      "name": "Gggg1",
+      "id": "strategic-intelligence-lattice",
+      "name": "Strategic Intelligence Lattice",
       "visibility": "public",
       "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Yggg",
-      "repository_url": "https://github.com/aixaria0/Gggg1",
-      "live_url": "https://aixaria0.github.io/Gggg1/",
-      "live_label": "Open live site",
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS"
-      ],
-      "authored_commits": 2,
-      "commits": 4,
-      "authored_prs": 1,
-      "merged_prs": 1,
-      "reviews": 1,
-      "ci_workflows": 4,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-21T17:57:32Z"
-    },
-    {
-      "id": "ariatrading-github-io",
-      "name": "AriaTrading Showcase",
-      "visibility": "public",
-      "kind": "original",
-      "family": "quantitative-systems",
-      "relation": "showcase",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Site",
-      "repository_url": null,
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript"
-      ],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 20,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-07-16T22:01:29Z"
-    },
-    {
-      "id": "ariatrading0",
-      "name": "AriaTrading0",
-      "visibility": "public",
-      "kind": "mirror",
-      "family": "quantitative-systems",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Mirror/legacy candidate pending ancestry verification.",
-      "repository_url": null,
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript"
-      ],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 20,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-07-17T22:38:35Z"
-    },
-    {
-      "id": "faal",
-      "name": "Faal",
-      "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Faal",
-      "repository_url": "https://github.com/aixaria0/Faal",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-22T17:58:17Z"
-    },
-    {
-      "id": "forgeos",
-      "name": "ForgeOS",
-      "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Legacy experiment; deeper lineage audit pending.",
-      "repository_url": "https://github.com/aixaria0/forgeos",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-06-27T22:48:05Z"
-    },
-    {
-      "id": "gggg",
-      "name": "Gggg",
-      "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Gg",
-      "repository_url": "https://github.com/aixaria0/Gggg",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-21T17:43:04Z"
-    },
-    {
-      "id": "oss",
-      "name": "OmniTrace / Oss",
-      "visibility": "public",
-      "kind": "mirror",
-      "family": "intelligence-security",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Near-duplicate/mirror candidate of OSint.",
-      "repository_url": "https://github.com/aixaria0/Oss",
+      "family": "research-operations",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "replay-verified",
+      "description": "Compare adaptive computation policies under equal budgets in a reproducible synthetic decision laboratory.",
+      "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
       "live_url": null,
       "live_label": null,
       "languages": [
         "Python",
-        "TypeScript",
-        "HTML",
-        "Shell"
+        "TeX",
+        "Dockerfile"
       ],
-      "authored_commits": 1,
-      "commits": 1,
+      "authored_commits": 160,
+      "commits": 160,
+      "authored_prs": 2,
+      "merged_prs": 2,
+      "reviews": 0,
+      "ci_workflows": 8,
+      "tests": 8,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 12,
+      "pushed_at": "2026-10-05T18:24:57Z"
+    },
+    {
+      "id": "thebookofkings",
+      "name": "The Book of Kings",
+      "visibility": "public",
+      "kind": "duplicate",
+      "family": "cultural-consumer",
+      "relation": "predecessor",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "The book of kings matrix ",
+      "repository_url": "https://github.com/aixaria0/Thebookofkings",
+      "live_url": null,
+      "live_label": null,
+      "languages": [],
+      "authored_commits": 7,
+      "commits": 7,
       "authored_prs": 0,
       "merged_prs": 0,
       "reviews": 0,
-      "ci_workflows": 3,
+      "ci_workflows": 0,
       "tests": 0,
       "formal_artifacts": 0,
-      "evidence_artifacts": 1,
-      "pushed_at": "2026-07-19T22:48:46Z"
+      "evidence_artifacts": 0,
+      "pushed_at": "2026-07-16T17:54:46Z"
     },
     {
       "id": "theshahnameh",
@@ -960,59 +1183,58 @@
       "pushed_at": "2026-07-16T17:48:58Z"
     },
     {
-      "id": "rchain-rust",
-      "name": "rchain-rust fork",
+      "id": "training-configurations",
+      "name": "training-configurations",
       "visibility": "public",
-      "kind": "fork",
-      "family": "rchain-assurance",
-      "relation": "upstream fork",
-      "status": "active",
-      "evidence_grade": "observed",
-      "description": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution.",
-      "repository_url": "https://github.com/aixaria0/rchain-rust",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Experimental TypeScript workspace containing local application configurations and training recipes.",
+      "repository_url": "https://github.com/aixaria0/training-configurations",
       "live_url": null,
       "live_label": null,
       "languages": [
-        "Rust",
-        "Lean",
-        "Shell",
-        "Python"
+        "TypeScript"
       ],
-      "authored_commits": 0,
-      "commits": 15661,
-      "authored_prs": 1,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 6,
-      "tests": 301,
-      "formal_artifacts": 49,
-      "evidence_artifacts": 18,
-      "pushed_at": "2026-10-11T12:38:47Z"
+      "pushed_at": "2025-12-11T12:44:43Z"
     },
     {
-      "id": "studious-guide",
-      "name": "Studious Guide",
+      "id": "vqe-analyzer",
+      "name": "VQE Analyzer",
       "visibility": "public",
       "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Empty/minimal legacy repository.",
-      "repository_url": "https://github.com/aixaria0/studious-guide",
+      "family": "quantum-formal",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "independently-verified",
+      "description": "This tool renders complex algorithmic performance landscapes in real-time using zero-dependency Vanilla JavaScript. While built for Quantum VQE, the underlying engine is production-ready for financial and industrial applications.",
+      "repository_url": "https://github.com/aixaria0/vqe-analyzer",
       "live_url": null,
       "live_label": null,
-      "languages": [],
-      "authored_commits": 0,
-      "commits": 0,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-26T01:03:21Z"
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-10-13T23:34:50Z"
+    },
+    {
+      "id": "webapp-scaffold-lab",
+      "name": "webapp-scaffold-lab",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Experimental TypeScript web workspace with client, server, and migration components.",
+      "repository_url": "https://github.com/aixaria0/webapp-scaffold-lab",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-09-22T10:06:00Z"
     }
   ],
   "home_public_catalog": [
@@ -1044,7 +1266,7 @@
       "tests": 60,
       "formal_artifacts": 0,
       "evidence_artifacts": 53,
-      "pushed_at": "2026-10-10T03:11:39Z"
+      "pushed_at": "2026-10-15T21:54:44Z"
     },
     {
       "id": "sovereign-lattice",
@@ -1074,7 +1296,7 @@
       "tests": 7,
       "formal_artifacts": 3,
       "evidence_artifacts": 13,
-      "pushed_at": "2026-10-10T02:54:15Z"
+      "pushed_at": "2026-10-14T01:45:23Z"
     },
     {
       "id": "aether-runtime",
@@ -1104,7 +1326,7 @@
       "tests": 8,
       "formal_artifacts": 0,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-10-07T03:45:48Z"
+      "pushed_at": "2026-10-15T02:55:56Z"
     },
     {
       "id": "omni",
@@ -1134,7 +1356,7 @@
       "tests": 20,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-10T04:06:00Z"
+      "pushed_at": "2026-10-21T14:55:56Z"
     },
     {
       "id": "nexus-quantum",
@@ -1175,26 +1397,14 @@
       "relation": "canonical",
       "status": "active",
       "evidence_grade": "independently-verified",
-      "description": "Browser workbench for small-circuit variational quantum optimization: real statevector evaluation, exact-reference comparison and retained best parameters. Simulator only.",
-      "repository_url": null,
-      "live_url": "https://aixaria0.github.io/vqe-analyzer/",
-      "live_label": "Open VQE Analyzer",
+      "description": "This tool renders complex algorithmic performance landscapes in real-time using zero-dependency Vanilla JavaScript. While built for Quantum VQE, the underlying engine is production-ready for financial and industrial applications.",
+      "repository_url": "https://github.com/aixaria0/vqe-analyzer",
+      "live_url": null,
+      "live_label": null,
       "languages": [
-        "JavaScript",
-        "CSS",
-        "HTML",
-        "Python"
+        "JavaScript"
       ],
-      "authored_commits": 19,
-      "commits": 49,
-      "authored_prs": 17,
-      "merged_prs": 16,
-      "reviews": 13,
-      "ci_workflows": 8,
-      "tests": 3,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-10-12T13:01:19Z"
+      "pushed_at": "2026-10-13T23:34:50Z"
     },
     {
       "id": "rchain-sentinel",
@@ -1224,7 +1434,7 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 4,
-      "pushed_at": "2026-09-28T01:29:20Z"
+      "pushed_at": "2026-10-23T21:43:09Z"
     },
     {
       "id": "strategic-intelligence-lattice",
@@ -1283,7 +1493,7 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-12T13:13:25Z"
+      "pushed_at": "2026-10-23T22:42:34Z"
     },
     {
       "id": "rlsenti",
@@ -1313,7 +1523,7 @@
       "tests": 11,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-09-28T01:29:24Z"
+      "pushed_at": "2026-10-17T03:01:19Z"
     },
     {
       "id": "bookofkings",
@@ -1342,7 +1552,7 @@
       "tests": 15,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-07-22T07:08:04Z"
+      "pushed_at": "2026-10-13T23:44:30Z"
     },
     {
       "id": "llm-security-poc",
@@ -1377,7 +1587,7 @@
       "visibility": "public",
       "kind": "fork",
       "family": "rchain-assurance",
-      "relation": "upstream fork",
+      "relation": "mirror",
       "status": "active",
       "evidence_grade": "observed",
       "description": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution.",
@@ -1399,18 +1609,126 @@
       "tests": 301,
       "formal_artifacts": 49,
       "evidence_artifacts": 18,
-      "pushed_at": "2026-10-11T12:38:47Z"
+      "pushed_at": "2026-10-25T08:58:07Z"
     }
   ],
   "archive_catalog": [
+    {
+      "id": "chimera-one",
+      "name": "CHIMERA-ONE",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "runtime-verified",
+      "description": "Coordinated execution, pinned capabilities, and evidence-bound verification.",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-ONE",
+      "live_url": "/CHIMERA-ONE/",
+      "live_label": "Open live site",
+      "languages": [
+        "Rust"
+      ],
+      "pushed_at": "2026-10-25T22:33:04Z"
+    },
+    {
+      "id": "ritualgraph",
+      "name": "RitualGraph",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "runtime-verified",
+      "description": "Executable threat graphs, deterministic simulation, and CI-checkable security invariants.",
+      "repository_url": "https://github.com/aixaria0/RitualGraph",
+      "live_url": "/RitualGraph/",
+      "live_label": "Open live site",
+      "languages": [
+        "Python"
+      ],
+      "pushed_at": "2026-10-05T01:46:35Z"
+    },
+    {
+      "id": "chimera-ag",
+      "name": "Chimera-AG",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "active",
+      "evidence_grade": "runtime-verified",
+      "description": "Self-hosted orchestration with measured routing and reproducible verification.",
+      "repository_url": "https://github.com/aixaria0/Chimera-AG",
+      "live_url": "/Chimera-AG/",
+      "live_label": "Open live site",
+      "languages": [
+        "Python"
+      ],
+      "pushed_at": "2026-10-08T23:08:15Z"
+    },
+    {
+      "id": "aetherforge",
+      "name": "Aether Forge",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantum-formal",
+      "relation": "research-lab",
+      "status": "active-research",
+      "evidence_grade": "experimental",
+      "description": "Interactive quantum-gravity research laboratory with explicit approximation and synthetic-data boundaries.",
+      "repository_url": "https://github.com/aixaria0/aetherforge",
+      "live_url": "/aetherforge/",
+      "live_label": "Open live site",
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-10-25T22:34:01Z"
+    },
+    {
+      "id": "personal-llm-sanctum",
+      "name": "Personal LLM Sanctum",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "runtime-verified",
+      "description": "Local-first Rust runtime with recorded runs, routing, memory and replay.",
+      "repository_url": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Rust"
+      ],
+      "pushed_at": "2026-10-25T22:33:07Z"
+    },
+    {
+      "id": "shahnameh-lite",
+      "name": "Shahnameh Lite",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "relation": "predecessor",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Persian-first storytelling and reading guide with offline search and browser narration.",
+      "repository_url": "https://github.com/aixaria0/Shahnameh-lite",
+      "live_url": "/shahnameh-lite/",
+      "live_label": "Open live site",
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-10-25T22:34:04Z"
+    },
     {
       "id": "aether-runtime-os",
       "name": "Aether Runtime OS",
       "visibility": "public",
       "kind": "original",
       "family": "chimera-evidence-runtime",
-      "relation": "predecessor",
-      "status": "legacy",
+      "relation": "prototype",
+      "status": "research",
       "evidence_grade": "replay-verified",
       "description": "A fault-tolerant, evidence-carrying runtime for autonomous and distributed AI execution.",
       "repository_url": "https://github.com/aixaria0/Aether-Runtime-OS",
@@ -1431,32 +1749,433 @@
       "pushed_at": "2026-10-06T06:08:23Z"
     },
     {
-      "id": "apex-dee",
-      "name": "Apex Deep Quant",
+      "id": "aix",
+      "name": "Aix",
       "visibility": "public",
       "kind": "original",
-      "family": "quantitative-systems",
+      "family": "intelligence-security",
       "relation": "prototype",
       "status": "legacy",
       "evidence_grade": "historical",
-      "description": "....",
-      "repository_url": "https://github.com/aixaria0/-Apex-Dee",
+      "description": "private",
+      "repository_url": "https://github.com/aixaria0/Aix",
       "live_url": null,
-      "live_label": "Open live site",
+      "live_label": null,
+      "languages": [
+        "Python"
+      ],
+      "pushed_at": "2026-10-15T02:26:55Z"
+    },
+    {
+      "id": "aixaria0-github-io",
+      "name": "aixaria0.github.io",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "AIX — Engineering Intelligence Registry",
+      "repository_url": "https://github.com/aixaria0/aixaria0.github.io",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-10-22T01:44:40Z"
+    },
+    {
+      "id": "apex-quant-prototype",
+      "name": "apex-quant-prototype",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Apex Quant: an experimental quantitative research prototype with Python and browser components.",
+      "repository_url": "https://github.com/aixaria0/apex-quant-prototype",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-07-23T16:06:47Z"
+    },
+    {
+      "id": "aria-lab",
+      "name": "ARIA Lab",
+      "visibility": "public",
+      "kind": "original",
+      "family": "research-operations",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Experimental research workspace for protein-design studies and interactive analysis.",
+      "repository_url": "https://github.com/aixaria0/Aria-Lab",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-22T14:43:03Z"
+    },
+    {
+      "id": "aria-trading-legacy",
+      "name": "aria-trading-legacy",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Trade ",
+      "repository_url": "https://github.com/aixaria0/aria-trading-legacy",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-21T16:36:12Z"
+    },
+    {
+      "id": "ariatrading-github-io",
+      "name": "AriaTrading Showcase",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantitative-systems",
+      "relation": "showcase",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Site",
+      "repository_url": "https://github.com/aixaria0/AriaTrading.github.io",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-16T22:01:29Z"
+    },
+    {
+      "id": "ariatrading0",
+      "name": "AriaTrading0",
+      "visibility": "public",
+      "kind": "original",
+      "family": "quantitative-systems",
+      "relation": "mirror",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Legacy AriaTrading implementation retained as a separate development snapshot.",
+      "repository_url": "https://github.com/aixaria0/AriaTrading0",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-17T22:38:35Z"
+    },
+    {
+      "id": "chimera-command-lab",
+      "name": "chimera-command-lab",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Experimental CHIMERA command-lattice workspace for classical and quantum research.",
+      "repository_url": "https://github.com/aixaria0/chimera-command-lab",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-23T18:26:30Z"
+    },
+    {
+      "id": "chimera-desk",
+      "name": "CHIMERA-DESK",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Browser research control surface for quantum simulation, consensus, proofs, markets and technical research.",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-DESK",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-10-17T17:19:10Z"
+    },
+    {
+      "id": "chimera-engine-prototype",
+      "name": "chimera-engine-prototype",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Historical CHIMERA engine prototype with an interactive TypeScript research interface.",
+      "repository_url": "https://github.com/aixaria0/chimera-engine-prototype",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-08-25T04:40:47Z"
+    },
+    {
+      "id": "chimera-omega-public",
+      "name": "CHIMERA-OMEGA-public",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "CHIMERA OMEGA — bounded proof-carrying evidence verifier (AGPL-3.0-or-later)",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-OMEGA-public",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Rust"
+      ],
+      "pushed_at": "2026-10-14T18:27:37Z"
+    },
+    {
+      "id": "chimera-redteam-web",
+      "name": "chimera-redteam-web",
+      "visibility": "public",
+      "kind": "original",
+      "family": "research-operations",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "ungraded",
+      "description": "Public web console and documentation for CHIMERA Red Team",
+      "repository_url": "https://github.com/aixaria0/chimera-redteam-web",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-10-25T23:46:04Z"
+    },
+    {
+      "id": "empire-pwa",
+      "name": "Empire Chat PWA",
+      "visibility": "public",
+      "kind": "original",
+      "family": "intelligence-security",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Empire Chat PWA — WebLLM in-browser AI, installable, offline-capable",
+      "repository_url": "https://github.com/aixaria0/empire-pwa",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-08-04T15:06:32Z"
+    },
+    {
+      "id": "ensemble-chat-prototype",
+      "name": "ensemble-chat-prototype",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Just for fun",
+      "repository_url": "https://github.com/aixaria0/ensemble-chat-prototype",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-21T18:08:11Z"
+    },
+    {
+      "id": "faal-scaffold",
+      "name": "faal-scaffold",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Faal",
+      "repository_url": "https://github.com/aixaria0/faal-scaffold",
+      "live_url": null,
+      "live_label": null,
+      "languages": [],
+      "pushed_at": "2026-07-22T17:58:17Z"
+    },
+    {
+      "id": "faal-web",
+      "name": "faal-web",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Faal Web: a standalone browser prototype for interactive reflection.",
+      "repository_url": "https://github.com/aixaria0/faal-web",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "HTML"
+      ],
+      "pushed_at": "2026-07-22T23:07:28Z"
+    },
+    {
+      "id": "forgeos",
+      "name": "ForgeOS",
+      "visibility": "public",
+      "kind": "original",
+      "family": "legacy-scratch",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Legacy experiment; deeper lineage audit pending.",
+      "repository_url": "https://github.com/aixaria0/forgeos",
+      "live_url": null,
+      "live_label": null,
+      "languages": [],
+      "authored_commits": 1,
+      "commits": 1,
+      "authored_prs": 0,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 0,
+      "tests": 0,
+      "formal_artifacts": 0,
+      "evidence_artifacts": 0,
+      "pushed_at": "2026-06-27T22:48:05Z"
+    },
+    {
+      "id": "fracture-archive",
+      "name": "fracture-archive",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Fracture Archive — local-first research desk for post-quantum cryptography, holography, Hawking radiation, and primordial cosmology.",
+      "repository_url": "https://github.com/aixaria0/fracture-archive",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-10-15T01:36:46Z"
+    },
+    {
+      "id": "jimscarversqlf",
+      "name": "jimscarversQLF",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Educational consensus workbench for protocol simulations, formal specifications, invariants, and execution traces.",
+      "repository_url": "https://github.com/aixaria0/jimscarversQLF",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-10-16T01:55:44Z"
+    },
+    {
+      "id": "lattice-workbench",
+      "name": "lattice-workbench",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Lattice research prototype combining interactive quantum and formal-methods exploration.",
+      "repository_url": "https://github.com/aixaria0/lattice-workbench",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-05T04:10:29Z"
+    },
+    {
+      "id": "live-veil",
+      "name": "live-veil",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Live Veil: a shared-intention web prototype with live updates, echoes, and interactive visuals.",
+      "repository_url": "https://github.com/aixaria0/live-veil",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-07-21T17:57:32Z"
+    },
+    {
+      "id": "my-little-baddies",
+      "name": "My Little Baddies",
+      "visibility": "public",
+      "kind": "original",
+      "family": "cultural-consumer",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "description": "Historical consumer/creative experiment.",
+      "repository_url": "https://github.com/aixaria0/My-little-baddies-",
+      "live_url": null,
+      "live_label": null,
       "languages": [
         "HTML",
         "Python"
       ],
-      "authored_commits": 35,
-      "commits": 38,
-      "authored_prs": 2,
-      "merged_prs": 2,
-      "reviews": 1,
-      "ci_workflows": 3,
+      "authored_commits": 7,
+      "commits": 7,
+      "authored_prs": 0,
+      "merged_prs": 0,
+      "reviews": 0,
+      "ci_workflows": 1,
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-07-23T16:06:47Z"
+      "pushed_at": "2026-09-01T23:59:08Z"
+    },
+    {
+      "id": "omnitrace-variant",
+      "name": "omnitrace-variant",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "OmniTrace variant with a public-data investigation frontend, backend services, and observability configuration.",
+      "repository_url": "https://github.com/aixaria0/omnitrace-variant",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "Python"
+      ],
+      "pushed_at": "2026-07-19T22:48:46Z"
     },
     {
       "id": "osint",
@@ -1489,84 +2208,74 @@
       "pushed_at": "2026-07-31T21:07:30Z"
     },
     {
-      "id": "my-little-baddies",
-      "name": "My Little Baddies",
-      "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Historical consumer/creative experiment.",
-      "repository_url": "https://github.com/aixaria0/My-little-baddies-",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "HTML",
-        "Python"
-      ],
-      "authored_commits": 7,
-      "commits": 7,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-09-01T23:59:08Z"
-    },
-    {
-      "id": "thebookofkings",
-      "name": "The Book of Kings",
-      "visibility": "public",
-      "kind": "duplicate",
-      "family": "cultural-consumer",
-      "relation": "predecessor",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "The book of kings matrix ",
-      "repository_url": "https://github.com/aixaria0/Thebookofkings",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 7,
-      "commits": 7,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-16T17:54:46Z"
-    },
-    {
-      "id": "qlm",
-      "name": "QLM",
+      "id": "qlf",
+      "name": "QLF",
       "visibility": "public",
       "kind": "original",
       "family": "quantum-formal",
-      "relation": "prototype",
-      "status": "legacy",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Research workspace for protocol models, logic specifications, and interactive formal-methods exploration.",
+      "repository_url": "https://github.com/aixaria0/QLF",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-09-22T14:42:09Z"
+    },
+    {
+      "id": "quantum-os-workspace",
+      "name": "quantum-os-workspace",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
       "evidence_grade": "historical",
-      "description": "Historical quantum/formal prototype.",
-      "repository_url": "https://github.com/aixaria0/Qlm",
+      "description": "QuantumOS development workspace for browser peer-to-peer collaboration, capability transport, and Rust/WASM components.",
+      "repository_url": "https://github.com/aixaria0/quantum-os-workspace",
       "live_url": null,
       "live_label": null,
       "languages": [
         "TypeScript"
       ],
-      "authored_commits": 5,
-      "commits": 12,
-      "authored_prs": 5,
-      "merged_prs": 4,
-      "reviews": 5,
-      "ci_workflows": 1,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2025-12-11T12:44:43Z"
+      "pushed_at": "2026-10-25T00:18:07Z"
+    },
+    {
+      "id": "quantum001",
+      "name": "Aether",
+      "visibility": "public",
+      "kind": "original",
+      "family": "chimera-evidence-runtime",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "description": "Interactive quantum research studio with a twelve-qubit circuit composer and inspectable experiment records.",
+      "repository_url": "https://github.com/aixaria0/Quantum001",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-10-17T18:16:44Z"
+    },
+    {
+      "id": "scratch-notes",
+      "name": "scratch-notes",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Gg",
+      "repository_url": "https://github.com/aixaria0/scratch-notes",
+      "live_url": null,
+      "live_label": null,
+      "languages": [],
+      "pushed_at": "2026-07-21T17:43:04Z"
     },
     {
       "id": "shahnamehresonance",
@@ -1598,217 +2307,21 @@
       "pushed_at": "2026-08-13T21:53:27Z"
     },
     {
-      "id": "x000000",
-      "name": "AixAria CHIMERA Engine",
+      "id": "thebookofkings",
+      "name": "The Book of Kings",
       "visibility": "public",
-      "kind": "original",
-      "family": "chimera-evidence-runtime",
-      "relation": "prototype",
+      "kind": "duplicate",
+      "family": "cultural-consumer",
+      "relation": "predecessor",
       "status": "legacy",
       "evidence_grade": "historical",
-      "description": "X000000",
-      "repository_url": "https://github.com/aixaria0/X000000",
+      "description": "The book of kings matrix ",
+      "repository_url": "https://github.com/aixaria0/Thebookofkings",
       "live_url": null,
       "live_label": null,
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "HTML"
-      ],
-      "authored_commits": 4,
-      "commits": 4,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 1,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-08-25T04:40:47Z"
-    },
-    {
-      "id": "fun",
-      "name": "Empire of Free LLMs",
-      "visibility": "public",
-      "kind": "original",
-      "family": "intelligence-security",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "experimental",
-      "description": "Just for fun",
-      "repository_url": "https://github.com/aixaria0/Fun",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript",
-        "CSS",
-        "HTML"
-      ],
-      "authored_commits": 3,
+      "languages": [],
+      "authored_commits": 7,
       "commits": 7,
-      "authored_prs": 2,
-      "merged_prs": 2,
-      "reviews": 2,
-      "ci_workflows": 4,
-      "tests": 3,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-21T18:08:11Z"
-    },
-    {
-      "id": "faaal",
-      "name": "Faal",
-      "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Faal",
-      "repository_url": "https://github.com/aixaria0/Faaal",
-      "live_url": "https://aixaria0.github.io/Faaal/",
-      "live_label": "Open live site",
-      "languages": [
-        "HTML"
-      ],
-      "authored_commits": 3,
-      "commits": 8,
-      "authored_prs": 2,
-      "merged_prs": 2,
-      "reviews": 1,
-      "ci_workflows": 3,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-22T23:07:28Z"
-    },
-    {
-      "id": "tr",
-      "name": "AriaTrading / Tr",
-      "visibility": "public",
-      "kind": "mirror",
-      "family": "quantitative-systems",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Trade ",
-      "repository_url": "https://github.com/aixaria0/Tr",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript"
-      ],
-      "authored_commits": 2,
-      "commits": 2,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 20,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-07-21T16:36:12Z"
-    },
-    {
-      "id": "gggg1",
-      "name": "Gggg1",
-      "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Yggg",
-      "repository_url": "https://github.com/aixaria0/Gggg1",
-      "live_url": "https://aixaria0.github.io/Gggg1/",
-      "live_label": "Open live site",
-      "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS"
-      ],
-      "authored_commits": 2,
-      "commits": 4,
-      "authored_prs": 1,
-      "merged_prs": 1,
-      "reviews": 1,
-      "ci_workflows": 4,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-21T17:57:32Z"
-    },
-    {
-      "id": "ariatrading-github-io",
-      "name": "AriaTrading Showcase",
-      "visibility": "public",
-      "kind": "original",
-      "family": "quantitative-systems",
-      "relation": "showcase",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Site",
-      "repository_url": null,
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript"
-      ],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 1,
-      "tests": 20,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-07-16T22:01:29Z"
-    },
-    {
-      "id": "ariatrading0",
-      "name": "AriaTrading0",
-      "visibility": "public",
-      "kind": "mirror",
-      "family": "quantitative-systems",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Mirror/legacy candidate pending ancestry verification.",
-      "repository_url": null,
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "TypeScript"
-      ],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 20,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 2,
-      "pushed_at": "2026-07-17T22:38:35Z"
-    },
-    {
-      "id": "faal",
-      "name": "Faal",
-      "visibility": "public",
-      "kind": "original",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Faal",
-      "repository_url": "https://github.com/aixaria0/Faal",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 1,
-      "commits": 1,
       "authored_prs": 0,
       "merged_prs": 0,
       "reviews": 0,
@@ -1816,87 +2329,7 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-07-22T17:58:17Z"
-    },
-    {
-      "id": "forgeos",
-      "name": "ForgeOS",
-      "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Legacy experiment; deeper lineage audit pending.",
-      "repository_url": "https://github.com/aixaria0/forgeos",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-06-27T22:48:05Z"
-    },
-    {
-      "id": "gggg",
-      "name": "Gggg",
-      "visibility": "public",
-      "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Gg",
-      "repository_url": "https://github.com/aixaria0/Gggg",
-      "live_url": null,
-      "live_label": null,
-      "languages": [],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-21T17:43:04Z"
-    },
-    {
-      "id": "oss",
-      "name": "OmniTrace / Oss",
-      "visibility": "public",
-      "kind": "mirror",
-      "family": "intelligence-security",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "description": "Near-duplicate/mirror candidate of OSint.",
-      "repository_url": "https://github.com/aixaria0/Oss",
-      "live_url": null,
-      "live_label": null,
-      "languages": [
-        "Python",
-        "TypeScript",
-        "HTML",
-        "Shell"
-      ],
-      "authored_commits": 1,
-      "commits": 1,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 3,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 1,
-      "pushed_at": "2026-07-19T22:48:46Z"
+      "pushed_at": "2026-07-16T17:54:46Z"
     },
     {
       "id": "theshahnameh",
@@ -1924,87 +2357,44 @@
       "pushed_at": "2026-07-16T17:48:58Z"
     },
     {
-      "id": "studious-guide",
-      "name": "Studious Guide",
+      "id": "training-configurations",
+      "name": "training-configurations",
       "visibility": "public",
       "kind": "original",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
       "evidence_grade": "historical",
-      "description": "Empty/minimal legacy repository.",
-      "repository_url": "https://github.com/aixaria0/studious-guide",
+      "description": "Experimental TypeScript workspace containing local application configurations and training recipes.",
+      "repository_url": "https://github.com/aixaria0/training-configurations",
       "live_url": null,
       "live_label": null,
-      "languages": [],
-      "authored_commits": 0,
-      "commits": 0,
-      "authored_prs": 0,
-      "merged_prs": 0,
-      "reviews": 0,
-      "ci_workflows": 0,
-      "tests": 0,
-      "formal_artifacts": 0,
-      "evidence_artifacts": 0,
-      "pushed_at": "2026-07-26T01:03:21Z"
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2025-12-11T12:44:43Z"
+    },
+    {
+      "id": "webapp-scaffold-lab",
+      "name": "webapp-scaffold-lab",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "description": "Experimental TypeScript web workspace with client, server, and migration components.",
+      "repository_url": "https://github.com/aixaria0/webapp-scaffold-lab",
+      "live_url": null,
+      "live_label": null,
+      "languages": [
+        "TypeScript"
+      ],
+      "pushed_at": "2026-09-22T10:06:00Z"
     }
   ],
-  "archive_count": 20,
+  "archive_count": 40,
   "private_catalog": [
-    {
-      "name": "CHIMERA-ONE",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "The control and coordination hub of the CHIMERA constellation.",
-        "fa": "هستهٔ کنترل و هماهنگیِ منظومهٔ کایمرا."
-      }
-    },
-    {
-      "name": "CHIMERA-OMEGA",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "An evidence kernel for claims accompanied by inspectable data.",
-        "fa": "هستهٔ شواهدی که ادعاهایش همراه با دادهٔ قابل بررسی ارائه می‌شوند."
-      }
-    },
-    {
-      "name": "Aether Forge",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private Aether-related product and research surface.",
-        "fa": "بستر خصوصیِ محصول و پژوهش مرتبط با خانوادهٔ ایثر."
-      }
-    },
-    {
-      "name": "AriaTrading",
-      "family": "quantitative-systems",
-      "status": "active",
-      "description": {
-        "en": "A quantitative intelligence core.",
-        "fa": "هسته‌ای برای هوش کمّی."
-      }
-    },
-    {
-      "name": "Chimera-AG",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "A coordination engine within the CHIMERA constellation.",
-        "fa": "موتور هماهنگی در مجموعهٔ کایمرا."
-      }
-    },
-    {
-      "name": "Personal LLM Sanctum",
-      "family": "intelligence-security",
-      "status": "research",
-      "description": {
-        "en": "A local-first adaptive multi-model language-model orchestration workspace.",
-        "fa": "محیط محلی برای هماهنگی تطبیقیِ چند مدل زبانی، با امکان استفاده از توان پردازشی راه‌دور."
-      }
-    },
     {
       "name": "Aix Registry",
       "family": "registry-meta",
@@ -2012,42 +2402,6 @@
       "description": {
         "en": "A structured registry for projects and the published portfolio source of truth.",
         "fa": "دفتر ثبت ساخت‌یافتهٔ پروژه‌ها و مرجع اصلی اطلاعات منتشرشده در این مجموعه."
-      }
-    },
-    {
-      "name": "RitualGraph",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A compiler and simulation engine for executable threat models, security invariants, attack graphs, and evidence-driven CI checks.",
-        "fa": "موتور کامپایل و شبیه‌سازیِ مدل‌های تهدید اجرایی، ناورداهای امنیتی، گراف حمله و دروازه‌های بررسی مبتنی بر شواهد."
-      }
-    },
-    {
-      "name": "CHIMERA RChain Staking Audit",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A domain-specific evidence-first audit pack for RChain staking.",
-        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
-      }
-    },
-    {
-      "name": "Aether",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A private application identified as Aether; its repository lineage is unresolved.",
-        "fa": "مخزن خصوصیِ برنامه‌ای با نام ایثر؛ نسبت دقیق آن با پروژه‌های هم‌نام هنوز روشن نشده است."
-      }
-    },
-    {
-      "name": "Aix",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "A prototype mobile security-testing platform.",
-        "fa": "نمونهٔ اولیهٔ بستری برای آزمون امنیت موبایل."
       }
     },
     {
@@ -2060,21 +2414,48 @@
       }
     },
     {
-      "name": "ARIA Lab",
-      "family": "research-operations",
-      "status": "research",
+      "name": "AriaTrading",
+      "family": "quantitative-systems",
+      "status": "active",
       "description": {
-        "en": "A private research workspace focused on protein design.",
-        "fa": "محیط پژوهش خصوصی در طراحی پروتئین."
+        "en": "A quantitative intelligence core.",
+        "fa": "هسته‌ای برای هوش کمّی."
       }
     },
     {
-      "name": "CHIMERA Hybrid Command Lattice",
+      "name": "CHIMERA RChain Staking Audit",
       "family": "chimera-evidence-runtime",
       "status": "research",
       "description": {
-        "en": "A private CHIMERA prototype for a hybrid classical and quantum command lattice.",
-        "fa": "نمونهٔ خصوصیِ سامانهٔ فرماندهی ترکیبیِ کلاسیک و کوانتومی در خانوادهٔ کایمرا."
+        "en": "A domain-specific evidence-first audit pack for RChain staking.",
+        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
+      }
+    },
+    {
+      "name": "CHIMERA-OMEGA",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "An evidence kernel for claims accompanied by inspectable data.",
+        "fa": "هستهٔ شواهدی که ادعاهایش همراه با دادهٔ قابل بررسی ارائه می‌شوند."
+      }
+    },
+    {
+      "name": "chimera-redteam",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
+      }
+    },
+    {
+      "name": "cobordism",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -2096,57 +2477,21 @@
       }
     },
     {
-      "name": "Empire Chat PWA",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "An installable browser chat prototype using an in-browser language model.",
-        "fa": "گفت‌وگوی قابل نصب در مرورگر با مدل زبانیِ درون مرورگر و امکان کار بدون اتصال."
-      }
-    },
-    {
-      "name": "Fracture Archive",
-      "family": "research-operations",
-      "status": "research",
-      "description": {
-        "en": "A private research-operations dashboard for post-quantum cryptography, gravity, and cosmology.",
-        "fa": "داشبورد خصوصیِ عملیات پژوهشی برای رمزنگاری پساکوانتومی، گرانش و کیهان‌شناسی."
-      }
-    },
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A hybrid quantum and formal-methods application under a temporary repository name.",
-        "fa": "برنامه‌ای با قابلیت‌های ترکیبی کوانتومی و روش‌های صوری که با نام موقت مخزن نگهداری می‌شود."
-      }
-    },
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private local application for a 12-qubit register.",
-        "fa": "برنامهٔ محلیِ خصوصی با رجیستر کوانتومی ۱۲ کیوبیتی."
-      }
-    },
-    {
-      "name": "masspropa",
-      "family": "research-operations",
+      "name": "Fracturebench",
+      "family": "pending-classification",
       "status": "pending",
       "description": {
-        "en": "A private repository retained while its identity and lineage are classified.",
-        "fa": "مخزن خصوصی که هویت و پیوند آن با سایر پروژه‌ها هنوز دسته‌بندی نشده است."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
-      "name": "QLF",
-      "family": "quantum-formal",
-      "status": "research",
+      "name": "lattice-register",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A private formal-methods workspace with protocol and logic specifications.",
-        "fa": "محیط خصوصیِ روش‌های صوری با مشخصات پروتکل و منطق."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -2156,15 +2501,6 @@
       "description": {
         "en": "An in-browser compiler and workbench that does not provide live RChain network evidence.",
         "fa": "کامپایلر و میزکار مرورگری؛ شواهد آن به شبکهٔ زندهٔ آرچین مربوط نیست."
-      }
-    },
-    {
-      "name": "Shahnameh Lite",
-      "family": "cultural-consumer",
-      "status": "legacy",
-      "description": {
-        "en": "An earlier cultural product implementation.",
-        "fa": "پیاده‌سازی پیشین یک محصول فرهنگی."
       }
     },
     {
@@ -2186,12 +2522,12 @@
       }
     },
     {
-      "name": "VERITAS Sovereign Prime",
-      "family": "intelligence-security",
-      "status": "legacy",
+      "name": "veritas-prototype",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A legacy product and business experiment; marketing claims are not treated as verified results.",
-        "fa": "آزمایش قدیمیِ محصول و کسب‌وکار؛ ادعاهای تبلیغی آن دستاورد تأییدشده تلقی نمی‌شوند."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -2204,12 +2540,12 @@
       }
     },
     {
-      "name": "x1111",
-      "family": "legacy-scratch",
+      "name": "webapp-scaffold",
+      "family": "pending-classification",
       "status": "pending",
       "description": {
-        "en": "A private repository retained while its classification is unresolved.",
-        "fa": "مخزن خصوصی که دسته‌بندی دقیق آن هنوز مشخص نشده است."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     }
   ],
@@ -3010,102 +3346,12 @@
   ],
   "private_projects": [
     {
-      "name": "CHIMERA-ONE",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "The control and coordination hub of the CHIMERA constellation.",
-        "fa": "هستهٔ کنترل و هماهنگیِ منظومهٔ کایمرا."
-      }
-    },
-    {
-      "name": "CHIMERA-OMEGA",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "An evidence kernel for claims accompanied by inspectable data.",
-        "fa": "هستهٔ شواهدی که ادعاهایش همراه با دادهٔ قابل بررسی ارائه می‌شوند."
-      }
-    },
-    {
-      "name": "Aether Forge",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private Aether-related product and research surface.",
-        "fa": "بستر خصوصیِ محصول و پژوهش مرتبط با خانوادهٔ ایثر."
-      }
-    },
-    {
-      "name": "AriaTrading",
-      "family": "quantitative-systems",
-      "status": "active",
-      "description": {
-        "en": "A quantitative intelligence core.",
-        "fa": "هسته‌ای برای هوش کمّی."
-      }
-    },
-    {
-      "name": "Chimera-AG",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "A coordination engine within the CHIMERA constellation.",
-        "fa": "موتور هماهنگی در مجموعهٔ کایمرا."
-      }
-    },
-    {
-      "name": "Personal LLM Sanctum",
-      "family": "intelligence-security",
-      "status": "research",
-      "description": {
-        "en": "A local-first adaptive multi-model language-model orchestration workspace.",
-        "fa": "محیط محلی برای هماهنگی تطبیقیِ چند مدل زبانی، با امکان استفاده از توان پردازشی راه‌دور."
-      }
-    },
-    {
       "name": "Aix Registry",
       "family": "registry-meta",
       "status": "active",
       "description": {
         "en": "A structured registry for projects and the published portfolio source of truth.",
         "fa": "دفتر ثبت ساخت‌یافتهٔ پروژه‌ها و مرجع اصلی اطلاعات منتشرشده در این مجموعه."
-      }
-    },
-    {
-      "name": "RitualGraph",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A compiler and simulation engine for executable threat models, security invariants, attack graphs, and evidence-driven CI checks.",
-        "fa": "موتور کامپایل و شبیه‌سازیِ مدل‌های تهدید اجرایی، ناورداهای امنیتی، گراف حمله و دروازه‌های بررسی مبتنی بر شواهد."
-      }
-    },
-    {
-      "name": "CHIMERA RChain Staking Audit",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A domain-specific evidence-first audit pack for RChain staking.",
-        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
-      }
-    },
-    {
-      "name": "Aether",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A private application identified as Aether; its repository lineage is unresolved.",
-        "fa": "مخزن خصوصیِ برنامه‌ای با نام ایثر؛ نسبت دقیق آن با پروژه‌های هم‌نام هنوز روشن نشده است."
-      }
-    },
-    {
-      "name": "Aix",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "A prototype mobile security-testing platform.",
-        "fa": "نمونهٔ اولیهٔ بستری برای آزمون امنیت موبایل."
       }
     },
     {
@@ -3118,21 +3364,48 @@
       }
     },
     {
-      "name": "ARIA Lab",
-      "family": "research-operations",
-      "status": "research",
+      "name": "AriaTrading",
+      "family": "quantitative-systems",
+      "status": "active",
       "description": {
-        "en": "A private research workspace focused on protein design.",
-        "fa": "محیط پژوهش خصوصی در طراحی پروتئین."
+        "en": "A quantitative intelligence core.",
+        "fa": "هسته‌ای برای هوش کمّی."
       }
     },
     {
-      "name": "CHIMERA Hybrid Command Lattice",
+      "name": "CHIMERA RChain Staking Audit",
       "family": "chimera-evidence-runtime",
       "status": "research",
       "description": {
-        "en": "A private CHIMERA prototype for a hybrid classical and quantum command lattice.",
-        "fa": "نمونهٔ خصوصیِ سامانهٔ فرماندهی ترکیبیِ کلاسیک و کوانتومی در خانوادهٔ کایمرا."
+        "en": "A domain-specific evidence-first audit pack for RChain staking.",
+        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
+      }
+    },
+    {
+      "name": "CHIMERA-OMEGA",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "An evidence kernel for claims accompanied by inspectable data.",
+        "fa": "هستهٔ شواهدی که ادعاهایش همراه با دادهٔ قابل بررسی ارائه می‌شوند."
+      }
+    },
+    {
+      "name": "chimera-redteam",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
+      }
+    },
+    {
+      "name": "cobordism",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -3154,57 +3427,21 @@
       }
     },
     {
-      "name": "Empire Chat PWA",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "An installable browser chat prototype using an in-browser language model.",
-        "fa": "گفت‌وگوی قابل نصب در مرورگر با مدل زبانیِ درون مرورگر و امکان کار بدون اتصال."
-      }
-    },
-    {
-      "name": "Fracture Archive",
-      "family": "research-operations",
-      "status": "research",
-      "description": {
-        "en": "A private research-operations dashboard for post-quantum cryptography, gravity, and cosmology.",
-        "fa": "داشبورد خصوصیِ عملیات پژوهشی برای رمزنگاری پساکوانتومی، گرانش و کیهان‌شناسی."
-      }
-    },
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A hybrid quantum and formal-methods application under a temporary repository name.",
-        "fa": "برنامه‌ای با قابلیت‌های ترکیبی کوانتومی و روش‌های صوری که با نام موقت مخزن نگهداری می‌شود."
-      }
-    },
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private local application for a 12-qubit register.",
-        "fa": "برنامهٔ محلیِ خصوصی با رجیستر کوانتومی ۱۲ کیوبیتی."
-      }
-    },
-    {
-      "name": "masspropa",
-      "family": "research-operations",
+      "name": "Fracturebench",
+      "family": "pending-classification",
       "status": "pending",
       "description": {
-        "en": "A private repository retained while its identity and lineage are classified.",
-        "fa": "مخزن خصوصی که هویت و پیوند آن با سایر پروژه‌ها هنوز دسته‌بندی نشده است."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
-      "name": "QLF",
-      "family": "quantum-formal",
-      "status": "research",
+      "name": "lattice-register",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A private formal-methods workspace with protocol and logic specifications.",
-        "fa": "محیط خصوصیِ روش‌های صوری با مشخصات پروتکل و منطق."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -3214,15 +3451,6 @@
       "description": {
         "en": "An in-browser compiler and workbench that does not provide live RChain network evidence.",
         "fa": "کامپایلر و میزکار مرورگری؛ شواهد آن به شبکهٔ زندهٔ آرچین مربوط نیست."
-      }
-    },
-    {
-      "name": "Shahnameh Lite",
-      "family": "cultural-consumer",
-      "status": "legacy",
-      "description": {
-        "en": "An earlier cultural product implementation.",
-        "fa": "پیاده‌سازی پیشین یک محصول فرهنگی."
       }
     },
     {
@@ -3244,12 +3472,12 @@
       }
     },
     {
-      "name": "VERITAS Sovereign Prime",
-      "family": "intelligence-security",
-      "status": "legacy",
+      "name": "veritas-prototype",
+      "family": "pending-classification",
+      "status": "pending",
       "description": {
-        "en": "A legacy product and business experiment; marketing claims are not treated as verified results.",
-        "fa": "آزمایش قدیمیِ محصول و کسب‌وکار؛ ادعاهای تبلیغی آن دستاورد تأییدشده تلقی نمی‌شوند."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     },
     {
@@ -3262,24 +3490,19 @@
       }
     },
     {
-      "name": "x1111",
-      "family": "legacy-scratch",
+      "name": "webapp-scaffold",
+      "family": "pending-classification",
       "status": "pending",
       "description": {
-        "en": "A private repository retained while its classification is unresolved.",
-        "fa": "مخزن خصوصی که دسته‌بندی دقیق آن هنوز مشخص نشده است."
+        "en": "Private project; source remains restricted.",
+        "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
     }
   ],
   "featured_private_names": [
-    "CHIMERA-ONE",
     "CHIMERA-OMEGA",
-    "Aether Forge",
     "AriaTrading",
-    "Chimera-AG",
-    "Personal LLM Sanctum",
     "Aix Registry",
-    "RitualGraph",
     "CHIMERA RChain Staking Audit"
   ],
   "full_index": [
@@ -3297,17 +3520,95 @@
       "featured": true
     },
     {
-      "id": "sovereign-lattice",
-      "name": "Sovereign Lattice",
+      "id": "chimera-one",
+      "name": "CHIMERA-ONE",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "runtime-verified",
+      "note": "Coordinated execution, pinned capabilities, and evidence-bound verification.",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-ONE",
+      "live_url": "/CHIMERA-ONE/",
+      "featured": true
+    },
+    {
+      "id": "ritualgraph",
+      "name": "RitualGraph",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "runtime-verified",
+      "note": "Executable threat graphs, deterministic simulation, and CI-checkable security invariants.",
+      "repository_url": "https://github.com/aixaria0/RitualGraph",
+      "live_url": "/RitualGraph/",
+      "featured": true
+    },
+    {
+      "id": "chimera-ag",
+      "name": "Chimera-AG",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "active",
+      "evidence_grade": "runtime-verified",
+      "note": "Self-hosted orchestration with measured routing and reproducible verification.",
+      "repository_url": "https://github.com/aixaria0/Chimera-AG",
+      "live_url": "/Chimera-AG/",
+      "featured": true
+    },
+    {
+      "id": "aetherforge",
+      "name": "Aether Forge",
       "visibility": "public",
       "family": "quantum-formal",
+      "relation": "research-lab",
+      "status": "active-research",
+      "evidence_grade": "experimental",
+      "note": "Interactive quantum-gravity research laboratory with explicit approximation and synthetic-data boundaries.",
+      "repository_url": "https://github.com/aixaria0/aetherforge",
+      "live_url": "/aetherforge/",
+      "featured": true
+    },
+    {
+      "id": "personal-llm-sanctum",
+      "name": "Personal LLM Sanctum",
+      "visibility": "public",
+      "family": "intelligence-security",
       "relation": "canonical",
       "status": "research",
-      "evidence_grade": "experimental",
-      "note": "Distributed consensus / formal-methods research; formal claims require artifact-level audit.",
-      "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
-      "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
+      "evidence_grade": "runtime-verified",
+      "note": "Local-first Rust runtime with recorded runs, routing, memory and replay.",
+      "repository_url": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
+      "live_url": null,
       "featured": true
+    },
+    {
+      "id": "shahnameh-lite",
+      "name": "Shahnameh Lite",
+      "visibility": "public",
+      "family": "cultural-consumer",
+      "relation": "predecessor",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Persian-first storytelling and reading guide with offline search and browser narration.",
+      "repository_url": "https://github.com/aixaria0/Shahnameh-lite",
+      "live_url": "/shahnameh-lite/",
+      "featured": false
+    },
+    {
+      "id": "quantum001",
+      "name": "Aether",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/Quantum001",
+      "live_url": null,
+      "featured": false
     },
     {
       "id": "aether-runtime",
@@ -3323,94 +3624,107 @@
       "featured": true
     },
     {
-      "id": "omni",
-      "name": "Omni",
+      "id": "aether-runtime-os",
+      "name": "Aether Runtime OS",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "replay-verified",
+      "note": "Related Aether runtime generation. Repository creation chronology and deep tree comparison do not establish predecessor direction.",
+      "repository_url": "https://github.com/aixaria0/Aether-Runtime-OS",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "aix",
+      "name": "Aix",
       "visibility": "public",
       "family": "intelligence-security",
-      "relation": "canonical",
-      "status": "active",
-      "evidence_grade": "replay-verified",
-      "note": "Evidence-stress and proof-carrying investigation workspace with Quantum Fabric.",
-      "repository_url": "https://github.com/aixaria0/Omni",
-      "live_url": "https://aixaria0.github.io/Omni/",
-      "featured": true
-    },
-    {
-      "id": "nexus-quantum",
-      "name": "Nexus Quantum",
-      "visibility": "public",
-      "family": "quantum-formal",
-      "relation": "canonical",
-      "status": "research",
-      "evidence_grade": "experimental",
-      "note": "Formal/quantum research project; strongest formal claims require artifact-level verification.",
-      "repository_url": "https://github.com/aixaria0/nexus-quantum",
-      "live_url": "https://aixaria0.github.io/nexus-quantum/",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/Aix",
+      "live_url": null,
       "featured": false
     },
     {
-      "id": "vqe-analyzer",
-      "name": "VQE Analyzer",
+      "id": "aixaria0-github-io",
+      "name": "aixaria0.github.io",
       "visibility": "public",
-      "family": "quantum-formal",
-      "relation": "canonical",
-      "status": "active",
-      "evidence_grade": "independently-verified",
-      "note": "Reproducible small-circuit VQE workbench with independent Python parity checks.",
-      "repository_url": null,
-      "live_url": "https://aixaria0.github.io/vqe-analyzer/",
-      "featured": true
-    },
-    {
-      "id": "rchain-sentinel",
-      "name": "RChain Sentinel",
-      "visibility": "public",
-      "family": "rchain-assurance",
-      "relation": "component",
-      "status": "active",
-      "evidence_grade": "observed",
-      "note": "Read/verification surface for node and block evidence.",
-      "repository_url": "https://github.com/aixaria0/rchain-sentinel",
-      "live_url": "https://aixaria0.github.io/rchain-sentinel/",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/aixaria0.github.io",
+      "live_url": null,
       "featured": false
     },
     {
-      "id": "strategic-intelligence-lattice",
-      "name": "Strategic Intelligence Lattice",
+      "id": "apex-quant-prototype",
+      "name": "apex-quant-prototype",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/apex-quant-prototype",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "aria-lab",
+      "name": "ARIA Lab",
       "visibility": "public",
       "family": "research-operations",
       "relation": "canonical",
       "status": "research",
-      "evidence_grade": "replay-verified",
-      "note": "Reproducible multi-agent research and evaluation framework.",
-      "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
-      "live_url": null,
-      "featured": true
-    },
-    {
-      "id": "rholox",
-      "name": "Rholox",
-      "visibility": "public",
-      "family": "rchain-assurance",
-      "relation": "canonical",
-      "status": "active",
-      "evidence_grade": "observed",
-      "note": "Evidence-first public-testnet product surface.",
-      "repository_url": "https://github.com/aixaria0/Rholox",
-      "live_url": "https://rholox.com/",
-      "featured": true
-    },
-    {
-      "id": "rlsenti",
-      "name": "rlsenti",
-      "visibility": "public",
-      "family": "rchain-assurance",
-      "relation": "component",
-      "status": "research",
       "evidence_grade": "experimental",
-      "note": "Compiler/workbench evidence adapter; synthetic/integration-oriented.",
-      "repository_url": "https://github.com/aixaria0/rlsenti",
-      "live_url": "https://aixaria0.github.io/rlsenti/",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/Aria-Lab",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "aria-trading-legacy",
+      "name": "aria-trading-legacy",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/aria-trading-legacy",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "ariatrading-github-io",
+      "name": "AriaTrading Showcase",
+      "visibility": "public",
+      "family": "quantitative-systems",
+      "relation": "showcase",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/AriaTrading.github.io",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "ariatrading0",
+      "name": "AriaTrading0",
+      "visibility": "public",
+      "family": "quantitative-systems",
+      "relation": "mirror",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/AriaTrading0",
+      "live_url": null,
       "featured": false
     },
     {
@@ -3427,380 +3741,119 @@
       "featured": false
     },
     {
-      "id": "aether-runtime-os",
-      "name": "Aether Runtime OS",
+      "id": "chimera-command-lab",
+      "name": "chimera-command-lab",
       "visibility": "public",
-      "family": "chimera-evidence-runtime",
-      "relation": "prototype",
-      "status": "research",
-      "evidence_grade": "replay-verified",
-      "note": "Related Aether runtime generation. Repository creation chronology and deep tree comparison do not establish predecessor direction.",
-      "repository_url": "https://github.com/aixaria0/Aether-Runtime-OS",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/chimera-command-lab",
       "live_url": null,
       "featured": false
     },
     {
-      "name": "Aether",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A private application identified as Aether; its repository lineage is unresolved.",
-        "fa": "مخزن خصوصیِ برنامه‌ای با نام ایثر؛ نسبت دقیق آن با پروژه‌های هم‌نام هنوز روشن نشده است."
-      }
+      "id": "chimera-desk",
+      "name": "CHIMERA-DESK",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-DESK",
+      "live_url": null,
+      "featured": false
     },
     {
-      "name": "Aether Forge",
-      "family": "quantum-formal",
-      "status": "active-research",
-      "description": {
-        "en": "A private Aether-related product and research surface.",
-        "fa": "بستر خصوصیِ محصول و پژوهش مرتبط با خانوادهٔ ایثر."
-      }
+      "id": "chimera-engine-prototype",
+      "name": "chimera-engine-prototype",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/chimera-engine-prototype",
+      "live_url": null,
+      "featured": false
     },
     {
-      "name": "Aix",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "A prototype mobile security-testing platform.",
-        "fa": "نمونهٔ اولیهٔ بستری برای آزمون امنیت موبایل."
-      }
+      "id": "chimera-omega-public",
+      "name": "CHIMERA-OMEGA-public",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-OMEGA-public",
+      "live_url": null,
+      "featured": false
     },
     {
-      "name": "Aix Registry",
-      "family": "registry-meta",
-      "status": "active",
-      "description": {
-        "en": "A structured registry for projects and the published portfolio source of truth.",
-        "fa": "دفتر ثبت ساخت‌یافتهٔ پروژه‌ها و مرجع اصلی اطلاعات منتشرشده در این مجموعه."
-      }
-    },
-    {
-      "name": "Aixaria Registry (superseded)",
-      "family": "registry-meta",
-      "status": "legacy",
-      "description": {
-        "en": "An earlier registry of projects, contributions, evidence, and their relationships.",
-        "fa": "نسخهٔ پیشینِ دفتر ثبت پروژه‌ها، مشارکت‌ها، شواهد و پیوندهای میان آن‌ها."
-      }
-    },
-    {
-      "name": "ARIA Lab",
+      "id": "chimera-redteam-web",
+      "name": "chimera-redteam-web",
+      "visibility": "public",
       "family": "research-operations",
+      "relation": "prototype",
       "status": "research",
-      "description": {
-        "en": "A private research workspace focused on protein design.",
-        "fa": "محیط پژوهش خصوصی در طراحی پروتئین."
-      }
+      "evidence_grade": "ungraded",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/chimera-redteam-web",
+      "live_url": null,
+      "featured": false
     },
     {
-      "name": "AriaTrading",
-      "family": "quantitative-systems",
-      "status": "active",
-      "description": {
-        "en": "A quantitative intelligence core.",
-        "fa": "هسته‌ای برای هوش کمّی."
-      }
-    },
-    {
-      "name": "CHIMERA Hybrid Command Lattice",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A private CHIMERA prototype for a hybrid classical and quantum command lattice.",
-        "fa": "نمونهٔ خصوصیِ سامانهٔ فرماندهی ترکیبیِ کلاسیک و کوانتومی در خانوادهٔ کایمرا."
-      }
-    },
-    {
-      "name": "CHIMERA RChain Staking Audit",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A domain-specific evidence-first audit pack for RChain staking.",
-        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
-      }
-    },
-    {
-      "name": "Chimera-AG",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "A coordination engine within the CHIMERA constellation.",
-        "fa": "موتور هماهنگی در مجموعهٔ کایمرا."
-      }
-    },
-    {
-      "name": "CHIMERA-OMEGA",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "An evidence kernel for claims accompanied by inspectable data.",
-        "fa": "هستهٔ شواهدی که ادعاهایش همراه با دادهٔ قابل بررسی ارائه می‌شوند."
-      }
-    },
-    {
-      "name": "CHIMERA-ONE",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "The control and coordination hub of the CHIMERA constellation.",
-        "fa": "هستهٔ کنترل و هماهنگیِ منظومهٔ کایمرا."
-      }
-    },
-    {
-      "name": "Demo Repository",
-      "family": "legacy-scratch",
-      "status": "legacy",
-      "description": {
-        "en": "A demonstration repository presenting selected GitHub platform features.",
-        "fa": "مخزنی نمایشی برای آشنایی با امکانات گیت‌هاب."
-      }
-    },
-    {
-      "name": "Empire Aix",
-      "family": "legacy-scratch",
-      "status": "legacy",
-      "description": {
-        "en": "A legacy experiment whose classification may be refined with further review.",
-        "fa": "آزمایش قدیمی؛ دسته‌بندی آن ممکن است با بررسی بیشتر دقیق‌تر شود."
-      }
-    },
-    {
+      "id": "empire-pwa",
       "name": "Empire Chat PWA",
+      "visibility": "public",
       "family": "intelligence-security",
+      "relation": "prototype",
       "status": "legacy",
-      "description": {
-        "en": "An installable browser chat prototype using an in-browser language model.",
-        "fa": "گفت‌وگوی قابل نصب در مرورگر با مدل زبانیِ درون مرورگر و امکان کار بدون اتصال."
-      }
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/empire-pwa",
+      "live_url": null,
+      "featured": false
     },
     {
-      "name": "Fracture Archive",
-      "family": "research-operations",
-      "status": "research",
-      "description": {
-        "en": "A private research-operations dashboard for post-quantum cryptography, gravity, and cosmology.",
-        "fa": "داشبورد خصوصیِ عملیات پژوهشی برای رمزنگاری پساکوانتومی، گرانش و کیهان‌شناسی."
-      }
-    },
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A hybrid quantum and formal-methods application under a temporary repository name.",
-        "fa": "برنامه‌ای با قابلیت‌های ترکیبی کوانتومی و روش‌های صوری که با نام موقت مخزن نگهداری می‌شود."
-      }
-    },
-    {
-      "name": "Lattice",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private local application for a 12-qubit register.",
-        "fa": "برنامهٔ محلیِ خصوصی با رجیستر کوانتومی ۱۲ کیوبیتی."
-      }
-    },
-    {
-      "name": "masspropa",
-      "family": "research-operations",
+      "id": "ensemble-chat-prototype",
+      "name": "ensemble-chat-prototype",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
       "status": "pending",
-      "description": {
-        "en": "A private repository retained while its identity and lineage are classified.",
-        "fa": "مخزن خصوصی که هویت و پیوند آن با سایر پروژه‌ها هنوز دسته‌بندی نشده است."
-      }
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/ensemble-chat-prototype",
+      "live_url": null,
+      "featured": false
     },
     {
-      "name": "Personal LLM Sanctum",
-      "family": "intelligence-security",
-      "status": "research",
-      "description": {
-        "en": "A local-first adaptive multi-model language-model orchestration workspace.",
-        "fa": "محیط محلی برای هماهنگی تطبیقیِ چند مدل زبانی، با امکان استفاده از توان پردازشی راه‌دور."
-      }
-    },
-    {
-      "name": "QLF",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A private formal-methods workspace with protocol and logic specifications.",
-        "fa": "محیط خصوصیِ روش‌های صوری با مشخصات پروتکل و منطق."
-      }
-    },
-    {
-      "name": "RChain Reality Compiler",
-      "family": "rchain-assurance",
-      "status": "research",
-      "description": {
-        "en": "An in-browser compiler and workbench that does not provide live RChain network evidence.",
-        "fa": "کامپایلر و میزکار مرورگری؛ شواهد آن به شبکهٔ زندهٔ آرچین مربوط نیست."
-      }
-    },
-    {
-      "name": "RitualGraph",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A compiler and simulation engine for executable threat models, security invariants, attack graphs, and evidence-driven CI checks.",
-        "fa": "موتور کامپایل و شبیه‌سازیِ مدل‌های تهدید اجرایی، ناورداهای امنیتی، گراف حمله و دروازه‌های بررسی مبتنی بر شواهد."
-      }
-    },
-    {
-      "name": "Shahnameh Lite",
-      "family": "cultural-consumer",
-      "status": "legacy",
-      "description": {
-        "en": "An earlier cultural product implementation.",
-        "fa": "پیاده‌سازی پیشین یک محصول فرهنگی."
-      }
-    },
-    {
-      "name": "smm",
-      "family": "legacy-scratch",
+      "id": "faal-scaffold",
+      "name": "faal-scaffold",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
       "status": "pending",
-      "description": {
-        "en": "A stateful, model-agnostic runtime combining local memory, independent views, verification, and a hash-chained execution ledger.",
-        "fa": "محیط اجراییِ حالت‌مند و مستقل از مدل که حافظهٔ محلی، دیدگاه‌های مستقل، راستی‌آزمایی و دفتر ثبت اجرای زنجیره‌ای از هش‌ها را ترکیب می‌کند."
-      }
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/faal-scaffold",
+      "live_url": null,
+      "featured": false
     },
     {
-      "name": "Sovereign Quantum Stack",
-      "family": "quantum-formal",
-      "status": "research",
-      "description": {
-        "en": "A quantum security and deserialization proof of concept.",
-        "fa": "نمونهٔ اثبات مفهوم برای امنیت کوانتومی و دی‌سریال‌سازی."
-      }
-    },
-    {
-      "name": "VERITAS Sovereign Prime",
-      "family": "intelligence-security",
-      "status": "legacy",
-      "description": {
-        "en": "A legacy product and business experiment; marketing claims are not treated as verified results.",
-        "fa": "آزمایش قدیمیِ محصول و کسب‌وکار؛ ادعاهای تبلیغی آن دستاورد تأییدشده تلقی نمی‌شوند."
-      }
-    },
-    {
-      "name": "VQE",
-      "family": "quantum-formal",
-      "status": "legacy",
-      "description": {
-        "en": "A historical prototype related to quantum computing.",
-        "fa": "آزمایش پیشین در حوزهٔ محاسبات کوانتومی."
-      }
-    },
-    {
-      "name": "x1111",
-      "family": "legacy-scratch",
+      "id": "faal-web",
+      "name": "faal-web",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
       "status": "pending",
-      "description": {
-        "en": "A private repository retained while its classification is unresolved.",
-        "fa": "مخزن خصوصی که دسته‌بندی دقیق آن هنوز مشخص نشده است."
-      }
-    },
-    {
-      "id": "x000000",
-      "name": "AixAria CHIMERA Engine",
-      "visibility": "public",
-      "family": "chimera-evidence-runtime",
-      "relation": "prototype",
-      "status": "legacy",
       "evidence_grade": "historical",
-      "note": "Earlier CHIMERA engine prototype hidden behind a temporary repository name.",
-      "repository_url": "https://github.com/aixaria0/X000000",
-      "live_url": null,
-      "featured": false
-    },
-    {
-      "id": "apex-dee",
-      "name": "Apex Deep Quant",
-      "visibility": "public",
-      "family": "quantitative-systems",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "Early quantitative prototype; lineage pending.",
-      "repository_url": "https://github.com/aixaria0/-Apex-Dee",
-      "live_url": null,
-      "featured": false
-    },
-    {
-      "id": "tr",
-      "name": "AriaTrading / Tr",
-      "visibility": "public",
-      "family": "quantitative-systems",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "AriaTrading mirror/legacy candidate.",
-      "repository_url": "https://github.com/aixaria0/Tr",
-      "live_url": null,
-      "featured": false
-    },
-    {
-      "id": "ariatrading-github-io",
-      "name": "AriaTrading Showcase",
-      "visibility": "public",
-      "family": "quantitative-systems",
-      "relation": "showcase",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "Public presentation/deployment surface; not an independent product.",
-      "repository_url": null,
-      "live_url": null,
-      "featured": false
-    },
-    {
-      "id": "ariatrading0",
-      "name": "AriaTrading0",
-      "visibility": "public",
-      "family": "quantitative-systems",
-      "relation": "mirror",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "Mirror/legacy candidate pending ancestry verification.",
-      "repository_url": null,
-      "live_url": null,
-      "featured": false
-    },
-    {
-      "id": "fun",
-      "name": "Empire of Free LLMs",
-      "visibility": "public",
-      "family": "intelligence-security",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "experimental",
-      "note": "Parallel model fan-out and synthesis prototype.",
-      "repository_url": "https://github.com/aixaria0/Fun",
-      "live_url": null,
-      "featured": false
-    },
-    {
-      "id": "faaal",
-      "name": "Faal",
-      "visibility": "public",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "Minimal historical prototype.",
-      "repository_url": "https://github.com/aixaria0/Faaal",
-      "live_url": "https://aixaria0.github.io/Faaal/",
-      "featured": false
-    },
-    {
-      "id": "faal",
-      "name": "Faal",
-      "visibility": "public",
-      "family": "cultural-consumer",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "Minimal historical prototype.",
-      "repository_url": "https://github.com/aixaria0/Faal",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/faal-web",
       "live_url": null,
       "featured": false
     },
@@ -3818,29 +3871,55 @@
       "featured": false
     },
     {
-      "id": "gggg",
-      "name": "Gggg",
+      "id": "fracture-archive",
+      "name": "fracture-archive",
       "visibility": "public",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
       "evidence_grade": "historical",
-      "note": "Minimal scratch repository.",
-      "repository_url": "https://github.com/aixaria0/Gggg",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/fracture-archive",
       "live_url": null,
       "featured": false
     },
     {
-      "id": "gggg1",
-      "name": "Gggg1",
+      "id": "jimscarversqlf",
+      "name": "jimscarversQLF",
       "visibility": "public",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
       "evidence_grade": "historical",
-      "note": "Minimal scratch repository.",
-      "repository_url": "https://github.com/aixaria0/Gggg1",
-      "live_url": "https://aixaria0.github.io/Gggg1/",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/jimscarversQLF",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "lattice-workbench",
+      "name": "lattice-workbench",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/lattice-workbench",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "live-veil",
+      "name": "live-veil",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/live-veil",
+      "live_url": null,
       "featured": false
     },
     {
@@ -3870,6 +3949,32 @@
       "featured": false
     },
     {
+      "id": "nexus-quantum",
+      "name": "Nexus Quantum",
+      "visibility": "public",
+      "family": "quantum-formal",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Formal/quantum research project; strongest formal claims require artifact-level verification.",
+      "repository_url": "https://github.com/aixaria0/nexus-quantum",
+      "live_url": "https://aixaria0.github.io/nexus-quantum/",
+      "featured": false
+    },
+    {
+      "id": "omni",
+      "name": "Omni",
+      "visibility": "public",
+      "family": "intelligence-security",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "replay-verified",
+      "note": "Evidence-stress and proof-carrying investigation workspace with Quantum Fabric.",
+      "repository_url": "https://github.com/aixaria0/Omni",
+      "live_url": "https://aixaria0.github.io/Omni/",
+      "featured": true
+    },
+    {
       "id": "osint",
       "name": "OmniTrace / OSint",
       "visibility": "public",
@@ -3883,29 +3988,55 @@
       "featured": false
     },
     {
-      "id": "oss",
-      "name": "OmniTrace / Oss",
+      "id": "omnitrace-variant",
+      "name": "omnitrace-variant",
       "visibility": "public",
-      "family": "intelligence-security",
-      "relation": "mirror",
-      "status": "legacy",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
       "evidence_grade": "historical",
-      "note": "Near-duplicate/mirror candidate of OSint.",
-      "repository_url": "https://github.com/aixaria0/Oss",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/omnitrace-variant",
       "live_url": null,
       "featured": false
     },
     {
-      "id": "qlm",
-      "name": "QLM",
+      "id": "qlf",
+      "name": "QLF",
       "visibility": "public",
       "family": "quantum-formal",
-      "relation": "prototype",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "Historical quantum/formal prototype.",
-      "repository_url": "https://github.com/aixaria0/Qlm",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/QLF",
       "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "quantum-os-workspace",
+      "name": "quantum-os-workspace",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/quantum-os-workspace",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "rchain-sentinel",
+      "name": "RChain Sentinel",
+      "visibility": "public",
+      "family": "rchain-assurance",
+      "relation": "component",
+      "status": "active",
+      "evidence_grade": "observed",
+      "note": "Read/verification surface for node and block evidence.",
+      "repository_url": "https://github.com/aixaria0/rchain-sentinel",
+      "live_url": "https://aixaria0.github.io/rchain-sentinel/",
       "featured": false
     },
     {
@@ -3918,6 +4049,45 @@
       "evidence_grade": "observed",
       "note": "Personal fork used for upstream work; upstream contributions are tracked separately.",
       "repository_url": "https://github.com/aixaria0/rchain-rust",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "rholox",
+      "name": "Rholox",
+      "visibility": "public",
+      "family": "rchain-assurance",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "observed",
+      "note": "Evidence-first public-testnet product surface.",
+      "repository_url": "https://github.com/aixaria0/Rholox",
+      "live_url": "https://rholox.com/",
+      "featured": true
+    },
+    {
+      "id": "rlsenti",
+      "name": "rlsenti",
+      "visibility": "public",
+      "family": "rchain-assurance",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Compiler/workbench evidence adapter; synthetic/integration-oriented.",
+      "repository_url": "https://github.com/aixaria0/rlsenti",
+      "live_url": "https://aixaria0.github.io/rlsenti/",
+      "featured": false
+    },
+    {
+      "id": "scratch-notes",
+      "name": "scratch-notes",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/scratch-notes",
       "live_url": null,
       "featured": false
     },
@@ -3935,17 +4105,30 @@
       "featured": false
     },
     {
-      "id": "studious-guide",
-      "name": "Studious Guide",
+      "id": "sovereign-lattice",
+      "name": "Sovereign Lattice",
       "visibility": "public",
-      "family": "legacy-scratch",
-      "relation": "scratch",
-      "status": "legacy",
-      "evidence_grade": "historical",
-      "note": "Empty/minimal legacy repository.",
-      "repository_url": "https://github.com/aixaria0/studious-guide",
+      "family": "quantum-formal",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Distributed consensus / formal-methods research; formal claims require artifact-level audit.",
+      "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
+      "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
+      "featured": true
+    },
+    {
+      "id": "strategic-intelligence-lattice",
+      "name": "Strategic Intelligence Lattice",
+      "visibility": "public",
+      "family": "research-operations",
+      "relation": "canonical",
+      "status": "research",
+      "evidence_grade": "replay-verified",
+      "note": "Reproducible multi-agent research and evaluation framework.",
+      "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
       "live_url": null,
-      "featured": false
+      "featured": true
     },
     {
       "id": "thebookofkings",
@@ -3970,6 +4153,266 @@
       "evidence_grade": "historical",
       "note": "Early predecessor of Book of Kings/Shahnameh work.",
       "repository_url": "https://github.com/aixaria0/Theshahnameh",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "training-configurations",
+      "name": "training-configurations",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/training-configurations",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "vqe-analyzer",
+      "name": "VQE Analyzer",
+      "visibility": "public",
+      "family": "quantum-formal",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "independently-verified",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/vqe-analyzer",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "webapp-scaffold-lab",
+      "name": "webapp-scaffold-lab",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": "https://github.com/aixaria0/webapp-scaffold-lab",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "aix-registry",
+      "name": "Aix Registry",
+      "visibility": "private",
+      "family": "registry-meta",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "observed",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "aixaria-registry",
+      "name": "Aixaria Registry (superseded)",
+      "visibility": "private",
+      "family": "registry-meta",
+      "relation": "archive",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "ariatrading",
+      "name": "AriaTrading",
+      "visibility": "private",
+      "family": "quantitative-systems",
+      "relation": "canonical",
+      "status": "active",
+      "evidence_grade": "runtime-verified",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "chimera-rchain-staking-audit",
+      "name": "CHIMERA RChain Staking Audit",
+      "visibility": "private",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "research",
+      "evidence_grade": "observed",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "chimera-omega",
+      "name": "CHIMERA-OMEGA",
+      "visibility": "private",
+      "family": "chimera-evidence-runtime",
+      "relation": "component",
+      "status": "active",
+      "evidence_grade": "replay-verified",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "chimera-redteam",
+      "name": "chimera-redteam",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "cobordism",
+      "name": "cobordism",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "demo-repository",
+      "name": "Demo Repository",
+      "visibility": "private",
+      "family": "legacy-scratch",
+      "relation": "scratch",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "empire-aix",
+      "name": "Empire Aix",
+      "visibility": "private",
+      "family": "legacy-scratch",
+      "relation": "prototype",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "fracturebench",
+      "name": "Fracturebench",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "lattice-register",
+      "name": "lattice-register",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "rchain-reality-compiler",
+      "name": "RChain Reality Compiler",
+      "visibility": "private",
+      "family": "rchain-assurance",
+      "relation": "predecessor",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "smm",
+      "name": "smm",
+      "visibility": "private",
+      "family": "legacy-scratch",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "ungraded",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "sovereign-quantum-stack",
+      "name": "Sovereign Quantum Stack",
+      "visibility": "private",
+      "family": "quantum-formal",
+      "relation": "prototype",
+      "status": "research",
+      "evidence_grade": "experimental",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "veritas-prototype",
+      "name": "veritas-prototype",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "vqe",
+      "name": "VQE",
+      "visibility": "private",
+      "family": "quantum-formal",
+      "relation": "predecessor",
+      "status": "legacy",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "webapp-scaffold",
+      "name": "webapp-scaffold",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "pending",
+      "evidence_grade": "historical",
+      "note": "Repository identity and bounded public description.",
+      "repository_url": null,
       "live_url": null,
       "featured": false
     }
@@ -4297,5 +4740,7 @@
       "changed_files": 0,
       "prs": []
     }
-  ]
+  ],
+  "inventory_observed_at": "2026-10-26",
+  "inventory_note": "Visibility and repository identity were refreshed from the authenticated GitHub inventory on 2026-10-26. Historical per-project activity metrics retain their earlier observation date."
 }
