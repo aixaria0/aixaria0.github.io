@@ -1,0 +1,1010 @@
+{
+  "observed_at": "2026-10-26",
+  "repositories": [
+    {
+      "id": "1050238047",
+      "name": "Aix",
+      "description": "private",
+      "url": "https://github.com/aixaria0/Aix",
+      "homepage": "https://symmetrical-disco-ny85qly.pages.github.io/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-15T02:26:55Z",
+      "language": "Python",
+      "topics": [
+        "mobile",
+        "react-native",
+        "security-testing",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1094226548",
+      "name": "vqe-analyzer",
+      "description": "This tool renders complex algorithmic performance landscapes in real-time using zero-dependency Vanilla JavaScript. While built for Quantum VQE, the underlying engine is production-ready for financial and industrial applications.",
+      "url": "https://github.com/aixaria0/vqe-analyzer",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-13T23:34:50Z",
+      "language": "JavaScript",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1095828141",
+      "name": "training-configurations",
+      "description": "Experimental TypeScript workspace containing local application configurations and training recipes.",
+      "url": "https://github.com/aixaria0/training-configurations",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2025-12-11T12:44:43Z",
+      "language": "TypeScript",
+      "topics": [
+        "configuration",
+        "experimental",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1217424653",
+      "name": "Shahnamehresonance-",
+      "description": "Make communication with ferdowsi and the whole book itself from thousands years ago ",
+      "url": "https://github.com/aixaria0/Shahnamehresonance-",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-08-13T21:53:27Z",
+      "language": "TypeScript",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1229105189",
+      "name": "Shahnameh-lite",
+      "description": "Shahnameh-lite",
+      "url": "https://github.com/aixaria0/Shahnameh-lite",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-25T22:34:04Z",
+      "language": "TypeScript",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1282537484",
+      "name": "forgeos",
+      "description": "Reserved project scaffold; the default branch currently contains a license only.",
+      "url": "https://github.com/aixaria0/forgeos",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-06-27T22:48:05Z",
+      "language": null,
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1288823371",
+      "name": "OSint",
+      "description": "OmniTrace prototype: a public-data investigation dashboard with a FastAPI backend and Next.js frontend.",
+      "url": "https://github.com/aixaria0/OSint",
+      "homepage": "https://aixaria0.github.io/OSint/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-31T21:07:30Z",
+      "language": "Python",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1303082693",
+      "name": "Theshahnameh",
+      "description": "The book of kings matrix ",
+      "url": "https://github.com/aixaria0/Theshahnameh",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-16T17:48:58Z",
+      "language": null,
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1303083493",
+      "name": "Thebookofkings",
+      "description": "The book of kings matrix ",
+      "url": "https://github.com/aixaria0/Thebookofkings",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-16T17:54:46Z",
+      "language": null,
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1303123656",
+      "name": "Bookofkings",
+      "description": "The shahnameh",
+      "url": "https://github.com/aixaria0/Bookofkings",
+      "homepage": "https://aixaria0.github.io/Bookofkings/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-13T23:44:30Z",
+      "language": "TypeScript",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1303290996",
+      "name": "AriaTrading.github.io",
+      "description": "Site",
+      "url": "https://github.com/aixaria0/AriaTrading.github.io",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-16T22:01:29Z",
+      "language": "TypeScript",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1304438351",
+      "name": "AriaTrading0",
+      "description": "Legacy AriaTrading implementation retained as a separate development snapshot.",
+      "url": "https://github.com/aixaria0/AriaTrading0",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-17T22:38:35Z",
+      "language": "TypeScript",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1306055019",
+      "name": "omnitrace-variant",
+      "description": "OmniTrace variant with a public-data investigation frontend, backend services, and observability configuration.",
+      "url": "https://github.com/aixaria0/omnitrace-variant",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-19T22:48:46Z",
+      "language": "Python",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1307100568",
+      "name": "nexus-quantum",
+      "description": "I-Powered Quantum Error Mitigation Platform",
+      "url": "https://github.com/aixaria0/nexus-quantum",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-09T16:56:34Z",
+      "language": "Python",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1307872319",
+      "name": "ensemble-chat-prototype",
+      "description": "Just for fun",
+      "url": "https://github.com/aixaria0/ensemble-chat-prototype",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-21T18:08:11Z",
+      "language": "TypeScript",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1307912141",
+      "name": "aria-trading-legacy",
+      "description": "Trade ",
+      "url": "https://github.com/aixaria0/aria-trading-legacy",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-21T16:36:12Z",
+      "language": "TypeScript",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1307973133",
+      "name": "scratch-notes",
+      "description": "Gg",
+      "url": "https://github.com/aixaria0/scratch-notes",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-21T17:43:04Z",
+      "language": null,
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1307973832",
+      "name": "live-veil",
+      "description": "Live Veil: a shared-intention web prototype with live updates, echoes, and interactive visuals.",
+      "url": "https://github.com/aixaria0/live-veil",
+      "homepage": "https://aixaria0.github.io/live-veil/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-21T17:57:32Z",
+      "language": "TypeScript",
+      "topics": [
+        "nextjs",
+        "prototype",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1309107331",
+      "name": "faal-web",
+      "description": "Faal Web: a standalone browser prototype for interactive reflection.",
+      "url": "https://github.com/aixaria0/faal-web",
+      "homepage": "https://aixaria0.github.io/faal-web/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-22T23:07:28Z",
+      "language": "HTML",
+      "topics": [
+        "html",
+        "prototype",
+        "webapp"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1309109667",
+      "name": "faal-scaffold",
+      "description": "Faal",
+      "url": "https://github.com/aixaria0/faal-scaffold",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-22T17:58:17Z",
+      "language": null,
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1309285380",
+      "name": "apex-quant-prototype",
+      "description": "Apex Quant: an experimental quantitative research prototype with Python and browser components.",
+      "url": "https://github.com/aixaria0/apex-quant-prototype",
+      "homepage": "https://aixaria0.github.io/apex-quant-prototype/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-07-23T16:06:47Z",
+      "language": "HTML",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1320151194",
+      "name": "chimera-engine-prototype",
+      "description": "Historical CHIMERA engine prototype with an interactive TypeScript research interface.",
+      "url": "https://github.com/aixaria0/chimera-engine-prototype",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-08-25T04:40:47Z",
+      "language": "TypeScript",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1323067152",
+      "name": "empire-pwa",
+      "description": "Empire Chat PWA — WebLLM in-browser AI, installable, offline-capable",
+      "url": "https://github.com/aixaria0/empire-pwa",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-08-04T15:06:32Z",
+      "language": "HTML",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1323406847",
+      "name": "llm-security-poc",
+      "description": "Experimental security research on adaptive operator drift, with Python examples and regression tests.",
+      "url": "https://github.com/aixaria0/llm-security-poc",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-08-04T22:14:07Z",
+      "language": "Python",
+      "topics": [
+        "proof-of-concept",
+        "python",
+        "regression-testing",
+        "security-research"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1350127853",
+      "name": "Sovereign-Lattice",
+      "description": "Byzantine-fault-tolerant consensus engine in Rust with BLS12-381, strict NewView, WAL recovery, adversarial testing, and selected Lean 4 safety invariants.",
+      "url": "https://github.com/aixaria0/Sovereign-Lattice",
+      "homepage": "https://aixaria0.github.io/Sovereign-Lattice/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-14T01:45:23Z",
+      "language": "Makefile",
+      "topics": [
+        "byzantine-fault-tolerance",
+        "consensus",
+        "formal-methods",
+        "rust"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1351182831",
+      "name": "My-little-baddies-",
+      "description": "Experimental browser dashboard for consensus visualization and research telemetry.",
+      "url": "https://github.com/aixaria0/My-little-baddies-",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-01T23:59:08Z",
+      "language": "HTML",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "experimental",
+        "visualization"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1357814640",
+      "name": "lattice-workbench",
+      "description": "Lattice research prototype combining interactive quantum and formal-methods exploration.",
+      "url": "https://github.com/aixaria0/lattice-workbench",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-05T04:10:29Z",
+      "language": "JavaScript",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1371030246",
+      "name": "rchain-sentinel",
+      "description": "Evidence-first RChain block forensics: payload fingerprinting, canonical consistency, cross-node corroboration, Casper-shaped evidence inventory, and explicit claim boundaries.",
+      "url": "https://github.com/aixaria0/rchain-sentinel",
+      "homepage": "https://aixaria0.github.io/rchain-sentinel/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-23T21:43:09Z",
+      "language": "Makefile",
+      "topics": [
+        "blockchain",
+        "evidence",
+        "forensics",
+        "observability",
+        "rchain"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1372586805",
+      "name": "RCHAIN-COMPLIER",
+      "description": "Protocol-agnostic assurance engine for task-bound evidence, deterministic replay, provenance, durable recovery, and adversarial RChain research.",
+      "url": "https://github.com/aixaria0/RCHAIN-COMPLIER",
+      "homepage": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-15T21:54:44Z",
+      "language": "TypeScript",
+      "topics": [
+        "deterministic-replay",
+        "evidence",
+        "provenance",
+        "rchain",
+        "verification"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1372629051",
+      "name": "rlsenti",
+      "description": "Evidence compiler and provenance workbench: deterministic protocol artifacts, linked witness envelopes, adversarial mutations, replay, first divergence, and explicit claim boundaries.",
+      "url": "https://github.com/aixaria0/rlsenti",
+      "homepage": "https://aixaria0.github.io/rlsenti/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-17T03:01:19Z",
+      "language": "TypeScript",
+      "topics": [
+        "evidence",
+        "experimental",
+        "provenance",
+        "rchain",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1381245905",
+      "name": "aetherforge",
+      "description": "Interactive loop quantum gravity research lab with explicit formula, approximation, and synthetic-data boundaries.",
+      "url": "https://github.com/aixaria0/aetherforge",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-25T22:34:01Z",
+      "language": "TypeScript",
+      "topics": [
+        "quantum-gravity",
+        "research",
+        "simulation",
+        "visualization"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1381248247",
+      "name": "webapp-scaffold-lab",
+      "description": "Experimental TypeScript web workspace with client, server, and migration components.",
+      "url": "https://github.com/aixaria0/webapp-scaffold-lab",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-22T10:06:00Z",
+      "language": "TypeScript",
+      "topics": [
+        "experimental",
+        "typescript",
+        "webapp"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1381735631",
+      "name": "QLF",
+      "description": "Research workspace for protocol models, logic specifications, and interactive formal-methods exploration.",
+      "url": "https://github.com/aixaria0/QLF",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-22T14:42:09Z",
+      "language": "JavaScript",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1381737180",
+      "name": "Aria-Lab",
+      "description": "Experimental research workspace for protein-design studies and interactive analysis.",
+      "url": "https://github.com/aixaria0/Aria-Lab",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-22T14:43:03Z",
+      "language": "JavaScript",
+      "topics": [
+        "experimental",
+        "research",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1381746036",
+      "name": "Omni",
+      "description": "Proof-carrying public-infrastructure investigation, evidence robustness, and quantum/classical attestation by AixAria.",
+      "url": "https://github.com/aixaria0/Omni",
+      "homepage": "https://sunaria.si/Omni/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-21T14:55:56Z",
+      "language": "JavaScript",
+      "topics": [
+        "amazon-braket",
+        "autonomous-investigation",
+        "evidence",
+        "osint",
+        "proof-carrying",
+        "provenance",
+        "quantum-computing",
+        "security-research",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1381771667",
+      "name": "aether-runtime",
+      "description": "Rust/C++ hybrid execution kernel",
+      "url": "https://github.com/aixaria0/aether-runtime",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-15T02:55:56Z",
+      "language": "Rust",
+      "topics": [
+        "cpp",
+        "deterministic-replay",
+        "execution-runtime",
+        "provenance",
+        "rust"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1381850505",
+      "name": "Chimera-AG",
+      "description": "Self-hosted coordination runtime with specialist routing, council workflows, and measured verification.",
+      "url": "https://github.com/aixaria0/Chimera-AG",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-08T23:08:15Z",
+      "language": "Python",
+      "topics": [
+        "orchestration",
+        "python",
+        "self-hosted",
+        "verification"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1382354954",
+      "name": "strategic-intelligence-lattice",
+      "description": "Reproducible research simulation for adaptive computation allocation and bounded decision experiments.",
+      "url": "https://github.com/aixaria0/strategic-intelligence-lattice",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-05T18:24:57Z",
+      "language": "Python",
+      "topics": [
+        "decision-making",
+        "python",
+        "reproducible-research",
+        "simulation"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1384002728",
+      "name": "fracture-archive",
+      "description": "Fracture Archive — local-first research desk for post-quantum cryptography, holography, Hawking radiation, and primordial cosmology.",
+      "url": "https://github.com/aixaria0/fracture-archive",
+      "homepage": "https://aixaria0.github.io/Fracture-Archive/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-15T01:36:46Z",
+      "language": "JavaScript",
+      "topics": [
+        "cosmology",
+        "post-quantum-cryptography",
+        "research",
+        "visualization"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1384008337",
+      "name": "chimera-command-lab",
+      "description": "Experimental CHIMERA command-lattice workspace for classical and quantum research.",
+      "url": "https://github.com/aixaria0/chimera-command-lab",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-09-23T18:26:30Z",
+      "language": "JavaScript",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1386778339",
+      "name": "Quantum001",
+      "description": "Interactive quantum research studio with a twelve-qubit circuit composer and inspectable experiment records.",
+      "url": "https://github.com/aixaria0/Quantum001",
+      "homepage": "https://aixaria0.github.io/Quantum001/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-17T18:16:44Z",
+      "language": "JavaScript",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1393045794",
+      "name": "rchain-rust",
+      "description": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution.",
+      "url": "https://github.com/aixaria0/rchain-rust",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": true,
+      "pushed_at": "2026-10-25T08:58:07Z",
+      "language": "Rust",
+      "topics": [
+        "blockchain",
+        "consensus",
+        "rchain",
+        "rholang",
+        "rust"
+      ],
+      "default_branch": "dev"
+    },
+    {
+      "id": "1400677197",
+      "name": "RitualGraph",
+      "description": "Compiler and simulation engine for executable AI threat models, security invariants, attack graphs, control verification, and evidence-driven CI gates.",
+      "url": "https://github.com/aixaria0/RitualGraph",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-05T01:46:35Z",
+      "language": "Python",
+      "topics": [
+        "graphs",
+        "python",
+        "security-invariants",
+        "threat-modeling",
+        "verification"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1404971488",
+      "name": "CHIMERA-ONE",
+      "description": "Control plane composing versioned CHIMERA capabilities while preserving component trust and evidence boundaries.",
+      "url": "https://github.com/aixaria0/CHIMERA-ONE",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-25T22:33:04Z",
+      "language": "Python",
+      "topics": [
+        "capabilities",
+        "distributed-systems",
+        "orchestration",
+        "verification"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1406713590",
+      "name": "Aether-Runtime-OS",
+      "description": "A fault-tolerant, evidence-carrying runtime for autonomous and distributed AI execution.",
+      "url": "https://github.com/aixaria0/Aether-Runtime-OS",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-06T06:08:23Z",
+      "language": "Rust",
+      "topics": [
+        "execution-runtime",
+        "fault-tolerance",
+        "recovery",
+        "rust",
+        "sqlite"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1406774998",
+      "name": "PERSONAL-LLM-SANCTUM",
+      "description": "Local-first adaptive multi-LLM orchestration runtime for Galaxy Tab S9+ and remote compute",
+      "url": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-25T22:33:07Z",
+      "language": "Rust",
+      "topics": [
+        "local-first",
+        "observability",
+        "orchestration",
+        "rust",
+        "sqlite"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1413622018",
+      "name": "Rholox",
+      "description": "Rholox — RChain-native DApp platform and testnet gateway",
+      "url": "https://github.com/aixaria0/Rholox",
+      "homepage": "https://Rholox.com/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:42:34Z",
+      "language": "TypeScript",
+      "topics": [
+        "dapp",
+        "observability",
+        "rchain",
+        "testnet",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1417817421",
+      "name": "aixaria0.github.io",
+      "description": "AIX — Engineering Intelligence Registry",
+      "url": "https://github.com/aixaria0/aixaria0.github.io",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-25T23:54:31Z",
+      "language": "HTML",
+      "topics": [
+        "github-pages",
+        "portfolio",
+        "static-site"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1419649140",
+      "name": "CHIMERA-OMEGA-public",
+      "description": "CHIMERA OMEGA — bounded proof-carrying evidence verifier (AGPL-3.0-or-later)",
+      "url": "https://github.com/aixaria0/CHIMERA-OMEGA-public",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-14T18:27:37Z",
+      "language": "Rust",
+      "topics": [
+        "evidence",
+        "mutation-testing",
+        "provenance",
+        "rust",
+        "verification"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1421475089",
+      "name": "jimscarversQLF",
+      "description": "Educational consensus workbench for protocol simulations, formal specifications, invariants, and execution traces.",
+      "url": "https://github.com/aixaria0/jimscarversQLF",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-16T01:55:44Z",
+      "language": "TypeScript",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1422829050",
+      "name": "quantum-os-workspace",
+      "description": "QuantumOS development workspace for browser peer-to-peer collaboration, capability transport, and Rust/WASM components.",
+      "url": "https://github.com/aixaria0/quantum-os-workspace",
+      "homepage": "",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-25T00:18:07Z",
+      "language": "TypeScript",
+      "topics": [
+        "capabilities",
+        "peer-to-peer",
+        "rust",
+        "wasm",
+        "webrtc"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1422888783",
+      "name": "CHIMERA-DESK",
+      "description": "Browser research control surface for quantum simulation, consensus, proofs, markets and technical research.",
+      "url": "https://github.com/aixaria0/CHIMERA-DESK",
+      "homepage": "https://sunaria.si/CHIMERA-DESK/",
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-17T17:19:10Z",
+      "language": "TypeScript",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "quantum-computing",
+        "simulation",
+        "typescript"
+      ],
+      "default_branch": "main"
+    },
+    {
+      "id": "1433719739",
+      "name": "chimera-redteam-web",
+      "description": "Public web console and documentation for CHIMERA Red Team",
+      "url": "https://github.com/aixaria0/chimera-redteam-web",
+      "homepage": null,
+      "private": false,
+      "archived": false,
+      "fork": false,
+      "pushed_at": "2026-10-25T23:46:04Z",
+      "language": "HTML",
+      "topics": [],
+      "default_branch": "main"
+    }
+  ]
+}

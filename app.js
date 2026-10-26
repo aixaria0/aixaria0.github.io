@@ -1,10 +1,10 @@
-import './system-field.js';
+import './system-field.js?v=20261026';
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const isFa = document.documentElement.lang === 'fa';
 const localeText = (en, fa) => isFa ? fa : en;
-const languageFa = {Python:'پایتون',Rust:'راست',TypeScript:'تایپ‌اسکریپت',JavaScript:'جاوااسکریپت','Lean 4':'لین ۴'};
+const languageFa = {Python:'پایتون',Rust:'راست',TypeScript:'تایپ‌اسکریپت',JavaScript:'جاوااسکریپت','Lean 4':'لین ۴',HTML:'اچ‌تی‌ام‌ال',CSS:'شیوه‌نامه',Shell:'پوسته',Lean:'لین'};
 const projects = $$('[data-project]');
 let category = 'all';
 let expanded = false;
@@ -79,14 +79,11 @@ if ('IntersectionObserver' in window) {
   $$('section[id]').forEach(section=>navObserver.observe(section));
 }
 
-const CACHE_KEY = 'sunaria-public-activity-v1';
+const CACHE_KEY = 'sunaria-public-activity-v2';
 const TTL = 15 * 60 * 1000;
 const MAX_AGE = 7 * 24 * 60 * 60 * 1000;
 let busy = false;
-const allowedRepositories = new Map(projects.map(p => {
-  const source=p.querySelector('.project-links a');
-  return [new URL(source.href).pathname.toLowerCase().replace(/\/$/,''), source.href];
-}));
+const allowedRepositories = new Set([...document.querySelectorAll('.directory-entry h4 a')].map(a=>new URL(a.href).pathname.toLowerCase().replace(/\/$/,'')));
 function readCache() {
   try {
     const cache=JSON.parse(localStorage.getItem(CACHE_KEY));
@@ -97,7 +94,7 @@ function readCache() {
 function validRows(rows) {
   if(!Array.isArray(rows)) throw Error('Invalid activity response');
   return rows.filter(row=>{
-    try { const u=new URL(row.html_url); return u.origin==='https://github.com' && allowedRepositories.has(u.pathname.toLowerCase().replace(/\/$/,'')) && row.private===false && typeof row.name==='string' && Number.isFinite(Date.parse(row.pushed_at)); } catch { return false; }
+    try { const u=new URL(row.html_url); return u.origin==='https://github.com' && allowedRepositories.has(u.pathname.toLowerCase().replace(/\/$/,'')) && row.private===false && row.name!=='aixaria0.github.io' && typeof row.name==='string' && Number.isFinite(Date.parse(row.pushed_at)); } catch { return false; }
   }).map(row=>({name:row.name,html_url:row.html_url,private:false,pushed_at:row.pushed_at,language:typeof row.language==='string' ? row.language : 'Source'}))
     .sort((a,b)=>Date.parse(b.pushed_at)-Date.parse(a.pushed_at)).slice(0,4);
 }
@@ -248,7 +245,7 @@ if (astralCanvas) {
   };
   const loop=time=>{if(frameMs&&time-last<frameMs){raf=requestAnimationFrame(loop);return}last=time;draw(time)};
   const syncMotion=()=>{
-    const shouldRun=heroVisible&&!document.hidden&&!reducedMotion.matches&&!navigator.connection?.saveData;
+    const shouldRun=heroVisible&&document.documentElement.dataset.motion!=='paused'&&!document.hidden&&!reducedMotion.matches&&!navigator.connection?.saveData;
     active=shouldRun;
     if(active&&!raf)raf=requestAnimationFrame(loop);
     if(!active&&raf){cancelAnimationFrame(raf);raf=0;}
@@ -261,6 +258,7 @@ if (astralCanvas) {
   else window.addEventListener('resize',scheduleResize,{passive:true});
   if('IntersectionObserver'in window)new IntersectionObserver(([entry])=>{heroVisible=entry.isIntersecting;syncMotion()},{threshold:.01}).observe(hero);
   document.addEventListener('visibilitychange',syncMotion);
+  document.addEventListener('sunaria:motion',syncMotion);
   reducedMotion.addEventListener?.('change',()=>{draw(performance.now(),true);syncMotion()});
   resize();syncMotion();
 }

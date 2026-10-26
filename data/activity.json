@@ -1,1 +1,370 @@
-{"schema":1,"observed_at":"2026-10-13","projects":[{"name":"RCHAIN-COMPLIER","last_pushed_at":"2026-10-10T03:11:39Z","language":"TypeScript"},{"name":"Sovereign Lattice","last_pushed_at":"2026-10-10T02:54:15Z","language":"Rust"},{"name":"Aether Runtime","last_pushed_at":"2026-10-07T03:45:48Z","language":"Rust"},{"name":"Omni","last_pushed_at":"2026-10-10T04:06:00Z","language":"TypeScript"},{"name":"Nexus Quantum","last_pushed_at":"2026-09-09T16:56:34Z","language":"Lean 4"},{"name":"VQE Analyzer","last_pushed_at":"2026-10-12T13:01:19Z","language":"JavaScript"},{"name":"RChain Sentinel","last_pushed_at":"2026-09-28T01:29:20Z","language":"C"},{"name":"Strategic Intelligence Lattice","last_pushed_at":"2026-10-05T18:24:57Z","language":"Python"},{"name":"Rholox","last_pushed_at":"2026-10-12T13:13:25Z","language":"CSS"},{"name":"rlsenti","last_pushed_at":"2026-09-28T01:29:24Z","language":"CSS"},{"name":"Book of Kings","last_pushed_at":"2026-07-22T07:08:04Z","language":"CSS"},{"name":"Aether Runtime OS","last_pushed_at":"2026-10-06T06:08:23Z","language":"GitHub Actions"},{"name":"LLM Security PoC","last_pushed_at":"2026-08-04T22:14:07Z","language":"Python"}]}
+{
+  "schema": 2,
+  "observed_at": "2026-10-26",
+  "repositories": [
+    {
+      "name": "chimera-redteam-web",
+      "html_url": "https://github.com/aixaria0/chimera-redteam-web",
+      "private": false,
+      "pushed_at": "2026-10-25T23:46:04Z",
+      "language": "HTML"
+    },
+    {
+      "name": "Shahnameh-lite",
+      "html_url": "https://github.com/aixaria0/Shahnameh-lite",
+      "private": false,
+      "pushed_at": "2026-10-25T22:34:04Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "aetherforge",
+      "html_url": "https://github.com/aixaria0/aetherforge",
+      "private": false,
+      "pushed_at": "2026-10-25T22:34:01Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "PERSONAL-LLM-SANCTUM",
+      "html_url": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
+      "private": false,
+      "pushed_at": "2026-10-25T22:33:07Z",
+      "language": "Rust"
+    },
+    {
+      "name": "CHIMERA-ONE",
+      "html_url": "https://github.com/aixaria0/CHIMERA-ONE",
+      "private": false,
+      "pushed_at": "2026-10-25T22:33:04Z",
+      "language": "Python"
+    },
+    {
+      "name": "rchain-rust",
+      "html_url": "https://github.com/aixaria0/rchain-rust",
+      "private": false,
+      "pushed_at": "2026-10-25T08:58:07Z",
+      "language": "Rust"
+    },
+    {
+      "name": "quantum-os-workspace",
+      "html_url": "https://github.com/aixaria0/quantum-os-workspace",
+      "private": false,
+      "pushed_at": "2026-10-25T00:18:07Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "Rholox",
+      "html_url": "https://github.com/aixaria0/Rholox",
+      "private": false,
+      "pushed_at": "2026-10-23T22:42:34Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "rchain-sentinel",
+      "html_url": "https://github.com/aixaria0/rchain-sentinel",
+      "private": false,
+      "pushed_at": "2026-10-23T21:43:09Z",
+      "language": "Makefile"
+    },
+    {
+      "name": "Omni",
+      "html_url": "https://github.com/aixaria0/Omni",
+      "private": false,
+      "pushed_at": "2026-10-21T14:55:56Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "Quantum001",
+      "html_url": "https://github.com/aixaria0/Quantum001",
+      "private": false,
+      "pushed_at": "2026-10-17T18:16:44Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "CHIMERA-DESK",
+      "html_url": "https://github.com/aixaria0/CHIMERA-DESK",
+      "private": false,
+      "pushed_at": "2026-10-17T17:19:10Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "rlsenti",
+      "html_url": "https://github.com/aixaria0/rlsenti",
+      "private": false,
+      "pushed_at": "2026-10-17T03:01:19Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "jimscarversQLF",
+      "html_url": "https://github.com/aixaria0/jimscarversQLF",
+      "private": false,
+      "pushed_at": "2026-10-16T01:55:44Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "RCHAIN-COMPLIER",
+      "html_url": "https://github.com/aixaria0/RCHAIN-COMPLIER",
+      "private": false,
+      "pushed_at": "2026-10-15T21:54:44Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "aether-runtime",
+      "html_url": "https://github.com/aixaria0/aether-runtime",
+      "private": false,
+      "pushed_at": "2026-10-15T02:55:56Z",
+      "language": "Rust"
+    },
+    {
+      "name": "Aix",
+      "html_url": "https://github.com/aixaria0/Aix",
+      "private": false,
+      "pushed_at": "2026-10-15T02:26:55Z",
+      "language": "Python"
+    },
+    {
+      "name": "fracture-archive",
+      "html_url": "https://github.com/aixaria0/fracture-archive",
+      "private": false,
+      "pushed_at": "2026-10-15T01:36:46Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "CHIMERA-OMEGA-public",
+      "html_url": "https://github.com/aixaria0/CHIMERA-OMEGA-public",
+      "private": false,
+      "pushed_at": "2026-10-14T18:27:37Z",
+      "language": "Rust"
+    },
+    {
+      "name": "Sovereign-Lattice",
+      "html_url": "https://github.com/aixaria0/Sovereign-Lattice",
+      "private": false,
+      "pushed_at": "2026-10-14T01:45:23Z",
+      "language": "Makefile"
+    },
+    {
+      "name": "Bookofkings",
+      "html_url": "https://github.com/aixaria0/Bookofkings",
+      "private": false,
+      "pushed_at": "2026-10-13T23:44:30Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "vqe-analyzer",
+      "html_url": "https://github.com/aixaria0/vqe-analyzer",
+      "private": false,
+      "pushed_at": "2026-10-13T23:34:50Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "Chimera-AG",
+      "html_url": "https://github.com/aixaria0/Chimera-AG",
+      "private": false,
+      "pushed_at": "2026-10-08T23:08:15Z",
+      "language": "Python"
+    },
+    {
+      "name": "Aether-Runtime-OS",
+      "html_url": "https://github.com/aixaria0/Aether-Runtime-OS",
+      "private": false,
+      "pushed_at": "2026-10-06T06:08:23Z",
+      "language": "Rust"
+    },
+    {
+      "name": "strategic-intelligence-lattice",
+      "html_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
+      "private": false,
+      "pushed_at": "2026-10-05T18:24:57Z",
+      "language": "Python"
+    },
+    {
+      "name": "RitualGraph",
+      "html_url": "https://github.com/aixaria0/RitualGraph",
+      "private": false,
+      "pushed_at": "2026-10-05T01:46:35Z",
+      "language": "Python"
+    },
+    {
+      "name": "chimera-command-lab",
+      "html_url": "https://github.com/aixaria0/chimera-command-lab",
+      "private": false,
+      "pushed_at": "2026-09-23T18:26:30Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "Aria-Lab",
+      "html_url": "https://github.com/aixaria0/Aria-Lab",
+      "private": false,
+      "pushed_at": "2026-09-22T14:43:03Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "QLF",
+      "html_url": "https://github.com/aixaria0/QLF",
+      "private": false,
+      "pushed_at": "2026-09-22T14:42:09Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "webapp-scaffold-lab",
+      "html_url": "https://github.com/aixaria0/webapp-scaffold-lab",
+      "private": false,
+      "pushed_at": "2026-09-22T10:06:00Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "nexus-quantum",
+      "html_url": "https://github.com/aixaria0/nexus-quantum",
+      "private": false,
+      "pushed_at": "2026-09-09T16:56:34Z",
+      "language": "Python"
+    },
+    {
+      "name": "lattice-workbench",
+      "html_url": "https://github.com/aixaria0/lattice-workbench",
+      "private": false,
+      "pushed_at": "2026-09-05T04:10:29Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "My-little-baddies-",
+      "html_url": "https://github.com/aixaria0/My-little-baddies-",
+      "private": false,
+      "pushed_at": "2026-09-01T23:59:08Z",
+      "language": "HTML"
+    },
+    {
+      "name": "chimera-engine-prototype",
+      "html_url": "https://github.com/aixaria0/chimera-engine-prototype",
+      "private": false,
+      "pushed_at": "2026-08-25T04:40:47Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "Shahnamehresonance-",
+      "html_url": "https://github.com/aixaria0/Shahnamehresonance-",
+      "private": false,
+      "pushed_at": "2026-08-13T21:53:27Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "llm-security-poc",
+      "html_url": "https://github.com/aixaria0/llm-security-poc",
+      "private": false,
+      "pushed_at": "2026-08-04T22:14:07Z",
+      "language": "Python"
+    },
+    {
+      "name": "empire-pwa",
+      "html_url": "https://github.com/aixaria0/empire-pwa",
+      "private": false,
+      "pushed_at": "2026-08-04T15:06:32Z",
+      "language": "HTML"
+    },
+    {
+      "name": "OSint",
+      "html_url": "https://github.com/aixaria0/OSint",
+      "private": false,
+      "pushed_at": "2026-07-31T21:07:30Z",
+      "language": "Python"
+    },
+    {
+      "name": "apex-quant-prototype",
+      "html_url": "https://github.com/aixaria0/apex-quant-prototype",
+      "private": false,
+      "pushed_at": "2026-07-23T16:06:47Z",
+      "language": "HTML"
+    },
+    {
+      "name": "faal-web",
+      "html_url": "https://github.com/aixaria0/faal-web",
+      "private": false,
+      "pushed_at": "2026-07-22T23:07:28Z",
+      "language": "HTML"
+    },
+    {
+      "name": "faal-scaffold",
+      "html_url": "https://github.com/aixaria0/faal-scaffold",
+      "private": false,
+      "pushed_at": "2026-07-22T17:58:17Z",
+      "language": null
+    },
+    {
+      "name": "ensemble-chat-prototype",
+      "html_url": "https://github.com/aixaria0/ensemble-chat-prototype",
+      "private": false,
+      "pushed_at": "2026-07-21T18:08:11Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "live-veil",
+      "html_url": "https://github.com/aixaria0/live-veil",
+      "private": false,
+      "pushed_at": "2026-07-21T17:57:32Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "scratch-notes",
+      "html_url": "https://github.com/aixaria0/scratch-notes",
+      "private": false,
+      "pushed_at": "2026-07-21T17:43:04Z",
+      "language": null
+    },
+    {
+      "name": "aria-trading-legacy",
+      "html_url": "https://github.com/aixaria0/aria-trading-legacy",
+      "private": false,
+      "pushed_at": "2026-07-21T16:36:12Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "omnitrace-variant",
+      "html_url": "https://github.com/aixaria0/omnitrace-variant",
+      "private": false,
+      "pushed_at": "2026-07-19T22:48:46Z",
+      "language": "Python"
+    },
+    {
+      "name": "AriaTrading0",
+      "html_url": "https://github.com/aixaria0/AriaTrading0",
+      "private": false,
+      "pushed_at": "2026-07-17T22:38:35Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "AriaTrading.github.io",
+      "html_url": "https://github.com/aixaria0/AriaTrading.github.io",
+      "private": false,
+      "pushed_at": "2026-07-16T22:01:29Z",
+      "language": "TypeScript"
+    },
+    {
+      "name": "Thebookofkings",
+      "html_url": "https://github.com/aixaria0/Thebookofkings",
+      "private": false,
+      "pushed_at": "2026-07-16T17:54:46Z",
+      "language": null
+    },
+    {
+      "name": "Theshahnameh",
+      "html_url": "https://github.com/aixaria0/Theshahnameh",
+      "private": false,
+      "pushed_at": "2026-07-16T17:48:58Z",
+      "language": null
+    },
+    {
+      "name": "forgeos",
+      "html_url": "https://github.com/aixaria0/forgeos",
+      "private": false,
+      "pushed_at": "2026-06-27T22:48:05Z",
+      "language": null
+    },
+    {
+      "name": "training-configurations",
+      "html_url": "https://github.com/aixaria0/training-configurations",
+      "private": false,
+      "pushed_at": "2025-12-11T12:44:43Z",
+      "language": "TypeScript"
+    }
+  ]
+}

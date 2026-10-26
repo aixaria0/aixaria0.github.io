@@ -6,7 +6,7 @@
   "principle": "Systems that make claims carry evidence.",
   "summary": {
     "tracked_repositories": 70,
-    "public_projects": 13,
+    "public_projects": 19,
     "projects_with_ci": 41,
     "projects_with_tests": 32,
     "projects_with_formal_artifacts": 3,
@@ -112,7 +112,15 @@
       "tests": 60,
       "formal_artifacts": 0,
       "evidence_artifacts": 53,
-      "pushed_at": "2026-10-15T21:54:44Z"
+      "pushed_at": "2026-10-15T21:54:44Z",
+      "topics": [
+        "deterministic-replay",
+        "evidence",
+        "provenance",
+        "rchain",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-one",
@@ -130,7 +138,14 @@
       "languages": [
         "Rust"
       ],
-      "pushed_at": "2026-10-25T22:33:04Z"
+      "pushed_at": "2026-10-25T22:33:04Z",
+      "topics": [
+        "capabilities",
+        "distributed-systems",
+        "orchestration",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "ritualgraph",
@@ -148,7 +163,15 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-05T01:46:35Z"
+      "pushed_at": "2026-10-05T01:46:35Z",
+      "topics": [
+        "graphs",
+        "python",
+        "security-invariants",
+        "threat-modeling",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-ag",
@@ -166,7 +189,14 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-08T23:08:15Z"
+      "pushed_at": "2026-10-08T23:08:15Z",
+      "topics": [
+        "orchestration",
+        "python",
+        "self-hosted",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "aetherforge",
@@ -184,7 +214,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-25T22:34:01Z"
+      "pushed_at": "2026-10-25T22:34:01Z",
+      "topics": [
+        "quantum-gravity",
+        "research",
+        "simulation",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "personal-llm-sanctum",
@@ -202,7 +239,15 @@
       "languages": [
         "Rust"
       ],
-      "pushed_at": "2026-10-25T22:33:07Z"
+      "pushed_at": "2026-10-25T22:33:07Z",
+      "topics": [
+        "local-first",
+        "observability",
+        "orchestration",
+        "rust",
+        "sqlite"
+      ],
+      "archived": false
     },
     {
       "id": "shahnameh-lite",
@@ -220,7 +265,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-25T22:34:04Z"
+      "pushed_at": "2026-10-25T22:34:04Z",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "archived": false
     },
     {
       "id": "aether-runtime",
@@ -250,7 +302,15 @@
       "tests": 8,
       "formal_artifacts": 0,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-10-15T02:55:56Z"
+      "pushed_at": "2026-10-15T02:55:56Z",
+      "topics": [
+        "cpp",
+        "deterministic-replay",
+        "execution-runtime",
+        "provenance",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "aether-runtime-os",
@@ -277,7 +337,15 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 3,
-      "pushed_at": "2026-10-06T06:08:23Z"
+      "pushed_at": "2026-10-06T06:08:23Z",
+      "topics": [
+        "execution-runtime",
+        "fault-tolerance",
+        "recovery",
+        "rust",
+        "sqlite"
+      ],
+      "archived": false
     },
     {
       "id": "aix",
@@ -295,7 +363,14 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-15T02:26:55Z"
+      "pushed_at": "2026-10-15T02:26:55Z",
+      "topics": [
+        "mobile",
+        "react-native",
+        "security-testing",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "aixaria0-github-io",
@@ -313,7 +388,13 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-10-22T01:44:40Z"
+      "pushed_at": "2026-10-25T23:54:31Z",
+      "topics": [
+        "github-pages",
+        "portfolio",
+        "static-site"
+      ],
+      "archived": false
     },
     {
       "id": "apex-quant-prototype",
@@ -331,7 +412,14 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-07-23T16:06:47Z"
+      "pushed_at": "2026-07-23T16:06:47Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "aria-lab",
@@ -349,7 +437,13 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-22T14:43:03Z"
+      "pushed_at": "2026-09-22T14:43:03Z",
+      "topics": [
+        "experimental",
+        "research",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "aria-trading-legacy",
@@ -367,7 +461,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-21T16:36:12Z"
+      "pushed_at": "2026-07-21T16:36:12Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "ariatrading-github-io",
@@ -385,7 +486,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-16T22:01:29Z"
+      "pushed_at": "2026-07-16T22:01:29Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "ariatrading0",
@@ -403,7 +511,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-17T22:38:35Z"
+      "pushed_at": "2026-07-17T22:38:35Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "bookofkings",
@@ -432,7 +547,14 @@
       "tests": 15,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-10-13T23:44:30Z"
+      "pushed_at": "2026-10-13T23:44:30Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-command-lab",
@@ -450,7 +572,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-23T18:26:30Z"
+      "pushed_at": "2026-09-23T18:26:30Z",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-desk",
@@ -468,7 +597,15 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-17T17:19:10Z"
+      "pushed_at": "2026-10-17T17:19:10Z",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "quantum-computing",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-engine-prototype",
@@ -486,7 +623,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-08-25T04:40:47Z"
+      "pushed_at": "2026-08-25T04:40:47Z",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-omega-public",
@@ -504,7 +648,15 @@
       "languages": [
         "Rust"
       ],
-      "pushed_at": "2026-10-14T18:27:37Z"
+      "pushed_at": "2026-10-14T18:27:37Z",
+      "topics": [
+        "evidence",
+        "mutation-testing",
+        "provenance",
+        "rust",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-redteam-web",
@@ -522,7 +674,9 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-10-25T23:46:04Z"
+      "pushed_at": "2026-10-25T23:46:04Z",
+      "topics": [],
+      "archived": false
     },
     {
       "id": "empire-pwa",
@@ -540,7 +694,13 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-08-04T15:06:32Z"
+      "pushed_at": "2026-08-04T15:06:32Z",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "ensemble-chat-prototype",
@@ -558,7 +718,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-21T18:08:11Z"
+      "pushed_at": "2026-07-21T18:08:11Z",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "faal-scaffold",
@@ -574,7 +740,12 @@
       "live_url": null,
       "live_label": null,
       "languages": [],
-      "pushed_at": "2026-07-22T17:58:17Z"
+      "pushed_at": "2026-07-22T17:58:17Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "faal-web",
@@ -592,7 +763,13 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-07-22T23:07:28Z"
+      "pushed_at": "2026-07-22T23:07:28Z",
+      "topics": [
+        "html",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "forgeos",
@@ -617,7 +794,12 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-06-27T22:48:05Z"
+      "pushed_at": "2026-06-27T22:48:05Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "fracture-archive",
@@ -635,7 +817,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-10-15T01:36:46Z"
+      "pushed_at": "2026-10-15T01:36:46Z",
+      "topics": [
+        "cosmology",
+        "post-quantum-cryptography",
+        "research",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "jimscarversqlf",
@@ -653,7 +842,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-16T01:55:44Z"
+      "pushed_at": "2026-10-16T01:55:44Z",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "lattice-workbench",
@@ -671,7 +867,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-05T04:10:29Z"
+      "pushed_at": "2026-09-05T04:10:29Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "live-veil",
@@ -689,7 +892,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-21T17:57:32Z"
+      "pushed_at": "2026-07-21T17:57:32Z",
+      "topics": [
+        "nextjs",
+        "prototype",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "llm-security-poc",
@@ -716,7 +925,14 @@
       "tests": 1,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-08-04T22:14:07Z"
+      "pushed_at": "2026-08-04T22:14:07Z",
+      "topics": [
+        "proof-of-concept",
+        "python",
+        "regression-testing",
+        "security-research"
+      ],
+      "archived": false
     },
     {
       "id": "my-little-baddies",
@@ -744,7 +960,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-09-01T23:59:08Z"
+      "pushed_at": "2026-09-01T23:59:08Z",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "experimental",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "nexus-quantum",
@@ -774,7 +997,14 @@
       "tests": 0,
       "formal_artifacts": 1,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-09-09T16:56:34Z"
+      "pushed_at": "2026-09-09T16:56:34Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "omni",
@@ -804,7 +1034,19 @@
       "tests": 20,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-21T14:55:56Z"
+      "pushed_at": "2026-10-21T14:55:56Z",
+      "topics": [
+        "amazon-braket",
+        "autonomous-investigation",
+        "evidence",
+        "osint",
+        "proof-carrying",
+        "provenance",
+        "quantum-computing",
+        "security-research",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "omnitrace-variant",
@@ -822,7 +1064,14 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-07-19T22:48:46Z"
+      "pushed_at": "2026-07-19T22:48:46Z",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "archived": false
     },
     {
       "id": "osint",
@@ -852,7 +1101,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-07-31T21:07:30Z"
+      "pushed_at": "2026-07-31T21:07:30Z",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "archived": false
     },
     {
       "id": "qlf",
@@ -870,7 +1126,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-22T14:42:09Z"
+      "pushed_at": "2026-09-22T14:42:09Z",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "quantum-os-workspace",
@@ -888,7 +1151,15 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-25T00:18:07Z"
+      "pushed_at": "2026-10-25T00:18:07Z",
+      "topics": [
+        "capabilities",
+        "peer-to-peer",
+        "rust",
+        "wasm",
+        "webrtc"
+      ],
+      "archived": false
     },
     {
       "id": "quantum001",
@@ -906,7 +1177,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-10-17T18:16:44Z"
+      "pushed_at": "2026-10-17T18:16:44Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-rust",
@@ -936,7 +1214,15 @@
       "tests": 301,
       "formal_artifacts": 49,
       "evidence_artifacts": 18,
-      "pushed_at": "2026-10-25T08:58:07Z"
+      "pushed_at": "2026-10-25T08:58:07Z",
+      "topics": [
+        "blockchain",
+        "consensus",
+        "rchain",
+        "rholang",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-sentinel",
@@ -966,7 +1252,15 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 4,
-      "pushed_at": "2026-10-23T21:43:09Z"
+      "pushed_at": "2026-10-23T21:43:09Z",
+      "topics": [
+        "blockchain",
+        "evidence",
+        "forensics",
+        "observability",
+        "rchain"
+      ],
+      "archived": false
     },
     {
       "id": "rholox",
@@ -996,7 +1290,15 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-23T22:42:34Z"
+      "pushed_at": "2026-10-23T22:42:34Z",
+      "topics": [
+        "dapp",
+        "observability",
+        "rchain",
+        "testnet",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "rlsenti",
@@ -1026,7 +1328,15 @@
       "tests": 11,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-17T03:01:19Z"
+      "pushed_at": "2026-10-17T03:01:19Z",
+      "topics": [
+        "evidence",
+        "experimental",
+        "provenance",
+        "rchain",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "scratch-notes",
@@ -1042,7 +1352,12 @@
       "live_url": null,
       "live_label": null,
       "languages": [],
-      "pushed_at": "2026-07-21T17:43:04Z"
+      "pushed_at": "2026-07-21T17:43:04Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "shahnamehresonance",
@@ -1071,7 +1386,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-08-13T21:53:27Z"
+      "pushed_at": "2026-08-13T21:53:27Z",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "archived": false
     },
     {
       "id": "sovereign-lattice",
@@ -1101,7 +1423,14 @@
       "tests": 7,
       "formal_artifacts": 3,
       "evidence_artifacts": 13,
-      "pushed_at": "2026-10-14T01:45:23Z"
+      "pushed_at": "2026-10-14T01:45:23Z",
+      "topics": [
+        "byzantine-fault-tolerance",
+        "consensus",
+        "formal-methods",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "strategic-intelligence-lattice",
@@ -1130,7 +1459,14 @@
       "tests": 8,
       "formal_artifacts": 0,
       "evidence_artifacts": 12,
-      "pushed_at": "2026-10-05T18:24:57Z"
+      "pushed_at": "2026-10-05T18:24:57Z",
+      "topics": [
+        "decision-making",
+        "python",
+        "reproducible-research",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "thebookofkings",
@@ -1155,7 +1491,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-07-16T17:54:46Z"
+      "pushed_at": "2026-07-16T17:54:46Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "theshahnameh",
@@ -1180,7 +1523,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-07-16T17:48:58Z"
+      "pushed_at": "2026-07-16T17:48:58Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "training-configurations",
@@ -1198,7 +1548,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2025-12-11T12:44:43Z"
+      "pushed_at": "2025-12-11T12:44:43Z",
+      "topics": [
+        "configuration",
+        "experimental",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "vqe-analyzer",
@@ -1216,7 +1572,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-10-13T23:34:50Z"
+      "pushed_at": "2026-10-13T23:34:50Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "webapp-scaffold-lab",
@@ -1234,7 +1597,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-09-22T10:06:00Z"
+      "pushed_at": "2026-09-22T10:06:00Z",
+      "topics": [
+        "experimental",
+        "typescript",
+        "webapp"
+      ],
+      "archived": false
     }
   ],
   "home_public_catalog": [
@@ -1266,7 +1635,15 @@
       "tests": 60,
       "formal_artifacts": 0,
       "evidence_artifacts": 53,
-      "pushed_at": "2026-10-15T21:54:44Z"
+      "pushed_at": "2026-10-15T21:54:44Z",
+      "topics": [
+        "deterministic-replay",
+        "evidence",
+        "provenance",
+        "rchain",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "sovereign-lattice",
@@ -1296,7 +1673,14 @@
       "tests": 7,
       "formal_artifacts": 3,
       "evidence_artifacts": 13,
-      "pushed_at": "2026-10-14T01:45:23Z"
+      "pushed_at": "2026-10-14T01:45:23Z",
+      "topics": [
+        "byzantine-fault-tolerance",
+        "consensus",
+        "formal-methods",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "aether-runtime",
@@ -1326,7 +1710,15 @@
       "tests": 8,
       "formal_artifacts": 0,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-10-15T02:55:56Z"
+      "pushed_at": "2026-10-15T02:55:56Z",
+      "topics": [
+        "cpp",
+        "deterministic-replay",
+        "execution-runtime",
+        "provenance",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "omni",
@@ -1356,7 +1748,19 @@
       "tests": 20,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-21T14:55:56Z"
+      "pushed_at": "2026-10-21T14:55:56Z",
+      "topics": [
+        "amazon-braket",
+        "autonomous-investigation",
+        "evidence",
+        "osint",
+        "proof-carrying",
+        "provenance",
+        "quantum-computing",
+        "security-research",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "nexus-quantum",
@@ -1386,7 +1790,14 @@
       "tests": 0,
       "formal_artifacts": 1,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-09-09T16:56:34Z"
+      "pushed_at": "2026-09-09T16:56:34Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "vqe-analyzer",
@@ -1404,7 +1815,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-10-13T23:34:50Z"
+      "pushed_at": "2026-10-13T23:34:50Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-sentinel",
@@ -1434,7 +1852,15 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 4,
-      "pushed_at": "2026-10-23T21:43:09Z"
+      "pushed_at": "2026-10-23T21:43:09Z",
+      "topics": [
+        "blockchain",
+        "evidence",
+        "forensics",
+        "observability",
+        "rchain"
+      ],
+      "archived": false
     },
     {
       "id": "strategic-intelligence-lattice",
@@ -1463,7 +1889,14 @@
       "tests": 8,
       "formal_artifacts": 0,
       "evidence_artifacts": 12,
-      "pushed_at": "2026-10-05T18:24:57Z"
+      "pushed_at": "2026-10-05T18:24:57Z",
+      "topics": [
+        "decision-making",
+        "python",
+        "reproducible-research",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "rholox",
@@ -1493,7 +1926,15 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-23T22:42:34Z"
+      "pushed_at": "2026-10-23T22:42:34Z",
+      "topics": [
+        "dapp",
+        "observability",
+        "rchain",
+        "testnet",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "rlsenti",
@@ -1523,7 +1964,15 @@
       "tests": 11,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-10-17T03:01:19Z"
+      "pushed_at": "2026-10-17T03:01:19Z",
+      "topics": [
+        "evidence",
+        "experimental",
+        "provenance",
+        "rchain",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "bookofkings",
@@ -1552,7 +2001,14 @@
       "tests": 15,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-10-13T23:44:30Z"
+      "pushed_at": "2026-10-13T23:44:30Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "llm-security-poc",
@@ -1579,7 +2035,14 @@
       "tests": 1,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-08-04T22:14:07Z"
+      "pushed_at": "2026-08-04T22:14:07Z",
+      "topics": [
+        "proof-of-concept",
+        "python",
+        "regression-testing",
+        "security-research"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-rust",
@@ -1609,7 +2072,15 @@
       "tests": 301,
       "formal_artifacts": 49,
       "evidence_artifacts": 18,
-      "pushed_at": "2026-10-25T08:58:07Z"
+      "pushed_at": "2026-10-25T08:58:07Z",
+      "topics": [
+        "blockchain",
+        "consensus",
+        "rchain",
+        "rholang",
+        "rust"
+      ],
+      "archived": false
     }
   ],
   "archive_catalog": [
@@ -1629,7 +2100,14 @@
       "languages": [
         "Rust"
       ],
-      "pushed_at": "2026-10-25T22:33:04Z"
+      "pushed_at": "2026-10-25T22:33:04Z",
+      "topics": [
+        "capabilities",
+        "distributed-systems",
+        "orchestration",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "ritualgraph",
@@ -1647,7 +2125,15 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-05T01:46:35Z"
+      "pushed_at": "2026-10-05T01:46:35Z",
+      "topics": [
+        "graphs",
+        "python",
+        "security-invariants",
+        "threat-modeling",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-ag",
@@ -1665,7 +2151,14 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-08T23:08:15Z"
+      "pushed_at": "2026-10-08T23:08:15Z",
+      "topics": [
+        "orchestration",
+        "python",
+        "self-hosted",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "aetherforge",
@@ -1683,7 +2176,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-25T22:34:01Z"
+      "pushed_at": "2026-10-25T22:34:01Z",
+      "topics": [
+        "quantum-gravity",
+        "research",
+        "simulation",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "personal-llm-sanctum",
@@ -1701,7 +2201,15 @@
       "languages": [
         "Rust"
       ],
-      "pushed_at": "2026-10-25T22:33:07Z"
+      "pushed_at": "2026-10-25T22:33:07Z",
+      "topics": [
+        "local-first",
+        "observability",
+        "orchestration",
+        "rust",
+        "sqlite"
+      ],
+      "archived": false
     },
     {
       "id": "shahnameh-lite",
@@ -1719,7 +2227,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-25T22:34:04Z"
+      "pushed_at": "2026-10-25T22:34:04Z",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "archived": false
     },
     {
       "id": "aether-runtime-os",
@@ -1746,7 +2261,15 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 3,
-      "pushed_at": "2026-10-06T06:08:23Z"
+      "pushed_at": "2026-10-06T06:08:23Z",
+      "topics": [
+        "execution-runtime",
+        "fault-tolerance",
+        "recovery",
+        "rust",
+        "sqlite"
+      ],
+      "archived": false
     },
     {
       "id": "aix",
@@ -1764,7 +2287,14 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-15T02:26:55Z"
+      "pushed_at": "2026-10-15T02:26:55Z",
+      "topics": [
+        "mobile",
+        "react-native",
+        "security-testing",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "aixaria0-github-io",
@@ -1782,7 +2312,13 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-10-22T01:44:40Z"
+      "pushed_at": "2026-10-25T23:54:31Z",
+      "topics": [
+        "github-pages",
+        "portfolio",
+        "static-site"
+      ],
+      "archived": false
     },
     {
       "id": "apex-quant-prototype",
@@ -1800,7 +2336,14 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-07-23T16:06:47Z"
+      "pushed_at": "2026-07-23T16:06:47Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "aria-lab",
@@ -1818,7 +2361,13 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-22T14:43:03Z"
+      "pushed_at": "2026-09-22T14:43:03Z",
+      "topics": [
+        "experimental",
+        "research",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "aria-trading-legacy",
@@ -1836,7 +2385,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-21T16:36:12Z"
+      "pushed_at": "2026-07-21T16:36:12Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "ariatrading-github-io",
@@ -1854,7 +2410,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-16T22:01:29Z"
+      "pushed_at": "2026-07-16T22:01:29Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "ariatrading0",
@@ -1872,7 +2435,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-17T22:38:35Z"
+      "pushed_at": "2026-07-17T22:38:35Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-command-lab",
@@ -1890,7 +2460,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-23T18:26:30Z"
+      "pushed_at": "2026-09-23T18:26:30Z",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-desk",
@@ -1908,7 +2485,15 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-17T17:19:10Z"
+      "pushed_at": "2026-10-17T17:19:10Z",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "quantum-computing",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-engine-prototype",
@@ -1926,7 +2511,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-08-25T04:40:47Z"
+      "pushed_at": "2026-08-25T04:40:47Z",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-omega-public",
@@ -1944,7 +2536,15 @@
       "languages": [
         "Rust"
       ],
-      "pushed_at": "2026-10-14T18:27:37Z"
+      "pushed_at": "2026-10-14T18:27:37Z",
+      "topics": [
+        "evidence",
+        "mutation-testing",
+        "provenance",
+        "rust",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-redteam-web",
@@ -1962,7 +2562,9 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-10-25T23:46:04Z"
+      "pushed_at": "2026-10-25T23:46:04Z",
+      "topics": [],
+      "archived": false
     },
     {
       "id": "empire-pwa",
@@ -1980,7 +2582,13 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-08-04T15:06:32Z"
+      "pushed_at": "2026-08-04T15:06:32Z",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "ensemble-chat-prototype",
@@ -1998,7 +2606,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-21T18:08:11Z"
+      "pushed_at": "2026-07-21T18:08:11Z",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "faal-scaffold",
@@ -2014,7 +2628,12 @@
       "live_url": null,
       "live_label": null,
       "languages": [],
-      "pushed_at": "2026-07-22T17:58:17Z"
+      "pushed_at": "2026-07-22T17:58:17Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "faal-web",
@@ -2032,7 +2651,13 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-07-22T23:07:28Z"
+      "pushed_at": "2026-07-22T23:07:28Z",
+      "topics": [
+        "html",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "forgeos",
@@ -2057,7 +2682,12 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-06-27T22:48:05Z"
+      "pushed_at": "2026-06-27T22:48:05Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "fracture-archive",
@@ -2075,7 +2705,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-10-15T01:36:46Z"
+      "pushed_at": "2026-10-15T01:36:46Z",
+      "topics": [
+        "cosmology",
+        "post-quantum-cryptography",
+        "research",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "jimscarversqlf",
@@ -2093,7 +2730,14 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-16T01:55:44Z"
+      "pushed_at": "2026-10-16T01:55:44Z",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "lattice-workbench",
@@ -2111,7 +2755,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-05T04:10:29Z"
+      "pushed_at": "2026-09-05T04:10:29Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "live-veil",
@@ -2129,7 +2780,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-07-21T17:57:32Z"
+      "pushed_at": "2026-07-21T17:57:32Z",
+      "topics": [
+        "nextjs",
+        "prototype",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "my-little-baddies",
@@ -2157,7 +2814,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-09-01T23:59:08Z"
+      "pushed_at": "2026-09-01T23:59:08Z",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "experimental",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "omnitrace-variant",
@@ -2175,7 +2839,14 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-07-19T22:48:46Z"
+      "pushed_at": "2026-07-19T22:48:46Z",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "archived": false
     },
     {
       "id": "osint",
@@ -2205,7 +2876,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 1,
-      "pushed_at": "2026-07-31T21:07:30Z"
+      "pushed_at": "2026-07-31T21:07:30Z",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "archived": false
     },
     {
       "id": "qlf",
@@ -2223,7 +2901,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-09-22T14:42:09Z"
+      "pushed_at": "2026-09-22T14:42:09Z",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "quantum-os-workspace",
@@ -2241,7 +2926,15 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-10-25T00:18:07Z"
+      "pushed_at": "2026-10-25T00:18:07Z",
+      "topics": [
+        "capabilities",
+        "peer-to-peer",
+        "rust",
+        "wasm",
+        "webrtc"
+      ],
+      "archived": false
     },
     {
       "id": "quantum001",
@@ -2259,7 +2952,14 @@
       "languages": [
         "JavaScript"
       ],
-      "pushed_at": "2026-10-17T18:16:44Z"
+      "pushed_at": "2026-10-17T18:16:44Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "scratch-notes",
@@ -2275,7 +2975,12 @@
       "live_url": null,
       "live_label": null,
       "languages": [],
-      "pushed_at": "2026-07-21T17:43:04Z"
+      "pushed_at": "2026-07-21T17:43:04Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "shahnamehresonance",
@@ -2304,7 +3009,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-08-13T21:53:27Z"
+      "pushed_at": "2026-08-13T21:53:27Z",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "archived": false
     },
     {
       "id": "thebookofkings",
@@ -2329,7 +3041,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-07-16T17:54:46Z"
+      "pushed_at": "2026-07-16T17:54:46Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "theshahnameh",
@@ -2354,7 +3073,14 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 0,
-      "pushed_at": "2026-07-16T17:48:58Z"
+      "pushed_at": "2026-07-16T17:48:58Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "training-configurations",
@@ -2372,7 +3098,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2025-12-11T12:44:43Z"
+      "pushed_at": "2025-12-11T12:44:43Z",
+      "topics": [
+        "configuration",
+        "experimental",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "webapp-scaffold-lab",
@@ -2390,7 +3122,13 @@
       "languages": [
         "TypeScript"
       ],
-      "pushed_at": "2026-09-22T10:06:00Z"
+      "pushed_at": "2026-09-22T10:06:00Z",
+      "topics": [
+        "experimental",
+        "typescript",
+        "webapp"
+      ],
+      "archived": false
     }
   ],
   "archive_count": 40,
@@ -2632,8 +3370,17 @@
         "authored_issues": 0,
         "reviewed_prs": 0
       },
-      "last_pushed_at": "2026-10-07T03:45:48Z",
-      "resume_priority": 2
+      "last_pushed_at": "2026-10-15T02:55:56Z",
+      "resume_priority": 2,
+      "pushed_at": "2026-10-15T02:55:56Z",
+      "topics": [
+        "cpp",
+        "deterministic-replay",
+        "execution-runtime",
+        "provenance",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "aether-runtime-os",
@@ -2687,7 +3434,16 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-10-06T06:08:23Z",
-      "resume_priority": 11
+      "resume_priority": 11,
+      "pushed_at": "2026-10-06T06:08:23Z",
+      "topics": [
+        "execution-runtime",
+        "fault-tolerance",
+        "recovery",
+        "rust",
+        "sqlite"
+      ],
+      "archived": false
     },
     {
       "id": "bookofkings",
@@ -2739,10 +3495,18 @@
         "authored_issues": 0,
         "reviewed_prs": 10
       },
-      "last_pushed_at": "2026-07-22T07:08:04Z",
+      "last_pushed_at": "2026-10-13T23:44:30Z",
       "resume_priority": 10,
       "live_url": "https://aixaria0.github.io/Bookofkings/",
-      "label": "Open live site"
+      "label": "Open live site",
+      "pushed_at": "2026-10-13T23:44:30Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "llm-security-poc",
@@ -2792,7 +3556,15 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-08-04T22:14:07Z",
-      "resume_priority": 999
+      "resume_priority": 999,
+      "pushed_at": "2026-08-04T22:14:07Z",
+      "topics": [
+        "proof-of-concept",
+        "python",
+        "regression-testing",
+        "security-research"
+      ],
+      "archived": false
     },
     {
       "id": "nexus-quantum",
@@ -2851,7 +3623,15 @@
       "last_pushed_at": "2026-09-09T16:56:34Z",
       "resume_priority": 4,
       "live_url": "https://aixaria0.github.io/nexus-quantum/",
-      "label": "Open live site"
+      "label": "Open live site",
+      "pushed_at": "2026-09-09T16:56:34Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "omni",
@@ -2909,10 +3689,23 @@
         "authored_issues": 0,
         "reviewed_prs": 0
       },
-      "last_pushed_at": "2026-10-10T04:06:00Z",
+      "last_pushed_at": "2026-10-21T14:55:56Z",
       "resume_priority": 3,
       "live_url": "https://aixaria0.github.io/Omni/",
-      "label": "Open Omni"
+      "label": "Open Omni",
+      "pushed_at": "2026-10-21T14:55:56Z",
+      "topics": [
+        "amazon-braket",
+        "autonomous-investigation",
+        "evidence",
+        "osint",
+        "proof-carrying",
+        "provenance",
+        "quantum-computing",
+        "security-research",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-complier",
@@ -2972,10 +3765,19 @@
         "authored_issues": 1,
         "reviewed_prs": 0
       },
-      "last_pushed_at": "2026-10-10T03:11:39Z",
+      "last_pushed_at": "2026-10-15T21:54:44Z",
       "resume_priority": 0,
       "live_url": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
-      "label": "Open live site"
+      "label": "Open live site",
+      "pushed_at": "2026-10-15T21:54:44Z",
+      "topics": [
+        "deterministic-replay",
+        "evidence",
+        "provenance",
+        "rchain",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-sentinel",
@@ -3033,10 +3835,19 @@
         "authored_issues": 0,
         "reviewed_prs": 0
       },
-      "last_pushed_at": "2026-09-28T01:29:20Z",
+      "last_pushed_at": "2026-10-23T21:43:09Z",
       "resume_priority": 6,
       "live_url": "https://aixaria0.github.io/rchain-sentinel/",
-      "label": "Open live site"
+      "label": "Open live site",
+      "pushed_at": "2026-10-23T21:43:09Z",
+      "topics": [
+        "blockchain",
+        "evidence",
+        "forensics",
+        "observability",
+        "rchain"
+      ],
+      "archived": false
     },
     {
       "id": "rholox",
@@ -3095,7 +3906,7 @@
         "authored_issues": 2,
         "reviewed_prs": 0
       },
-      "last_pushed_at": "2026-10-12T13:13:25Z",
+      "last_pushed_at": "2026-10-23T22:42:34Z",
       "resume_priority": 8,
       "live_url": "https://rholox.com/",
       "label": "Open Rholox",
@@ -3104,7 +3915,16 @@
           "label": "RChain Community Observer",
           "url": "https://github.com/rchain-community/rchain-observer"
         }
-      ]
+      ],
+      "pushed_at": "2026-10-23T22:42:34Z",
+      "topics": [
+        "dapp",
+        "observability",
+        "rchain",
+        "testnet",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "rlsenti",
@@ -3161,10 +3981,19 @@
         "authored_issues": 0,
         "reviewed_prs": 0
       },
-      "last_pushed_at": "2026-09-28T01:29:24Z",
+      "last_pushed_at": "2026-10-17T03:01:19Z",
       "resume_priority": 9,
       "live_url": "https://aixaria0.github.io/rlsenti/",
-      "label": "Open live site"
+      "label": "Open live site",
+      "pushed_at": "2026-10-17T03:01:19Z",
+      "topics": [
+        "evidence",
+        "experimental",
+        "provenance",
+        "rchain",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "sovereign-lattice",
@@ -3223,10 +4052,18 @@
         "authored_issues": 0,
         "reviewed_prs": 0
       },
-      "last_pushed_at": "2026-10-10T02:54:15Z",
+      "last_pushed_at": "2026-10-14T01:45:23Z",
       "resume_priority": 1,
       "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
-      "label": "Open live site"
+      "label": "Open live site",
+      "pushed_at": "2026-10-14T01:45:23Z",
+      "topics": [
+        "byzantine-fault-tolerance",
+        "consensus",
+        "formal-methods",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "strategic-intelligence-lattice",
@@ -3281,7 +4118,15 @@
         "reviewed_prs": 0
       },
       "last_pushed_at": "2026-10-05T18:24:57Z",
-      "resume_priority": 7
+      "resume_priority": 7,
+      "pushed_at": "2026-10-05T18:24:57Z",
+      "topics": [
+        "decision-making",
+        "python",
+        "reproducible-research",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "vqe-analyzer",
@@ -3342,6 +4187,103 @@
       "resume_priority": 5,
       "live_url": "https://aixaria0.github.io/vqe-analyzer/",
       "label": "Open VQE Analyzer"
+    },
+    {
+      "id": "quantum-os-workspace",
+      "name": "quantum-os-workspace",
+      "visibility": "public",
+      "repository_url": "https://github.com/aixaria0/quantum-os-workspace",
+      "description": "QuantumOS development workspace for browser peer-to-peer collaboration, capability transport, and Rust/WASM components.",
+      "last_pushed_at": "2026-10-25T00:18:07Z",
+      "technology": [
+        "TypeScript"
+      ],
+      "categories": [
+        "Distributed Systems",
+        "Quantum",
+        "Tooling"
+      ],
+      "evidence_surface": null
+    },
+    {
+      "id": "chimera-desk",
+      "name": "CHIMERA-DESK",
+      "visibility": "public",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-DESK",
+      "description": "Browser research control surface for quantum simulation, consensus, proofs, markets and technical research.",
+      "last_pushed_at": "2026-10-17T17:19:10Z",
+      "technology": [
+        "TypeScript"
+      ],
+      "categories": [
+        "Quantum",
+        "Tooling"
+      ],
+      "evidence_surface": null
+    },
+    {
+      "id": "chimera-redteam-web",
+      "name": "chimera-redteam-web",
+      "visibility": "public",
+      "repository_url": "https://github.com/aixaria0/chimera-redteam-web",
+      "description": "Public web console and documentation for CHIMERA Red Team",
+      "last_pushed_at": "2026-10-25T23:46:04Z",
+      "technology": [
+        "HTML"
+      ],
+      "categories": [
+        "Security",
+        "Tooling"
+      ],
+      "evidence_surface": null
+    },
+    {
+      "id": "chimera-one",
+      "name": "CHIMERA-ONE",
+      "visibility": "public",
+      "repository_url": "https://github.com/aixaria0/CHIMERA-ONE",
+      "description": "Control plane composing versioned CHIMERA capabilities while preserving component trust and evidence boundaries.",
+      "last_pushed_at": "2026-10-25T22:33:04Z",
+      "technology": [
+        "Python"
+      ],
+      "categories": [
+        "Distributed Systems",
+        "Tooling"
+      ],
+      "evidence_surface": null
+    },
+    {
+      "id": "ritualgraph",
+      "name": "RitualGraph",
+      "visibility": "public",
+      "repository_url": "https://github.com/aixaria0/RitualGraph",
+      "description": "Compiler and simulation engine for executable AI threat models, security invariants, attack graphs, control verification, and evidence-driven CI gates.",
+      "last_pushed_at": "2026-10-05T01:46:35Z",
+      "technology": [
+        "Python"
+      ],
+      "categories": [
+        "Security",
+        "Tooling"
+      ],
+      "evidence_surface": null
+    },
+    {
+      "id": "aetherforge",
+      "name": "aetherforge",
+      "visibility": "public",
+      "repository_url": "https://github.com/aixaria0/aetherforge",
+      "description": "Interactive loop quantum gravity research lab with explicit formula, approximation, and synthetic-data boundaries.",
+      "last_pushed_at": "2026-10-25T22:34:01Z",
+      "technology": [
+        "TypeScript"
+      ],
+      "categories": [
+        "Quantum",
+        "Tooling"
+      ],
+      "evidence_surface": null
     }
   ],
   "private_projects": [
@@ -3517,7 +4459,16 @@
       "note": "Evidence-oriented Casper CBC / assurance workbench.",
       "repository_url": "https://github.com/aixaria0/RCHAIN-COMPLIER",
       "live_url": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-15T21:54:44Z",
+      "topics": [
+        "deterministic-replay",
+        "evidence",
+        "provenance",
+        "rchain",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-one",
@@ -3530,7 +4481,15 @@
       "note": "Coordinated execution, pinned capabilities, and evidence-bound verification.",
       "repository_url": "https://github.com/aixaria0/CHIMERA-ONE",
       "live_url": "/CHIMERA-ONE/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-25T22:33:04Z",
+      "topics": [
+        "capabilities",
+        "distributed-systems",
+        "orchestration",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "ritualgraph",
@@ -3543,7 +4502,16 @@
       "note": "Executable threat graphs, deterministic simulation, and CI-checkable security invariants.",
       "repository_url": "https://github.com/aixaria0/RitualGraph",
       "live_url": "/RitualGraph/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-05T01:46:35Z",
+      "topics": [
+        "graphs",
+        "python",
+        "security-invariants",
+        "threat-modeling",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-ag",
@@ -3556,7 +4524,15 @@
       "note": "Self-hosted orchestration with measured routing and reproducible verification.",
       "repository_url": "https://github.com/aixaria0/Chimera-AG",
       "live_url": "/Chimera-AG/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-08T23:08:15Z",
+      "topics": [
+        "orchestration",
+        "python",
+        "self-hosted",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "aetherforge",
@@ -3569,7 +4545,15 @@
       "note": "Interactive quantum-gravity research laboratory with explicit approximation and synthetic-data boundaries.",
       "repository_url": "https://github.com/aixaria0/aetherforge",
       "live_url": "/aetherforge/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-25T22:34:01Z",
+      "topics": [
+        "quantum-gravity",
+        "research",
+        "simulation",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "personal-llm-sanctum",
@@ -3582,7 +4566,16 @@
       "note": "Local-first Rust runtime with recorded runs, routing, memory and replay.",
       "repository_url": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
       "live_url": null,
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-25T22:33:07Z",
+      "topics": [
+        "local-first",
+        "observability",
+        "orchestration",
+        "rust",
+        "sqlite"
+      ],
+      "archived": false
     },
     {
       "id": "shahnameh-lite",
@@ -3595,7 +4588,15 @@
       "note": "Persian-first storytelling and reading guide with offline search and browser narration.",
       "repository_url": "https://github.com/aixaria0/Shahnameh-lite",
       "live_url": "/shahnameh-lite/",
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-25T22:34:04Z",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "archived": false
     },
     {
       "id": "quantum001",
@@ -3608,7 +4609,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/Quantum001",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-17T18:16:44Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "aether-runtime",
@@ -3621,7 +4630,16 @@
       "note": "Current canonical execution/evidence runtime.",
       "repository_url": "https://github.com/aixaria0/aether-runtime",
       "live_url": null,
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-15T02:55:56Z",
+      "topics": [
+        "cpp",
+        "deterministic-replay",
+        "execution-runtime",
+        "provenance",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "aether-runtime-os",
@@ -3634,7 +4652,16 @@
       "note": "Related Aether runtime generation. Repository creation chronology and deep tree comparison do not establish predecessor direction.",
       "repository_url": "https://github.com/aixaria0/Aether-Runtime-OS",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-06T06:08:23Z",
+      "topics": [
+        "execution-runtime",
+        "fault-tolerance",
+        "recovery",
+        "rust",
+        "sqlite"
+      ],
+      "archived": false
     },
     {
       "id": "aix",
@@ -3647,7 +4674,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/Aix",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-15T02:26:55Z",
+      "topics": [
+        "mobile",
+        "react-native",
+        "security-testing",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "aixaria0-github-io",
@@ -3660,7 +4695,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/aixaria0.github.io",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-25T23:54:31Z",
+      "topics": [
+        "github-pages",
+        "portfolio",
+        "static-site"
+      ],
+      "archived": false
     },
     {
       "id": "apex-quant-prototype",
@@ -3673,7 +4715,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/apex-quant-prototype",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-23T16:06:47Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "aria-lab",
@@ -3686,7 +4736,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/Aria-Lab",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-09-22T14:43:03Z",
+      "topics": [
+        "experimental",
+        "research",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "aria-trading-legacy",
@@ -3699,7 +4756,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/aria-trading-legacy",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-21T16:36:12Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "ariatrading-github-io",
@@ -3712,7 +4777,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/AriaTrading.github.io",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-16T22:01:29Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "ariatrading0",
@@ -3725,7 +4798,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/AriaTrading0",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-17T22:38:35Z",
+      "topics": [
+        "experimental",
+        "market-data",
+        "quantitative-finance",
+        "research"
+      ],
+      "archived": false
     },
     {
       "id": "bookofkings",
@@ -3738,7 +4819,15 @@
       "note": "Current canonical cultural/consumer product.",
       "repository_url": "https://github.com/aixaria0/Bookofkings",
       "live_url": "https://aixaria0.github.io/Bookofkings/",
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-13T23:44:30Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-command-lab",
@@ -3751,7 +4840,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/chimera-command-lab",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-09-23T18:26:30Z",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-desk",
@@ -3764,7 +4861,16 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/CHIMERA-DESK",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-17T17:19:10Z",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "quantum-computing",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-engine-prototype",
@@ -3777,7 +4883,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/chimera-engine-prototype",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-08-25T04:40:47Z",
+      "topics": [
+        "dashboard",
+        "prototype",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-omega-public",
@@ -3790,7 +4904,16 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/CHIMERA-OMEGA-public",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-14T18:27:37Z",
+      "topics": [
+        "evidence",
+        "mutation-testing",
+        "provenance",
+        "rust",
+        "verification"
+      ],
+      "archived": false
     },
     {
       "id": "chimera-redteam-web",
@@ -3803,7 +4926,10 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/chimera-redteam-web",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-25T23:46:04Z",
+      "topics": [],
+      "archived": false
     },
     {
       "id": "empire-pwa",
@@ -3816,7 +4942,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/empire-pwa",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-08-04T15:06:32Z",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "ensemble-chat-prototype",
@@ -3829,7 +4962,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/ensemble-chat-prototype",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-21T18:08:11Z",
+      "topics": [
+        "experimental",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "faal-scaffold",
@@ -3842,7 +4982,13 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/faal-scaffold",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-22T17:58:17Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "faal-web",
@@ -3855,7 +5001,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/faal-web",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-22T23:07:28Z",
+      "topics": [
+        "html",
+        "prototype",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "forgeos",
@@ -3868,7 +5021,13 @@
       "note": "Legacy experiment; deeper lineage audit pending.",
       "repository_url": "https://github.com/aixaria0/forgeos",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-06-27T22:48:05Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "fracture-archive",
@@ -3881,7 +5040,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/fracture-archive",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-15T01:36:46Z",
+      "topics": [
+        "cosmology",
+        "post-quantum-cryptography",
+        "research",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "jimscarversqlf",
@@ -3894,7 +5061,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/jimscarversQLF",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-16T01:55:44Z",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "lattice-workbench",
@@ -3907,7 +5082,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/lattice-workbench",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-09-05T04:10:29Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "live-veil",
@@ -3920,7 +5103,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/live-veil",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-21T17:57:32Z",
+      "topics": [
+        "nextjs",
+        "prototype",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "llm-security-poc",
@@ -3933,7 +5123,15 @@
       "note": "Security hypotheses/PoCs; external or target-specific validation required before stronger vulnerability claims.",
       "repository_url": "https://github.com/aixaria0/llm-security-poc",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-08-04T22:14:07Z",
+      "topics": [
+        "proof-of-concept",
+        "python",
+        "regression-testing",
+        "security-research"
+      ],
+      "archived": false
     },
     {
       "id": "my-little-baddies",
@@ -3946,7 +5144,15 @@
       "note": "Historical consumer/creative experiment.",
       "repository_url": "https://github.com/aixaria0/My-little-baddies-",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-09-01T23:59:08Z",
+      "topics": [
+        "consensus",
+        "dashboard",
+        "experimental",
+        "visualization"
+      ],
+      "archived": false
     },
     {
       "id": "nexus-quantum",
@@ -3959,7 +5165,15 @@
       "note": "Formal/quantum research project; strongest formal claims require artifact-level verification.",
       "repository_url": "https://github.com/aixaria0/nexus-quantum",
       "live_url": "https://aixaria0.github.io/nexus-quantum/",
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-09-09T16:56:34Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "omni",
@@ -3972,7 +5186,20 @@
       "note": "Evidence-stress and proof-carrying investigation workspace with Quantum Fabric.",
       "repository_url": "https://github.com/aixaria0/Omni",
       "live_url": "https://aixaria0.github.io/Omni/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-21T14:55:56Z",
+      "topics": [
+        "amazon-braket",
+        "autonomous-investigation",
+        "evidence",
+        "osint",
+        "proof-carrying",
+        "provenance",
+        "quantum-computing",
+        "security-research",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "osint",
@@ -3985,7 +5212,15 @@
       "note": "Earlier OmniTrace/OSINT implementation.",
       "repository_url": "https://github.com/aixaria0/OSint",
       "live_url": "https://aixaria0.github.io/OSint/",
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-31T21:07:30Z",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "archived": false
     },
     {
       "id": "omnitrace-variant",
@@ -3998,7 +5233,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/omnitrace-variant",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-19T22:48:46Z",
+      "topics": [
+        "fastapi",
+        "nextjs",
+        "observability",
+        "osint"
+      ],
+      "archived": false
     },
     {
       "id": "qlf",
@@ -4011,7 +5254,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/QLF",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-09-22T14:42:09Z",
+      "topics": [
+        "consensus",
+        "formal-methods",
+        "protocols",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "quantum-os-workspace",
@@ -4024,7 +5275,16 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/quantum-os-workspace",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-25T00:18:07Z",
+      "topics": [
+        "capabilities",
+        "peer-to-peer",
+        "rust",
+        "wasm",
+        "webrtc"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-sentinel",
@@ -4037,7 +5297,16 @@
       "note": "Read/verification surface for node and block evidence.",
       "repository_url": "https://github.com/aixaria0/rchain-sentinel",
       "live_url": "https://aixaria0.github.io/rchain-sentinel/",
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-23T21:43:09Z",
+      "topics": [
+        "blockchain",
+        "evidence",
+        "forensics",
+        "observability",
+        "rchain"
+      ],
+      "archived": false
     },
     {
       "id": "rchain-rust",
@@ -4050,7 +5319,16 @@
       "note": "Personal fork used for upstream work; upstream contributions are tracked separately.",
       "repository_url": "https://github.com/aixaria0/rchain-rust",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-25T08:58:07Z",
+      "topics": [
+        "blockchain",
+        "consensus",
+        "rchain",
+        "rholang",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "rholox",
@@ -4063,7 +5341,16 @@
       "note": "Evidence-first public-testnet product surface.",
       "repository_url": "https://github.com/aixaria0/Rholox",
       "live_url": "https://rholox.com/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-23T22:42:34Z",
+      "topics": [
+        "dapp",
+        "observability",
+        "rchain",
+        "testnet",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "rlsenti",
@@ -4076,7 +5363,16 @@
       "note": "Compiler/workbench evidence adapter; synthetic/integration-oriented.",
       "repository_url": "https://github.com/aixaria0/rlsenti",
       "live_url": "https://aixaria0.github.io/rlsenti/",
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-17T03:01:19Z",
+      "topics": [
+        "evidence",
+        "experimental",
+        "provenance",
+        "rchain",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "scratch-notes",
@@ -4089,7 +5385,13 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/scratch-notes",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-21T17:43:04Z",
+      "topics": [
+        "experimental",
+        "project-scaffold"
+      ],
+      "archived": false
     },
     {
       "id": "shahnamehresonance",
@@ -4102,7 +5404,15 @@
       "note": "Earlier cultural product implementation; README duplicate candidate.",
       "repository_url": "https://github.com/aixaria0/Shahnamehresonance-",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-08-13T21:53:27Z",
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "archived": false
     },
     {
       "id": "sovereign-lattice",
@@ -4115,7 +5425,15 @@
       "note": "Distributed consensus / formal-methods research; formal claims require artifact-level audit.",
       "repository_url": "https://github.com/aixaria0/Sovereign-Lattice",
       "live_url": "https://aixaria0.github.io/Sovereign-Lattice/",
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-14T01:45:23Z",
+      "topics": [
+        "byzantine-fault-tolerance",
+        "consensus",
+        "formal-methods",
+        "rust"
+      ],
+      "archived": false
     },
     {
       "id": "strategic-intelligence-lattice",
@@ -4128,7 +5446,15 @@
       "note": "Reproducible multi-agent research and evaluation framework.",
       "repository_url": "https://github.com/aixaria0/strategic-intelligence-lattice",
       "live_url": null,
-      "featured": true
+      "featured": true,
+      "pushed_at": "2026-10-05T18:24:57Z",
+      "topics": [
+        "decision-making",
+        "python",
+        "reproducible-research",
+        "simulation"
+      ],
+      "archived": false
     },
     {
       "id": "thebookofkings",
@@ -4141,7 +5467,15 @@
       "note": "Early predecessor of Book of Kings.",
       "repository_url": "https://github.com/aixaria0/Thebookofkings",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-16T17:54:46Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "theshahnameh",
@@ -4154,7 +5488,15 @@
       "note": "Early predecessor of Book of Kings/Shahnameh work.",
       "repository_url": "https://github.com/aixaria0/Theshahnameh",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-07-16T17:48:58Z",
+      "topics": [
+        "interactive",
+        "persian",
+        "reflection",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "training-configurations",
@@ -4167,7 +5509,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/training-configurations",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2025-12-11T12:44:43Z",
+      "topics": [
+        "configuration",
+        "experimental",
+        "typescript"
+      ],
+      "archived": false
     },
     {
       "id": "vqe-analyzer",
@@ -4180,7 +5529,15 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/vqe-analyzer",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-10-13T23:34:50Z",
+      "topics": [
+        "quantum-computing",
+        "research",
+        "simulation",
+        "vqe"
+      ],
+      "archived": false
     },
     {
       "id": "webapp-scaffold-lab",
@@ -4193,7 +5550,14 @@
       "note": "Repository identity and bounded public description.",
       "repository_url": "https://github.com/aixaria0/webapp-scaffold-lab",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "pushed_at": "2026-09-22T10:06:00Z",
+      "topics": [
+        "experimental",
+        "typescript",
+        "webapp"
+      ],
+      "archived": false
     },
     {
       "id": "aix-registry",
@@ -4742,5 +6106,20 @@
     }
   ],
   "inventory_observed_at": "2026-10-26",
-  "inventory_note": "Visibility and repository identity were refreshed from the authenticated GitHub inventory on 2026-10-26. Historical per-project activity metrics retain their earlier observation date."
+  "inventory_note": "Visibility and repository identity were refreshed from the authenticated GitHub inventory on 2026-10-26. Historical per-project activity metrics retain their earlier observation date.",
+  "public_directory": {
+    "observed_at": "2026-10-26",
+    "count": 53,
+    "url": "/data/public-repositories.json"
+  },
+  "publication": {
+    "edition": "2026-10-26",
+    "base_commit": "caec4b65290d08b5e3719b8156a0bb7341eb449a",
+    "public_repository_count": 53,
+    "project_count": 19,
+    "locales": [
+      "en",
+      "fa"
+    ]
+  }
 }
