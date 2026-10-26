@@ -6113,13 +6113,14 @@
     "url": "/data/public-repositories.json"
   },
   "publication": {
-    "edition": "2026-10-26",
+    "edition": "2026-10-26-r2",
     "base_commit": "caec4b65290d08b5e3719b8156a0bb7341eb449a",
     "public_repository_count": 53,
     "project_count": 19,
     "locales": [
       "en",
       "fa"
-    ]
+    ],
+    "layout": "original-hero-with-lower-artwork"
   }
 }

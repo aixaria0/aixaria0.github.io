@@ -1,6 +1,5 @@
 /* The Sunaria living edition. */
 :root{--edition-gold:#dfbd83;--edition-paper:#f2e4cb;--edition-line:rgba(219,190,137,.25)}
-.site-header{backdrop-filter:blur(16px);background:rgba(4,18,12,.94)}
 .living-hero{min-height:0;background:radial-gradient(ellipse at 68% 42%,#15342255,transparent 55%),#06130d}
 .living-hero .hero-stage{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:32px 70px;align-items:center;padding:66px 0 28px;overflow:visible;min-height:0;direction:ltr}
 .living-hero .hero-stage::before,.living-hero .hero-stage::after{display:none}
@@ -113,3 +112,12 @@ html[lang=fa] .living-hero .hero-disciplines{margin-inline-start:auto}
 html[lang=fa] .living-hero .hero-disciplines{margin-inline-start:0;margin-inline-end:auto}
 
 html,body{overflow-x:clip}
+
+/* The original logo-led hero and visible photographs remain the primary identity. */
+.identity-section{display:block;padding-block:65px 80px}
+.identity-heading{max-width:620px;margin-bottom:32px}
+.identity-gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:24px}
+.identity-art:nth-child(n){transform:none}
+.identity-art:nth-child(n) .artwork-link img{aspect-ratio:auto;height:auto;object-fit:contain}
+@media(max-width:900px){.identity-gallery{gap:18px}.identity-art figcaption strong{font-size:21px}html[lang=fa] .identity-art figcaption strong{font-size:17px}}
+@media(max-width:760px){.identity-section{padding-block:45px 60px}.identity-gallery{grid-template-columns:1fr;gap:35px;max-width:480px;margin-inline:auto}.identity-heading{margin-bottom:28px}.identity-art:nth-child(n){transform:none}.identity-art figcaption strong{font-size:25px}html[lang=fa] .identity-art figcaption strong{font-size:20px}}
