@@ -27,7 +27,7 @@
   <link rel="icon" href="./favicon.png" type="image/png">
   <link rel="preload" href="./fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/instrument-serif-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=20261026r2">
+  <link rel="stylesheet" href="./styles.css?v=20261107r1">
   <link rel="stylesheet" href="./precision.css?v=20261026r2">
   <link rel="stylesheet" href="./aix-aria.css?v=20261026r2">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sunaria.si/#website","name":"Sunaria","url":"https://sunaria.si/","description":"Sunaria is the engineering practice of Aria and Sanaz: technical systems engineered by Aria, grounded by a decade-long shared foundation.","author":{"@id":"https://sunaria.si/#person"},"contributor":{"@id":"https://sunaria.si/#sanaz"}},{"@type":"Person","@id":"https://sunaria.si/#person","name":"Aria","url":"https://sunaria.si/","sameAs":["https://github.com/aixaria0","https://www.linkedin.com/in/ariafani"]},{"@type":"Person","@id":"https://sunaria.si/#sanaz","name":"Sanaz"},{"@type":"SoftwareSourceCode","name":"RCHAIN-COMPLIER","description":"Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.","codeRepository":"https://github.com/aixaria0/RCHAIN-COMPLIER","programmingLanguage":["TypeScript"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Sovereign Lattice","description":"Explore PBFT-style consensus with cryptographic certificates, durable state, and scoped formal artifacts.","codeRepository":"https://github.com/aixaria0/Sovereign-Lattice","programmingLanguage":["Rust","Lean 4"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Aether Runtime","description":"Keep a verifiable record of bounded execution across routing failures, restarts, and replay.","codeRepository":"https://github.com/aixaria0/aether-runtime","programmingLanguage":["Rust","C++"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Omni","description":"Test how robust an investigation is when its evidence is challenged, removed, or replayed.","codeRepository":"https://github.com/aixaria0/Omni","programmingLanguage":["TypeScript","Python"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"Nexus Quantum","description":"Research workspace for quantum error mitigation experiments (VQE, zero-noise extrapolation) with Lean 4 proof artifacts.","codeRepository":"https://github.com/aixaria0/nexus-quantum","programmingLanguage":["Lean 4","Python"],"author":{"@id":"https://sunaria.si/#person"}},{"@type":"SoftwareSourceCode","name":"VQE Analyzer","description":"Browser workbench for small-circuit variational quantum optimization: real statevector evaluation, exact-reference comparison and retained best parameters. Simulator only.","codeRepository":null,"programmingLanguage":["JavaScript","Python"],"author":{"@id":"https://sunaria.si/#person"}}]}</script>
@@ -99,6 +99,51 @@
 <article class="project" data-project="llm-security-poc" data-categories="Security|AI" data-selected="false"><div class="project-meta"><span class="project-category">Security / AI</span><span class="project-status">Research PoC</span></div><h3>LLM Security PoC</h3><p class="project-description">Forensic red-team proof-of-concept repository for testing security failure modes in dynamic model/application architectures.</p><ul class="technologies" aria-label="Technologies"><li>Python</li></ul><div class="project-proof"><span><b>3/14</b> evidence surface</span><span><b>4</b> authored commits</span></div><div class="project-links"><a href="https://github.com/aixaria0/llm-security-poc" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a><a href="https://github.com/aixaria0/llm-security-poc#readme" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a></div><details class="project-detail"><summary>Scope &amp; evidence</summary><p>Forensic red-team proof-of-concept repository for testing security failure modes in dynamic model/application architectures.</p><ul><li>PoC labels are not treated as established vulnerabilities in third-party targets without target-specific reproduction and evidence</li><li>severity language remains scoped to demonstrated conditions</li></ul><a href="https://github.com/aixaria0/llm-security-poc#readme" target="_blank" rel="noopener noreferrer">Repository evidence <span aria-hidden="true">↗</span></a></details></article></div>
       <div id="work-empty" class="empty-state" hidden><h3>No projects in this category yet.</h3><p>Explore the other domains or return to the full selection.</p><button id="reset-filter" class="button" type="button">Show all work</button></div>
       <div class="work-bottom"><p>Curated from repository documentation. Status describes scope, not a production guarantee.</p><button class="text-link" id="show-all" type="button" data-js-only hidden aria-expanded="false" aria-controls="project-list">Explore all 13 projects <span aria-hidden="true">↗</span></button></div>
+    </section>
+
+    <section class="section shell source-notes" id="source-notes" aria-labelledby="source-notes-heading" data-observed-at="2026-11-07">
+      <div class="section-heading">
+        <div><p class="eyebrow">LATEST SOURCE NOTES / 2026-11-07</p><h2 id="source-notes-heading">What changed in the repositories.</h2></div>
+        <p>Reviewed public contributions through 7 November 2026. Each entry states its merge status and evidence scope; this is not live telemetry.</p>
+      </div>
+      <div class="source-notes-grid">
+        <article class="source-note">
+          <div class="source-note-meta"><span>01 / PR #7 / #10</span><span class="source-state-merged">MERGED · RELEASE RECORD</span></div>
+          <h3>Rho Observer</h3>
+          <p>Read-only metrics and readiness in 0.3.0; the 7 Nov deployment record reports 4/4 comparable nodes at that instant, not a finality guarantee.</p>
+          <a href="https://github.com/rhovision-org/rho-observer/pull/10" target="_blank" rel="noopener noreferrer" aria-label="Read pull request: Rho Observer">Inspect source on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="source-note">
+          <div class="source-note-meta"><span>02 / PR #557</span><span class="source-state-merged">MERGED · ISOLATED EVIDENCE</span></div>
+          <h3>Rholo / Recovery</h3>
+          <p>Historical/control/candidate replay at height 3122 records the #492 differential. Isolated evidence only; no production rollout or four-validator acceptance claim.</p>
+          <a href="https://github.com/rhovision-org/rholo/pull/557" target="_blank" rel="noopener noreferrer" aria-label="Read pull request: Rholo / Recovery">Inspect source on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="source-note">
+          <div class="source-note-meta"><span>03 / PR #211</span><span class="source-state-merged">MERGED · FORMAL ASSURANCE</span></div>
+          <h3>QLF / Proof Trust</h3>
+          <p>Reviewed Lean axiom-footprint checks and Python source checks improve proof dependency auditing; physical interpretation remains a separate research boundary.</p>
+          <a href="https://github.com/rhovision-org/quantum-logical-framework/pull/211" target="_blank" rel="noopener noreferrer" aria-label="Read pull request: QLF / Proof Trust">Inspect source on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="source-note">
+          <div class="source-note-meta"><span>04 / PR #243</span><span class="source-state-merged">MERGED · PILOT KIT</span></div>
+          <h3>Quantum OS / RhoGov</h3>
+          <p>A bounded two-week governance pilot kit was merged. This records a test plan, not a claim of an operational production pilot.</p>
+          <a href="https://github.com/rhovision-org/quantum-os/pull/243" target="_blank" rel="noopener noreferrer" aria-label="Read pull request: Quantum OS / RhoGov">Inspect source on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="source-note">
+          <div class="source-note-meta"><span>05 / PR #21</span><span class="source-state-merged">MERGED · INTERFACE</span></div>
+          <h3>Rholox / Console</h3>
+          <p>Rho Observer console refresh with precision typography and an evidence-first operational interface (0.11.0).</p>
+          <a href="https://github.com/aixaria0/Rholox/pull/21" target="_blank" rel="noopener noreferrer" aria-label="Read pull request: Rholox / Console">Inspect source on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="source-note">
+          <div class="source-note-meta"><span>06 / PR #118</span><span class="source-state-open">OPEN · NOT MERGED</span></div>
+          <h3>RhoGov / Council</h3>
+          <p>Proposed council approval-option regression coverage; review remains open and must not be described as shipped.</p>
+          <a href="https://github.com/rhovision-org/rhogov/pull/118" target="_blank" rel="noopener noreferrer" aria-label="Read pull request: RhoGov / Council">Inspect source on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
     </section>
 
     <section class="section research-section" id="research" aria-labelledby="research-heading"><div class="shell">
