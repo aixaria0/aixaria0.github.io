@@ -5,309 +5,14 @@
     "fa": "فراداده و زبان‌های مخزن از API رسمی GitHub دریافت می‌شود؛ داده‌های فعالیت و گردش‌کار از snapshot رجیستری تولیدشده‌اند. دادهٔ ناموجود null می‌ماند. معیارهای روبریک شواهد نیازمند تأیید مالک‌اند."
   },
   "source": {
-    "name": "GitHub REST API and repository snapshot",
-    "query": "gh api --paginate -X GET user/repos -f affiliation=owner -f per_page=100 --slurp",
-    "contentHash": "sha256:d6b34d66fe387acf9799cb2019a5cdac6533902901df010156acbf65a047a826"
+    "name": "Authenticated linked GitHub account enumeration",
+    "query": "owner:aixaria0; 2026-11-07",
+    "contentHash": "sha256:71f896664120dccbbab2a80d7d668ce2930407b5145e7ac00961bd44e414d106"
   },
   "projects": [
     {
-      "id": "rchain-complier",
-      "name": "RCHAIN-COMPLIER",
-      "visibility": "public",
-      "kind": "original",
-      "family": "rchain-assurance",
-      "status": "active",
-      "featured": true,
-      "order": 39,
-      "description": {
-        "en": "Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.",
-        "fa": "ادعاهای مربوط به اجرای سامانه را با شواهد امضاشده، بازیابی پایدار و راستی‌آزمایی قطعی، به‌طور مستقل قابل بررسی می‌کند."
-      },
-      "scope": {
-        "summary": {
-          "en": "Two non-submitter identities reproduce a task-bound claim against reviewer-supplied trust pins. Fixed membership and trusted local execution remain explicit boundaries.",
-          "fa": "دو فرایند مستقل از ارسال‌کننده، ادعای وابسته به یک وظیفه را با قیود اعتمادِ تعیین‌شده از سوی بازبین بازتولید می‌کنند. اعضای ثابت و اجرای محلیِ مورد اعتماد همچنان محدودیت‌های صریح سامانه‌اند."
-        },
-        "limits": {
-          "en": [
-            "does not treat a passing harness as a protocol safety theorem",
-            "formal-verification claims require separate formal artifacts",
-            "live-network conclusions must be tied to captured runtime evidence"
-          ],
-          "fa": [
-            "پاس‌شدن آزمون‌های محیط، اثبات ایمنی کل پروتکل نیست.",
-            "ادعای اثبات صوری به آثار صوری جداگانه نیاز دارد.",
-            "نتیجه‌گیری دربارهٔ شبکهٔ زنده باید به دادهٔ ثبت‌شده از همان اجرا متکی باشد."
-          ]
-        }
-      },
-      "stack": [
-        "TypeScript",
-        "Node.js",
-        "Ed25519",
-        "SQLite WAL"
-      ],
-      "languages": [
-        "TypeScript",
-        "Python",
-        "JavaScript",
-        "HTML",
-        "Rust",
-        "CSS",
-        "Shell"
-      ],
-      "links": {
-        "source": "https://github.com/aixaria0/RCHAIN-COMPLIER",
-        "live": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
-        "docs": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/docs/ASSURANCE_ENGINE.md",
-        "evidence": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/README.md"
-      },
-      "metrics": {
-        "commits": 446,
-        "prs": 38,
-        "mergedPrs": 20,
-        "ciRuns": 20,
-        "evidence": {
-          "score": 10,
-          "criteria": [
-            {
-              "id": "criterion-01",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-02",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-03",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-04",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-05",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-06",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-07",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-08",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-09",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-10",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-11",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-12",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-13",
-              "met": null,
-              "evidenceUrl": null
-            },
-            {
-              "id": "criterion-14",
-              "met": null,
-              "evidenceUrl": null
-            }
-          ]
-        }
-      },
-      "topics": [
-        "deterministic-replay",
-        "evidence",
-        "provenance",
-        "rchain",
-        "verification"
-      ],
-      "pushed_at": "2026-10-15T21:54:44Z",
-      "archived": false
-    },
-    {
-      "id": "chimera-one",
-      "name": "CHIMERA-ONE",
-      "visibility": "public",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "Coordinated execution, pinned capabilities, and evidence-bound verification.",
-        "fa": "هماهنگی اجرای محدود، اتصال قابلیت‌ها به نسخهٔ مشخص و راستی‌آزمایی مبتنی بر شواهد."
-      },
-      "links": {
-        "source": "https://github.com/aixaria0/CHIMERA-ONE",
-        "live": "/CHIMERA-ONE/",
-        "docs": null,
-        "evidence": null
-      },
-      "topics": [
-        "capabilities",
-        "distributed-systems",
-        "orchestration",
-        "verification"
-      ],
-      "pushed_at": "2026-10-25T22:33:04Z",
-      "archived": false
-    },
-    {
-      "id": "ritualgraph",
-      "name": "RitualGraph",
-      "visibility": "public",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "Executable threat graphs, deterministic simulation, and CI-checkable security invariants.",
-        "fa": "گراف‌های تهدید اجرایی، شبیه‌سازی قطعی و ناورداهای امنیتی قابل آزمون در فرایند ساخت."
-      },
-      "links": {
-        "source": "https://github.com/aixaria0/RitualGraph",
-        "live": "/RitualGraph/",
-        "docs": null,
-        "evidence": null
-      },
-      "topics": [
-        "graphs",
-        "python",
-        "security-invariants",
-        "threat-modeling",
-        "verification"
-      ],
-      "pushed_at": "2026-10-05T01:46:35Z",
-      "archived": false
-    },
-    {
-      "id": "chimera-ag",
-      "name": "Chimera-AG",
-      "visibility": "public",
-      "family": "chimera-evidence-runtime",
-      "status": "active",
-      "description": {
-        "en": "Self-hosted orchestration with measured routing and reproducible verification.",
-        "fa": "هماهنگ‌سازی خودمیزبان با مسیریابی قابل اندازه‌گیری و راستی‌آزمایی بازتولیدپذیر."
-      },
-      "links": {
-        "source": "https://github.com/aixaria0/Chimera-AG",
-        "live": "/Chimera-AG/",
-        "docs": null,
-        "evidence": null
-      },
-      "topics": [
-        "orchestration",
-        "python",
-        "self-hosted",
-        "verification"
-      ],
-      "pushed_at": "2026-10-08T23:08:15Z",
-      "archived": false
-    },
-    {
-      "id": "aetherforge",
-      "name": "Aether Forge",
-      "visibility": "public",
-      "family": "quantum-formal",
-      "status": "active-research",
-      "description": {
-        "en": "Interactive quantum-gravity research laboratory with explicit approximation and synthetic-data boundaries.",
-        "fa": "آزمایشگاه تعاملی پژوهش گرانش کوانتومی با مرزبندی روشنِ تقریب‌ها و داده‌های ساختگی."
-      },
-      "links": {
-        "source": "https://github.com/aixaria0/aetherforge",
-        "live": "/aetherforge/",
-        "docs": null,
-        "evidence": null
-      },
-      "topics": [
-        "quantum-gravity",
-        "research",
-        "simulation",
-        "visualization"
-      ],
-      "pushed_at": "2026-10-25T22:34:01Z",
-      "archived": false
-    },
-    {
-      "id": "personal-llm-sanctum",
-      "name": "Personal LLM Sanctum",
-      "visibility": "public",
-      "family": "intelligence-security",
-      "status": "research",
-      "description": {
-        "en": "Local-first Rust runtime with recorded runs, routing, memory and replay.",
-        "fa": "محیط اجرای محلی با زبان راست، همراه با ثبت اجراها، مسیریابی، حافظه و بازپخش."
-      },
-      "links": {
-        "source": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
-        "live": null,
-        "docs": null,
-        "evidence": null
-      },
-      "topics": [
-        "local-first",
-        "observability",
-        "orchestration",
-        "rust",
-        "sqlite"
-      ],
-      "pushed_at": "2026-10-25T22:33:07Z",
-      "archived": false
-    },
-    {
-      "id": "shahnameh-lite",
-      "name": "Shahnameh Lite",
-      "visibility": "public",
-      "family": "cultural-consumer",
-      "status": "legacy",
-      "description": {
-        "en": "Persian-first storytelling and reading guide with offline search and browser narration.",
-        "fa": "راهنمای فارسیِ روایت و خوانش شاهنامه با جست‌وجوی آفلاین و روایت صوتی مرورگر."
-      },
-      "links": {
-        "source": "https://github.com/aixaria0/Shahnameh-lite",
-        "live": "/shahnameh-lite/",
-        "docs": null,
-        "evidence": null
-      },
-      "topics": [
-        "nextjs",
-        "persian",
-        "reading",
-        "shahnameh"
-      ],
-      "pushed_at": "2026-10-25T22:34:04Z",
-      "archived": false
-    },
-    {
       "id": "aether-runtime",
-      "name": "Aether Runtime",
+      "name": "aether-runtime",
       "visibility": "public",
       "kind": "original",
       "family": "chimera-evidence-runtime",
@@ -450,7 +155,7 @@
     },
     {
       "id": "aether-runtime-os",
-      "name": "Aether Runtime OS",
+      "name": "Aether-Runtime-OS",
       "visibility": "public",
       "kind": "original",
       "family": "chimera-evidence-runtime",
@@ -583,6 +288,31 @@
       "archived": false
     },
     {
+      "id": "aetherforge",
+      "name": "aetherforge",
+      "visibility": "public",
+      "family": "quantum-formal",
+      "status": "active-research",
+      "description": {
+        "en": "Interactive quantum-gravity research laboratory with explicit approximation and synthetic-data boundaries.",
+        "fa": "آزمایشگاه تعاملی پژوهش گرانش کوانتومی با مرزبندی روشنِ تقریب‌ها و داده‌های ساختگی."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/aetherforge",
+        "live": "/aetherforge/",
+        "docs": null,
+        "evidence": null
+      },
+      "topics": [
+        "quantum-gravity",
+        "research",
+        "simulation",
+        "visualization"
+      ],
+      "pushed_at": "2026-10-25T22:34:01Z",
+      "archived": false
+    },
+    {
       "id": "aix",
       "name": "Aix",
       "visibility": "public",
@@ -628,7 +358,7 @@
         "portfolio",
         "static-site"
       ],
-      "pushed_at": "2026-10-25T23:54:31Z",
+      "pushed_at": "2026-11-07T19:26:52Z",
       "archived": false
     },
     {
@@ -658,7 +388,7 @@
     },
     {
       "id": "aria-lab",
-      "name": "ARIA Lab",
+      "name": "Aria-Lab",
       "visibility": "public",
       "family": "research-operations",
       "status": "research",
@@ -707,7 +437,7 @@
     },
     {
       "id": "ariatrading-github-io",
-      "name": "AriaTrading Showcase",
+      "name": "AriaTrading.github.io",
       "visibility": "public",
       "kind": "original",
       "family": "quantitative-systems",
@@ -953,7 +683,7 @@
     },
     {
       "id": "bookofkings",
-      "name": "Book of Kings",
+      "name": "Bookofkings",
       "visibility": "public",
       "kind": "original",
       "family": "cultural-consumer",
@@ -1087,6 +817,31 @@
       "archived": false
     },
     {
+      "id": "chimera-ag",
+      "name": "Chimera-AG",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "Self-hosted orchestration with measured routing and reproducible verification.",
+        "fa": "هماهنگ‌سازی خودمیزبان با مسیریابی قابل اندازه‌گیری و راستی‌آزمایی بازتولیدپذیر."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/Chimera-AG",
+        "live": "/Chimera-AG/",
+        "docs": null,
+        "evidence": null
+      },
+      "topics": [
+        "orchestration",
+        "python",
+        "self-hosted",
+        "verification"
+      ],
+      "pushed_at": "2026-10-08T23:08:15Z",
+      "archived": false
+    },
+    {
       "id": "chimera-command-lab",
       "name": "chimera-command-lab",
       "visibility": "public",
@@ -1189,6 +944,31 @@
       "archived": false
     },
     {
+      "id": "chimera-one",
+      "name": "CHIMERA-ONE",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "status": "active",
+      "description": {
+        "en": "Coordinated execution, pinned capabilities, and evidence-bound verification.",
+        "fa": "هماهنگی اجرای محدود، اتصال قابلیت‌ها به نسخهٔ مشخص و راستی‌آزمایی مبتنی بر شواهد."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/CHIMERA-ONE",
+        "live": "/CHIMERA-ONE/",
+        "docs": null,
+        "evidence": null
+      },
+      "topics": [
+        "capabilities",
+        "distributed-systems",
+        "orchestration",
+        "verification"
+      ],
+      "pushed_at": "2026-10-26T18:08:09Z",
+      "archived": false
+    },
+    {
       "id": "chimera-redteam-web",
       "name": "chimera-redteam-web",
       "visibility": "public",
@@ -1210,7 +990,7 @@
     },
     {
       "id": "empire-pwa",
-      "name": "Empire Chat PWA",
+      "name": "empire-pwa",
       "visibility": "public",
       "family": "intelligence-security",
       "status": "legacy",
@@ -1305,7 +1085,7 @@
     },
     {
       "id": "forgeos",
-      "name": "ForgeOS",
+      "name": "forgeos",
       "visibility": "public",
       "kind": "original",
       "family": "legacy-scratch",
@@ -1523,7 +1303,7 @@
     },
     {
       "id": "llm-security-poc",
-      "name": "LLM Security PoC",
+      "name": "llm-security-poc",
       "visibility": "public",
       "kind": "original",
       "family": "intelligence-security",
@@ -1654,7 +1434,7 @@
     },
     {
       "id": "my-little-baddies",
-      "name": "My Little Baddies",
+      "name": "My-little-baddies-",
       "visibility": "public",
       "kind": "original",
       "family": "cultural-consumer",
@@ -1778,7 +1558,7 @@
     },
     {
       "id": "nexus-quantum",
-      "name": "Nexus Quantum",
+      "name": "nexus-quantum",
       "visibility": "public",
       "kind": "original",
       "family": "quantum-formal",
@@ -2055,7 +1835,7 @@
         "security-research",
         "typescript"
       ],
-      "pushed_at": "2026-10-21T14:55:56Z",
+      "pushed_at": "2026-11-03T09:50:46Z",
       "archived": false
     },
     {
@@ -2085,7 +1865,7 @@
     },
     {
       "id": "osint",
-      "name": "OmniTrace / OSint",
+      "name": "OSint",
       "visibility": "public",
       "kind": "duplicate",
       "family": "intelligence-security",
@@ -2212,6 +1992,32 @@
       "archived": false
     },
     {
+      "id": "personal-llm-sanctum",
+      "name": "PERSONAL-LLM-SANCTUM",
+      "visibility": "public",
+      "family": "intelligence-security",
+      "status": "research",
+      "description": {
+        "en": "Local-first Rust runtime with recorded runs, routing, memory and replay.",
+        "fa": "محیط اجرای محلی با زبان راست، همراه با ثبت اجراها، مسیریابی، حافظه و بازپخش."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/PERSONAL-LLM-SANCTUM",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "topics": [
+        "local-first",
+        "observability",
+        "orchestration",
+        "rust",
+        "sqlite"
+      ],
+      "pushed_at": "2026-10-25T22:33:07Z",
+      "archived": false
+    },
+    {
       "id": "qlf",
       "name": "QLF",
       "visibility": "public",
@@ -2264,7 +2070,7 @@
     },
     {
       "id": "quantum001",
-      "name": "Aether",
+      "name": "Quantum001",
       "visibility": "public",
       "family": "chimera-evidence-runtime",
       "status": "research",
@@ -2288,8 +2094,151 @@
       "archived": false
     },
     {
+      "id": "rchain-complier",
+      "name": "RCHAIN-COMPLIER",
+      "visibility": "public",
+      "kind": "original",
+      "family": "rchain-assurance",
+      "status": "active",
+      "featured": true,
+      "order": 39,
+      "description": {
+        "en": "Make execution claims independently checkable with signed evidence, durable recovery, and deterministic verification.",
+        "fa": "ادعاهای مربوط به اجرای سامانه را با شواهد امضاشده، بازیابی پایدار و راستی‌آزمایی قطعی، به‌طور مستقل قابل بررسی می‌کند."
+      },
+      "scope": {
+        "summary": {
+          "en": "Two non-submitter identities reproduce a task-bound claim against reviewer-supplied trust pins. Fixed membership and trusted local execution remain explicit boundaries.",
+          "fa": "دو فرایند مستقل از ارسال‌کننده، ادعای وابسته به یک وظیفه را با قیود اعتمادِ تعیین‌شده از سوی بازبین بازتولید می‌کنند. اعضای ثابت و اجرای محلیِ مورد اعتماد همچنان محدودیت‌های صریح سامانه‌اند."
+        },
+        "limits": {
+          "en": [
+            "does not treat a passing harness as a protocol safety theorem",
+            "formal-verification claims require separate formal artifacts",
+            "live-network conclusions must be tied to captured runtime evidence"
+          ],
+          "fa": [
+            "پاس‌شدن آزمون‌های محیط، اثبات ایمنی کل پروتکل نیست.",
+            "ادعای اثبات صوری به آثار صوری جداگانه نیاز دارد.",
+            "نتیجه‌گیری دربارهٔ شبکهٔ زنده باید به دادهٔ ثبت‌شده از همان اجرا متکی باشد."
+          ]
+        }
+      },
+      "stack": [
+        "TypeScript",
+        "Node.js",
+        "Ed25519",
+        "SQLite WAL"
+      ],
+      "languages": [
+        "TypeScript",
+        "Python",
+        "JavaScript",
+        "HTML",
+        "Rust",
+        "CSS",
+        "Shell"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/RCHAIN-COMPLIER",
+        "live": "https://aixaria0.github.io/RCHAIN-COMPLIER/",
+        "docs": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/docs/ASSURANCE_ENGINE.md",
+        "evidence": "https://github.com/aixaria0/RCHAIN-COMPLIER/blob/main/README.md"
+      },
+      "metrics": {
+        "commits": 446,
+        "prs": 38,
+        "mergedPrs": 20,
+        "ciRuns": 20,
+        "evidence": {
+          "score": 10,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      },
+      "topics": [
+        "deterministic-replay",
+        "evidence",
+        "provenance",
+        "rchain",
+        "verification"
+      ],
+      "pushed_at": "2026-10-15T21:54:44Z",
+      "archived": false
+    },
+    {
       "id": "rchain-rust",
-      "name": "rchain-rust fork",
+      "name": "rchain-rust",
       "visibility": "public",
       "kind": "fork",
       "family": "rchain-assurance",
@@ -2414,12 +2363,12 @@
         "rholang",
         "rust"
       ],
-      "pushed_at": "2026-10-25T08:58:07Z",
+      "pushed_at": "2026-11-07T14:52:39Z",
       "archived": false
     },
     {
       "id": "rchain-sentinel",
-      "name": "RChain Sentinel",
+      "name": "rchain-sentinel",
       "visibility": "public",
       "kind": "original",
       "family": "rchain-assurance",
@@ -2565,6 +2514,130 @@
       "archived": false
     },
     {
+      "id": "rholo-review",
+      "name": "rholo-review",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "status": "unreviewed",
+      "featured": false,
+      "order": 1040,
+      "description": {
+        "en": "RHOLO repository copy",
+        "fa": "مخزن عمومی گیت‌هاب؛ ادعاهای فنی جزئی هنوز برای انتشار بررسی نشده‌اند."
+      },
+      "scope": {
+        "summary": {
+          "en": "RHOLO repository copy",
+          "fa": "مخزن عمومی گیت‌هاب؛ ادعاهای فنی جزئی هنوز برای انتشار بررسی نشده‌اند."
+        },
+        "limits": {
+          "en": [
+            "No production, CI or proof assurance implied by inclusion."
+          ],
+          "fa": [
+            "ثبت در فهرست به معنای تأیید تولیدی، CI یا اثبات نیست."
+          ]
+        }
+      },
+      "stack": [
+        "Rust"
+      ],
+      "languages": [
+        "Rust"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/rholo-review",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": null,
+        "prs": null,
+        "mergedPrs": null,
+        "ciRuns": null,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      },
+      "topics": [],
+      "pushed_at": "2026-11-01T14:24:13Z",
+      "archived": false
+    },
+    {
       "id": "rholox",
       "name": "Rholox",
       "visibility": "public",
@@ -2706,7 +2779,33 @@
         "testnet",
         "typescript"
       ],
-      "pushed_at": "2026-10-23T22:42:34Z",
+      "pushed_at": "2026-11-06T23:23:29Z",
+      "archived": false
+    },
+    {
+      "id": "ritualgraph",
+      "name": "RitualGraph",
+      "visibility": "public",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "Executable threat graphs, deterministic simulation, and CI-checkable security invariants.",
+        "fa": "گراف‌های تهدید اجرایی، شبیه‌سازی قطعی و ناورداهای امنیتی قابل آزمون در فرایند ساخت."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/RitualGraph",
+        "live": "/RitualGraph/",
+        "docs": null,
+        "evidence": null
+      },
+      "topics": [
+        "graphs",
+        "python",
+        "security-invariants",
+        "threat-modeling",
+        "verification"
+      ],
+      "pushed_at": "2026-10-05T01:46:35Z",
       "archived": false
     },
     {
@@ -2876,8 +2975,33 @@
       "archived": false
     },
     {
+      "id": "shahnameh-lite",
+      "name": "Shahnameh-lite",
+      "visibility": "public",
+      "family": "cultural-consumer",
+      "status": "legacy",
+      "description": {
+        "en": "Persian-first storytelling and reading guide with offline search and browser narration.",
+        "fa": "راهنمای فارسیِ روایت و خوانش شاهنامه با جست‌وجوی آفلاین و روایت صوتی مرورگر."
+      },
+      "links": {
+        "source": "https://github.com/aixaria0/Shahnameh-lite",
+        "live": "/shahnameh-lite/",
+        "docs": null,
+        "evidence": null
+      },
+      "topics": [
+        "nextjs",
+        "persian",
+        "reading",
+        "shahnameh"
+      ],
+      "pushed_at": "2026-10-25T22:34:04Z",
+      "archived": false
+    },
+    {
       "id": "shahnamehresonance",
-      "name": "Shahnameh Resonance",
+      "name": "Shahnamehresonance-",
       "visibility": "public",
       "kind": "duplicate",
       "family": "cultural-consumer",
@@ -3002,7 +3126,7 @@
     },
     {
       "id": "sovereign-lattice",
-      "name": "Sovereign Lattice",
+      "name": "Sovereign-Lattice",
       "visibility": "public",
       "kind": "original",
       "family": "quantum-formal",
@@ -3136,12 +3260,12 @@
         "formal-methods",
         "rust"
       ],
-      "pushed_at": "2026-10-14T01:45:23Z",
+      "pushed_at": "2026-11-06T16:33:26Z",
       "archived": false
     },
     {
       "id": "strategic-intelligence-lattice",
-      "name": "Strategic Intelligence Lattice",
+      "name": "strategic-intelligence-lattice",
       "visibility": "public",
       "kind": "original",
       "family": "research-operations",
@@ -3276,7 +3400,7 @@
     },
     {
       "id": "thebookofkings",
-      "name": "The Book of Kings",
+      "name": "Thebookofkings",
       "visibility": "public",
       "kind": "duplicate",
       "family": "cultural-consumer",
@@ -3397,7 +3521,7 @@
     },
     {
       "id": "theshahnameh",
-      "name": "The Shahnameh",
+      "name": "Theshahnameh",
       "visibility": "public",
       "kind": "duplicate",
       "family": "cultural-consumer",
@@ -3542,7 +3666,7 @@
     },
     {
       "id": "vqe-analyzer",
-      "name": "VQE Analyzer",
+      "name": "vqe-analyzer",
       "visibility": "public",
       "kind": "original",
       "family": "quantum-formal",
@@ -3707,6 +3831,15 @@
   ],
   "privateProjects": [
     {
+      "name": "Undisclosed project 01",
+      "family": "pending-classification",
+      "status": "private",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
+    },
+    {
       "name": "Aix Registry",
       "family": "registry-meta",
       "status": "active",
@@ -3734,21 +3867,21 @@
       }
     },
     {
-      "name": "CHIMERA RChain Staking Audit",
-      "family": "chimera-evidence-runtime",
-      "status": "research",
-      "description": {
-        "en": "A domain-specific evidence-first audit pack for RChain staking.",
-        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
-      }
-    },
-    {
       "name": "CHIMERA-OMEGA",
       "family": "chimera-evidence-runtime",
       "status": "active",
       "description": {
         "en": "An evidence kernel for claims accompanied by inspectable data.",
         "fa": "هستهٔ شواهدی که ادعاهایش همراه با دادهٔ قابل بررسی ارائه می‌شوند."
+      }
+    },
+    {
+      "name": "CHIMERA RChain Staking Audit",
+      "family": "chimera-evidence-runtime",
+      "status": "research",
+      "description": {
+        "en": "A domain-specific evidence-first audit pack for RChain staking.",
+        "fa": "بستهٔ بررسی سپرده‌گذاری آرچین بر پایهٔ شواهد و متناسب با همین حوزه."
       }
     },
     {
@@ -3815,12 +3948,21 @@
       }
     },
     {
-      "name": "smm",
-      "family": "legacy-scratch",
-      "status": "pending",
+      "name": "Undisclosed project 14",
+      "family": "pending-classification",
+      "status": "private",
       "description": {
-        "en": "A stateful, model-agnostic runtime combining local memory, independent views, verification, and a hash-chained execution ledger.",
-        "fa": "محیط اجراییِ حالت‌مند و مستقل از مدل که حافظهٔ محلی، دیدگاه‌های مستقل، راستی‌آزمایی و دفتر ثبت اجرای زنجیره‌ای از هش‌ها را ترکیب می‌کند."
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
+    },
+    {
+      "name": "Undisclosed project 15",
+      "family": "legacy-scratch",
+      "status": "private",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
       }
     },
     {
@@ -3860,5 +4002,5 @@
       }
     }
   ],
-  "inventoryObservedAt": "2026-10-26"
+  "inventoryObservedAt": "2026-11-07"
 }
