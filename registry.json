@@ -4000,7 +4000,16 @@
         "en": "Private project; source remains restricted.",
         "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
+    },
+    {
+      "name": "Undisclosed project 20",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
     }
   ],
-  "inventoryObservedAt": "2026-11-07"
+  "inventoryObservedAt": "2026-11-10"
 }

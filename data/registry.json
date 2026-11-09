@@ -5,7 +5,7 @@
   "owner": "aixaria0",
   "principle": "Systems that make claims carry evidence.",
   "summary": {
-    "tracked_repositories": 73,
+    "tracked_repositories": 74,
     "public_projects": 19,
     "projects_with_ci": 41,
     "projects_with_tests": 32,
@@ -16,17 +16,17 @@
     "external_reviewed_prs": 16
   },
   "engineering": {
-    "owned_repositories": 73,
+    "owned_repositories": 74,
     "distinct_codebases": null,
     "public_repositories": 54,
-    "private_repositories": 19,
+    "private_repositories": 20,
     "live_sites": 12,
     "authored_commits": 1899,
     "default_branch_commits": 17835,
-    "authored_prs": 464,
-    "merged_prs": 357,
-    "reviews": 142,
-    "authored_issues": 40,
+    "authored_prs": 468,
+    "merged_prs": 360,
+    "reviews": 148,
+    "authored_issues": 43,
     "checked_ci_workflows": 91,
     "registered_workflows": 187,
     "sampled_actions_runs": 513,
@@ -74,7 +74,7 @@
         "bytes": 294385
       }
     ],
-    "open_prs": 57,
+    "open_prs": 58,
     "closed_unmerged_prs": 50,
     "historical_deep_metrics_observed_at": "2026-10-13"
   },
@@ -223,7 +223,7 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-11-07T19:26:52Z",
+      "pushed_at": "2026-11-07T19:52:36Z",
       "topics": [
         "github-pages",
         "portfolio",
@@ -532,7 +532,7 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-26T18:08:09Z",
+      "pushed_at": "2026-11-09T18:07:54Z",
       "topics": [
         "capabilities",
         "distributed-systems",
@@ -1145,7 +1145,7 @@
       "tests": 301,
       "formal_artifacts": 49,
       "evidence_artifacts": 18,
-      "pushed_at": "2026-11-07T14:52:39Z",
+      "pushed_at": "2026-11-07T20:13:17Z",
       "topics": [
         "blockchain",
         "consensus",
@@ -3270,6 +3270,15 @@
         "en": "Private project; source remains restricted.",
         "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
       }
+    },
+    {
+      "name": "Undisclosed project 20",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
     }
   ],
   "family_pages": [
@@ -4441,6 +4450,15 @@
       "description": {
         "en": "Private project; source remains restricted.",
         "fa": "پروژهٔ خصوصی؛ کد آن در دسترس عموم نیست."
+      }
+    },
+    {
+      "name": "Undisclosed project 20",
+      "family": "pending-classification",
+      "status": "pending",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
       }
     }
   ],
@@ -5824,6 +5842,19 @@
       "repository_url": null,
       "live_url": null,
       "featured": false
+    },
+    {
+      "id": "private-20",
+      "name": "Undisclosed project 20",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "restricted",
+      "status": "pending",
+      "evidence_grade": "not-published",
+      "note": "Private repository; source and contents are not published.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
     }
   ],
   "contributions": [
@@ -6150,8 +6181,8 @@
       "prs": []
     }
   ],
-  "inventory_observed_at": "2026-11-07",
-  "inventory_note": "Owner repository identity, visibility and global PR/issue search metrics observed 2026-11-07. Deep source-level CI, commits and evidence indicators retain their earlier collection boundary.",
+  "inventory_observed_at": "2026-11-10",
+  "inventory_note": "Owned repository visibility and account-wide PR, review and issue totals observed on 10 November 2026. Project-level technical metrics retain their original observation dates.",
   "public_directory": [
     {
       "name": "aether-runtime",
@@ -6185,7 +6216,7 @@
       "name": "aixaria0.github.io",
       "url": "https://github.com/aixaria0/aixaria0.github.io",
       "language": "HTML",
-      "pushed_at": "2026-11-07T19:26:52Z",
+      "pushed_at": "2026-11-07T19:52:36Z",
       "description": "AIX — Engineering Intelligence Registry"
     },
     {
@@ -6269,7 +6300,7 @@
       "name": "CHIMERA-ONE",
       "url": "https://github.com/aixaria0/CHIMERA-ONE",
       "language": "Python",
-      "pushed_at": "2026-10-26T18:08:09Z",
+      "pushed_at": "2026-11-09T18:07:54Z",
       "description": "Control plane composing versioned CHIMERA capabilities while preserving component trust and evidence boundaries."
     },
     {
@@ -6423,7 +6454,7 @@
       "name": "rchain-rust",
       "url": "https://github.com/aixaria0/rchain-rust",
       "language": "Rust",
-      "pushed_at": "2026-11-07T14:52:39Z",
+      "pushed_at": "2026-11-07T20:13:17Z",
       "description": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution."
     },
     {
@@ -6533,7 +6564,7 @@
     }
   ],
   "publication": {
-    "edition": "2026-11-07-r1",
+    "edition": "2026-11-10-r1",
     "base_commit": "caec4b65290d08b5e3719b8156a0bb7341eb449a",
     "public_repository_count": 54,
     "project_count": 19,
@@ -6541,6 +6572,7 @@
       "en",
       "fa"
     ],
-    "layout": "original-hero-with-lower-artwork"
-  }
+    "layout": "logo-led-editorial-grid"
+  },
+  "account_activity_observed_at": "2026-11-10"
 }
