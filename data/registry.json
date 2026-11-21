@@ -5,7 +5,7 @@
   "owner": "aixaria0",
   "principle": "Systems that make claims carry evidence.",
   "summary": {
-    "tracked_repositories": 74,
+    "tracked_repositories": 77,
     "public_projects": 19,
     "projects_with_ci": 41,
     "projects_with_tests": 32,
@@ -16,17 +16,17 @@
     "external_reviewed_prs": 16
   },
   "engineering": {
-    "owned_repositories": 74,
+    "owned_repositories": 77,
     "distinct_codebases": null,
-    "public_repositories": 54,
-    "private_repositories": 20,
+    "public_repositories": 55,
+    "private_repositories": 22,
     "live_sites": 12,
     "authored_commits": 1899,
     "default_branch_commits": 17835,
-    "authored_prs": 468,
-    "merged_prs": 360,
-    "reviews": 148,
-    "authored_issues": 43,
+    "authored_prs": 518,
+    "merged_prs": 376,
+    "reviews": 188,
+    "authored_issues": 44,
     "checked_ci_workflows": 91,
     "registered_workflows": 187,
     "sampled_actions_runs": 513,
@@ -74,8 +74,8 @@
         "bytes": 294385
       }
     ],
-    "open_prs": 58,
-    "closed_unmerged_prs": 50,
+    "open_prs": 84,
+    "closed_unmerged_prs": 58,
     "historical_deep_metrics_observed_at": "2026-10-13"
   },
   "rchain_impact": {
@@ -223,7 +223,7 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-11-07T19:52:36Z",
+      "pushed_at": "2026-11-09T21:36:18Z",
       "topics": [
         "github-pages",
         "portfolio",
@@ -532,7 +532,7 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-11-09T18:07:54Z",
+      "pushed_at": "2026-11-16T18:08:08Z",
       "topics": [
         "capabilities",
         "distributed-systems",
@@ -1145,7 +1145,7 @@
       "tests": 301,
       "formal_artifacts": 49,
       "evidence_artifacts": 18,
-      "pushed_at": "2026-11-07T20:13:17Z",
+      "pushed_at": "2026-11-14T06:14:01Z",
       "topics": [
         "blockchain",
         "consensus",
@@ -1234,7 +1234,7 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-11-06T23:23:29Z",
+      "pushed_at": "2026-11-15T20:49:54Z",
       "topics": [
         "dapp",
         "observability",
@@ -1242,6 +1242,25 @@
         "testnet",
         "typescript"
       ],
+      "archived": false
+    },
+    {
+      "id": "rholox-web",
+      "name": "rholox-web",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "unreviewed",
+      "evidence_grade": "unreviewed",
+      "description": "Independent free static hosting for rholox.com, built from aixaria0/Rholox with read-only evidence-first provenance",
+      "repository_url": "https://github.com/aixaria0/rholox-web",
+      "live_url": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-11-15T21:34:39Z",
+      "topics": [],
       "archived": false
     },
     {
@@ -1828,7 +1847,7 @@
       "tests": 301,
       "formal_artifacts": 49,
       "evidence_artifacts": 18,
-      "pushed_at": "2026-11-07T14:52:39Z",
+      "pushed_at": "2026-11-14T06:14:01Z",
       "topics": [
         "blockchain",
         "consensus",
@@ -1898,7 +1917,7 @@
       "tests": 0,
       "formal_artifacts": 0,
       "evidence_artifacts": 5,
-      "pushed_at": "2026-11-06T23:23:29Z",
+      "pushed_at": "2026-11-15T20:49:54Z",
       "topics": [
         "dapp",
         "observability",
@@ -2139,7 +2158,7 @@
       "languages": [
         "HTML"
       ],
-      "pushed_at": "2026-11-07T19:26:52Z",
+      "pushed_at": "2026-11-09T21:36:18Z",
       "topics": [
         "github-pages",
         "portfolio",
@@ -2414,7 +2433,7 @@
       "languages": [
         "Python"
       ],
-      "pushed_at": "2026-10-26T18:08:09Z",
+      "pushed_at": "2026-11-16T18:08:08Z",
       "topics": [
         "capabilities",
         "distributed-systems",
@@ -2880,6 +2899,25 @@
       "archived": false
     },
     {
+      "id": "rholox-web",
+      "name": "rholox-web",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "unreviewed",
+      "evidence_grade": "unreviewed",
+      "description": "Independent free static hosting for rholox.com, built from aixaria0/Rholox with read-only evidence-first provenance",
+      "repository_url": "https://github.com/aixaria0/rholox-web",
+      "live_url": null,
+      "languages": [
+        "JavaScript"
+      ],
+      "pushed_at": "2026-11-15T21:34:39Z",
+      "topics": [],
+      "archived": false
+    },
+    {
       "id": "ritualgraph",
       "name": "RitualGraph",
       "visibility": "public",
@@ -3098,7 +3136,7 @@
       "archived": false
     }
   ],
-  "archive_count": 41,
+  "archive_count": 42,
   "private_catalog": [
     {
       "name": "Undisclosed project 01",
@@ -3275,6 +3313,24 @@
       "name": "Undisclosed project 20",
       "family": "pending-classification",
       "status": "pending",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
+    },
+    {
+      "name": "Undisclosed project 21",
+      "family": "pending-classification",
+      "status": "private",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
+    },
+    {
+      "name": "Undisclosed project 22",
+      "family": "pending-classification",
+      "status": "private",
       "description": {
         "en": "Private repository; source and contents are not published.",
         "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
@@ -4460,6 +4516,24 @@
         "en": "Private repository; source and contents are not published.",
         "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
       }
+    },
+    {
+      "name": "Undisclosed project 21",
+      "family": "pending-classification",
+      "status": "private",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
+    },
+    {
+      "name": "Undisclosed project 22",
+      "family": "pending-classification",
+      "status": "private",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
     }
   ],
   "featured_private_names": [
@@ -4567,7 +4641,7 @@
       "repository_url": "https://github.com/aixaria0/aixaria0.github.io",
       "live_url": null,
       "featured": false,
-      "pushed_at": "2026-11-07T19:26:52Z",
+      "pushed_at": "2026-11-09T21:36:18Z",
       "topics": [
         "github-pages",
         "portfolio",
@@ -4819,7 +4893,7 @@
       "repository_url": "https://github.com/aixaria0/CHIMERA-ONE",
       "live_url": "/CHIMERA-ONE/",
       "featured": false,
-      "pushed_at": "2026-10-26T18:08:09Z",
+      "pushed_at": "2026-11-16T18:08:08Z",
       "topics": [
         "capabilities",
         "distributed-systems",
@@ -5276,7 +5350,7 @@
       "repository_url": "https://github.com/aixaria0/rchain-rust",
       "live_url": null,
       "featured": true,
-      "pushed_at": "2026-11-07T14:52:39Z",
+      "pushed_at": "2026-11-14T06:14:01Z",
       "topics": [
         "blockchain",
         "consensus",
@@ -5336,7 +5410,7 @@
       "repository_url": "https://github.com/aixaria0/Rholox",
       "live_url": "https://rholox.com/",
       "featured": true,
-      "pushed_at": "2026-11-06T23:23:29Z",
+      "pushed_at": "2026-11-15T20:49:54Z",
       "topics": [
         "dapp",
         "observability",
@@ -5344,6 +5418,22 @@
         "testnet",
         "typescript"
       ],
+      "archived": false
+    },
+    {
+      "id": "rholox-web",
+      "name": "rholox-web",
+      "visibility": "public",
+      "family": "pending-classification",
+      "relation": "pending-classification",
+      "status": "unreviewed",
+      "evidence_grade": "unreviewed",
+      "note": "Independent free static hosting for rholox.com, built from aixaria0/Rholox with read-only evidence-first provenance",
+      "repository_url": "https://github.com/aixaria0/rholox-web",
+      "live_url": null,
+      "featured": false,
+      "pushed_at": "2026-11-15T21:34:39Z",
+      "topics": [],
       "archived": false
     },
     {
@@ -5855,6 +5945,32 @@
       "repository_url": null,
       "live_url": null,
       "featured": false
+    },
+    {
+      "id": "private-21",
+      "name": "Undisclosed project 21",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "restricted",
+      "status": "private",
+      "evidence_grade": "not-published",
+      "note": "Private repository; source and contents are not published.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "private-22",
+      "name": "Undisclosed project 22",
+      "visibility": "private",
+      "family": "pending-classification",
+      "relation": "restricted",
+      "status": "private",
+      "evidence_grade": "not-published",
+      "note": "Private repository; source and contents are not published.",
+      "repository_url": null,
+      "live_url": null,
+      "featured": false
     }
   ],
   "contributions": [
@@ -6181,8 +6297,8 @@
       "prs": []
     }
   ],
-  "inventory_observed_at": "2026-11-10",
-  "inventory_note": "Owned repository visibility and account-wide PR, review and issue totals observed on 10 November 2026. Project-level technical metrics retain their original observation dates.",
+  "inventory_observed_at": "2026-11-22",
+  "inventory_note": "Owned repository visibility and account-wide PR, review and issue totals observed on 22 November 2026. Project-level technical metrics retain their original observation dates.",
   "public_directory": [
     {
       "name": "aether-runtime",
@@ -6216,7 +6332,7 @@
       "name": "aixaria0.github.io",
       "url": "https://github.com/aixaria0/aixaria0.github.io",
       "language": "HTML",
-      "pushed_at": "2026-11-07T19:52:36Z",
+      "pushed_at": "2026-11-09T21:36:18Z",
       "description": "AIX — Engineering Intelligence Registry"
     },
     {
@@ -6300,7 +6416,7 @@
       "name": "CHIMERA-ONE",
       "url": "https://github.com/aixaria0/CHIMERA-ONE",
       "language": "Python",
-      "pushed_at": "2026-11-09T18:07:54Z",
+      "pushed_at": "2026-11-16T18:08:08Z",
       "description": "Control plane composing versioned CHIMERA capabilities while preserving component trust and evidence boundaries."
     },
     {
@@ -6454,7 +6570,7 @@
       "name": "rchain-rust",
       "url": "https://github.com/aixaria0/rchain-rust",
       "language": "Rust",
-      "pushed_at": "2026-11-07T20:13:17Z",
+      "pushed_at": "2026-11-14T06:14:01Z",
       "description": "Blockchain (smart contract) platform using CBC-Casper proof of stake + Rholang for concurrent execution."
     },
     {
@@ -6475,8 +6591,15 @@
       "name": "Rholox",
       "url": "https://github.com/aixaria0/Rholox",
       "language": "TypeScript",
-      "pushed_at": "2026-11-06T23:23:29Z",
+      "pushed_at": "2026-11-15T20:49:54Z",
       "description": "Rholox — RChain-native DApp platform and testnet gateway"
+    },
+    {
+      "name": "rholox-web",
+      "url": "https://github.com/aixaria0/rholox-web",
+      "language": "JavaScript",
+      "pushed_at": "2026-11-15T21:34:39Z",
+      "description": "Independent free static hosting for rholox.com, built from aixaria0/Rholox with read-only evidence-first provenance"
     },
     {
       "name": "RitualGraph",
@@ -6564,9 +6687,9 @@
     }
   ],
   "publication": {
-    "edition": "2026-11-10-r1",
+    "edition": "2026-11-22-r1",
     "base_commit": "caec4b65290d08b5e3719b8156a0bb7341eb449a",
-    "public_repository_count": 54,
+    "public_repository_count": 55,
     "project_count": 19,
     "locales": [
       "en",
@@ -6574,5 +6697,5 @@
     ],
     "layout": "logo-led-editorial-grid"
   },
-  "account_activity_observed_at": "2026-11-10"
+  "account_activity_observed_at": "2026-11-22"
 }

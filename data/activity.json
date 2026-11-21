@@ -1,34 +1,41 @@
 {
   "schema": 2,
-  "observed_at": "2026-11-10",
+  "observed_at": "2026-11-22",
   "repositories": [
     {
       "name": "CHIMERA-ONE",
       "html_url": "https://github.com/aixaria0/CHIMERA-ONE",
       "private": false,
-      "pushed_at": "2026-11-09T18:07:54Z",
+      "pushed_at": "2026-11-16T18:08:08Z",
       "language": "Python"
+    },
+    {
+      "name": "rholox-web",
+      "html_url": "https://github.com/aixaria0/rholox-web",
+      "private": false,
+      "pushed_at": "2026-11-15T21:34:39Z",
+      "language": "JavaScript"
+    },
+    {
+      "name": "Rholox",
+      "html_url": "https://github.com/aixaria0/Rholox",
+      "private": false,
+      "pushed_at": "2026-11-15T20:49:54Z",
+      "language": "TypeScript"
     },
     {
       "name": "rchain-rust",
       "html_url": "https://github.com/aixaria0/rchain-rust",
       "private": false,
-      "pushed_at": "2026-11-07T20:13:17Z",
+      "pushed_at": "2026-11-14T06:14:01Z",
       "language": "Rust"
     },
     {
       "name": "aixaria0.github.io",
       "html_url": "https://github.com/aixaria0/aixaria0.github.io",
       "private": false,
-      "pushed_at": "2026-11-07T19:52:36Z",
+      "pushed_at": "2026-11-09T21:36:18Z",
       "language": "HTML"
-    },
-    {
-      "name": "Rholox",
-      "html_url": "https://github.com/aixaria0/Rholox",
-      "private": false,
-      "pushed_at": "2026-11-06T23:23:29Z",
-      "language": "TypeScript"
     },
     {
       "name": "Sovereign-Lattice",

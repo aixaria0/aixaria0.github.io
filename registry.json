@@ -6,8 +6,8 @@
   },
   "source": {
     "name": "Authenticated linked GitHub account enumeration",
-    "query": "owner:aixaria0; 2026-11-07",
-    "contentHash": "sha256:71f896664120dccbbab2a80d7d668ce2930407b5145e7ac00961bd44e414d106"
+    "query": "owner:aixaria0; 2026-11-22",
+    "contentHash": "sha256:94c1a522bfff8aab565bd735b89b7d0aaa50c3b5a851f5675bd1c9303d095d62"
   },
   "projects": [
     {
@@ -358,7 +358,7 @@
         "portfolio",
         "static-site"
       ],
-      "pushed_at": "2026-11-07T19:26:52Z",
+      "pushed_at": "2026-11-09T21:36:18Z",
       "archived": false
     },
     {
@@ -965,7 +965,7 @@
         "orchestration",
         "verification"
       ],
-      "pushed_at": "2026-10-26T18:08:09Z",
+      "pushed_at": "2026-11-16T18:08:08Z",
       "archived": false
     },
     {
@@ -2363,7 +2363,7 @@
         "rholang",
         "rust"
       ],
-      "pushed_at": "2026-11-07T14:52:39Z",
+      "pushed_at": "2026-11-14T06:14:01Z",
       "archived": false
     },
     {
@@ -2779,8 +2779,132 @@
         "testnet",
         "typescript"
       ],
-      "pushed_at": "2026-11-06T23:23:29Z",
+      "pushed_at": "2026-11-15T20:49:54Z",
       "archived": false
+    },
+    {
+      "id": "rholox-web",
+      "name": "rholox-web",
+      "visibility": "public",
+      "kind": "original",
+      "family": "pending-classification",
+      "status": "unreviewed",
+      "featured": false,
+      "order": 1000,
+      "description": {
+        "en": "Independent free static hosting for rholox.com, built from aixaria0/Rholox with read-only evidence-first provenance",
+        "fa": "مخزن عمومی گیت‌هاب؛ بررسی فنی مستقل هنوز ثبت نشده است."
+      },
+      "scope": {
+        "summary": {
+          "en": "Independent free static hosting for rholox.com, built from aixaria0/Rholox with read-only evidence-first provenance",
+          "fa": "مخزن عمومی گیت‌هاب؛ بررسی فنی مستقل هنوز ثبت نشده است."
+        },
+        "limits": {
+          "en": [
+            "No production or proof assurance implied."
+          ],
+          "fa": [
+            "ثبت در فهرست به معنای تأیید تولیدی یا اثبات نیست."
+          ]
+        }
+      },
+      "stack": [
+        "JavaScript"
+      ],
+      "languages": [
+        "JavaScript"
+      ],
+      "links": {
+        "source": "https://github.com/aixaria0/rholox-web",
+        "live": null,
+        "docs": null,
+        "evidence": null
+      },
+      "metrics": {
+        "commits": null,
+        "prs": null,
+        "mergedPrs": null,
+        "ciRuns": null,
+        "evidence": {
+          "score": null,
+          "criteria": [
+            {
+              "id": "criterion-01",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-02",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-03",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-04",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-05",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-06",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-07",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-08",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-09",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-10",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-11",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-12",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-13",
+              "met": null,
+              "evidenceUrl": null
+            },
+            {
+              "id": "criterion-14",
+              "met": null,
+              "evidenceUrl": null
+            }
+          ]
+        }
+      },
+      "pushed_at": "2026-11-15T21:34:39Z",
+      "archived": false,
+      "topics": []
     },
     {
       "id": "ritualgraph",
@@ -4009,7 +4133,25 @@
         "en": "Private repository; source and contents are not published.",
         "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
       }
+    },
+    {
+      "name": "Undisclosed project 21",
+      "family": "pending-classification",
+      "status": "private",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
+    },
+    {
+      "name": "Undisclosed project 22",
+      "family": "pending-classification",
+      "status": "private",
+      "description": {
+        "en": "Private repository; source and contents are not published.",
+        "fa": "مخزن خصوصی؛ کد و محتوای آن منتشر نشده است."
+      }
     }
   ],
-  "inventoryObservedAt": "2026-11-10"
+  "inventoryObservedAt": "2026-11-22"
 }
